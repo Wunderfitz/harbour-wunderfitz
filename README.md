@@ -1,2 +1,2 @@
-# harbour-wunderfitz
+# Wunderfitz
 A Norwegian-German dictionary for SailfishOS
