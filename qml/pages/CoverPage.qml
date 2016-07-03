@@ -22,7 +22,6 @@ CoverBackground {
         }
 
         fillMode: Image.PreserveAspectFit
-        // width: 9/10 * parent.width
         opacity: 0.3
     }
 
@@ -42,6 +41,10 @@ CoverBackground {
 
         CoverAction {
             iconSource: "image://theme/icon-cover-search"
+            onTriggered: {
+                pageStack.pop(pageStack.find( function(page){ return(page._depth === 0)} ), PageStackAction.Immediate)
+                window.activate()
+            }
         }
 
     }

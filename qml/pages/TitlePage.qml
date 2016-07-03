@@ -8,7 +8,7 @@ import Sailfish.Silica 1.0
 
 
 Page {
-    id: page
+    id: titlePage
 
     SilicaFlickable {
         anchors.fill: parent
@@ -16,7 +16,7 @@ Page {
         PullDownMenu {
             MenuItem {
                 text: qsTr("About Wunderfitz")
-                onClicked: pageStack.push(Qt.resolvedUrl("AboutPage.qml"))
+                onClicked: pageStack.push(aboutPage)
             }
         }
 
@@ -25,15 +25,17 @@ Page {
         Column {
             id: column
 
-            width: page.width
+            width: titlePage.width
             spacing: Theme.paddingLarge
             PageHeader {
                 title: qsTr("Wunderfitz")
             }
             SearchField {
+                id: searchField
                 x: Theme.paddingMedium
                 width: parent.width
                 placeholderText: qsTr("Search in dictionary...")
+                focus: true
             }
         }
     }

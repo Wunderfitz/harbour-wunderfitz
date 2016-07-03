@@ -9,9 +9,21 @@ import "pages"
 
 ApplicationWindow
 {
-    initialPage: Component { TitlePage { } }
+    Component {
+        id: aboutPage
+        AboutPage {}
+    }
+
+    Component {
+        id: titlePage
+        TitlePage {}
+    }
+
+    id: window
+    initialPage: titlePage
     cover: Component { CoverPage { } }
     allowedOrientations: Orientation.All
+
 }
 
 

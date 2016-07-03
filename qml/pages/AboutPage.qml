@@ -8,7 +8,7 @@ import Sailfish.Silica 1.0
 
 
 Page {
-    id: page
+    id: aboutPage
 
     SilicaFlickable {
         id: aboutContainer
@@ -17,7 +17,7 @@ Page {
 
         Column {
             id: column
-            width: page.width
+            width: aboutPage.width
             spacing: Theme.paddingLarge
 
             PageHeader {
@@ -88,7 +88,7 @@ Page {
                 x: Theme.horizontalPageMargin
                 width: parent.width - 2*x
                 text: qsTr("This project uses data from heinzelnisse.info. Thanks to the authors Heiko Klein and Julia Emmerich for making the dictionary accessible under the conditions of the GNU GPLv2!")
-                font.pixelSize: Theme.fontSizeTiny
+                font.pixelSize: Theme.fontSizeExtraSmall
                 wrapMode: Text.Wrap
                 anchors {
                     horizontalCenter: parent.horizontalCenter
