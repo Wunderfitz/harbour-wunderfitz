@@ -28,10 +28,6 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>This project uses data from heinzelnisse.info. Thanks to the authors Heiko Klein and Julia Emmerich for making the dictionary accessible under the conditions of the GNU GPLv2!</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Additional information</source>
         <translation type="unfinished"></translation>
     </message>
@@ -41,6 +37,10 @@
     </message>
     <message>
         <source>Project Page</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>This project uses data from heinzelnisse.info - Thanks to the authors Heiko Klein and Julia Emmerich for making the dictionary accessible under the conditions of the GNU GPLv2!</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

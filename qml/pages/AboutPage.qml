@@ -87,7 +87,7 @@ Page {
             Label {
                 x: Theme.horizontalPageMargin
                 width: parent.width - 2*x
-                text: qsTr("This project uses data from heinzelnisse.info. Thanks to the authors Heiko Klein and Julia Emmerich for making the dictionary accessible under the conditions of the GNU GPLv2!")
+                text: qsTr("This project uses data from heinzelnisse.info - Thanks to the authors Heiko Klein and Julia Emmerich for making the dictionary accessible under the conditions of the GNU GPLv2!")
                 font.pixelSize: Theme.fontSizeExtraSmall
                 wrapMode: Text.Wrap
                 anchors {

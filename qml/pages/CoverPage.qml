@@ -14,15 +14,15 @@ CoverBackground {
         anchors {
             verticalCenter: parent.verticalCenter
 
-            left: parent.left
-            leftMargin: Theme.paddingMedium
+            bottom: parent.bottom
+            bottomMargin: Theme.paddingMedium
 
             right: parent.right
             rightMargin: Theme.paddingMedium
         }
 
         fillMode: Image.PreserveAspectFit
-        opacity: 0.3
+        opacity: 0.25
     }
 
     Label {
