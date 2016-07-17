@@ -40,7 +40,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>This project uses data from heinzelnisse.info - Thanks to the authors Heiko Klein and Julia Emmerich for making the dictionary accessible under the conditions of the GNU GPLv2!</source>
+        <source>This project uses the Norwegian-German dictionary from heinzelnisse.info - Updated on May 22, 2016 - Thanks to the authors Heiko Klein and Julia Emmerich for making the dictionary accessible under the conditions of the GNU GPLv2!</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

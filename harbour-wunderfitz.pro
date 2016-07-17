@@ -1,28 +1,19 @@
-# NOTICE:
-#
-# Application name defined in TARGET has a corresponding QML filename.
-# If name defined in TARGET is changed, the following needs to be done
-# to match new name:
-#   - corresponding QML filename must be changed
-#   - desktop icon filename must be changed
-#   - desktop filename must be changed
-#   - icon definition filename in desktop file must be changed
-#   - translation filenames have to be changed
-
-# The name of your application
 TARGET = harbour-wunderfitz
 
 CONFIG += sailfishapp
 
-SOURCES += src/harbour-wunderfitz.cpp
+SOURCES += src/harbour-wunderfitz.cpp \
+    src/databasemanager.cpp
 
-OTHER_FILES += qml/harbour-wunderfitz.qml \
-    qml/cover/CoverPage.qml \
-    rpm/harbour-wunderfitz.changes.in \
+OTHER_FILES += rpm/harbour-wunderfitz.changes.in \
     rpm/harbour-wunderfitz.spec \
     rpm/harbour-wunderfitz.yaml \
     translations/*.ts \
-    harbour-wunderfitz.desktop
+    harbour-wunderfitz.desktop \
+    qml/pages/TitlePage.qml \
+    qml/pages/AboutPage.qml \
+    qml/pages/CoverPage.qml \
+    db/heinzelliste.db
 
 SAILFISHAPP_ICONS = 86x86 108x108 128x128 256x256
 
@@ -36,8 +27,11 @@ CONFIG += sailfishapp_i18n
 # modify the localized app name in the the .desktop file.
 TRANSLATIONS += translations/harbour-wunderfitz-de.ts
 
-DISTFILES += \
-    qml/pages/TitlePage.qml \
-    qml/pages/AboutPage.qml \
-    qml/pages/CoverPage.qml
+QT += sql
 
+HEADERS += \
+    src/databasemanager.h
+
+database.files = db
+database.path = /usr/share/$${TARGET}
+INSTALLS += database
