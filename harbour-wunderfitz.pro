@@ -3,7 +3,8 @@ TARGET = harbour-wunderfitz
 CONFIG += sailfishapp
 
 SOURCES += src/harbour-wunderfitz.cpp \
-    src/databasemanager.cpp
+    src/databasemanager.cpp \
+    src/heinzelnisseelement.cpp
 
 OTHER_FILES += rpm/harbour-wunderfitz.changes.in \
     rpm/harbour-wunderfitz.spec \
@@ -30,6 +31,7 @@ TRANSLATIONS += translations/harbour-wunderfitz-de.ts
 QT += sql
 
 HEADERS += \
+    src/heinzelnisseelement.h \
     src/databasemanager.h
 
 database.files = db
