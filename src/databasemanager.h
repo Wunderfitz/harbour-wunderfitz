@@ -3,20 +3,21 @@
 
 #include <QSqlDatabase>
 #include <QSqlQuery>
-#include <QVector>
+#include <QList>
 #include <QString>
 #include "heinzelnisseelement.h"
 #include "databasemanager.h"
 
-class DatabaseManager
-{
+class DatabaseManager {
+
 public:
     DatabaseManager();
     bool isOpen() const;
-    QVector<HeinzelnisseElement> getResults(const QString &query);
+    QList<HeinzelnisseElement> getResults(const QString &query);
 private:
     QSqlDatabase database;
     HeinzelnisseElement getElementFromQuery(const QSqlQuery &query) const;
+    void addQueryResults(QSqlQuery &query, QList<HeinzelnisseElement> &results) const;
 
 };
 

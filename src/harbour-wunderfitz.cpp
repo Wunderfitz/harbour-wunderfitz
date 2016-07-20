@@ -3,7 +3,6 @@
 #endif
 
 #include <QDebug>
-#include <QVectorIterator>
 #include <sailfishapp.h>
 #include "databasemanager.h"
 
@@ -23,8 +22,8 @@ int main(int argc, char *argv[])
     DatabaseManager databaseManager;
     if (databaseManager.isOpen()) {
         qDebug() << "Good!";
-        QVector<HeinzelnisseElement> results = databaseManager.getResults("haus");
-        QVectorIterator<HeinzelnisseElement> resultsIterator(results);
+        QList<HeinzelnisseElement> results = databaseManager.getResults("haus");
+        QListIterator<HeinzelnisseElement> resultsIterator(results);
         while (resultsIterator.hasNext()) {
             const HeinzelnisseElement result = resultsIterator.next();
             qDebug() << result.getWordNorwegian() << " : " << result.getWordGerman();

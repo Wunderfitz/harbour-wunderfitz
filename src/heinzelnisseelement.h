@@ -3,8 +3,8 @@
 
 #include <QString>
 
-class HeinzelnisseElement
-{
+class HeinzelnisseElement {
+
 public:
     HeinzelnisseElement();
     QString getWordNorwegian() const;
@@ -37,7 +37,15 @@ public:
     QString getGrade() const;
     void setGrade(const QString &value);
 
+    int getIndex() const;
+    void setIndex(int value);
+
+    inline bool operator ==(const HeinzelnisseElement &otherHeinzelnisseElement) const {
+        return (index == otherHeinzelnisseElement.getIndex());
+    }
+
 private:
+    int index;
     QString wordNorwegian;
     QString genderNorwegian;
     QString optionalNorwegian;

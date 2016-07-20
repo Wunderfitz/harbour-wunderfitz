@@ -1,5 +1,5 @@
 #include <QDebug>
-#include <QVector>
+#include <QList>
 #include <QString>
 #include "heinzelnisseelement.h"
 #include "databasemanager.h"
@@ -24,30 +24,33 @@ bool DatabaseManager::isOpen() const
     return database.isOpen();
 }
 
-QVector<HeinzelnisseElement> DatabaseManager::getResults(const QString &queryString) {
-    QVector<HeinzelnisseElement> results;
+QList<HeinzelnisseElement> DatabaseManager::getResults(const QString &queryString) {
+    QList<HeinzelnisseElement> results;
 
     QSqlQuery query;
+    QString wildcardQueryString = queryString + "* -" + queryString;
 
     query.prepare("select * from heinzelnisse where de_word match (:queryString) order by de_word");
     query.bindValue(":queryString", queryString);
+    addQueryResults(query, results);
+
+    query.bindValue(":queryString", wildcardQueryString);
     query.exec();
-    while (query.next()) {
-        results.append(getElementFromQuery(query));
-    }
+    addQueryResults(query, results);
 
     query.prepare("select * from heinzelnisse where no_word match (:queryString) order by no_word");
     query.bindValue(":queryString", queryString);
-    query.exec();
-    while (query.next()) {
-        results.append(getElementFromQuery(query));
-    }
+    addQueryResults(query, results);
+
+    query.bindValue(":queryString", wildcardQueryString);
+    addQueryResults(query, results);
 
     return results;
 }
 
 HeinzelnisseElement DatabaseManager::getElementFromQuery(const QSqlQuery &query) const {
     HeinzelnisseElement heinzelnisseElement;
+    heinzelnisseElement.setIndex(query.value(0).toInt());
     heinzelnisseElement.setWordNorwegian(query.value(1).toString());
     heinzelnisseElement.setGenderNorwegian(query.value(2).toString());
     heinzelnisseElement.setOptionalNorwegian(query.value(3).toString());
@@ -60,3 +63,14 @@ HeinzelnisseElement DatabaseManager::getElementFromQuery(const QSqlQuery &query)
     heinzelnisseElement.setGrade(query.value(10).toString());
     return heinzelnisseElement;
 }
+
+void DatabaseManager::addQueryResults(QSqlQuery &query, QList<HeinzelnisseElement> &results) const {
+    query.exec();
+    while (query.next()) {
+        HeinzelnisseElement nextElement = getElementFromQuery(query);
+        if (!results.contains(nextElement)) {
+            results.append(nextElement);
+        }
+    }
+}
+

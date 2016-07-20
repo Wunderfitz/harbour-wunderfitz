@@ -105,3 +105,13 @@ void HeinzelnisseElement::setGrade(const QString &value)
     grade = value;
 }
 
+int HeinzelnisseElement::getIndex() const
+{
+    return index;
+}
+
+void HeinzelnisseElement::setIndex(int value)
+{
+    index = value;
+}
+
