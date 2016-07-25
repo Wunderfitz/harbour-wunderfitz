@@ -2,11 +2,14 @@
 #define HEINZELNISSEELEMENT_H
 
 #include <QString>
+#include <QObject>
 
-class HeinzelnisseElement {
+class HeinzelnisseElement : public QObject {
+
+    Q_OBJECT
 
 public:
-    HeinzelnisseElement();
+    HeinzelnisseElement(QObject* parent = 0);
     QString getWordNorwegian() const;
     void setWordNorwegian(const QString &value);
 

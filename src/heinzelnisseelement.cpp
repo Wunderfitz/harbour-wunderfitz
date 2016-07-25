@@ -1,7 +1,6 @@
 #include "heinzelnisseelement.h"
 
-HeinzelnisseElement::HeinzelnisseElement()
-{
+HeinzelnisseElement::HeinzelnisseElement(QObject* parent) : QObject(parent) {
 
 }
 

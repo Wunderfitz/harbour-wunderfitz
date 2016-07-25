@@ -4,7 +4,8 @@ CONFIG += sailfishapp
 
 SOURCES += src/harbour-wunderfitz.cpp \
     src/databasemanager.cpp \
-    src/heinzelnisseelement.cpp
+    src/heinzelnisseelement.cpp \
+    src/heinzelnissemodel.cpp
 
 OTHER_FILES += rpm/harbour-wunderfitz.changes.in \
     rpm/harbour-wunderfitz.spec \
@@ -32,8 +33,12 @@ QT += sql
 
 HEADERS += \
     src/heinzelnisseelement.h \
-    src/databasemanager.h
+    src/databasemanager.h \
+    src/heinzelnissemodel.h
 
 database.files = db
 database.path = /usr/share/$${TARGET}
 INSTALLS += database
+
+DISTFILES += \
+    qml/harbour-wunderfitz.qml
