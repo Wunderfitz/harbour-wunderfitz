@@ -15,6 +15,8 @@ public:
     virtual int rowCount(const QModelIndex&) const;
     virtual QVariant data(const QModelIndex &index, int role) const;
 
+    Q_INVOKABLE void search(const QString &query);
+
 private:
     DatabaseManager databaseManager;
     QList<HeinzelnisseElement*>* resultList;
