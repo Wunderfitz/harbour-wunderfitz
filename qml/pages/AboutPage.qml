@@ -73,11 +73,11 @@ Page {
             }
 
             Button {
-                text: qsTr("Project Page")
+                text: qsTr("Sources on GitHub")
                 anchors {
                     horizontalCenter: parent.horizontalCenter
                 }
-                onClicked: Qt.openUrlExternally("http://www.wunderfitz.info/")
+                onClicked: Qt.openUrlExternally("https://github.com/Wunderfitz/harbour-wunderfitz")
             }
 
             SectionHeader {

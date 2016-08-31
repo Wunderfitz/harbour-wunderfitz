@@ -40,6 +40,14 @@ QVariant HeinzelnisseModel::data(const QModelIndex &index, int role) const {
         resultMap.insert("otherGerman", QVariant(resultElement->getOtherGerman()));
         return QVariant(resultMap);
     }
+    if(role == Qt::StatusTipRole) {
+        if (resultList->empty()) {
+            return QVariant("");
+        } else {
+            HeinzelnisseElement* resultElement = resultList->value(0);
+            return QVariant(resultElement->getWordNorwegian() + " - " + resultElement->getWordGerman());
+        }
+    }
     return QVariant();
 }
 

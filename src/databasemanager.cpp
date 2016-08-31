@@ -41,19 +41,12 @@ void DatabaseManager::updateResults(const QString &queryString) {
     QSqlQuery query;
     QString wildcardQueryString = queryString + "* -" + queryString;
 
-    query.prepare("select * from heinzelnisse where de_word match (:queryString) order by de_word");
+    query.prepare("select * from heinzelnisse where heinzelnisse match (:queryString) order by de_word");
     query.bindValue(":queryString", queryString);
     addQueryResults(query);
 
     query.bindValue(":queryString", wildcardQueryString);
     query.exec();
-    addQueryResults(query);
-
-    query.prepare("select * from heinzelnisse where no_word match (:queryString) order by no_word");
-    query.bindValue(":queryString", queryString);
-    addQueryResults(query);
-
-    query.bindValue(":queryString", wildcardQueryString);
     addQueryResults(query);
 }
 

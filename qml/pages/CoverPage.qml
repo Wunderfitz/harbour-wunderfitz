@@ -6,6 +6,7 @@
 
 import QtQuick 2.0
 import Sailfish.Silica 1.0
+import harbour.wunderfitz 1.0
 import "."
 
 CoverBackground {
@@ -23,7 +24,7 @@ CoverBackground {
         }
 
         fillMode: Image.PreserveAspectFit
-        opacity: 0.25
+        opacity: 0.15
     }
 
     Label {
@@ -37,18 +38,6 @@ CoverBackground {
         text: "Wunderfitz"
     }
 
-    CoverActionList {
-        id: coverAction
-
-        CoverAction {
-            iconSource: "image://theme/icon-cover-search"
-            onTriggered: {
-                pageStack.pop(pageStack.find( function(page){ return(page._depth === 0)} ), PageStackAction.Immediate)
-                window.activate()
-            }
-        }
-
-    }
 }
 
 
