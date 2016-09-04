@@ -5,7 +5,6 @@
 
 import QtQuick 2.0
 import Sailfish.Silica 1.0
-import harbour.wunderfitz 1.0
 
 Page {
     id: titlePage
@@ -30,7 +29,7 @@ Page {
 
             PageHeader {
                 id: header
-                title: qsTr("Wunderfitz")
+                title: "Wunderfitz"
             }
 
             SearchField {
@@ -44,7 +43,7 @@ Page {
                 EnterKey.onClicked: focus = false
 
                 onTextChanged: {
-                    heinzelnissemodel.search(searchField.text)
+                    heinzelnisseModel.search(searchField.text)
                 }
             }
 
@@ -58,19 +57,19 @@ Page {
 
                 clip: true
 
-                model: HeinzelnisseModel {
-                    id: heinzelnissemodel
-                }
+                model: heinzelnisseModel
 
                 delegate: ListItem {
-                    height: wordRow.height
+                    contentHeight: wordRow.height + Theme.paddingSmall
+
                     Row {
                         id: wordRow
-                        spacing: Theme.paddingLarge
                         width: parent.width
                         Column {
+                            id: columnNorwegian
                             width: parent.width / 2 -  2 * Theme.paddingLarge
                             Label {
+                                color: Theme.primaryColor
                                 width: parent.width
                                 font.pixelSize: Theme.fontSizeSmall
                                 x: Theme.horizontalPageMargin
@@ -78,6 +77,7 @@ Page {
                                 text: display.wordNorwegian + display.genderNorwegian
                             }
                             Label {
+                                color: Theme.primaryColor
                                 width: parent.width
                                 font.pixelSize: Theme.fontSizeExtraSmall
                                 x: Theme.horizontalPageMargin
@@ -86,9 +86,11 @@ Page {
                             }
                         }
                         Column {
+                            id: columnGerman
                             width: parent.width / 2 - 2 * Theme.paddingLarge
                             Label {
                                 width: parent.width
+                                color: Theme.highlightColor
                                 font.pixelSize: Theme.fontSizeSmall
                                 x: Theme.horizontalPageMargin
                                 wrapMode: Text.Wrap
@@ -96,6 +98,7 @@ Page {
                             }
                             Label {
                                 width: parent.width
+                                color: Theme.highlightColor
                                 font.pixelSize: Theme.fontSizeExtraSmall
                                 x: Theme.horizontalPageMargin
                                 wrapMode: Text.Wrap

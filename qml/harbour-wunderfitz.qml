@@ -5,6 +5,7 @@
 
 import QtQuick 2.0
 import Sailfish.Silica 1.0
+import harbour.wunderfitz 1.0
 import "pages"
 
 ApplicationWindow
@@ -17,6 +18,10 @@ ApplicationWindow
     Component {
         id: titlePage
         TitlePage {}
+    }
+
+    HeinzelnisseModel {
+        id: heinzelnisseModel
     }
 
     id: window

@@ -16,11 +16,17 @@ public:
     virtual QVariant data(const QModelIndex &index, int role) const;
 
     Q_INVOKABLE void search(const QString &query);
+    Q_INVOKABLE QString getLastQuery();
+    Q_INVOKABLE QString getFirstResult();
+    Q_INVOKABLE QString getSecondResult();
+    Q_INVOKABLE QString getThirdResult();
 
 private:
     DatabaseManager databaseManager;
     QList<HeinzelnisseElement*>* resultList;
+    QString lastQuery;
 
+    QString getResult(const int index);
 };
 
 #endif // HEINZELNISSEMODEL_H

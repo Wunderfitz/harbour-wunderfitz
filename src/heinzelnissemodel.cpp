@@ -10,6 +10,7 @@ HeinzelnisseModel::HeinzelnisseModel(QObject *parent) : QAbstractListModel(paren
     } else {
         qDebug() << "Unable to initialize database!";
     }
+    lastQuery = "";
 }
 
 QVariant HeinzelnisseModel::data(const QModelIndex &index, int role) const {
@@ -40,14 +41,6 @@ QVariant HeinzelnisseModel::data(const QModelIndex &index, int role) const {
         resultMap.insert("otherGerman", QVariant(resultElement->getOtherGerman()));
         return QVariant(resultMap);
     }
-    if(role == Qt::StatusTipRole) {
-        if (resultList->empty()) {
-            return QVariant("");
-        } else {
-            HeinzelnisseElement* resultElement = resultList->value(0);
-            return QVariant(resultElement->getWordNorwegian() + " - " + resultElement->getWordGerman());
-        }
-    }
     return QVariant();
 }
 
@@ -58,5 +51,35 @@ int HeinzelnisseModel::rowCount(const QModelIndex&) const {
 void HeinzelnisseModel::search(const QString &query) {
     beginResetModel();
     databaseManager.updateResults(query);
+    lastQuery = query;
     endResetModel();
+}
+
+QString HeinzelnisseModel::getFirstResult() {
+    return getResult(0);
+}
+
+QString HeinzelnisseModel::getSecondResult() {
+    return getResult(1);
+}
+
+QString HeinzelnisseModel::getThirdResult() {
+    return getResult(2);
+}
+
+QString HeinzelnisseModel::getResult(const int index) {
+    if (resultList->size() <= index) {
+        return QString("");
+    } else {
+        HeinzelnisseElement* result = resultList->value(index);
+        return QString(result->getWordNorwegian() + " - " + result->getWordGerman());
+    }
+}
+
+QString HeinzelnisseModel::getLastQuery() {
+    if (lastQuery == "") {
+        return QString("-");
+    } else {
+        return lastQuery;
+    }
 }

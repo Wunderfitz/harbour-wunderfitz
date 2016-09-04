@@ -5,58 +5,50 @@
     <name>AboutPage</name>
     <message>
         <source>About Wunderfitz</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Wunderfitz 0.1</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>A Norwegian-German dictionary</source>
-        <translation type="unfinished"></translation>
+        <translation>Über Wunderfitz</translation>
     </message>
     <message>
         <source>By Sebastian J. Wolf</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Heinzelnisse</source>
-        <translation type="unfinished"></translation>
+        <translation>von Sebastian J. Wolf</translation>
     </message>
     <message>
         <source>Credits</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Additional information</source>
-        <translation type="unfinished"></translation>
+        <translation>Danksagungen</translation>
     </message>
     <message>
         <source>Licensed under GNU GPLv2</source>
-        <translation type="unfinished"></translation>
+        <translation>Lizenziert unter der GNU GPLv2</translation>
     </message>
     <message>
         <source>This project uses the Norwegian-German dictionary from heinzelnisse.info - Updated on May 22, 2016 - Thanks to the authors Heiko Klein and Julia Emmerich for making the dictionary accessible under the conditions of the GNU GPLv2!</source>
-        <translation type="unfinished"></translation>
+        <translation>Dieses Projekt nutzt das Norwegisch-Deutsch-Wörterbuch von heinzelnisse.info - im Stand vom 22. Mai 2016 - Danke an die Autoren Heiko Klein und Julia Emmerich für die Veröffentlichung des Wörterbuchs unter den Bedingungen der GNU GPLv2!</translation>
     </message>
     <message>
         <source>Sources on GitHub</source>
-        <translation type="unfinished"></translation>
+        <translation>Quelltexte auf GitHub</translation>
+    </message>
+    <message>
+        <source>Send E-Mail</source>
+        <translation>E-Mail verschicken</translation>
+    </message>
+    <message>
+        <source>A Norwegian-German dictionary based on Heinzelnisse</source>
+        <translation>Ein Norwegisch-Deutsch-Wörterbuch auf der Basis von Heinzelnisse</translation>
+    </message>
+    <message>
+        <source>Open heinzelnisse.info</source>
+        <translation>Heinzelnisse.info öffnen</translation>
     </message>
 </context>
 <context>
     <name>TitlePage</name>
     <message>
         <source>About Wunderfitz</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Wunderfitz</source>
-        <translation type="unfinished"></translation>
+        <translation>Über Wunderfitz</translation>
     </message>
     <message>
         <source>Search in dictionary...</source>
-        <translation type="unfinished"></translation>
+        <translation>Suche im Wörterbuch...</translation>
     </message>
 </context>
 </TS>

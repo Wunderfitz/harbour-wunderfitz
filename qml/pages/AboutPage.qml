@@ -37,7 +37,8 @@ Page {
             }
 
             Label {
-                text: qsTr("Wunderfitz 0.1")
+                text: "Wunderfitz 0.1"
+                horizontalAlignment: Text.AlignHCenter
                 font.pixelSize: Theme.fontSizeExtraLarge
                 anchors {
                     horizontalCenter: parent.horizontalCenter
@@ -45,7 +46,11 @@ Page {
             }
 
             Label {
-                text: qsTr("A Norwegian-German dictionary")
+                wrapMode: Text.Wrap
+                x: Theme.horizontalPageMargin
+                width: parent.width - 2*x
+                horizontalAlignment: Text.AlignHCenter
+                text: qsTr("A Norwegian-German dictionary based on Heinzelnisse")
                 font.pixelSize: Theme.fontSizeSmall
                 anchors {
                     horizontalCenter: parent.horizontalCenter
@@ -60,8 +65,12 @@ Page {
                 }
             }
 
-            SectionHeader {
-                text: qsTr("Additional information")
+            Button {
+                text: qsTr("Send E-Mail")
+                anchors {
+                    horizontalCenter: parent.horizontalCenter
+                }
+                onClicked: Qt.openUrlExternally("mailto:sebastian@ygriega.de")
             }
 
             Label {
@@ -96,7 +105,7 @@ Page {
             }
 
             Button {
-                text: qsTr("Heinzelnisse")
+                text: qsTr("Open heinzelnisse.info")
                 anchors {
                     horizontalCenter: parent.horizontalCenter
                 }
