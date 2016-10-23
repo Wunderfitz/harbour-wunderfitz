@@ -53,6 +53,7 @@ Page {
                 id: listView
 
                 height: titlePage.height - header.height - searchField.height - ( 2 * Theme.paddingLarge )
+                width: parent.width
                 anchors.left: parent.left
                 anchors.right: parent.right
 
@@ -61,20 +62,23 @@ Page {
                 model: heinzelnisseModel
 
                 delegate: ListItem {
-                    contentHeight: wordRow.height + Theme.paddingSmall
+                    contentHeight: wordRow.height + Theme.paddingMedium
+                    contentWidth: parent.width
 
                     Row {
                         id: wordRow
                         width: parent.width
+                        spacing: Theme.paddingMedium
                         Column {
                             id: columnNorwegian
-                            width: parent.width / 2 -  2 * Theme.paddingLarge
+                            width: parent.width / 2 - ( 2 * Theme.paddingLarge )
                             Label {
                                 color: Theme.primaryColor
                                 width: parent.width
                                 font.pixelSize: Theme.fontSizeSmall
                                 x: Theme.horizontalPageMargin
-                                wrapMode: Text.Wrap
+                                wrapMode: Text.WordWrap
+                                truncationMode: TruncationMode.Fade
                                 text: display.wordNorwegian + display.genderNorwegian
                             }
                             Label {
@@ -82,19 +86,21 @@ Page {
                                 width: parent.width
                                 font.pixelSize: Theme.fontSizeExtraSmall
                                 x: Theme.horizontalPageMargin
-                                wrapMode: Text.Wrap
+                                wrapMode: Text.WordWrap
+                                truncationMode: TruncationMode.Fade
                                 text: display.otherNorwegian
                             }
                         }
                         Column {
                             id: columnGerman
-                            width: parent.width / 2 - 2 * Theme.paddingLarge
+                            width: parent.width / 2 - ( 2 * Theme.paddingLarge )
                             Label {
                                 width: parent.width
                                 color: Theme.highlightColor
                                 font.pixelSize: Theme.fontSizeSmall
                                 x: Theme.horizontalPageMargin
-                                wrapMode: Text.Wrap
+                                wrapMode: Text.WordWrap
+                                truncationMode: TruncationMode.Fade
                                 text: display.wordGerman + display.genderGerman
                             }
                             Label {
@@ -102,7 +108,8 @@ Page {
                                 color: Theme.highlightColor
                                 font.pixelSize: Theme.fontSizeExtraSmall
                                 x: Theme.horizontalPageMargin
-                                wrapMode: Text.Wrap
+                                wrapMode: Text.WordWrap
+                                truncationMode: TruncationMode.Fade
                                 text: display.otherGerman
                             }
                         }

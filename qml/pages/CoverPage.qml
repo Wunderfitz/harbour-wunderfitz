@@ -47,10 +47,10 @@ CoverBackground {
             Label {
                 id: resultLabelNorwegian
                 maximumLineCount: 1
-                wrapMode: Text.Wrap
                 color: Theme.primaryColor
                 font.pixelSize: Theme.fontSizeExtraSmall
                 text: display.wordNorwegian
+                truncationMode: TruncationMode.Fade
                 anchors {
                     left: parent.left
                     right: parent.right
@@ -59,10 +59,10 @@ CoverBackground {
             Label {
                 id: resultLabelGerman
                 maximumLineCount: 1
-                wrapMode: Text.Wrap
                 color: Theme.highlightColor
                 font.pixelSize: Theme.fontSizeExtraSmall
                 text: display.wordGerman
+                truncationMode: TruncationMode.Fade
                 anchors {
                     top: resultLabelNorwegian.bottom
                     left: parent.left
