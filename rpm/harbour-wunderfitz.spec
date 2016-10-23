@@ -13,8 +13,8 @@ Name:       harbour-wunderfitz
 %{!?qtc_make:%define qtc_make make}
 %{?qtc_builddir:%define _builddir %qtc_builddir}
 Summary:    Norwegian - German dictionary
-Version:    0.1
-Release:    6
+Version:    0.2
+Release:    1
 Group:      Qt/Qt
 License:    LICENSE
 URL:        http://www.wunderfitz.org/

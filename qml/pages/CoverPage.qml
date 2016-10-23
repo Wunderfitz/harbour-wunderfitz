@@ -26,22 +26,11 @@ CoverBackground {
         opacity: 0.15
     }
 
-    Label {
-        id: labelTitle
-        anchors {
-            top: parent.top
-            topMargin: Theme.paddingLarge
-            horizontalCenter: parent.horizontalCenter
-
-        }
-        text: "Wunderfitz"
-    }
-
     SilicaListView {
         id: coverListView
         anchors {
-            top: labelTitle.bottom
-            topMargin: Theme.paddingLarge
+            top: parent.top
+            topMargin: Theme.paddingMedium
             left: parent.left
             leftMargin: Theme.paddingMedium
             right: parent.right
@@ -60,7 +49,7 @@ CoverBackground {
                 maximumLineCount: 1
                 wrapMode: Text.Wrap
                 color: Theme.primaryColor
-                font.pixelSize: Theme.fontSizeTiny
+                font.pixelSize: Theme.fontSizeExtraSmall
                 text: display.wordNorwegian
                 anchors {
                     left: parent.left
@@ -72,7 +61,7 @@ CoverBackground {
                 maximumLineCount: 1
                 wrapMode: Text.Wrap
                 color: Theme.highlightColor
-                font.pixelSize: Theme.fontSizeTiny
+                font.pixelSize: Theme.fontSizeExtraSmall
                 text: display.wordGerman
                 anchors {
                     top: resultLabelNorwegian.bottom
