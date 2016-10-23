@@ -2,6 +2,7 @@
 #define HEINZELNISSEELEMENT_H
 
 #include <QString>
+#include <QDebug>
 #include <QObject>
 
 class HeinzelnisseElement : public QObject {

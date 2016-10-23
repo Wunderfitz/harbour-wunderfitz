@@ -21,6 +21,7 @@ private:
     QList<HeinzelnisseElement*>* resultList;
     void populateElementFromQuery(const QSqlQuery &query, HeinzelnisseElement* &heinzelnisseElement) const;
     void addQueryResults(QSqlQuery &query);
+    bool elementAlreadyThere(HeinzelnisseElement* &heinzelnisseElement);
 
 };
 

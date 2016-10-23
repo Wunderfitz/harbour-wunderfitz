@@ -1,6 +1,7 @@
 #include <QDebug>
 #include <QList>
 #include <QString>
+#include <QSqlError>
 #include "heinzelnisseelement.h"
 #include "databasemanager.h"
 
@@ -39,14 +40,13 @@ void DatabaseManager::updateResults(const QString &queryString) {
     resultList->clear();
 
     QSqlQuery query;
-    QString wildcardQueryString = queryString + "* -" + queryString;
+    QString wildcardQueryString = queryString + "*";
 
-    query.prepare("select * from heinzelnisse where heinzelnisse match (:queryString) order by de_word");
+    query.prepare("select * from heinzelnisse where heinzelnisse match (:queryString) order by de_word limit 50");
     query.bindValue(":queryString", queryString);
     addQueryResults(query);
 
     query.bindValue(":queryString", wildcardQueryString);
-    query.exec();
     addQueryResults(query);
 }
 
@@ -69,7 +69,7 @@ void DatabaseManager::addQueryResults(QSqlQuery &query) {
     while (query.next()) {
         HeinzelnisseElement* nextElement = new HeinzelnisseElement();
         populateElementFromQuery(query, nextElement);
-        if (!resultList->contains(nextElement)) {
+        if (!elementAlreadyThere(nextElement)) {
             resultList->append(nextElement);
         }
     }
@@ -79,4 +79,13 @@ QList<HeinzelnisseElement*>* DatabaseManager::getResultList() {
     return resultList;
 }
 
+bool DatabaseManager::elementAlreadyThere(HeinzelnisseElement* &heinzelnisseElement) {
+    bool alreadyThere = false;
+    for (int i = 0; i < resultList->count(); i++ ) {
+        if (*resultList->value(i) == *heinzelnisseElement) {
+            return true;
+        }
+    }
+    return alreadyThere;
+}
 
