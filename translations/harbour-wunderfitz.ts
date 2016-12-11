@@ -20,10 +20,6 @@
         <translation>Licensed under GNU GPLv2</translation>
     </message>
     <message>
-        <source>This project uses the Norwegian-German dictionary from heinzelnisse.info - Updated on May 22, 2016 - Thanks to the authors Heiko Klein and Julia Emmerich for making the dictionary accessible under the conditions of the GNU GPLv2!</source>
-        <translation>This project uses the Norwegian-German dictionary from heinzelnisse.info - Updated on May 22, 2016 - Thanks to the authors Heiko Klein and Julia Emmerich for making the dictionary accessible under the conditions of the GNU GPLv2!</translation>
-    </message>
-    <message>
         <source>Sources on GitHub</source>
         <translation>Sources on GitHub</translation>
     </message>
@@ -38,6 +34,10 @@
     <message>
         <source>Open heinzelnisse.info</source>
         <translation>Open heinzelnisse.info</translation>
+    </message>
+    <message>
+        <source>This project uses the Norwegian-German dictionary from heinzelnisse.info - Updated on November 5, 2016 - Thanks to the authors Heiko Klein and Julia Emmerich for making the dictionary available under the conditions of the GNU GPLv2!</source>
+        <translation>his project uses the Norwegian-German dictionary from heinzelnisse.info - Updated on November 5, 2016 - Thanks to the authors Heiko Klein and Julia Emmerich for making the dictionary available under the conditions of the GNU GPLv2!</translation>
     </message>
 </context>
 <context>

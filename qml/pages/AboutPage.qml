@@ -38,7 +38,7 @@ Page {
             }
 
             Label {
-                text: "Wunderfitz 0.2"
+                text: "Wunderfitz 0.2.1"
                 horizontalAlignment: Text.AlignHCenter
                 font.pixelSize: Theme.fontSizeExtraLarge
                 anchors {
@@ -97,7 +97,7 @@ Page {
             Label {
                 x: Theme.horizontalPageMargin
                 width: parent.width - 2*x
-                text: qsTr("This project uses the Norwegian-German dictionary from heinzelnisse.info - Updated on May 22, 2016 - Thanks to the authors Heiko Klein and Julia Emmerich for making the dictionary accessible under the conditions of the GNU GPLv2!")
+                text: qsTr("This project uses the Norwegian-German dictionary from heinzelnisse.info - Updated on November 5, 2016 - Thanks to the authors Heiko Klein and Julia Emmerich for making the dictionary available under the conditions of the GNU GPLv2!")
                 font.pixelSize: Theme.fontSizeExtraSmall
                 wrapMode: Text.Wrap
                 anchors {
@@ -112,6 +112,7 @@ Page {
                 }
                 onClicked: Qt.openUrlExternally("http://www.heinzelnisse.info/")
             }
+
             VerticalScrollDecorator {}
         }
 
