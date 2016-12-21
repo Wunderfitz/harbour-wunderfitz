@@ -1,6 +1,6 @@
 Name: harbour-wunderfitz
 Summary: Norwegian - German dictionary
-Version: 0.2.1
+Version: 0.3
 Release: 1
 # The contents of the Group field should be one of the groups listed here:
 # http://gitorious.org/meego-developer-tools/spectacle/blobs/master/data/GROUPS
@@ -38,6 +38,7 @@ Requires:
 Files:
   - '%{_bindir}'
   - '%{_datadir}/%{name}'
+  - '%{_datadir}/%{name}/lib'
   - '%{_datadir}/applications/%{name}.desktop'
   - '%{_datadir}/icons/hicolor/*/apps/%{name}.png'
 

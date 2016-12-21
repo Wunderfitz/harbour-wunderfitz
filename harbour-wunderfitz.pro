@@ -1,20 +1,21 @@
-TARGET = harbour-wunderfitz
+TEMPLATE = subdirs
 
-CONFIG += sailfishapp
+quazip_lib.file = quazip/quazip/wunderfitz-quazip.pro
+quazip_lib.target = quazip-lib
 
-SOURCES += src/harbour-wunderfitz.cpp \
-    src/databasemanager.cpp \
-    src/heinzelnisseelement.cpp \
-    src/heinzelnissemodel.cpp
+app_src.subdir = src
+app_src.target = app-src
+app_src.depends = quazip-lib
+
+SUBDIRS = quazip_lib app_src
 
 OTHER_FILES += rpm/harbour-wunderfitz.changes.in \
     rpm/harbour-wunderfitz.spec \
     rpm/harbour-wunderfitz.yaml \
     translations/*.ts \
     harbour-wunderfitz.desktop \
-    qml/pages/TitlePage.qml \
-    qml/pages/AboutPage.qml \
-    qml/pages/CoverPage.qml \
+    qml/pages/*.qml \
+    qml/*.qml
     db/heinzelliste.db
 
 SAILFISHAPP_ICONS = 86x86 108x108 128x128 256x256
@@ -29,16 +30,44 @@ CONFIG += sailfishapp_i18n
 # modify the localized app name in the the .desktop file.
 TRANSLATIONS += translations/harbour-wunderfitz-de.ts
 
-QT += sql
-
-HEADERS += \
-    src/heinzelnisseelement.h \
-    src/databasemanager.h \
-    src/heinzelnissemodel.h
-
 database.files = db
 database.path = /usr/share/$${TARGET}
-INSTALLS += database
+
+gui.files = qml
+gui.path = /usr/share/$${TARGET}
+
+images.files = images
+images.path = /usr/share/$${TARGET}
+
+ICONPATH = /usr/share/icons/hicolor
+
+86.png.path = $${ICONPATH}/86x86/apps/
+86.png.files += icons/86x86/harbour-wunderfitz.png
+
+108.png.path = $${ICONPATH}/108x108/apps/
+108.png.files += icons/108x108/harbour-wunderfitz.png
+
+128.png.path = $${ICONPATH}/128x128/apps/
+128.png.files += icons/128x128/harbour-wunderfitz.png
+
+256.png.path = $${ICONPATH}/256x256/apps/
+256.png.files += icons/256x256/harbour-wunderfitz.png
+
+wunderfitz.desktop.path = /usr/share/applications/
+wunderfitz.desktop.files = harbour-wunderfitz.desktop
+
+INSTALLS += 86.png 108.png 128.png 256.png \
+            wunderfitz.desktop database gui images
 
 DISTFILES += \
-    qml/harbour-wunderfitz.qml
+    icons/108x108/harbour-wunderfitz.png \
+    icons/128x128/harbour-wunderfitz.png \
+    icons/256x256/harbour-wunderfitz.png \
+    icons/86x86/harbour-wunderfitz.png \
+    images/background.png \
+    images/wunderfitz.png \
+    qml/*.qml \
+    pml/pages/*.qml \
+    LICENSE \
+    README.md \
+

@@ -41,6 +41,13 @@
     </message>
 </context>
 <context>
+    <name>DictionariesPage</name>
+    <message>
+        <source>Dictionaries</source>
+        <translation>Dictionaries</translation>
+    </message>
+</context>
+<context>
     <name>TitlePage</name>
     <message>
         <source>About Wunderfitz</source>
@@ -49,6 +56,10 @@
     <message>
         <source>Search in dictionary...</source>
         <translation>Search in dictionary...</translation>
+    </message>
+    <message>
+        <source>Dictionaries</source>
+        <translation>Dictionaries</translation>
     </message>
 </context>
 </TS>

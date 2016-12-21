@@ -20,6 +20,11 @@ ApplicationWindow
         TitlePage {}
     }
 
+    Component {
+        id: dictionariesPage
+        DictionariesPage {}
+    }
+
     HeinzelnisseModel {
         id: heinzelnisseModel
     }

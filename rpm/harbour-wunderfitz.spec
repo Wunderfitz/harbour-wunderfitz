@@ -6,6 +6,8 @@
 Name:       harbour-wunderfitz
 
 # >> macros
+%define __provides_exclude_from ^%{_datadir}/.*$
+%define __requires_exclude ^libquazip.*$
 # << macros
 
 %{!?qtc_qmake:%define qtc_qmake %qmake}
@@ -13,7 +15,7 @@ Name:       harbour-wunderfitz
 %{!?qtc_make:%define qtc_make make}
 %{?qtc_builddir:%define _builddir %qtc_builddir}
 Summary:    Norwegian - German dictionary
-Version:    0.2.1
+Version:    0.3
 Release:    1
 Group:      Qt/Qt
 License:    LICENSE
@@ -65,6 +67,7 @@ desktop-file-install --delete-original       \
 %defattr(-,root,root,-)
 %{_bindir}
 %{_datadir}/%{name}
+%{_datadir}/%{name}/lib
 %{_datadir}/applications/%{name}.desktop
 %{_datadir}/icons/hicolor/*/apps/%{name}.png
 # >> files

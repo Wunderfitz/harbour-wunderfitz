@@ -20,6 +20,10 @@ Page {
                 text: qsTr("About Wunderfitz")
                 onClicked: pageStack.push(aboutPage)
             }
+            MenuItem {
+                text: qsTr("Dictionaries")
+                onClicked: pageStack.push(dictionariesPage)
+            }
         }
 
         Column {

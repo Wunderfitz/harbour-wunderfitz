@@ -27,7 +27,7 @@ Page {
 
             Image {
                 id: wunderfitzImage
-                source: "../images/wunderfitz.png"
+                source: "../../images/wunderfitz.png"
                 anchors {
                     horizontalCenter: parent.horizontalCenter
                 }
@@ -38,7 +38,7 @@ Page {
             }
 
             Label {
-                text: "Wunderfitz 0.2.1"
+                text: "Wunderfitz 0.3"
                 horizontalAlignment: Text.AlignHCenter
                 font.pixelSize: Theme.fontSizeExtraLarge
                 anchors {

@@ -11,7 +11,7 @@ import "."
 CoverBackground {
 
     Image {
-        source: "../images/background.png"
+        source: "../../images/background.png"
         anchors {
             verticalCenter: parent.verticalCenter
 

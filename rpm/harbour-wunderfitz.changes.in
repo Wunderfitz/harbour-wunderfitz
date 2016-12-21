@@ -2,4 +2,8 @@
 - Get things running
 
 * Sun Sep 25 2016 <sebastian@ygriega.de> 0.2
-- Bugfixes and dict.cc support
+- Bugfixes
+- Adoption to SailfishOS 2.0.4.x
+
+* Sun Dec 11 2016 <sebastian@ygriega.de> 0.2.1
+- New vocabulary database
