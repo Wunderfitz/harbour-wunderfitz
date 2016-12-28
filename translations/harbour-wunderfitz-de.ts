@@ -28,10 +28,6 @@
         <translation>E-Mail verschicken</translation>
     </message>
     <message>
-        <source>A Norwegian-German dictionary based on Heinzelnisse</source>
-        <translation>Ein Norwegisch-Deutsch-Wörterbuch auf der Basis von Heinzelnisse</translation>
-    </message>
-    <message>
         <source>Open heinzelnisse.info</source>
         <translation>Heinzelnisse.info öffnen</translation>
     </message>
@@ -39,12 +35,52 @@
         <source>This project uses the Norwegian-German dictionary from heinzelnisse.info - Updated on November 5, 2016 - Thanks to the authors Heiko Klein and Julia Emmerich for making the dictionary available under the conditions of the GNU GPLv2!</source>
         <translation>Dieses Projekt nutzt das Norwegisch-Deutsch-Wörterbuch von heinzelnisse.info - aktualisiert am 5. November 2016 - Danke an die Autoren Heiko Klein und Julia Emmerich für die Veröffentlichung des Wörterbuchs unter den Bedingungen der GNU GPLv2!</translation>
     </message>
+    <message>
+        <source>Open QuaZIP home page</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>This application uses the QuaZIP library, version 0.7.2, to extract ZIP archives.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>This application supports dict.cc dictionary export files. </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Open dict.cc home page</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>A mobile dictionary application including the Heinzelnisse database and supporting dict.cc export files.</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>DictionariesPage</name>
     <message>
         <source>Dictionaries</source>
         <translation>Wörterbücher</translation>
+    </message>
+    <message>
+        <source>Dict.cc dictionary archives</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Import dict.cc archives</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source></source>
+        <translation></translation>
+    </message>
+    <message>
+        <source>Download dict.cc dictionaries</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Dict.cc does not allow third-party applications such as Wunderfitz to ship their dictionaries. Therefore, you must download them from dict.cc yourself. Use the Download link, follow the instructions and import the files later. The downloaded dict.cc ZIP files must be placed in the Downloads folder so that they can be imported properly. If you use the standard E-Mail Client or Browser, everything is fine. :)</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

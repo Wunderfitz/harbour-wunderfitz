@@ -51,7 +51,7 @@ Page {
                 x: Theme.horizontalPageMargin
                 width: parent.width - 2*x
                 horizontalAlignment: Text.AlignHCenter
-                text: qsTr("A Norwegian-German dictionary based on Heinzelnisse")
+                text: qsTr("A mobile dictionary application including the Heinzelnisse database and supporting dict.cc export files.")
                 font.pixelSize: Theme.fontSizeSmall
                 anchors {
                     horizontalCenter: parent.horizontalCenter
@@ -66,12 +66,15 @@ Page {
                 }
             }
 
-            Button {
-                text: qsTr("Send E-Mail")
+            Text {
+                text: "<a href=\"mailto:sebastian@ygriega.de\">" + qsTr("Send E-Mail") + "</a>"
                 anchors {
                     horizontalCenter: parent.horizontalCenter
                 }
-                onClicked: Qt.openUrlExternally("mailto:sebastian@ygriega.de")
+                font.pixelSize: Theme.fontSizeSmall
+                linkColor: Theme.highlightColor
+
+                onLinkActivated: Qt.openUrlExternally("mailto:sebastian@ygriega.de")
             }
 
             Label {
@@ -82,12 +85,15 @@ Page {
                 }
             }
 
-            Button {
-                text: qsTr("Sources on GitHub")
+            Text {
+                text: "<a href=\"https://github.com/Wunderfitz/harbour-wunderfitz\">" + qsTr("Sources on GitHub") + "</a>"
                 anchors {
                     horizontalCenter: parent.horizontalCenter
                 }
-                onClicked: Qt.openUrlExternally("https://github.com/Wunderfitz/harbour-wunderfitz")
+                font.pixelSize: Theme.fontSizeSmall
+                linkColor: Theme.highlightColor
+
+                onLinkActivated: Qt.openUrlExternally("https://github.com/Wunderfitz/harbour-wunderfitz")
             }
 
             SectionHeader {
@@ -105,12 +111,70 @@ Page {
                 }
             }
 
-            Button {
-                text: qsTr("Open heinzelnisse.info")
+            Text {
+                text: "<a href=\"http://www.heinzelnisse.info/\">" + qsTr("Open heinzelnisse.info") + "</a>"
                 anchors {
                     horizontalCenter: parent.horizontalCenter
                 }
-                onClicked: Qt.openUrlExternally("http://www.heinzelnisse.info/")
+                font.pixelSize: Theme.fontSizeSmall
+                linkColor: Theme.highlightColor
+
+                onLinkActivated: Qt.openUrlExternally("http://www.heinzelnisse.info/")
+            }
+
+            Label {
+                x: Theme.horizontalPageMargin
+                width: parent.width - 2*x
+                text: qsTr("This application supports dict.cc dictionary export files. ")
+                font.pixelSize: Theme.fontSizeExtraSmall
+                wrapMode: Text.Wrap
+                anchors {
+                    horizontalCenter: parent.horizontalCenter
+                }
+            }
+
+            Text {
+                text: "<a href=\"http://www.dict.cc?l=e\">" + qsTr("Open dict.cc home page") + "</a>"
+                anchors {
+                    horizontalCenter: parent.horizontalCenter
+                }
+                font.pixelSize: Theme.fontSizeSmall
+                linkColor: Theme.highlightColor
+
+                onLinkActivated:Qt.openUrlExternally("http://www.dict.cc?l=e")
+            }
+
+            Label {
+                x: Theme.horizontalPageMargin
+                width: parent.width - 2*x
+                text: qsTr("This application uses the QuaZIP library, version 0.7.2, to extract ZIP archives.")
+                font.pixelSize: Theme.fontSizeExtraSmall
+                wrapMode: Text.Wrap
+                anchors {
+                    horizontalCenter: parent.horizontalCenter
+                }
+            }
+
+            Text {
+                text: "<a href=\"http://quazip.sourceforge.net\">" + qsTr("Open QuaZIP home page") + "</a>"
+                anchors {
+                    horizontalCenter: parent.horizontalCenter
+                }
+                font.pixelSize: Theme.fontSizeSmall
+                linkColor: Theme.highlightColor
+
+                onLinkActivated:Qt.openUrlExternally("http://quazip.sourceforge.net")
+            }
+
+            Label {
+                id: separatorLabel
+                x: Theme.horizontalPageMargin
+                width: parent.width - 2*x
+                font.pixelSize: Theme.fontSizeExtraSmall
+                wrapMode: Text.Wrap
+                anchors {
+                    horizontalCenter: parent.horizontalCenter
+                }
             }
 
             VerticalScrollDecorator {}

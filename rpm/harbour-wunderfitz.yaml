@@ -1,7 +1,7 @@
 Name: harbour-wunderfitz
-Summary: Norwegian - German dictionary
+Summary: A mobile dictionary application, supporting dict.cc and Heinzelnisse
 Version: 0.3
-Release: 1
+Release: 3
 # The contents of the Group field should be one of the groups listed here:
 # http://gitorious.org/meego-developer-tools/spectacle/blobs/master/data/GROUPS
 Group: Qt/Qt
@@ -12,7 +12,7 @@ License: LICENSE
 Sources:
 - '%{name}-%{version}.tar.bz2'
 Description: |
-  Wunderfitz is a dictionary application, supporting Norwegian-German and vice versa. It is based on the Heinzelnisse dictionary (heinzelnisse.info).
+  Wunderfitz is a mobile dictionary application, supporting the Heinzelnisse dictionary (Norwegian-German) and dict.cc export files.
 Configure: none
 # The qtc5 builder inserts macros to allow QtCreator to have fine
 # control over qmake/make execution

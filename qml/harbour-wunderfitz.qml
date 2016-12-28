@@ -29,6 +29,10 @@ ApplicationWindow
         id: heinzelnisseModel
     }
 
+    DictCCImporterModel {
+        id: dictCCImporterModel
+    }
+
     id: window
     initialPage: titlePage
     cover: Component { CoverPage { } }

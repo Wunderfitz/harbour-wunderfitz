@@ -16,10 +16,14 @@ TEMPLATE = app
 SOURCES += harbour-wunderfitz.cpp \
     databasemanager.cpp \
     heinzelnisseelement.cpp \
-    heinzelnissemodel.cpp
+    heinzelnissemodel.cpp \
+    dictccimportermodel.cpp \
+    dictccimportworker.cpp
 
 HEADERS += \
     heinzelnisseelement.h \
     databasemanager.h \
-    heinzelnissemodel.h
+    heinzelnissemodel.h \
+    dictccimportermodel.h \
+    dictccimportworker.h
 
