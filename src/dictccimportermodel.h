@@ -13,8 +13,18 @@ public:
     virtual QVariant data(const QModelIndex &index, int role) const;
 
     Q_INVOKABLE void importDictionaries();
+    Q_INVOKABLE QString getStatusText();
+    Q_INVOKABLE bool isWorking();
 public slots:
-    void handleResults(const QString &results);
+    void handleImportFinished();
+    void handleStatusChanged(const QString &statusText);
+signals:
+    void statusChanged();
+    void importFinished();
+
+private:
+    QString statusText;
+    bool working;
 
 };
 

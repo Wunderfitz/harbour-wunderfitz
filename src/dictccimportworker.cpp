@@ -9,7 +9,7 @@
 
 void DictCCImportWorker::importDictionaries()
 {
-    qDebug() << "Checking for new dictionaries...";
+    emit statusChanged(QString("Checking for new dictionaries..."));
     QString downloadDirectoryString = QStandardPaths::writableLocation(QStandardPaths::DownloadLocation);
     QString tempDirectoryString = getTempDirectory();
     qDebug() << "Reading from directory: " << downloadDirectoryString;

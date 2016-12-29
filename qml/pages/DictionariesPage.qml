@@ -5,10 +5,45 @@ Page {
     id: dictionariesPage
     allowedOrientations: Orientation.All
 
+    function toggleBusyIndicator() {
+        busyIndicator.running = dictCCImporterModel.isWorking()
+        busyIndicatorColumn.opacity = dictCCImporterModel.isWorking() ? 1 : 0
+        dictionaryFlickable.opacity = dictCCImporterModel.isWorking() ? 0 : 1
+    }
+
+    Column {
+        y: Screen.height / 2 - busyIndicator.height - Theme.paddingLarge
+        width: Screen.width
+        id: busyIndicatorColumn
+        Behavior on opacity { NumberAnimation {} }
+        opacity: dictCCImporterModel.isWorking() ? 1 : 0
+
+        BusyIndicator {
+            id: busyIndicator
+            anchors.horizontalCenter: parent.horizontalCenter
+            running: dictCCImporterModel.isWorking()
+            size: BusyIndicatorSize.Large
+        }
+        InfoLabel {
+            id: busyInfoLabel
+            text: dictCCImporterModel.getStatusText()
+        }
+        Connections {
+            target: dictCCImporterModel
+            onStatusChanged: {
+                busyInfoLabel.text = dictCCImporterModel.getStatusText()
+                toggleBusyIndicator()
+            }
+        }
+    }
+
     SilicaFlickable {
 
+        id: dictionaryFlickable
         anchors.fill: parent
         contentHeight: dictionariesColumn.height
+        Behavior on opacity { NumberAnimation {} }
+        opacity: dictCCImporterModel.isWorking() ? 0 : 1
 
         Column {
             id: dictionariesColumn
@@ -22,7 +57,7 @@ Page {
             }
 
             SectionHeader {
-                text: qsTr("Dict.cc dictionary archives")
+                text: qsTr("Dict.cc dictionaries")
             }
 
             Row {
@@ -37,7 +72,7 @@ Page {
                 }
 
                 Label {
-                    text: qsTr("Dict.cc does not allow third-party applications such as Wunderfitz to ship their dictionaries. Therefore, you must download them from dict.cc yourself. Use the Download link, follow the instructions and import the files later. The downloaded dict.cc ZIP files must be placed in the Downloads folder so that they can be imported properly. If you use the standard E-Mail Client or Browser, everything is fine. :)")
+                    text: qsTr("Dict.cc does not allow third-party applications such as Wunderfitz to ship their dictionaries. Therefore, you must download them from dict.cc yourself. Use the Download link, follow the instructions and import the files later. The downloaded dict.cc ZIP files must be placed in the Downloads folder. If in doubt, use the SailfishOS E-Mail and Browser apps to store the downloads there automatically. After the import in Wunderfitz you can delete the ZIP archives.")
                     font.pixelSize: Theme.fontSizeExtraSmall
                     wrapMode: Text.Wrap
                     width: parent.width - infoImage.width - (3 * infoRow.x)
@@ -56,12 +91,31 @@ Page {
             }
 
             Button {
-                text: qsTr("Import dict.cc archives")
+                text: qsTr("Import dict.cc ZIP archives")
                 anchors {
                     horizontalCenter: parent.horizontalCenter
                 }
                 onClicked: dictCCImporterModel.importDictionaries()
             }
+
+            Text {
+                id: importStatusText
+                text: dictCCImporterModel.getStatusText()
+                anchors {
+                    horizontalCenter: parent.horizontalCenter
+                }
+                font.pixelSize: Theme.fontSizeSmall
+                color: Theme.primaryColor
+                Connections {
+                    target: dictCCImporterModel
+                    onStatusChanged: {
+                        importStatusText.text = dictCCImporterModel.getStatusText()
+                    }
+                }
+
+            }
+
+
 
              VerticalScrollDecorator {}
 

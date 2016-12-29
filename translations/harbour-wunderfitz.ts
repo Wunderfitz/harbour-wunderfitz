@@ -63,14 +63,6 @@
         <translation>Dictionaries</translation>
     </message>
     <message>
-        <source>Dict.cc dictionary archives</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Import dict.cc archives</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source></source>
         <translation></translation>
     </message>
@@ -79,7 +71,15 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Dict.cc does not allow third-party applications such as Wunderfitz to ship their dictionaries. Therefore, you must download them from dict.cc yourself. Use the Download link, follow the instructions and import the files later. The downloaded dict.cc ZIP files must be placed in the Downloads folder so that they can be imported properly. If you use the standard E-Mail Client or Browser, everything is fine. :)</source>
+        <source>Dict.cc does not allow third-party applications such as Wunderfitz to ship their dictionaries. Therefore, you must download them from dict.cc yourself. Use the Download link, follow the instructions and import the files later. The downloaded dict.cc ZIP files must be placed in the Downloads folder. If in doubt, use the SailfishOS E-Mail and Browser apps to store the downloads there automatically. After the import in Wunderfitz you can delete the ZIP archives.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Dict.cc dictionaries</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Import dict.cc ZIP archives</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

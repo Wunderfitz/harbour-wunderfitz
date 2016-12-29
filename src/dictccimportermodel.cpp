@@ -3,6 +3,8 @@
 #include <QDebug>
 DictCCImporterModel::DictCCImporterModel()
 {
+    statusText = QString("");
+    working = false;
 }
 
 QVariant DictCCImporterModel::data(const QModelIndex &index, int role) const {
@@ -16,13 +18,34 @@ int DictCCImporterModel::rowCount(const QModelIndex&) const {
 void DictCCImporterModel::importDictionaries()
 {
     DictCCImportWorker *workerThread = new DictCCImportWorker();
-    connect(workerThread, &DictCCImportWorker::resultReady, this, &DictCCImporterModel::handleResults);
-    //connect(workerThread, &DictCCImportWorker::finished, workerThread, &QObject::deleteLater);
+    connect(workerThread, SIGNAL(importFinished()), this, SLOT(handleImportFinished()));
+    connect(workerThread, SIGNAL(statusChanged(QString)), this, SLOT(handleStatusChanged(QString)));
+    working = true;
     workerThread->start();
 }
 
-void DictCCImporterModel::handleResults(const QString &results)
+QString DictCCImporterModel::getStatusText()
 {
-    qDebug() << "Extraction completed";
+    return statusText;
+}
+
+bool DictCCImporterModel::isWorking()
+{
+    return working;
+}
+
+void DictCCImporterModel::handleImportFinished()
+{
+    statusText = "Extraction completed";
+    qDebug() << statusText;
+    working = false;
+    emit statusChanged();
+    emit importFinished();
+}
+
+void DictCCImporterModel::handleStatusChanged(const QString &statusText)
+{
+    this->statusText = statusText;
+    emit statusChanged();
 }
 

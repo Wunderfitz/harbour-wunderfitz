@@ -8,12 +8,12 @@ class DictCCImportWorker : public QThread
 {
     Q_OBJECT
     void run() Q_DECL_OVERRIDE {
-        QString result;
         importDictionaries();
-        emit resultReady(result);
+        emit importFinished();
     }
 signals:
-        void resultReady(const QString &s);
+        void importFinished();
+        void statusChanged(const QString &statusText);
 private:
 
     void importDictionaries();
