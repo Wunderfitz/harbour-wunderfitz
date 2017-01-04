@@ -4,6 +4,7 @@
 #include <QDir>
 #include <QRegExp>
 #include <QSqlQuery>
+#include <QSqlError>
 #include <QStandardPaths>
 #include <QStringList>
 #include <QStringListIterator>
@@ -44,6 +45,7 @@ void DictCCImportWorker::readFile(QString &completeFileName)
     if (inputFile.open(QIODevice::ReadOnly))
     {
        QTextStream inputStream(&inputFile);
+       inputStream.setCodec("UTF-8");
        QMap<QString,QString> dictionaryMetadata = getMetadata(inputStream);
        if (dictionaryMetadata.contains("languages") && dictionaryMetadata.contains("timestamp")) {
            emit statusChanged("Dict.cc dictionary found: " + dictionaryMetadata.value("languages") + " - " + dictionaryMetadata.value("timestamp"));
@@ -88,7 +90,7 @@ void DictCCImportWorker::writeDictionary(QTextStream &inputStream, QMap<QString,
     if (database.open()) {
         qDebug() << "SQLite database " + databaseFilePath + " successfully opened";
         writeMetadata(metadata, database);
-        writeDictionaryEntries(inputStream, database);
+        writeDictionaryEntries(inputStream, metadata, database);
         database.close();
     } else {
         qDebug() << "Error opening SQLite database " + databaseFilePath;
@@ -122,20 +124,26 @@ void DictCCImportWorker::writeMetadata(QMap<QString, QString> &metadata, QSqlDat
     }
 }
 
-void DictCCImportWorker::writeDictionaryEntries(QTextStream &inputStream, QSqlDatabase &database)
+void DictCCImportWorker::writeDictionaryEntries(QTextStream &inputStream, QMap<QString,QString> &metadata, QSqlDatabase &database)
 {
     QSqlQuery databaseQuery(database);
     QStringList existingTables = database.tables();
-    if (!existingTables.contains("entries")) {
-        databaseQuery.prepare("create virtual table entries using fts4(id integer primary key, left_word text, right_word text, category text, tokenize=porter)");
-        if (databaseQuery.exec()) {
-            qDebug() << "Entries table successfully created!";
-        } else {
-            qDebug() << "Error creating entries table!";
+    if (existingTables.contains("entries")) {
+        databaseQuery.prepare("drop table entries");
+        if (!databaseQuery.exec()) {
+            qDebug() << "Error removing entries table.";
+            return;
         }
-    } else {
-        qDebug() << "Entries table already existing";
     }
+
+    databaseQuery.prepare("create virtual table entries using fts4(id integer primary key, left_word text, right_word text, category text, tokenize=porter)");
+    if (databaseQuery.exec()) {
+        qDebug() << "Entries table successfully created!";
+    } else {
+        qDebug() << "Error creating entries table!";
+        return;
+    }
+
     QStringList rawEntries;
     int lineCount = 0;
     while(!inputStream.atEnd())
@@ -148,12 +156,40 @@ void DictCCImportWorker::writeDictionaryEntries(QTextStream &inputStream, QSqlDa
     }
     QStringListIterator rawEntriesIterator(rawEntries);
     int currentLineNumber = 0;
-    emit statusChanged("Importing " + QString::number(lineCount) + " dictionary entries.");
+    int successfullyWrittenEntries = 0;
+    emit statusChanged(metadata.value("languages") + " dictionary: Importing " + QString::number(lineCount) + " entries.");
+
+    databaseQuery.prepare("begin transaction");
+    databaseQuery.exec();
+
+    databaseQuery.prepare("insert into entries values((:id),(:leftword),(:rightword),(:category))");
     while (rawEntriesIterator.hasNext()) {
         currentLineNumber++;
         div_t divisionResult = div(currentLineNumber * 100, lineCount);
-
+        div_t everyHundredResult = div(currentLineNumber, 100);
+        QStringList currentResult = rawEntriesIterator.next().split("\t");
+        if (currentResult.count() == 3) {
+            databaseQuery.bindValue(":id", currentLineNumber);
+            databaseQuery.bindValue(":leftword", currentResult.value(0));
+            databaseQuery.bindValue(":rightword", currentResult.value(1));
+            databaseQuery.bindValue(":category", currentResult.value(2));
+            if (databaseQuery.exec()) {
+                successfullyWrittenEntries++;
+            } else {
+                qDebug() << databaseQuery.lastError().text();
+            }
+        }
+        if (everyHundredResult.rem == 0) {
+            emit statusChanged(QString::number(currentLineNumber) + " of " + QString::number(lineCount) + " entries written. " + QString::number(divisionResult.quot) + "% completed");
+        }
     }
+
+    databaseQuery.prepare("end transaction");
+    databaseQuery.exec();
+
+    qDebug() << metadata.value("languages") + ": " + QString::number(successfullyWrittenEntries) + " entries written.";
+    emit statusChanged(metadata.value("languages") + " dictionary with " + QString::number(successfullyWrittenEntries) + " entries successfully imported.");
+
 }
 
 QString DictCCImportWorker::getTempDirectory()

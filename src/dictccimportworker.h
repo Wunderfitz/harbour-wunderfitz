@@ -24,7 +24,7 @@ private:
     QMap<QString,QString> getMetadata(QTextStream &inputStream);
     void writeDictionary(QTextStream &inputStream, QMap<QString,QString> &metadata);
     void writeMetadata(QMap<QString,QString> &metadata, QSqlDatabase &database);
-    void writeDictionaryEntries(QTextStream &inputStream, QSqlDatabase &database);
+    void writeDictionaryEntries(QTextStream &inputStream, QMap<QString,QString> &metadata, QSqlDatabase &database);
     QString getTempDirectory();
     QString getDirectory(const QString &directoryString);
 };
