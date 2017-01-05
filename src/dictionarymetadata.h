@@ -15,7 +15,11 @@ public:
     QString getTimestamp() const;
     void setTimestamp(const QString &value);
 
+    QString getId() const;
+    void setId(const QString &value);
+
 private:
+    QString id;
     QString languages;
     QString timestamp;
 };

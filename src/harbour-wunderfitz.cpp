@@ -17,9 +17,13 @@ int main(int argc, char *argv[])
 {
     QScopedPointer<QGuiApplication> app(SailfishApp::application(argc, argv));
     QScopedPointer<QQuickView> view(SailfishApp::createView());
-    qmlRegisterType<HeinzelnisseModel>("harbour.wunderfitz", 1, 0, "HeinzelnisseModel");
-    qmlRegisterType<DictCCImporterModel>("harbour.wunderfitz", 1, 0, "DictCCImporterModel");
-    qmlRegisterType<DictionaryModel>("harbour.wunderfitz", 1, 0, "DictionaryModel");
+
+    QQmlContext *ctxt = view.data()->rootContext();
+    DictCCImporterModel dictCCImporterModel;
+    ctxt->setContextProperty("dictCCImporterModel", &dictCCImporterModel);
+    DictionaryModel dictionaryModel;
+    ctxt->setContextProperty("dictionaryModel", &dictionaryModel);
+    ctxt->setContextProperty("heinzelnisseModel", &dictionaryModel.heinzelnisseModel);
 
     view->setSource(SailfishApp::pathTo("qml/harbour-wunderfitz.qml"));
     view->show();

@@ -11,29 +11,29 @@ class HeinzelnisseElement : public QObject {
 
 public:
     HeinzelnisseElement(QObject* parent = 0);
-    QString getWordNorwegian() const;
-    void setWordNorwegian(const QString &value);
+    QString getWordLeft() const;
+    void setWordLeft(const QString &value);
 
-    QString getGenderNorwegian() const;
-    void setGenderNorwegian(const QString &value);
+    QString getGenderLeft() const;
+    void setGenderLeft(const QString &value);
 
-    QString getOptionalNorwegian() const;
-    void setOptionalNorwegian(const QString &value);
+    QString getOptionalLeft() const;
+    void setOptionalLeft(const QString &value);
 
-    QString getOtherNorwegian() const;
-    void setOtherNorwegian(const QString &value);
+    QString getOtherLeft() const;
+    void setOtherLeft(const QString &value);
 
-    QString getWordGerman() const;
-    void setWordGerman(const QString &value);
+    QString getWordRight() const;
+    void setWordRight(const QString &value);
 
-    QString getGenderGerman() const;
-    void setGenderGerman(const QString &value);
+    QString getGenderRight() const;
+    void setGenderRight(const QString &value);
 
-    QString getOptionalGerman() const;
-    void setOptionalGerman(const QString &value);
+    QString getOptionalRight() const;
+    void setOptionalRight(const QString &value);
 
-    QString getOtherGerman() const;
-    void setOtherGerman(const QString &value);
+    QString getOtherRight() const;
+    void setOtherRight(const QString &value);
 
     QString getCategory() const;
     void setCategory(const QString &value);
@@ -50,14 +50,14 @@ public:
 
 private:
     int index;
-    QString wordNorwegian;
-    QString genderNorwegian;
-    QString optionalNorwegian;
-    QString otherNorwegian;
-    QString wordGerman;
-    QString genderGerman;
-    QString optionalGerman;
-    QString otherGerman;
+    QString wordLeft;
+    QString genderLeft;
+    QString optionalLeft;
+    QString otherLeft;
+    QString wordRight;
+    QString genderRight;
+    QString optionalRight;
+    QString otherRight;
     QString category;
     QString grade;
 

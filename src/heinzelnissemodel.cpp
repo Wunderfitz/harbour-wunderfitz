@@ -20,25 +20,25 @@ QVariant HeinzelnisseModel::data(const QModelIndex &index, int role) const {
     if(role == Qt::DisplayRole) {
         HeinzelnisseElement* resultElement = resultList->value(index.row());
         QMap<QString,QVariant> resultMap;
-        resultMap.insert("wordNorwegian", QVariant(resultElement->getWordNorwegian()));
-        resultMap.insert("wordGerman", QVariant(resultElement->getWordGerman()));
+        resultMap.insert("wordLeft", QVariant(resultElement->getWordLeft()));
+        resultMap.insert("wordRight", QVariant(resultElement->getWordRight()));
         QString empty = "";
-        QString genderNorwegian = resultElement->getGenderNorwegian();
-        QString genderGerman = resultElement->getGenderGerman();
-        if (genderNorwegian == empty) {
-            resultMap.insert("genderNorwegian", QVariant(empty));
+        QString genderLeft = resultElement->getGenderLeft();
+        QString genderRight = resultElement->getGenderRight();
+        if (genderLeft == empty) {
+            resultMap.insert("genderLeft", QVariant(empty));
         } else {
-            resultMap.insert("genderNorwegian", QVariant(" (" + genderNorwegian + ")"));
+            resultMap.insert("genderLeft", QVariant(" (" + genderLeft + ")"));
         }
-        if (genderGerman == empty) {
-            resultMap.insert("genderGerman", QVariant(empty));
+        if (genderRight == empty) {
+            resultMap.insert("genderRight", QVariant(empty));
         } else {
-            resultMap.insert("genderGerman", QVariant(" (" + genderGerman + ")"));
+            resultMap.insert("genderRight", QVariant(" (" + genderRight + ")"));
         }
-        resultMap.insert("optionalNorwegian", QVariant(resultElement->getOptionalNorwegian()));
-        resultMap.insert("optionalGerman", QVariant(resultElement->getOptionalGerman()));
-        resultMap.insert("otherNorwegian", QVariant(resultElement->getOtherNorwegian()));
-        resultMap.insert("otherGerman", QVariant(resultElement->getOtherGerman()));
+        resultMap.insert("optionalLeft", QVariant(resultElement->getOptionalLeft()));
+        resultMap.insert("optionalRight", QVariant(resultElement->getOptionalRight()));
+        resultMap.insert("otherLeft", QVariant(resultElement->getOtherLeft()));
+        resultMap.insert("otherRight", QVariant(resultElement->getOtherRight()));
         return QVariant(resultMap);
     }
     return QVariant();
@@ -55,24 +55,12 @@ void HeinzelnisseModel::search(const QString &query) {
     endResetModel();
 }
 
-QString HeinzelnisseModel::getFirstResult() {
-    return getResult(0);
-}
-
-QString HeinzelnisseModel::getSecondResult() {
-    return getResult(1);
-}
-
-QString HeinzelnisseModel::getThirdResult() {
-    return getResult(2);
-}
-
 QString HeinzelnisseModel::getResult(const int index) {
     if (resultList->size() <= index) {
         return QString("");
     } else {
         HeinzelnisseElement* result = resultList->value(index);
-        return QString(result->getWordNorwegian() + " - " + result->getWordGerman());
+        return QString(result->getWordLeft() + " - " + result->getWordRight());
     }
 }
 
@@ -82,4 +70,9 @@ QString HeinzelnisseModel::getLastQuery() {
     } else {
         return lastQuery;
     }
+}
+
+void HeinzelnisseModel::setDictionaryId(const QString &dictionaryId)
+{
+    databaseManager.setDictionaryId(dictionaryId);
 }

@@ -23,3 +23,13 @@ void DictionaryMetadata::setTimestamp(const QString &value)
 {
     timestamp = value;
 }
+
+QString DictionaryMetadata::getId() const
+{
+    return id;
+}
+
+void DictionaryMetadata::setId(const QString &value)
+{
+    id = value;
+}

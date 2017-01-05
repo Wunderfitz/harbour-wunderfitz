@@ -49,7 +49,7 @@ CoverBackground {
                 maximumLineCount: 1
                 color: Theme.primaryColor
                 font.pixelSize: Theme.fontSizeExtraSmall
-                text: display.wordNorwegian
+                text: display.wordLeft
                 truncationMode: TruncationMode.Fade
                 anchors {
                     left: parent.left
@@ -61,7 +61,7 @@ CoverBackground {
                 maximumLineCount: 1
                 color: Theme.highlightColor
                 font.pixelSize: Theme.fontSizeExtraSmall
-                text: display.wordGerman
+                text: display.wordRight
                 truncationMode: TruncationMode.Fade
                 anchors {
                     top: resultLabelNorwegian.bottom

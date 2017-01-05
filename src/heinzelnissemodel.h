@@ -17,9 +17,8 @@ public:
 
     Q_INVOKABLE void search(const QString &query);
     Q_INVOKABLE QString getLastQuery();
-    Q_INVOKABLE QString getFirstResult();
-    Q_INVOKABLE QString getSecondResult();
-    Q_INVOKABLE QString getThirdResult();
+
+    void setDictionaryId(const QString &dictionaryId);
 
 private:
     DatabaseManager databaseManager;

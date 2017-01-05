@@ -39,6 +39,7 @@ Page {
                     target: dictionaryModel
                     onDictionaryChanged: {
                         header.title = dictionaryModel.getSelectedDictionaryName()
+                        heinzelnisseModel.search(searchField.text)
                     }
                 }
             }
@@ -80,47 +81,47 @@ Page {
                         width: parent.width
                         spacing: Theme.paddingMedium
                         Column {
-                            id: columnNorwegian
-                            width: parent.width / 2 - ( 2 * Theme.paddingLarge )
+                            id: columnLeft
+                            width: parent.width / 2 - ( 2 * Theme.paddingMedium )
                             Label {
                                 color: Theme.primaryColor
                                 width: parent.width
                                 font.pixelSize: Theme.fontSizeSmall
                                 x: Theme.horizontalPageMargin
-                                wrapMode: Text.WordWrap
+                                wrapMode: Text.Wrap
                                 truncationMode: TruncationMode.Fade
-                                text: display.wordNorwegian + display.genderNorwegian
+                                text: display.wordLeft + display.genderLeft
                             }
                             Label {
                                 color: Theme.primaryColor
                                 width: parent.width
                                 font.pixelSize: Theme.fontSizeExtraSmall
                                 x: Theme.horizontalPageMargin
-                                wrapMode: Text.WordWrap
+                                wrapMode: Text.Wrap
                                 truncationMode: TruncationMode.Fade
-                                text: display.otherNorwegian
+                                text: display.otherLeft
                             }
                         }
                         Column {
-                            id: columnGerman
-                            width: parent.width / 2 - ( 2 * Theme.paddingLarge )
+                            id: columnRight
+                            width: parent.width / 2 - ( 2 * Theme.paddingMedium )
                             Label {
                                 width: parent.width
                                 color: Theme.highlightColor
                                 font.pixelSize: Theme.fontSizeSmall
                                 x: Theme.horizontalPageMargin
-                                wrapMode: Text.WordWrap
+                                wrapMode: Text.Wrap
                                 truncationMode: TruncationMode.Fade
-                                text: display.wordGerman + display.genderGerman
+                                text: display.wordRight + display.genderRight
                             }
                             Label {
                                 width: parent.width
                                 color: Theme.highlightColor
                                 font.pixelSize: Theme.fontSizeExtraSmall
                                 x: Theme.horizontalPageMargin
-                                wrapMode: Text.WordWrap
+                                wrapMode: Text.Wrap
                                 truncationMode: TruncationMode.Fade
-                                text: display.otherGerman
+                                text: display.otherRight
                             }
                         }
                     }
@@ -132,8 +133,6 @@ Page {
             }
 
         }
-
-
 
     }
 }

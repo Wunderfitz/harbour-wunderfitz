@@ -17,6 +17,7 @@ QVariant DictCCImporterModel::data(const QModelIndex &index, int role) const {
     if(role == Qt::DisplayRole) {
         QMap<QString,QVariant> resultMap;
         DictionaryMetadata* dictionaryMetadata = importedDictionaries.value(index.row());
+        resultMap.insert("id", QVariant(dictionaryMetadata->getId()));
         resultMap.insert("languages", QVariant(dictionaryMetadata->getLanguages()));
         resultMap.insert("timestamp", QVariant(dictionaryMetadata->getTimestamp()));
         return QVariant(resultMap);
@@ -69,6 +70,7 @@ void DictCCImporterModel::handleDictionaryFound(const QString &languages, const 
 {
     beginResetModel();
     DictionaryMetadata* importedDictionary = new DictionaryMetadata();
+    importedDictionary->setId(languages);
     importedDictionary->setLanguages(languages);
     importedDictionary->setTimestamp(timestamp);
     importedDictionaries.append(importedDictionary);

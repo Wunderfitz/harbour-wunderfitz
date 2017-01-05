@@ -4,84 +4,84 @@ HeinzelnisseElement::HeinzelnisseElement(QObject* parent) : QObject(parent) {
 
 }
 
-QString HeinzelnisseElement::getWordNorwegian() const
+QString HeinzelnisseElement::getWordLeft() const
 {
-    return wordNorwegian;
+    return wordLeft;
 }
 
-void HeinzelnisseElement::setWordNorwegian(const QString &value)
+void HeinzelnisseElement::setWordLeft(const QString &value)
 {
-    wordNorwegian = value;
+    wordLeft = value;
 }
 
-QString HeinzelnisseElement::getGenderNorwegian() const
+QString HeinzelnisseElement::getGenderLeft() const
 {
-    return genderNorwegian;
+    return genderLeft;
 }
 
-void HeinzelnisseElement::setGenderNorwegian(const QString &value)
+void HeinzelnisseElement::setGenderLeft(const QString &value)
 {
-    genderNorwegian = value;
+    genderLeft = value;
 }
 
-QString HeinzelnisseElement::getOptionalNorwegian() const
+QString HeinzelnisseElement::getOptionalLeft() const
 {
-    return optionalNorwegian;
+    return optionalLeft;
 }
 
-void HeinzelnisseElement::setOptionalNorwegian(const QString &value)
+void HeinzelnisseElement::setOptionalLeft(const QString &value)
 {
-    optionalNorwegian = value;
+    optionalLeft = value;
 }
 
-QString HeinzelnisseElement::getOtherNorwegian() const
+QString HeinzelnisseElement::getOtherLeft() const
 {
-    return otherNorwegian;
+    return otherLeft;
 }
 
-void HeinzelnisseElement::setOtherNorwegian(const QString &value)
+void HeinzelnisseElement::setOtherLeft(const QString &value)
 {
-    otherNorwegian = value;
+    otherLeft = value;
 }
 
-QString HeinzelnisseElement::getWordGerman() const
+QString HeinzelnisseElement::getWordRight() const
 {
-    return wordGerman;
+    return wordRight;
 }
 
-void HeinzelnisseElement::setWordGerman(const QString &value)
+void HeinzelnisseElement::setWordRight(const QString &value)
 {
-    wordGerman = value;
+    wordRight = value;
 }
 
-QString HeinzelnisseElement::getGenderGerman() const
+QString HeinzelnisseElement::getGenderRight() const
 {
-    return genderGerman;
+    return genderRight;
 }
 
-void HeinzelnisseElement::setGenderGerman(const QString &value)
+void HeinzelnisseElement::setGenderRight(const QString &value)
 {
-    genderGerman = value;
+    genderRight = value;
 }
 
-QString HeinzelnisseElement::getOptionalGerman() const
+QString HeinzelnisseElement::getOptionalRight() const
 {
-    return optionalGerman;
+    return optionalRight;
 }
 
-void HeinzelnisseElement::setOptionalGerman(const QString &value)
+void HeinzelnisseElement::setOptionalRight(const QString &value)
 {
-    optionalGerman = value;
+    optionalRight = value;
 }
 
-QString HeinzelnisseElement::getOtherGerman() const
+QString HeinzelnisseElement::getOtherRight() const
 {
-    return otherGerman;
+    return otherRight;
 }
 
-void HeinzelnisseElement::setOtherGerman(const QString &value)
+void HeinzelnisseElement::setOtherRight(const QString &value)
 {
-    otherGerman = value;
+    otherRight = value;
 }
 
 QString HeinzelnisseElement::getCategory() const

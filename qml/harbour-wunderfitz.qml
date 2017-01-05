@@ -5,7 +5,6 @@
 
 import QtQuick 2.0
 import Sailfish.Silica 1.0
-import harbour.wunderfitz 1.0
 import "pages"
 
 ApplicationWindow
@@ -23,18 +22,6 @@ ApplicationWindow
     Component {
         id: dictionariesPage
         DictionariesPage {}
-    }
-
-    HeinzelnisseModel {
-        id: heinzelnisseModel
-    }
-
-    DictCCImporterModel {
-        id: dictCCImporterModel
-    }
-
-    DictionaryModel {
-        id: dictionaryModel
     }
 
     id: window
