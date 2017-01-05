@@ -56,8 +56,15 @@ Page {
                 title: qsTr("Dictionaries")
             }
 
+            ComboBox {
+                label: qsTr("Dictionary")
+                menu: ContextMenu {
+                    MenuItem { text: "DE-NO (Heinzelnisse)" }
+                }
+            }
+
             SectionHeader {
-                text: qsTr("Dict.cc dictionaries")
+                text: qsTr("Dict.cc Import")
             }
 
             Row {

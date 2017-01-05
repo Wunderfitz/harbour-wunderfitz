@@ -2,6 +2,7 @@
 #include <QList>
 #include <QString>
 #include <QSqlError>
+#include <QtAlgorithms>
 #include "heinzelnisseelement.h"
 #include "databasemanager.h"
 

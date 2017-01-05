@@ -2,6 +2,9 @@
 #define DICTCCIMPORTERMODEL_H
 
 #include <QAbstractListModel>
+#include <QList>
+#include <QMap>
+#include "dictionarymetadata.h"
 
 class DictCCImporterModel : public QAbstractListModel
 {
@@ -18,12 +21,14 @@ public:
 public slots:
     void handleImportFinished();
     void handleStatusChanged(const QString &statusText);
+    void handleDictionaryFound(const QString &languages, const QString &timestamp);
 signals:
     void statusChanged();
     void importFinished();
 
 private:
     QString statusText;
+    QList<DictionaryMetadata*> importedDictionaries;
     bool working;
 
 };

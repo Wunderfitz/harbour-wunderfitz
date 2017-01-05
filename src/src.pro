@@ -18,12 +18,16 @@ SOURCES += harbour-wunderfitz.cpp \
     heinzelnisseelement.cpp \
     heinzelnissemodel.cpp \
     dictccimportermodel.cpp \
-    dictccimportworker.cpp
+    dictccimportworker.cpp \
+    dictionarymodel.cpp \
+    dictionarymetadata.cpp
 
 HEADERS += \
     heinzelnisseelement.h \
     databasemanager.h \
     heinzelnissemodel.h \
     dictccimportermodel.h \
-    dictccimportworker.h
+    dictccimportworker.h \
+    dictionarymodel.h \
+    dictionarymetadata.h
 

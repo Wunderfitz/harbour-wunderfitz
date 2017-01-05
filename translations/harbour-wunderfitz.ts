@@ -75,11 +75,15 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Dict.cc dictionaries</source>
+        <source>Import dict.cc ZIP archives</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Import dict.cc ZIP archives</source>
+        <source>Dictionary</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Dict.cc Import</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

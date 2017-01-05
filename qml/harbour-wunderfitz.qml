@@ -33,6 +33,10 @@ ApplicationWindow
         id: dictCCImporterModel
     }
 
+    DictionaryModel {
+        id: dictionaryModel
+    }
+
     id: window
     initialPage: titlePage
     cover: Component { CoverPage { } }

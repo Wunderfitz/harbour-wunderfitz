@@ -16,6 +16,7 @@ class DictCCImportWorker : public QThread
     }
 signals:
         void importFinished();
+        void dictionaryFound(const QString &languages, const QString &timestamp);
         void statusChanged(const QString &statusText);
 private:
 

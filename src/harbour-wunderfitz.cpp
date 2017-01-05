@@ -11,6 +11,7 @@
 #include "databasemanager.h"
 #include "dictccimportermodel.h"
 #include "heinzelnissemodel.h"
+#include "dictionarymodel.h"
 
 int main(int argc, char *argv[])
 {
@@ -18,6 +19,7 @@ int main(int argc, char *argv[])
     QScopedPointer<QQuickView> view(SailfishApp::createView());
     qmlRegisterType<HeinzelnisseModel>("harbour.wunderfitz", 1, 0, "HeinzelnisseModel");
     qmlRegisterType<DictCCImporterModel>("harbour.wunderfitz", 1, 0, "DictCCImporterModel");
+    qmlRegisterType<DictionaryModel>("harbour.wunderfitz", 1, 0, "DictionaryModel");
 
     view->setSource(SailfishApp::pathTo("qml/harbour-wunderfitz.qml"));
     view->show();
