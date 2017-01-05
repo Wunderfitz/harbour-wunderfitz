@@ -34,7 +34,13 @@ Page {
 
             PageHeader {
                 id: header
-                title: "Wunderfitz"
+                title: dictionaryModel.getSelectedDictionaryName()
+                Connections {
+                    target: dictionaryModel
+                    onDictionaryChanged: {
+                        header.title = dictionaryModel.getSelectedDictionaryName()
+                    }
+                }
             }
 
             SearchField {

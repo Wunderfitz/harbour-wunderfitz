@@ -58,8 +58,17 @@ Page {
 
             ComboBox {
                 label: qsTr("Dictionary")
+                currentIndex: dictionaryModel.getSelectedDictionaryIndex()
                 menu: ContextMenu {
-                    MenuItem { text: "DE-NO (Heinzelnisse)" }
+                    Repeater {
+                        model: dictionaryModel
+                        delegate: MenuItem {
+                            text: display.languages
+                        }
+                    }
+                    onActivated: {
+                        dictionaryModel.selectDictionary(index);
+                    }
                 }
             }
 

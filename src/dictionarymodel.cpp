@@ -10,6 +10,13 @@
 
 DictionaryModel::DictionaryModel()
 {
+    DictionaryMetadata* heinzelnisseMetadata = new DictionaryMetadata();
+    heinzelnisseMetadata->setLanguages("DE-NO (Heinzelnisse)");
+    heinzelnisseMetadata->setTimestamp("2016-11-05 16:19");
+    selectedDictionary = heinzelnisseMetadata;
+    selectedIndex = 0;
+    availableDictionaries.append(heinzelnisseMetadata);
+
     QStringList nameFilter("*.db");
     QString databaseDirectory = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + "/harbour-wunderfitz";
     QDir downloadDirectory(databaseDirectory);
@@ -23,7 +30,7 @@ DictionaryModel::DictionaryModel()
         if (database.open()) {
             qDebug() << "SQLite database " + databaseFilePath + " successfully opened";
             DictionaryMetadata* dictionaryMetadata = new DictionaryMetadata();
-            dictionaryMetadata->setLanguages(readLanguages(database));
+            dictionaryMetadata->setLanguages(readLanguages(database) + " (Dict.cc)");
             dictionaryMetadata->setTimestamp(readTimestamp(database));
             availableDictionaries.append(dictionaryMetadata);
             database.close();
@@ -38,7 +45,11 @@ QVariant DictionaryModel::data(const QModelIndex &index, int role) const {
         return QVariant();
     }
     if(role == Qt::DisplayRole) {
-        return QVariant();
+        QMap<QString,QVariant> resultMap;
+        DictionaryMetadata* dictionaryMetadata = availableDictionaries.value(index.row());
+        resultMap.insert("languages", QVariant(dictionaryMetadata->getLanguages()));
+        resultMap.insert("timestamp", QVariant(dictionaryMetadata->getTimestamp()));
+        return QVariant(resultMap);
     }
     return QVariant();
 }
@@ -73,6 +84,26 @@ QString DictionaryModel::readTimestamp(QSqlDatabase &database)
     }
 }
 
+void DictionaryModel::selectDictionary(int dictionaryIndex)
+{
+    if (dictionaryIndex >= 0 && availableDictionaries.size() > dictionaryIndex) {
+        selectedIndex = dictionaryIndex;
+        selectedDictionary = availableDictionaries.value(dictionaryIndex);
+        qDebug() << "New dictionary selected: " + selectedDictionary->getLanguages();
+        emit dictionaryChanged();
+    }
+}
+
+QString DictionaryModel::getSelectedDictionaryName()
+{
+    return selectedDictionary->getLanguages();
+}
+
+int DictionaryModel::getSelectedDictionaryIndex()
+{
+    return selectedIndex;
+}
+
 int DictionaryModel::rowCount(const QModelIndex&) const {
-    return 0;
+    return availableDictionaries.size();
 }
