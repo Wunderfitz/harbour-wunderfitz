@@ -23,8 +23,12 @@ private:
     QString dictionaryId;
 
     void populateElementFromQuery(const QSqlQuery &query, HeinzelnisseElement* &heinzelnisseElement) const;
-    void addQueryResults(QSqlQuery &query);
+    void addQueryResults(QSqlQuery &query, const QString &queryString);
     bool elementAlreadyThere(HeinzelnisseElement* &heinzelnisseElement);
+    bool isWordMatch(HeinzelnisseElement* &heinzelnisseElement, const QString &queryString);
+    bool isDirectMatch(HeinzelnisseElement* &heinzelnisseElement, const QString &queryString);
+    bool isIndirectMatch(HeinzelnisseElement* &heinzelnisseElement, const QString &queryString);
+    void appendRawList(QList<HeinzelnisseElement*> &rawList);
 
 };
 
