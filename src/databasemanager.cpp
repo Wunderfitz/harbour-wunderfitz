@@ -44,9 +44,9 @@ void DatabaseManager::updateResults(const QString &queryString) {
         QSqlQuery query(database);
 
         if (this->dictionaryId == DictionaryModel::heinzelnisseId) {
-            query.prepare("select * from heinzelnisse where heinzelnisse match (:queryString) order by de_word limit 200");
+            query.prepare("select * from heinzelnisse where heinzelnisse match (:queryString)");
         } else {
-            query.prepare("select * from entries where entries match (:queryString) order by left_word limit 200");
+            query.prepare("select * from entries where entries match (:queryString)");
         }
 
         query.bindValue(":queryString", queryString + "*");
@@ -72,14 +72,14 @@ void DatabaseManager::populateElementFromQuery(const QSqlQuery &query, Heinzelni
     } else {
         heinzelnisseElement->setIndex(query.value(0).toInt());
         heinzelnisseElement->setWordLeft(query.value(1).toString());
-        heinzelnisseElement->setGenderLeft("");
+        heinzelnisseElement->setGenderLeft(query.value(2).toString());
         heinzelnisseElement->setOptionalLeft("");
-        heinzelnisseElement->setOtherLeft("");
-        heinzelnisseElement->setWordRight(query.value(2).toString());
-        heinzelnisseElement->setGenderRight("");
+        heinzelnisseElement->setOtherLeft(query.value(3).toString());
+        heinzelnisseElement->setWordRight(query.value(4).toString());
+        heinzelnisseElement->setGenderRight(query.value(5).toString());
         heinzelnisseElement->setOptionalRight("");
-        heinzelnisseElement->setOtherRight("");
-        heinzelnisseElement->setCategory(query.value(3).toString());
+        heinzelnisseElement->setOtherRight(query.value(6).toString());
+        heinzelnisseElement->setCategory(query.value(7).toString());
         heinzelnisseElement->setGrade("");
     }
 }

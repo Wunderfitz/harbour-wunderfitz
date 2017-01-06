@@ -136,7 +136,7 @@ void DictCCImportWorker::writeDictionaryEntries(QTextStream &inputStream, QMap<Q
         }
     }
 
-    databaseQuery.prepare("create virtual table entries using fts4(id integer primary key, left_word text, right_word text, category text, tokenize=porter)");
+    databaseQuery.prepare("create virtual table entries using fts4(id integer primary key, left_word text, left_gender text, left_other text, right_word text, right_gender text, right_other text, category text, tokenize=porter)");
     if (databaseQuery.exec()) {
         qDebug() << "Entries table successfully created!";
     } else {
@@ -162,7 +162,7 @@ void DictCCImportWorker::writeDictionaryEntries(QTextStream &inputStream, QMap<Q
     databaseQuery.prepare("begin transaction");
     databaseQuery.exec();
 
-    databaseQuery.prepare("insert into entries values((:id),(:leftword),(:rightword),(:category))");
+    databaseQuery.prepare("insert into entries values((:id),(:left_word),(:left_gender),(:left_other),(:right_word),(:right_gender),(:right_other),(:category))");
     while (rawEntriesIterator.hasNext()) {
         currentLineNumber++;
         div_t divisionResult = div(currentLineNumber * 100, lineCount);
@@ -170,8 +170,14 @@ void DictCCImportWorker::writeDictionaryEntries(QTextStream &inputStream, QMap<Q
         QStringList currentResult = rawEntriesIterator.next().split("\t");
         if (currentResult.count() == 3) {
             databaseQuery.bindValue(":id", currentLineNumber);
-            databaseQuery.bindValue(":leftword", currentResult.value(0));
-            databaseQuery.bindValue(":rightword", currentResult.value(1));
+            DictCCWord leftWord = getDictCCWord(currentResult.value(0));
+            databaseQuery.bindValue(":left_word", leftWord.getWord());
+            databaseQuery.bindValue(":left_gender", leftWord.getGender());
+            databaseQuery.bindValue(":left_other", leftWord.getOptional());
+            DictCCWord rightWord = getDictCCWord(currentResult.value(1));
+            databaseQuery.bindValue(":right_word", rightWord.getWord());
+            databaseQuery.bindValue(":right_gender", rightWord.getGender());
+            databaseQuery.bindValue(":right_other", rightWord.getOptional());
             databaseQuery.bindValue(":category", currentResult.value(2));
             if (databaseQuery.exec()) {
                 successfullyWrittenEntries++;
@@ -180,16 +186,37 @@ void DictCCImportWorker::writeDictionaryEntries(QTextStream &inputStream, QMap<Q
             }
         }
         if (everyHundredResult.rem == 0) {
-            emit statusChanged(QString::number(currentLineNumber) + " of " + QString::number(lineCount) + " entries written. " + QString::number(divisionResult.quot) + "% completed");
+            emit statusChanged(QString::number(currentLineNumber) + " of " + QString::number(lineCount) + " entries imported.\n" + QString::number(divisionResult.quot) + "% completed");
         }
     }
 
     databaseQuery.prepare("end transaction");
     databaseQuery.exec();
 
-    qDebug() << metadata.value("languages") + ": " + QString::number(successfullyWrittenEntries) + " entries written.";
+    qDebug() << metadata.value("languages") + ": " + QString::number(successfullyWrittenEntries) + " entries imported.";
     emit statusChanged(metadata.value("languages") + " dictionary with " + QString::number(successfullyWrittenEntries) + " entries successfully imported.");
 
+}
+
+DictCCWord DictCCImportWorker::getDictCCWord(QString rawWord)
+{
+    DictCCWord dictCCWord;
+    QString realWord = rawWord;
+    QRegExp genderMatcher("(\\{.+\\})");
+    if (genderMatcher.indexIn(realWord) != -1) {
+        QString genderString = genderMatcher.cap(1);
+        genderString = genderString.replace("{", "(");
+        genderString = genderString.replace("}", ")");
+        dictCCWord.setGender(genderString);
+        realWord = realWord.remove(genderMatcher);
+    }
+    QRegExp optionalMatcher("(\\[.+\\])");
+    if (optionalMatcher.indexIn(realWord) != -1) {
+        dictCCWord.setOptional(optionalMatcher.cap(1));
+        realWord = realWord.remove(optionalMatcher);
+    }
+    dictCCWord.setWord(realWord.trimmed());
+    return dictCCWord;
 }
 
 QString DictCCImportWorker::getTempDirectory()

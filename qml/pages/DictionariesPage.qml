@@ -131,9 +131,7 @@ Page {
 
             }
 
-
-
-             VerticalScrollDecorator {}
+            VerticalScrollDecorator {}
 
         }
 

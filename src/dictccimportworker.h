@@ -6,6 +6,7 @@
 #include <QSqlDatabase>
 #include <QString>
 #include <QTextStream>
+#include "dictccword.h"
 
 class DictCCImportWorker : public QThread
 {
@@ -26,6 +27,7 @@ private:
     void writeDictionary(QTextStream &inputStream, QMap<QString,QString> &metadata);
     void writeMetadata(QMap<QString,QString> &metadata, QSqlDatabase &database);
     void writeDictionaryEntries(QTextStream &inputStream, QMap<QString,QString> &metadata, QSqlDatabase &database);
+    DictCCWord getDictCCWord(QString rawWord);
     QString getTempDirectory();
     QString getDirectory(const QString &directoryString);
 };

@@ -90,7 +90,7 @@ Page {
                                 x: Theme.horizontalPageMargin
                                 wrapMode: Text.Wrap
                                 truncationMode: TruncationMode.Fade
-                                text: display.wordLeft + display.genderLeft
+                                text: display.wordLeft + " " + display.genderLeft
                             }
                             Label {
                                 color: Theme.primaryColor
@@ -112,7 +112,7 @@ Page {
                                 x: Theme.horizontalPageMargin
                                 wrapMode: Text.Wrap
                                 truncationMode: TruncationMode.Fade
-                                text: display.wordRight + display.genderRight
+                                text: display.wordRight + " " + display.genderRight
                             }
                             Label {
                                 width: parent.width

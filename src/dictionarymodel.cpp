@@ -15,48 +15,9 @@ const QString DictionaryModel::heinzelnisseTimestamp = QString("2016-11-05 16:19
 
 DictionaryModel::DictionaryModel()
 {
-    QString chosenDictionaryId = settings.value(settingDictionaryId).toString();
-
-    int dictionaryIndex = 0;
-    DictionaryMetadata* heinzelnisseMetadata = new DictionaryMetadata();
-    heinzelnisseMetadata->setId(heinzelnisseId);
-    heinzelnisseMetadata->setLanguages(heinzelnisseLanguages);
-    heinzelnisseMetadata->setTimestamp(heinzelnisseTimestamp);
-    selectedDictionary = heinzelnisseMetadata;
-    selectedIndex = dictionaryIndex;
-    availableDictionaries.append(heinzelnisseMetadata);
-
-    QStringList nameFilter("*.db");
-    QString databaseDirectory = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + "/harbour-wunderfitz";
-    QDir downloadDirectory(databaseDirectory);
-    QStringList databaseFiles = downloadDirectory.entryList(nameFilter);
-    QStringListIterator databaseFilesIterator(databaseFiles);
-    while (databaseFilesIterator.hasNext()) {
-        dictionaryIndex++;
-        QString fileName = databaseFilesIterator.next();
-        QString databaseFilePath = databaseDirectory + "/" + fileName;
-        QSqlDatabase database = QSqlDatabase::addDatabase("QSQLITE", "connection" + fileName.section(".", 0, 0));
-        database.setDatabaseName(databaseFilePath);
-        if (database.open()) {
-            qDebug() << "SQLite database " + databaseFilePath + " successfully opened";
-            DictionaryMetadata* dictionaryMetadata = new DictionaryMetadata();
-            QString dictionaryId = readLanguages(database);
-            dictionaryMetadata->setId(dictionaryId);
-            dictionaryMetadata->setLanguages(dictionaryId + " (Dict.cc)");
-            dictionaryMetadata->setTimestamp(readTimestamp(database));
-            availableDictionaries.append(dictionaryMetadata);
-            if (dictionaryId == chosenDictionaryId) {
-                qDebug() << "Using user-defined dictionary " + dictionaryMetadata->getLanguages();
-                selectedIndex = dictionaryIndex;
-                selectedDictionary = dictionaryMetadata;
-                heinzelnisseModel.setDictionaryId(dictionaryId);
-            }
-            database.close();
-        } else {
-            qDebug() << "Error opening SQLite database " + databaseFilePath;
-        }
-    }
-
+    initializeDatabases();
+    DictCCImporterModel* myModel (&dictCCImporterModel);
+    connect(myModel, SIGNAL(importFinished()), this, SLOT(handleImportFinished()));
 }
 
 QVariant DictionaryModel::data(const QModelIndex &index, int role) const {
@@ -104,6 +65,54 @@ QString DictionaryModel::readTimestamp(QSqlDatabase &database)
     }
 }
 
+void DictionaryModel::initializeDatabases()
+{
+    qDeleteAll(availableDictionaries);
+    availableDictionaries.clear();
+
+    QString chosenDictionaryId = settings.value(settingDictionaryId).toString();
+
+    int dictionaryIndex = 0;
+    DictionaryMetadata* heinzelnisseMetadata = new DictionaryMetadata();
+    heinzelnisseMetadata->setId(heinzelnisseId);
+    heinzelnisseMetadata->setLanguages(heinzelnisseLanguages);
+    heinzelnisseMetadata->setTimestamp(heinzelnisseTimestamp);
+    selectedDictionary = heinzelnisseMetadata;
+    selectedIndex = dictionaryIndex;
+    availableDictionaries.append(heinzelnisseMetadata);
+
+    QStringList nameFilter("*.db");
+    QString databaseDirectory = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + "/harbour-wunderfitz";
+    QDir downloadDirectory(databaseDirectory);
+    QStringList databaseFiles = downloadDirectory.entryList(nameFilter);
+    QStringListIterator databaseFilesIterator(databaseFiles);
+    while (databaseFilesIterator.hasNext()) {
+        dictionaryIndex++;
+        QString fileName = databaseFilesIterator.next();
+        QString databaseFilePath = databaseDirectory + "/" + fileName;
+        QSqlDatabase database = QSqlDatabase::addDatabase("QSQLITE", "connection" + fileName.section(".", 0, 0));
+        database.setDatabaseName(databaseFilePath);
+        if (database.open()) {
+            qDebug() << "SQLite database " + databaseFilePath + " successfully opened";
+            DictionaryMetadata* dictionaryMetadata = new DictionaryMetadata();
+            QString dictionaryId = readLanguages(database);
+            dictionaryMetadata->setId(dictionaryId);
+            dictionaryMetadata->setLanguages(dictionaryId + " (Dict.cc)");
+            dictionaryMetadata->setTimestamp(readTimestamp(database));
+            availableDictionaries.append(dictionaryMetadata);
+            if (dictionaryId == chosenDictionaryId) {
+                qDebug() << "Using user-defined dictionary " + dictionaryMetadata->getLanguages();
+                selectedIndex = dictionaryIndex;
+                selectedDictionary = dictionaryMetadata;
+                heinzelnisseModel.setDictionaryId(dictionaryId);
+            }
+            database.close();
+        } else {
+            qDebug() << "Error opening SQLite database " + databaseFilePath;
+        }
+    }
+}
+
 void DictionaryModel::selectDictionary(int dictionaryIndex)
 {
     if (dictionaryIndex >= 0 && availableDictionaries.size() > dictionaryIndex) {
@@ -124,6 +133,14 @@ QString DictionaryModel::getSelectedDictionaryName()
 int DictionaryModel::getSelectedDictionaryIndex()
 {
     return selectedIndex;
+}
+
+void DictionaryModel::handleImportFinished()
+{
+    beginResetModel();
+    initializeDatabases();
+    endResetModel();
+    emit dictionaryChanged();
 }
 
 int DictionaryModel::rowCount(const QModelIndex&) const {

@@ -22,19 +22,8 @@ QVariant HeinzelnisseModel::data(const QModelIndex &index, int role) const {
         QMap<QString,QVariant> resultMap;
         resultMap.insert("wordLeft", QVariant(resultElement->getWordLeft()));
         resultMap.insert("wordRight", QVariant(resultElement->getWordRight()));
-        QString empty = "";
-        QString genderLeft = resultElement->getGenderLeft();
-        QString genderRight = resultElement->getGenderRight();
-        if (genderLeft == empty) {
-            resultMap.insert("genderLeft", QVariant(empty));
-        } else {
-            resultMap.insert("genderLeft", QVariant(" (" + genderLeft + ")"));
-        }
-        if (genderRight == empty) {
-            resultMap.insert("genderRight", QVariant(empty));
-        } else {
-            resultMap.insert("genderRight", QVariant(" (" + genderRight + ")"));
-        }
+        resultMap.insert("genderLeft", QVariant(resultElement->getGenderLeft()));
+        resultMap.insert("genderRight", QVariant(resultElement->getGenderRight()));
         resultMap.insert("optionalLeft", QVariant(resultElement->getOptionalLeft()));
         resultMap.insert("optionalRight", QVariant(resultElement->getOptionalRight()));
         resultMap.insert("otherLeft", QVariant(resultElement->getOtherLeft()));

@@ -3,6 +3,7 @@
 
 #include "dictionarymetadata.h"
 #include "heinzelnissemodel.h"
+#include "dictccimportermodel.h"
 
 #include <QAbstractListModel>
 #include <QSettings>
@@ -24,10 +25,14 @@ public:
     virtual QVariant data(const QModelIndex &index, int role) const;
 
     HeinzelnisseModel heinzelnisseModel;
+    DictCCImporterModel dictCCImporterModel;
 
     Q_INVOKABLE void selectDictionary(int dictionaryIndex);
     Q_INVOKABLE QString getSelectedDictionaryName();
     Q_INVOKABLE int getSelectedDictionaryIndex();
+
+public slots:
+    void handleImportFinished();
 
 signals:
     void dictionaryChanged();
@@ -35,6 +40,8 @@ signals:
 private:
     QString readLanguages(QSqlDatabase &database);
     QString readTimestamp(QSqlDatabase &database);
+    void initializeDatabases();
+
     QList<DictionaryMetadata*> availableDictionaries;
     int selectedIndex;
     DictionaryMetadata* selectedDictionary;

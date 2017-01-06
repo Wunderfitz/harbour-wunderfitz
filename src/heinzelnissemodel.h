@@ -3,6 +3,7 @@
 
 #include <QAbstractListModel>
 #include <QList>
+#include <QString>
 #include "databasemanager.h"
 #include "heinzelnisseelement.h"
 
