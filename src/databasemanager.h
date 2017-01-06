@@ -7,28 +7,30 @@
 #include <QString>
 #include "heinzelnisseelement.h"
 #include "databasemanager.h"
+#include "dictionarysearchworker.h"
 
-class DatabaseManager {
+class DatabaseManager : public QObject {
 
+    Q_OBJECT
 public:
-    DatabaseManager();
+    DatabaseManager(QObject* parent);
     ~DatabaseManager();
     bool isOpen() const;
     void updateResults(const QString &query);
     QList<HeinzelnisseElement*>* getResultList();
     void setDictionaryId(const QString &dictionaryId);
+
+signals:
+    void searchCompleted(const QString &queryString);
+
+public slots:
+    void handleSearchCompleted(const QString &queryString);
+
 private:
     QSqlDatabase database;
     QList<HeinzelnisseElement*>* resultList;
+    DictionarySearchWorker* searchWorker;
     QString dictionaryId;
-
-    void populateElementFromQuery(const QSqlQuery &query, HeinzelnisseElement* &heinzelnisseElement) const;
-    void addQueryResults(QSqlQuery &query, const QString &queryString);
-    bool elementAlreadyThere(HeinzelnisseElement* &heinzelnisseElement);
-    bool isWordMatch(HeinzelnisseElement* &heinzelnisseElement, const QString &queryString);
-    bool isDirectMatch(HeinzelnisseElement* &heinzelnisseElement, const QString &queryString);
-    bool isIndirectMatch(HeinzelnisseElement* &heinzelnisseElement, const QString &queryString);
-    void appendRawList(QList<HeinzelnisseElement*> &rawList);
 
 };
 

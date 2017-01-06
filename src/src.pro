@@ -21,7 +21,8 @@ SOURCES += harbour-wunderfitz.cpp \
     dictccimportworker.cpp \
     dictionarymodel.cpp \
     dictionarymetadata.cpp \
-    dictccword.cpp
+    dictccword.cpp \
+    dictionarysearchworker.cpp
 
 HEADERS += \
     heinzelnisseelement.h \
@@ -31,5 +32,6 @@ HEADERS += \
     dictccimportworker.h \
     dictionarymodel.h \
     dictionarymetadata.h \
-    dictccword.h
+    dictccword.h \
+    dictionarysearchworker.h
 

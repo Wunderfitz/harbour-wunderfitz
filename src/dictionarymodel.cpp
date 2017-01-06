@@ -1,6 +1,7 @@
 #include "dictionarymodel.h"
 
 const QString DictionaryModel::settingDictionaryId = QString("dictionary/id");
+const QString DictionaryModel::settingRemainingHints = QString("ui/remainingHints");
 const QString DictionaryModel::heinzelnisseId = QString("heinzelnisse");
 const QString DictionaryModel::heinzelnisseLanguages = QString("DE-NO (Heinzelnisse)");
 const QString DictionaryModel::heinzelnisseTimestamp = QString("2016-11-05 16:19");
@@ -133,6 +134,26 @@ QString DictionaryModel::getSelectedDictionaryName()
 int DictionaryModel::getSelectedDictionaryIndex()
 {
     return selectedIndex;
+}
+
+bool DictionaryModel::isInteractionHintDisplayed()
+{
+    if (settings.contains(settingRemainingHints)) {
+        int remainingHints = settings.value(settingRemainingHints).toInt();
+        if (remainingHints > 0) {
+            remainingHints--;
+            qDebug() << QString::number(remainingHints) + " remaining starts until interaction hint is disabled";
+            settings.setValue(settingRemainingHints, remainingHints);
+            return true;
+        } else {
+            qDebug() << "Interaction hint is disabled";
+            return false;
+        }
+    } else {
+        qDebug() << "2 remaining starts until interaction hint is disabled";
+        settings.setValue(settingRemainingHints, 2);
+        return true;
+    }
 }
 
 void DictionaryModel::handleImportFinished()

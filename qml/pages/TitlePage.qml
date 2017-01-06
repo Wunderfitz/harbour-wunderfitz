@@ -10,6 +10,14 @@ Page {
     id: titlePage
     allowedOrientations: Orientation.All
 
+    property bool interactionHintDisplayed : dictionaryModel.isInteractionHintDisplayed()
+
+    function toggleBusyIndicator() {
+        busyIndicator.running = heinzelnisseModel.isSearchInProgress()
+        busyIndicatorColumn.opacity = heinzelnisseModel.isSearchInProgress() ? 1 : 0
+        listView.opacity = heinzelnisseModel.isSearchInProgress() ? 0 : 1
+    }
+
     SilicaFlickable {
 
         anchors.fill: parent
@@ -26,8 +34,63 @@ Page {
             }
         }
 
+        Timer {
+            interval: 4000
+            running: titlePage.interactionHintDisplayed
+            repeat: false
+            onTriggered: {
+                interactionHint.opacity = 0
+                interactionHintLabel.opacity = 0
+                searchColumn.opacity = 1
+            }
+        }
+
+        TouchInteractionHint {
+            id: interactionHint
+            running: titlePage.interactionHintDisplayed
+            interactionMode: TouchInteraction.Pull
+            direction: TouchInteraction.Down
+            Behavior on opacity { NumberAnimation {} }
+            opacity: titlePage.interactionHintDisplayed
+        }
+
+        InteractionHintLabel {
+            id: interactionHintLabel
+            text: qsTr("Pull down to import and change your dictionaries")
+            invert: true
+            Behavior on opacity { NumberAnimation {} }
+            opacity: titlePage.interactionHintDisplayed
+        }
+
+        Column {
+            x: listView.x
+            y: listView.y
+            height: titlePage.height - header.height - searchField.height - ( 2 * Theme.paddingLarge )
+            width: parent.width
+
+            id: busyIndicatorColumn
+            Behavior on opacity { NumberAnimation {} }
+            opacity: heinzelnisseModel.isSearchInProgress() ? 1 : 0
+
+            BusyIndicator {
+                id: busyIndicator
+                anchors.horizontalCenter: parent.horizontalCenter
+                running: heinzelnisseModel.isSearchInProgress()
+                size: BusyIndicatorSize.Medium
+            }
+            Connections {
+                target: heinzelnisseModel
+                onSearchStatusChanged: {
+                    toggleBusyIndicator()
+                }
+            }
+        }
+
         Column {
             id: searchColumn
+
+            Behavior on opacity { NumberAnimation {} }
+            opacity: titlePage.interactionHintDisplayed ? 0 : 1
 
             width: titlePage.width
             spacing: Theme.paddingLarge
@@ -67,6 +130,9 @@ Page {
                 width: parent.width
                 anchors.left: parent.left
                 anchors.right: parent.right
+
+                Behavior on opacity { NumberAnimation {} }
+                opacity: heinzelnisseModel.isSearchInProgress() ? 0 : 1
 
                 clip: true
 

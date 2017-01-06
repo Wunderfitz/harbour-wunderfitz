@@ -18,13 +18,21 @@ public:
 
     Q_INVOKABLE void search(const QString &query);
     Q_INVOKABLE QString getLastQuery();
+    Q_INVOKABLE bool isSearchInProgress();
 
     void setDictionaryId(const QString &dictionaryId);
 
+public slots:
+    void handleSearchCompleted(const QString &queryString);
+
+signals:
+    void searchStatusChanged();
+
 private:
-    DatabaseManager databaseManager;
+    DatabaseManager* databaseManager;
     QList<HeinzelnisseElement*>* resultList;
     QString lastQuery;
+    bool searchInProgress;
 
     QString getResult(const int index);
 };

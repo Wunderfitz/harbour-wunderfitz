@@ -101,5 +101,9 @@
         <source>Dictionaries</source>
         <translation>Dictionaries</translation>
     </message>
+    <message>
+        <source>Pull down to import and change your dictionaries</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 </TS>

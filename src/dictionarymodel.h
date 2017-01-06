@@ -15,6 +15,7 @@ class DictionaryModel : public QAbstractListModel
 public:
 
     static const QString settingDictionaryId;
+    static const QString settingRemainingHints;
     static const QString heinzelnisseId;
     static const QString heinzelnisseLanguages;
     static const QString heinzelnisseTimestamp;
@@ -30,6 +31,7 @@ public:
     Q_INVOKABLE void selectDictionary(int dictionaryIndex);
     Q_INVOKABLE QString getSelectedDictionaryName();
     Q_INVOKABLE int getSelectedDictionaryIndex();
+    Q_INVOKABLE bool isInteractionHintDisplayed();
 
 public slots:
     void handleImportFinished();
