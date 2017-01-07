@@ -13,7 +13,6 @@ class DictCCImportWorker : public QThread
     Q_OBJECT
     void run() Q_DECL_OVERRIDE {
         importDictionaries();
-        emit importFinished();
     }
 signals:
         void importFinished();
@@ -25,6 +24,7 @@ private:
     void readFile(QString &completeFileName);
     QMap<QString,QString> getMetadata(QTextStream &inputStream);
     void writeDictionary(QTextStream &inputStream, QMap<QString,QString> &metadata);
+    bool isAlreadyImported(QMap<QString,QString> &metadata, QSqlDatabase &database);
     void writeMetadata(QMap<QString,QString> &metadata, QSqlDatabase &database);
     void writeDictionaryEntries(QTextStream &inputStream, QMap<QString,QString> &metadata, QSqlDatabase &database);
     DictCCWord getDictCCWord(QString rawWord);

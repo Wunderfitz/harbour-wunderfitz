@@ -16,7 +16,7 @@ Name:       harbour-wunderfitz
 %{?qtc_builddir:%define _builddir %qtc_builddir}
 Summary:    A mobile dictionary application, supporting dict.cc and Heinzelnisse
 Version:    0.3
-Release:    6
+Release:    9
 Group:      Qt/Qt
 License:    LICENSE
 URL:        http://www.wunderfitz.org/

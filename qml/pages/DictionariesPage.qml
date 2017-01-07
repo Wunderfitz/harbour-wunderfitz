@@ -12,8 +12,8 @@ Page {
     }
 
     Column {
-        y: Screen.height / 2 - busyIndicator.height - Theme.paddingLarge
-        width: Screen.width
+        y: parent.height / 2 - busyIndicator.height - Theme.paddingLarge
+        width: parent.width
         id: busyIndicatorColumn
         Behavior on opacity { NumberAnimation {} }
         opacity: dictCCImporterModel.isWorking() ? 1 : 0
@@ -121,7 +121,10 @@ Page {
                     horizontalCenter: parent.horizontalCenter
                 }
                 font.pixelSize: Theme.fontSizeSmall
-                color: Theme.primaryColor
+                color: Theme.secondaryColor
+                width: parent.width - 2 * Theme.horizontalPageMargin
+                wrapMode: Text.Wrap
+                horizontalAlignment: Text.AlignHCenter
                 Connections {
                     target: dictCCImporterModel
                     onStatusChanged: {

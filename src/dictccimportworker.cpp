@@ -37,6 +37,7 @@ void DictCCImportWorker::importDictionaries()
             }
         }
     }
+    emit importFinished();
 }
 
 void DictCCImportWorker::readFile(QString &completeFileName)
@@ -89,12 +90,34 @@ void DictCCImportWorker::writeDictionary(QTextStream &inputStream, QMap<QString,
     database.setDatabaseName(databaseFilePath);
     if (database.open()) {
         qDebug() << "SQLite database " + databaseFilePath + " successfully opened";
-        writeMetadata(metadata, database);
-        writeDictionaryEntries(inputStream, metadata, database);
+        if (!isAlreadyImported(metadata, database)) {
+            writeMetadata(metadata, database);
+            writeDictionaryEntries(inputStream, metadata, database);
+            emit dictionaryFound(metadata.value("languages"), metadata.value("timestamp"));
+        }
         database.close();
     } else {
         qDebug() << "Error opening SQLite database " + databaseFilePath;
     }
+}
+
+bool DictCCImportWorker::isAlreadyImported(QMap<QString, QString> &metadata, QSqlDatabase &database)
+{
+    QSqlQuery databaseQuery(database);
+    QStringList existingTables = database.tables();
+    if (existingTables.contains("metadata")) {
+        databaseQuery.prepare("select value from metadata where key = 'timestamp'");
+        databaseQuery.exec();
+        if (databaseQuery.next()) {
+            QString databaseTimestamp = databaseQuery.value(0).toString();
+            QString fileTimestamp = metadata.value("timestamp");
+            qDebug() << "Database timestamp: " + databaseTimestamp + " File timestamp: " + fileTimestamp;
+            if (databaseTimestamp == fileTimestamp) {
+                return true;
+            }
+        }
+    }
+    return false;
 }
 
 void DictCCImportWorker::writeMetadata(QMap<QString, QString> &metadata, QSqlDatabase &database)
@@ -166,7 +189,7 @@ void DictCCImportWorker::writeDictionaryEntries(QTextStream &inputStream, QMap<Q
     while (rawEntriesIterator.hasNext()) {
         currentLineNumber++;
         div_t divisionResult = div(currentLineNumber * 100, lineCount);
-        div_t everyHundredResult = div(currentLineNumber, 100);
+        div_t everyXResult = div(currentLineNumber, 1000);
         QStringList currentResult = rawEntriesIterator.next().split("\t");
         if (currentResult.count() == 3) {
             databaseQuery.bindValue(":id", currentLineNumber);
@@ -185,7 +208,7 @@ void DictCCImportWorker::writeDictionaryEntries(QTextStream &inputStream, QMap<Q
                 qDebug() << databaseQuery.lastError().text();
             }
         }
-        if (everyHundredResult.rem == 0) {
+        if (everyXResult.rem == 0) {
             emit statusChanged(QString::number(currentLineNumber) + " of " + QString::number(lineCount) + " entries imported.\n" + QString::number(divisionResult.quot) + "% completed");
         }
     }

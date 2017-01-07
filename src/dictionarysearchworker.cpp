@@ -66,7 +66,7 @@ bool DictionarySearchWorker::isIndirectMatch(HeinzelnisseElement *&heinzelnisseE
 void DictionarySearchWorker::appendRawList(QList<HeinzelnisseElement *> &rawList)
 {
     QListIterator<HeinzelnisseElement*> listIterator(rawList);
-    while (listIterator.hasNext()) {
+    while (listIterator.hasNext() && resultList->size() <= 200) {
         resultList->append(listIterator.next());
     }
 }
@@ -106,6 +106,9 @@ void DictionarySearchWorker::addQueryResults(QSqlQuery &query, const QString &qu
     QList<HeinzelnisseElement*> indirectMatches;
     QList<HeinzelnisseElement*> otherMatches;
     while (query.next()) {
+        if (isInterruptionRequested()) {
+            return;
+        }
         HeinzelnisseElement* nextElement = new HeinzelnisseElement();
         populateElementFromQuery(query, nextElement);
         if (isWordMatch(nextElement, queryString)) {

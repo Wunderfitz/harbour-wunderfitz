@@ -40,6 +40,9 @@ bool DatabaseManager::isOpen() const
 
 void DatabaseManager::updateResults(const QString &queryString) {
 
+    while (searchWorker->isRunning()) {
+        searchWorker->requestInterruption();
+    }
     searchWorker->setQueryParameters(database, dictionaryId, queryString);
     searchWorker->start();
 

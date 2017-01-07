@@ -49,7 +49,7 @@ Page {
             Label {
                 wrapMode: Text.Wrap
                 x: Theme.horizontalPageMargin
-                width: parent.width - 2*x
+                width: parent.width - ( 2 * Theme.horizontalPageMargin )
                 horizontalAlignment: Text.AlignHCenter
                 text: qsTr("A mobile dictionary application including the Heinzelnisse database and supporting dict.cc export files.")
                 font.pixelSize: Theme.fontSizeSmall
@@ -102,7 +102,7 @@ Page {
 
             Label {
                 x: Theme.horizontalPageMargin
-                width: parent.width - 2*x
+                width: parent.width  - ( 2 * Theme.horizontalPageMargin )
                 text: qsTr("This project uses the Norwegian-German dictionary from heinzelnisse.info - Updated on November 5, 2016 - Thanks to the authors Heiko Klein and Julia Emmerich for making the dictionary available under the conditions of the GNU GPLv2!")
                 font.pixelSize: Theme.fontSizeExtraSmall
                 wrapMode: Text.Wrap
@@ -124,8 +124,8 @@ Page {
 
             Label {
                 x: Theme.horizontalPageMargin
-                width: parent.width - 2*x
-                text: qsTr("This application supports dict.cc dictionary export files. ")
+                width: parent.width  - ( 2 * Theme.horizontalPageMargin )
+                text: qsTr("This application supports dict.cc dictionary export files. Thanks to Paul Hemetsberger and the dict.cc team for providing the dictionaries!")
                 font.pixelSize: Theme.fontSizeExtraSmall
                 wrapMode: Text.Wrap
                 anchors {
@@ -146,8 +146,8 @@ Page {
 
             Label {
                 x: Theme.horizontalPageMargin
-                width: parent.width - 2*x
-                text: qsTr("This application uses the QuaZIP library, version 0.7.2, to extract ZIP archives.")
+                width: parent.width  - ( 2 * Theme.horizontalPageMargin )
+                text: qsTr("This application uses the QuaZIP library, version 0.7.2, to extract ZIP archives. Thanks to Sergey A. Tachenov and the QuaZIP contributors for making it so simple to extract ZIP files with Qt.")
                 font.pixelSize: Theme.fontSizeExtraSmall
                 wrapMode: Text.Wrap
                 anchors {
@@ -169,7 +169,7 @@ Page {
             Label {
                 id: separatorLabel
                 x: Theme.horizontalPageMargin
-                width: parent.width - 2*x
+                width: parent.width  - ( 2 * Theme.horizontalPageMargin )
                 font.pixelSize: Theme.fontSizeExtraSmall
                 wrapMode: Text.Wrap
                 anchors {

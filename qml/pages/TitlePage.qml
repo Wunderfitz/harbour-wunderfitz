@@ -18,6 +18,16 @@ Page {
         listView.opacity = heinzelnisseModel.isSearchInProgress() ? 0 : 1
     }
 
+    Timer {
+        id: searchTimer
+        interval: 800
+        running: false
+        repeat: false
+        onTriggered: {
+            heinzelnisseModel.search(searchField.text)
+        }
+    }
+
     SilicaFlickable {
 
         anchors.fill: parent
@@ -78,6 +88,14 @@ Page {
                 running: heinzelnisseModel.isSearchInProgress()
                 size: BusyIndicatorSize.Medium
             }
+
+            Label {
+                id: busyIndicatorLabel
+                anchors.horizontalCenter: parent.horizontalCenter
+                text: qsTr("Searching...")
+                color: Theme.highlightColor
+            }
+
             Connections {
                 target: heinzelnisseModel
                 onSearchStatusChanged: {
@@ -118,7 +136,8 @@ Page {
                 EnterKey.onClicked: focus = false
 
                 onTextChanged: {
-                    heinzelnisseModel.search(searchField.text)
+                    searchTimer.stop()
+                    searchTimer.start()
                 }
             }
 
@@ -141,6 +160,27 @@ Page {
                 delegate: ListItem {
                     contentHeight: wordRow.height + Theme.paddingMedium
                     contentWidth: parent.width
+
+                    menu: ContextMenu {
+                        MenuItem {
+                            text: qsTr("Copy to clipboard")
+                            onClicked: {
+                                Clipboard.text = display.wordLeft + " " + display.genderLeft + " " + display.otherLeft + " - " + display.wordRight + " " + display.genderRight + " " + display.otherRight
+                            }
+                        }
+                        MenuItem {
+                            text: qsTr("Search for '%1'").arg(display.wordLeft)
+                            onClicked: {
+                                searchField.text = display.wordLeft
+                            }
+                        }
+                        MenuItem {
+                            text: qsTr("Search for '%1'").arg(display.wordRight)
+                            onClicked: {
+                                searchField.text = display.wordRight
+                            }
+                        }
+                    }
 
                     Row {
                         id: wordRow

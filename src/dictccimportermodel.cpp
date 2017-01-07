@@ -53,7 +53,12 @@ bool DictCCImporterModel::isWorking()
 
 void DictCCImporterModel::handleImportFinished()
 {
-    statusText = "Extraction completed";
+    if (importedDictionaries.size() > 0) {
+        statusText = "Import completed. New or updated dictionaries: " + QString::number(importedDictionaries.size());
+    } else {
+        statusText = "Import completed. No new or updated dictionaries found.";
+    }
+
     qDebug() << statusText;
     working = false;
     emit statusChanged();
@@ -68,6 +73,7 @@ void DictCCImporterModel::handleStatusChanged(const QString &statusText)
 
 void DictCCImporterModel::handleDictionaryFound(const QString &languages, const QString &timestamp)
 {
+    qDebug() << "Import completed for " + languages + ", timestamp: " + timestamp;
     beginResetModel();
     DictionaryMetadata* importedDictionary = new DictionaryMetadata();
     importedDictionary->setId(languages);
