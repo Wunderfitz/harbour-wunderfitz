@@ -48,6 +48,9 @@ public:
         return (index == otherHeinzelnisseElement.getIndex());
     }
 
+    QString getClipboardText() const;
+    void setClipboardText(const QString &value);
+
 private:
     int index;
     QString wordLeft;
@@ -60,6 +63,7 @@ private:
     QString otherRight;
     QString category;
     QString grade;
+    QString clipboardText;
 
 };
 

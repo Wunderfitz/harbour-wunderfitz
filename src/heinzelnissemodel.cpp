@@ -32,6 +32,7 @@ QVariant HeinzelnisseModel::data(const QModelIndex &index, int role) const {
         resultMap.insert("optionalRight", QVariant(resultElement->getOptionalRight()));
         resultMap.insert("otherLeft", QVariant(resultElement->getOtherLeft()));
         resultMap.insert("otherRight", QVariant(resultElement->getOtherRight()));
+        resultMap.insert("clipboardText", QVariant(resultElement->getClipboardText()));
         return QVariant(resultMap);
     }
     return QVariant();
@@ -72,6 +73,14 @@ void HeinzelnisseModel::setDictionaryId(const QString &dictionaryId)
 bool HeinzelnisseModel::isSearchInProgress()
 {
     return searchInProgress;
+}
+
+bool HeinzelnisseModel::isEmpty()
+{
+    if (!isSearchInProgress() && !lastQuery.isEmpty() && resultList->isEmpty()) {
+        return true;
+    }
+    return false;
 }
 
 void HeinzelnisseModel::handleSearchCompleted(const QString &queryString)

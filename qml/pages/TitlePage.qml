@@ -16,6 +16,7 @@ Page {
         busyIndicator.running = heinzelnisseModel.isSearchInProgress()
         busyIndicatorColumn.opacity = heinzelnisseModel.isSearchInProgress() ? 1 : 0
         listView.opacity = heinzelnisseModel.isSearchInProgress() ? 0 : 1
+        noResultsColumn.opacity = heinzelnisseModel.isEmpty() ? 1 : 0
     }
 
     Timer {
@@ -105,6 +106,24 @@ Page {
         }
 
         Column {
+            x: listView.x
+            y: listView.y
+            height: titlePage.height - header.height - searchField.height - ( 2 * Theme.paddingLarge )
+            width: parent.width
+
+            id: noResultsColumn
+            Behavior on opacity { NumberAnimation {} }
+            opacity: heinzelnisseModel.isEmpty() ? 1 : 0
+
+            Label {
+                id: noResultsLabel
+                anchors.horizontalCenter: parent.horizontalCenter
+                text: qsTr("No results found")
+                color: Theme.secondaryColor
+            }
+        }
+
+        Column {
             id: searchColumn
 
             Behavior on opacity { NumberAnimation {} }
@@ -165,7 +184,7 @@ Page {
                         MenuItem {
                             text: qsTr("Copy to clipboard")
                             onClicked: {
-                                Clipboard.text = display.wordLeft + " " + display.genderLeft + " " + display.otherLeft + " - " + display.wordRight + " " + display.genderRight + " " + display.otherRight
+                                Clipboard.text = display.clipboardText
                             }
                         }
                         MenuItem {

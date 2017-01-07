@@ -19,6 +19,7 @@ public:
     Q_INVOKABLE void search(const QString &query);
     Q_INVOKABLE QString getLastQuery();
     Q_INVOKABLE bool isSearchInProgress();
+    Q_INVOKABLE bool isEmpty();
 
     void setDictionaryId(const QString &dictionaryId);
 

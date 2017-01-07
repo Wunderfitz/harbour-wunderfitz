@@ -97,6 +97,14 @@ void DictionarySearchWorker::populateElementFromQuery(const QSqlQuery &query, He
         heinzelnisseElement->setCategory(query.value(7).toString());
         heinzelnisseElement->setGrade("");
     }
+    QString clipboardText = heinzelnisseElement->getWordLeft() + " "
+                            + heinzelnisseElement->getGenderLeft() + " "
+                            + heinzelnisseElement->getOtherLeft() + " - "
+                            + heinzelnisseElement->getWordRight() + " "
+                            + heinzelnisseElement->getGenderRight() + " "
+                            + heinzelnisseElement->getOtherRight();
+    heinzelnisseElement->setClipboardText(clipboardText.simplified());
+
 }
 
 void DictionarySearchWorker::addQueryResults(QSqlQuery &query, const QString &queryString) {

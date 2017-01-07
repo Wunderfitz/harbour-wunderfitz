@@ -52,7 +52,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>This application uses the QuaZIP library, version 0.7.2, to extract ZIP archives. Thanks to Sergey A. Tachenov and the QuaZIP contributors for making it so simple to extract ZIP files with Qt.</source>
+        <source>This application uses the QuaZIP library, version 0.7.2, to extract ZIP archives. Thanks to Sergey A. Tachenov and the QuaZIP contributors for making it so simple to extract ZIP files with Qt!</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -115,6 +115,10 @@
     </message>
     <message>
         <source>Search for &apos;%1&apos;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>No results found</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

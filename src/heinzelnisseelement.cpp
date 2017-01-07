@@ -114,3 +114,13 @@ void HeinzelnisseElement::setIndex(int value)
     index = value;
 }
 
+QString HeinzelnisseElement::getClipboardText() const
+{
+    return clipboardText;
+}
+
+void HeinzelnisseElement::setClipboardText(const QString &value)
+{
+    clipboardText = value;
+}
+
