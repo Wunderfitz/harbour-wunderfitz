@@ -59,6 +59,7 @@ Page {
             ComboBox {
                 label: qsTr("Dictionary")
                 currentIndex: dictionaryModel.getSelectedDictionaryIndex()
+                description: qsTr("Choose the active dictionary here")
                 menu: ContextMenu {
                     Repeater {
                         model: dictionaryModel
@@ -71,6 +72,8 @@ Page {
                     }
                 }
             }
+
+
 
             SectionHeader {
                 text: qsTr("Dict.cc Import")

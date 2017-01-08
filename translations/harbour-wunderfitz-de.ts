@@ -32,10 +32,6 @@
         <translation>Heinzelnisse.info öffnen</translation>
     </message>
     <message>
-        <source>This project uses the Norwegian-German dictionary from heinzelnisse.info - Updated on November 5, 2016 - Thanks to the authors Heiko Klein and Julia Emmerich for making the dictionary available under the conditions of the GNU GPLv2!</source>
-        <translation>Dieses Projekt nutzt das Norwegisch-Deutsch-Wörterbuch von heinzelnisse.info - aktualisiert am 5. November 2016 - Danke an die Autoren Heiko Klein und Julia Emmerich für die Veröffentlichung des Wörterbuchs unter den Bedingungen der GNU GPLv2!</translation>
-    </message>
-    <message>
         <source>Open QuaZIP home page</source>
         <translation>QuaZIP-Startseite öffnen</translation>
     </message>
@@ -54,6 +50,10 @@
     <message>
         <source>This application uses the QuaZIP library, version 0.7.2, to extract ZIP archives. Thanks to Sergey A. Tachenov and the QuaZIP contributors for making it so simple to extract ZIP files with Qt!</source>
         <translation>Diese Anwendung nutzt die QuaZIP-Bibliothek in der Version 0.7.2 um ZIP-Archive zu extrahieren. Danke an Sergey A. Tachenov und die Mitwirkenden an QuaZIP, dass sie das Extrahieren von ZIP-Dateien mit Qt so einfach gemacht haben!</translation>
+    </message>
+    <message>
+        <source>This project uses the Norwegian-German dictionary from heinzelnisse.info - Updated on January 7, 2017 - Thanks to the authors Heiko Klein and Julia Emmerich for making the dictionary available under the conditions of the GNU GPLv2!</source>
+        <translation>Dieses Projekt nutzt das Norwegisch-Deutsch-Wörterbuch von heinzelnisse.info - aktualisiert am 7. Januar 2017 - Danke an die Autoren Heiko Klein und Julia Emmerich für die Veröffentlichung des Wörterbuchs unter den Bedingungen der GNU GPLv2!</translation>
     </message>
 </context>
 <context>
@@ -85,6 +85,10 @@
     <message>
         <source>Dict.cc does not allow other applications such as Wunderfitz to ship their dictionaries. Therefore, you must download them from dict.cc yourself. Use the Download link, follow the instructions and import the files here afterwards. The downloaded dict.cc ZIP files must be placed in the Downloads folder. If in doubt, use the SailfishOS E-Mail and Browser apps to store the downloads there automatically. After the import in Wunderfitz you can delete the ZIP archives.</source>
         <translation>Dict.cc erlaubt es anderen Anwendungen wie Wunderfitz nicht, ihre Wörterbücher auszuliefern. Deshalb müssen Sie diese von dict.cc selbst herunterladen. Benutzen Sie den Herunterladen-Link, folgen Sie den Anweisungen und importieren Sie danach die Dateien hier. Die heruntergeladenen dict.cc-ZIP-Dateien müssen sich im Verzeichnis Downloads befinden. Im Zweifel nutzen Sie die SailfishOS-Anwendungen Browser und E-Mail um die Downloads dort automatisch zu speichern. Nach dem Import in Wunderfitz können Sie die ZIP-Archive löschen. </translation>
+    </message>
+    <message>
+        <source>Choose the active dictionary here</source>
+        <translation>Wählen Sie hier das aktive Wörterbuch aus</translation>
     </message>
 </context>
 <context>

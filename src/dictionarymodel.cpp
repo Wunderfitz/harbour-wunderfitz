@@ -4,7 +4,7 @@ const QString DictionaryModel::settingDictionaryId = QString("dictionary/id");
 const QString DictionaryModel::settingRemainingHints = QString("ui/remainingHints");
 const QString DictionaryModel::heinzelnisseId = QString("heinzelnisse");
 const QString DictionaryModel::heinzelnisseLanguages = QString("DE-NO (Heinzelnisse)");
-const QString DictionaryModel::heinzelnisseTimestamp = QString("2016-11-05 16:19");
+const QString DictionaryModel::heinzelnisseTimestamp = QString("2017-01-07 12:48");
 
 #include <QDebug>
 #include <QDir>

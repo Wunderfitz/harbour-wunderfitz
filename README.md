@@ -9,5 +9,6 @@ Licensed under GNU GPLv2
 
 ## Credits
 This project uses
-- the Norwegian-German dictionary from [heinzelnisse.info](http://www.heinzelnisse.info) - Updated on November 5, 2016 - Thanks to the authors Heiko Klein and Julia Emmerich for making the dictionary accessible under the conditions of the GNU GPLv2!
+- the Norwegian-German dictionary from [heinzelnisse.info](http://www.heinzelnisse.info) - Updated on January 7, 2017 - Thanks to the authors Heiko Klein and Julia Emmerich for making the dictionary accessible under the conditions of the GNU GPLv2!
+- [Dict.cc](http://dict.cc) dictionaries
 - the [QuaZIP library](http://quazip.sourceforge.net) to extract ZIP archives
