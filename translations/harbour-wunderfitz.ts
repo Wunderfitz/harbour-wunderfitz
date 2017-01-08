@@ -33,27 +33,27 @@
     </message>
     <message>
         <source>This project uses the Norwegian-German dictionary from heinzelnisse.info - Updated on November 5, 2016 - Thanks to the authors Heiko Klein and Julia Emmerich for making the dictionary available under the conditions of the GNU GPLv2!</source>
-        <translation>his project uses the Norwegian-German dictionary from heinzelnisse.info - Updated on November 5, 2016 - Thanks to the authors Heiko Klein and Julia Emmerich for making the dictionary available under the conditions of the GNU GPLv2!</translation>
+        <translation>This project uses the Norwegian-German dictionary from heinzelnisse.info - Updated on November 5, 2016 - Thanks to the authors Heiko Klein and Julia Emmerich for making the dictionary available under the conditions of the GNU GPLv2!</translation>
     </message>
     <message>
         <source>Open QuaZIP home page</source>
-        <translation type="unfinished"></translation>
+        <translation>Open QuaZIP home page</translation>
     </message>
     <message>
         <source>Open dict.cc home page</source>
-        <translation type="unfinished"></translation>
+        <translation>Open dict.cc home page</translation>
     </message>
     <message>
         <source>A mobile dictionary application including the Heinzelnisse database and supporting dict.cc export files.</source>
-        <translation type="unfinished"></translation>
+        <translation>A mobile dictionary application including the Heinzelnisse database and supporting dict.cc export files.</translation>
     </message>
     <message>
         <source>This application supports dict.cc dictionary export files. Thanks to Paul Hemetsberger and the dict.cc team for providing the dictionaries!</source>
-        <translation type="unfinished"></translation>
+        <translation>This application supports dict.cc dictionary export files. Thanks to Paul Hemetsberger and the dict.cc team for providing the dictionaries!</translation>
     </message>
     <message>
         <source>This application uses the QuaZIP library, version 0.7.2, to extract ZIP archives. Thanks to Sergey A. Tachenov and the QuaZIP contributors for making it so simple to extract ZIP files with Qt!</source>
-        <translation type="unfinished"></translation>
+        <translation>This application uses the QuaZIP library, version 0.7.2, to extract ZIP archives. Thanks to Sergey A. Tachenov and the QuaZIP contributors for making it so simple to extract ZIP files with Qt!</translation>
     </message>
 </context>
 <context>
@@ -68,23 +68,23 @@
     </message>
     <message>
         <source>Download dict.cc dictionaries</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Dict.cc does not allow third-party applications such as Wunderfitz to ship their dictionaries. Therefore, you must download them from dict.cc yourself. Use the Download link, follow the instructions and import the files later. The downloaded dict.cc ZIP files must be placed in the Downloads folder. If in doubt, use the SailfishOS E-Mail and Browser apps to store the downloads there automatically. After the import in Wunderfitz you can delete the ZIP archives.</source>
-        <translation type="unfinished"></translation>
+        <translation>Download dict.cc dictionaries</translation>
     </message>
     <message>
         <source>Import dict.cc ZIP archives</source>
-        <translation type="unfinished"></translation>
+        <translation>Import dict.cc ZIP archives</translation>
     </message>
     <message>
         <source>Dictionary</source>
-        <translation type="unfinished"></translation>
+        <translation>Dictionary</translation>
     </message>
     <message>
         <source>Dict.cc Import</source>
-        <translation type="unfinished"></translation>
+        <translation>Dict.cc Import</translation>
+    </message>
+    <message>
+        <source>Dict.cc does not allow other applications such as Wunderfitz to ship their dictionaries. Therefore, you must download them from dict.cc yourself. Use the Download link, follow the instructions and import the files here afterwards. The downloaded dict.cc ZIP files must be placed in the Downloads folder. If in doubt, use the SailfishOS E-Mail and Browser apps to store the downloads there automatically. After the import in Wunderfitz you can delete the ZIP archives.</source>
+        <translation>Dict.cc does not allow other applications such as Wunderfitz to ship their dictionaries. Therefore, you must download them from dict.cc yourself. Use the Download link, follow the instructions and import the files here afterwards. The downloaded dict.cc ZIP files must be placed in the Downloads folder. If in doubt, use the SailfishOS E-Mail and Browser apps to store the downloads there automatically. After the import in Wunderfitz you can delete the ZIP archives.</translation>
     </message>
 </context>
 <context>
@@ -102,24 +102,24 @@
         <translation>Dictionaries</translation>
     </message>
     <message>
-        <source>Pull down to import and change your dictionaries</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Searching...</source>
-        <translation type="unfinished"></translation>
+        <translation>Searching...</translation>
     </message>
     <message>
         <source>Copy to clipboard</source>
-        <translation type="unfinished"></translation>
+        <translation>Copy to clipboard</translation>
     </message>
     <message>
         <source>Search for &apos;%1&apos;</source>
-        <translation type="unfinished"></translation>
+        <translation>Search for &apos;%1&apos;</translation>
     </message>
     <message>
         <source>No results found</source>
-        <translation type="unfinished"></translation>
+        <translation>No results found</translation>
+    </message>
+    <message>
+        <source>Pull down the menu to import and change your dictionaries</source>
+        <translation>Pull down the menu to import and change your dictionaries</translation>
     </message>
 </context>
 </TS>

@@ -7,3 +7,7 @@
 
 * Sun Dec 11 2016 <sebastian@ygriega.de> 0.2.1
 - New vocabulary database
+
+* Sun Jan 08 2016 <sebastian@ygriega.de> 0.3
+- Dict.cc support
+- A lot of UX updates

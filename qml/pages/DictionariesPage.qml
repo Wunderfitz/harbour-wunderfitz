@@ -88,7 +88,7 @@ Page {
                 }
 
                 Label {
-                    text: qsTr("Dict.cc does not allow third-party applications such as Wunderfitz to ship their dictionaries. Therefore, you must download them from dict.cc yourself. Use the Download link, follow the instructions and import the files later. The downloaded dict.cc ZIP files must be placed in the Downloads folder. If in doubt, use the SailfishOS E-Mail and Browser apps to store the downloads there automatically. After the import in Wunderfitz you can delete the ZIP archives.")
+                    text: qsTr("Dict.cc does not allow other applications such as Wunderfitz to ship their dictionaries. Therefore, you must download them from dict.cc yourself. Use the Download link, follow the instructions and import the files here afterwards. The downloaded dict.cc ZIP files must be placed in the Downloads folder. If in doubt, use the SailfishOS E-Mail and Browser apps to store the downloads there automatically. After the import in Wunderfitz you can delete the ZIP archives.")
                     font.pixelSize: Theme.fontSizeExtraSmall
                     wrapMode: Text.Wrap
                     width: parent.width - infoImage.width - (3 * infoRow.x)

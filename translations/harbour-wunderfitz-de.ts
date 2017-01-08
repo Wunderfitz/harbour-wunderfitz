@@ -37,23 +37,23 @@
     </message>
     <message>
         <source>Open QuaZIP home page</source>
-        <translation type="unfinished"></translation>
+        <translation>QuaZIP-Startseite öffnen</translation>
     </message>
     <message>
         <source>Open dict.cc home page</source>
-        <translation type="unfinished"></translation>
+        <translation>Dict.cc-Startseite öffnen</translation>
     </message>
     <message>
         <source>A mobile dictionary application including the Heinzelnisse database and supporting dict.cc export files.</source>
-        <translation type="unfinished"></translation>
+        <translation>Ein mobiles Wörterbuch mit der Heinzelnisse-Datenbank und mit der Unterstützung für dict.cc-Exportdateien.</translation>
     </message>
     <message>
         <source>This application supports dict.cc dictionary export files. Thanks to Paul Hemetsberger and the dict.cc team for providing the dictionaries!</source>
-        <translation type="unfinished"></translation>
+        <translation>Diese Anwendung unterstützt dict.cc-Exportdateien. Danke an Paul Hemetsberger und das dict.cc-Team für das Bereitstellen der Wörterbücher!</translation>
     </message>
     <message>
         <source>This application uses the QuaZIP library, version 0.7.2, to extract ZIP archives. Thanks to Sergey A. Tachenov and the QuaZIP contributors for making it so simple to extract ZIP files with Qt!</source>
-        <translation type="unfinished"></translation>
+        <translation>Diese Anwendung nutzt die QuaZIP-Bibliothek in der Version 0.7.2 um ZIP-Archive zu extrahieren. Danke an Sergey A. Tachenov und die Mitwirkenden an QuaZIP, dass sie das Extrahieren von ZIP-Dateien mit Qt so einfach gemacht haben!</translation>
     </message>
 </context>
 <context>
@@ -68,23 +68,23 @@
     </message>
     <message>
         <source>Download dict.cc dictionaries</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Dict.cc does not allow third-party applications such as Wunderfitz to ship their dictionaries. Therefore, you must download them from dict.cc yourself. Use the Download link, follow the instructions and import the files later. The downloaded dict.cc ZIP files must be placed in the Downloads folder. If in doubt, use the SailfishOS E-Mail and Browser apps to store the downloads there automatically. After the import in Wunderfitz you can delete the ZIP archives.</source>
-        <translation type="unfinished"></translation>
+        <translation>Dict.cc-Wörterbücher herunterladen</translation>
     </message>
     <message>
         <source>Import dict.cc ZIP archives</source>
-        <translation type="unfinished"></translation>
+        <translation>Dict.cc-ZIP-Archive importieren</translation>
     </message>
     <message>
         <source>Dictionary</source>
-        <translation type="unfinished"></translation>
+        <translation>Wörterbuch</translation>
     </message>
     <message>
         <source>Dict.cc Import</source>
-        <translation type="unfinished"></translation>
+        <translation>Dict.cc-Import</translation>
+    </message>
+    <message>
+        <source>Dict.cc does not allow other applications such as Wunderfitz to ship their dictionaries. Therefore, you must download them from dict.cc yourself. Use the Download link, follow the instructions and import the files here afterwards. The downloaded dict.cc ZIP files must be placed in the Downloads folder. If in doubt, use the SailfishOS E-Mail and Browser apps to store the downloads there automatically. After the import in Wunderfitz you can delete the ZIP archives.</source>
+        <translation>Dict.cc erlaubt es anderen Anwendungen wie Wunderfitz nicht, ihre Wörterbücher auszuliefern. Deshalb müssen Sie diese von dict.cc selbst herunterladen. Benutzen Sie den Herunterladen-Link, folgen Sie den Anweisungen und importieren Sie danach die Dateien hier. Die heruntergeladenen dict.cc-ZIP-Dateien müssen sich im Verzeichnis Downloads befinden. Im Zweifel nutzen Sie die SailfishOS-Anwendungen Browser und E-Mail um die Downloads dort automatisch zu speichern. Nach dem Import in Wunderfitz können Sie die ZIP-Archive löschen. </translation>
     </message>
 </context>
 <context>
@@ -102,24 +102,24 @@
         <translation>Wörterbücher</translation>
     </message>
     <message>
-        <source>Pull down to import and change your dictionaries</source>
-        <translation type="unfinished"></translation>
+        <source>Pull down the menu to import and change your dictionaries</source>
+        <translation>Ziehen Sie das Menü nach unten, um Ihre Wörterbücher zu importieren und zu ändern.</translation>
     </message>
     <message>
         <source>Searching...</source>
-        <translation type="unfinished"></translation>
+        <translation>Suchen...</translation>
     </message>
     <message>
         <source>Copy to clipboard</source>
-        <translation type="unfinished"></translation>
+        <translation>In die Zwischenablage kopieren</translation>
     </message>
     <message>
         <source>Search for &apos;%1&apos;</source>
-        <translation type="unfinished"></translation>
+        <translation>Nach &apos;%1&apos; suchen</translation>
     </message>
     <message>
         <source>No results found</source>
-        <translation type="unfinished"></translation>
+        <translation>Keine Ergebnisse gefunden</translation>
     </message>
 </context>
 </TS>

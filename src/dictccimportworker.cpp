@@ -35,6 +35,12 @@ void DictCCImportWorker::importDictionaries()
                 qDebug() << "Extracted file: " + extractedFileName;
                 readFile(extractedFileName);
             }
+            QDir temporaryDirectory(zipArchiveExtractionDir);
+            if (temporaryDirectory.rmdir(zipArchiveExtractionDir)) {
+                qDebug() << "Temporary directory " + zipArchiveExtractionDir + " successfully deleted";
+            } else {
+                qDebug() << "Unable to delete temporary directory " + zipArchiveExtractionDir;
+            }
         }
     }
     emit importFinished();
@@ -53,6 +59,11 @@ void DictCCImportWorker::readFile(QString &completeFileName)
            writeDictionary(inputStream, dictionaryMetadata);
        }
        inputFile.close();
+       if (inputFile.remove()) {
+           qDebug() << "Temporary file " + completeFileName + " successfully deleted";
+       } else {
+           qDebug() << "Unable to delete temporary file " + completeFileName;
+       }
     } else
     {
         qDebug() << "Unable to open extracted file " + completeFileName;

@@ -67,7 +67,7 @@ Page {
 
         InteractionHintLabel {
             id: interactionHintLabel
-            text: qsTr("Pull down to import and change your dictionaries")
+            text: qsTr("Pull down the menu to import and change your dictionaries")
             invert: true
             Behavior on opacity { NumberAnimation {} }
             opacity: titlePage.interactionHintDisplayed
