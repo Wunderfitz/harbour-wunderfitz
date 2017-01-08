@@ -40,9 +40,7 @@ bool DatabaseManager::isOpen() const
 
 void DatabaseManager::updateResults(const QString &queryString) {
 
-    while (searchWorker->isRunning()) {
-        searchWorker->requestInterruption();
-    }
+    stopSearch();
     searchWorker->setQueryParameters(database, dictionaryId, queryString);
     searchWorker->start();
 
@@ -64,6 +62,13 @@ void DatabaseManager::setDictionaryId(const QString &dictionaryId)
         qDebug() << "Successfully switched to dictionary " + dictionaryId;
     } else {
         qDebug() << "Unable to switch to dictionary " + dictionaryId;
+    }
+}
+
+void DatabaseManager::stopSearch()
+{
+    while (searchWorker->isRunning()) {
+        searchWorker->requestInterruption();
     }
 }
 

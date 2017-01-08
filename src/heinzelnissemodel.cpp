@@ -3,7 +3,7 @@
 
 HeinzelnisseModel::HeinzelnisseModel(QObject *parent) : QAbstractListModel(parent)
 {
-    databaseManager = new DatabaseManager( NULL );
+    databaseManager = new DatabaseManager(this);
     // Initializations (and Test Code ;))
     if (databaseManager->isOpen()) {
         qDebug() << "Database successfully initialized!";
@@ -15,6 +15,9 @@ HeinzelnisseModel::HeinzelnisseModel(QObject *parent) : QAbstractListModel(paren
     searchInProgress = false;
 
     connect(databaseManager, SIGNAL(searchCompleted(QString)), this, SLOT(handleSearchCompleted(QString)));
+
+    searchTimeout = new QTimer(this);
+    connect(searchTimeout, SIGNAL(timeout()), this, SLOT(stopSearch()));
 }
 
 QVariant HeinzelnisseModel::data(const QModelIndex &index, int role) const {
@@ -45,6 +48,7 @@ int HeinzelnisseModel::rowCount(const QModelIndex&) const {
 void HeinzelnisseModel::search(const QString &query) {
     searchInProgress = true;
     emit searchStatusChanged();
+    searchTimeout->start(3000);
     databaseManager->updateResults(query);
 }
 
@@ -55,6 +59,12 @@ QString HeinzelnisseModel::getResult(const int index) {
         HeinzelnisseElement* result = resultList->value(index);
         return QString(result->getWordLeft() + " - " + result->getWordRight());
     }
+}
+
+void HeinzelnisseModel::stopSearch()
+{
+    qDebug() << "Search timeout...";
+    databaseManager->stopSearch();
 }
 
 QString HeinzelnisseModel::getLastQuery() {
@@ -89,5 +99,6 @@ void HeinzelnisseModel::handleSearchCompleted(const QString &queryString)
     lastQuery = queryString;
     endResetModel();
     searchInProgress = false;
+    searchTimeout->stop();
     emit searchStatusChanged();
 }

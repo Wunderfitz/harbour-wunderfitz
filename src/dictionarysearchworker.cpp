@@ -115,7 +115,7 @@ void DictionarySearchWorker::addQueryResults(QSqlQuery &query, const QString &qu
     QList<HeinzelnisseElement*> otherMatches;
     while (query.next()) {
         if (isInterruptionRequested()) {
-            return;
+            break;
         }
         HeinzelnisseElement* nextElement = new HeinzelnisseElement();
         populateElementFromQuery(query, nextElement);

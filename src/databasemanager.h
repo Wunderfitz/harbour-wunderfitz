@@ -19,6 +19,7 @@ public:
     void updateResults(const QString &query);
     QList<HeinzelnisseElement*>* getResultList();
     void setDictionaryId(const QString &dictionaryId);
+    void stopSearch();
 
 signals:
     void searchCompleted(const QString &queryString);

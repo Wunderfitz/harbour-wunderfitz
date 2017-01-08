@@ -4,6 +4,7 @@
 #include <QAbstractListModel>
 #include <QList>
 #include <QString>
+#include <QTimer>
 #include "databasemanager.h"
 #include "heinzelnisseelement.h"
 
@@ -31,11 +32,15 @@ signals:
 
 private:
     DatabaseManager* databaseManager;
+    QTimer* searchTimeout;
     QList<HeinzelnisseElement*>* resultList;
     QString lastQuery;
     bool searchInProgress;
 
     QString getResult(const int index);
+
+private slots:
+    void stopSearch();
 };
 
 #endif // HEINZELNISSEMODEL_H
