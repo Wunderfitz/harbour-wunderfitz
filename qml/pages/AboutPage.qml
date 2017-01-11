@@ -51,7 +51,7 @@ Page {
                 x: Theme.horizontalPageMargin
                 width: parent.width - ( 2 * Theme.horizontalPageMargin )
                 horizontalAlignment: Text.AlignHCenter
-                text: qsTr("A mobile dictionary application including the Heinzelnisse database and supporting dict.cc export files.")
+                text: qsTr("A mobile dictionary application for offline use including the Heinzelnisse database and supporting dict.cc export files.")
                 font.pixelSize: Theme.fontSizeSmall
                 anchors {
                     horizontalCenter: parent.horizontalCenter

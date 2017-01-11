@@ -91,7 +91,7 @@ Page {
                 }
 
                 Label {
-                    text: qsTr("Dict.cc does not allow other applications such as Wunderfitz to ship their dictionaries. Therefore, you must download them from dict.cc yourself. Use the Download link, follow the instructions and import the files here afterwards. The downloaded dict.cc ZIP files must be placed in the Downloads folder. If in doubt, use the SailfishOS E-Mail and Browser apps to store the downloads there automatically. After the import in Wunderfitz you can delete the ZIP archives.")
+                    text: qsTr("Dict.cc does not allow other applications such as Wunderfitz to ship their dictionaries. Therefore, you must download them from dict.cc yourself. Use the Download link, follow the instructions and import the files here afterwards. The downloaded dict.cc ZIP files must be placed in the Downloads folder. If in doubt, use the SailfishOS E-Mail and Browser apps to store the downloads there automatically. After the import in Wunderfitz you can delete the ZIP archives. Please note that you only need to download one combination of two languages. For example if you use DE-EN, you don't need EN-DE as Wunderfitz always searches in both languages.")
                     font.pixelSize: Theme.fontSizeExtraSmall
                     wrapMode: Text.Wrap
                     width: parent.width - infoImage.width - (3 * infoRow.x)
