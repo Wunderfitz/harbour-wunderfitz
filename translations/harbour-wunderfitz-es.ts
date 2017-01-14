@@ -5,43 +5,43 @@
     <name>AboutPage</name>
     <message>
         <source>About Wunderfitz</source>
-        <translation>About Wunderfitz</translation>
+        <translation>Acerca de Wunderfitz</translation>
     </message>
     <message>
         <source>By Sebastian J. Wolf</source>
-        <translation>By Sebastian J. Wolf</translation>
+        <translation>Por Sebastian J. Wolf</translation>
     </message>
     <message>
         <source>Credits</source>
-        <translation>Credits</translation>
+        <translation>Creditos</translation>
     </message>
     <message>
         <source>Licensed under GNU GPLv2</source>
-        <translation>Licensed under GNU GPLv2</translation>
+        <translation>Licensia GPLv2</translation>
     </message>
     <message>
         <source>Sources on GitHub</source>
-        <translation>Sources on GitHub</translation>
+        <translation>Codigo fuente en GitHub</translation>
     </message>
     <message>
         <source>Send E-Mail</source>
-        <translation>Send E-Mail</translation>
+        <translation>Enviar C-Electrónico</translation>
     </message>
     <message>
         <source>Open heinzelnisse.info</source>
-        <translation>Open heinzelnisse.info</translation>
+        <translation>Abrir heinzelnisse.info</translation>
     </message>
     <message>
         <source>Open QuaZIP home page</source>
-        <translation>Open QuaZIP home page</translation>
+        <translation>Abrir QuaZIP página inicial</translation>
     </message>
     <message>
         <source>Open dict.cc home page</source>
-        <translation>Open dict.cc home page</translation>
+        <translation>Abrir dict.cc página inicial</translation>
     </message>
     <message>
         <source>This application supports dict.cc dictionary export files. Thanks to Paul Hemetsberger and the dict.cc team for providing the dictionaries!</source>
-        <translation>This application supports dict.cc dictionary export files. Thanks to Paul Hemetsberger and the dict.cc team for providing the dictionaries!</translation>
+        <translation>Esta aplicación soporta archivos de exportación del diccionario dict.cc. Gracias Paul Hemetsberger al equipo dict.cc por dar los diccionarios!</translation>
     </message>
     <message>
         <source>This application uses the QuaZIP library, version 0.7.2, to extract ZIP archives. Thanks to Sergey A. Tachenov and the QuaZIP contributors for making it so simple to extract ZIP files with Qt!</source>
@@ -95,35 +95,35 @@
     <name>TitlePage</name>
     <message>
         <source>About Wunderfitz</source>
-        <translation>About Wunderfitz</translation>
+        <translation>Aerca de Wunderfitz</translation>
     </message>
     <message>
         <source>Search in dictionary...</source>
-        <translation>Search in dictionary...</translation>
+        <translation>Buscar en diccionario...</translation>
     </message>
     <message>
         <source>Dictionaries</source>
-        <translation>Dictionaries</translation>
+        <translation>Diccionarios</translation>
     </message>
     <message>
         <source>Searching...</source>
-        <translation>Searching...</translation>
+        <translation>Buscando...</translation>
     </message>
     <message>
         <source>Copy to clipboard</source>
-        <translation>Copy to clipboard</translation>
+        <translation>Copiar al portapapeles</translation>
     </message>
     <message>
         <source>Search for &apos;%1&apos;</source>
-        <translation>Search for &apos;%1&apos;</translation>
+        <translation>Buscar por &apos;%1&apos;</translation>
     </message>
     <message>
         <source>No results found</source>
-        <translation>No results found</translation>
+        <translation>No  hay resultados</translation>
     </message>
     <message>
         <source>Pull down the menu to import and change your dictionaries</source>
-        <translation>Pull down the menu to import and change your dictionaries</translation>
+        <translation>Jalar hacia abajo del menú para importar y cambiar sus diccionarios</translation>
     </message>
 </context>
 </TS>
