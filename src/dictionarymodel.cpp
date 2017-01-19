@@ -126,9 +126,37 @@ void DictionaryModel::selectDictionary(int dictionaryIndex)
     }
 }
 
+void DictionaryModel::deleteSelectedDictionary()
+{
+    QString idToDelete = selectedDictionary->getId();
+    int oldIndex = selectedIndex;
+    if (idToDelete != heinzelnisseId) {
+        if (selectedIndex < ( availableDictionaries.size() - 1 )) {
+            selectDictionary(selectedIndex + 1);
+        } else {
+            selectDictionary(selectedIndex - 1);
+        }
+        QFile fileToDelete(QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + "/harbour-wunderfitz" + "/" + idToDelete + ".db");
+        if (fileToDelete.remove()) {
+            qDebug() << "Dictionary deleted: " + idToDelete;
+            initializeDatabases();
+        } else {
+            qDebug() << "Unable to delete dictionary: " + idToDelete;
+            selectDictionary(oldIndex);
+            emit deletionNotSuccessful(idToDelete);
+        }
+
+    }
+}
+
 QString DictionaryModel::getSelectedDictionaryName()
 {
     return selectedDictionary->getLanguages();
+}
+
+QString DictionaryModel::getSelectedDictionaryId()
+{
+    return selectedDictionary->getId();
 }
 
 int DictionaryModel::getSelectedDictionaryIndex()

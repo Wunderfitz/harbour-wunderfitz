@@ -29,7 +29,9 @@ public:
     DictCCImporterModel dictCCImporterModel;
 
     Q_INVOKABLE void selectDictionary(int dictionaryIndex);
+    Q_INVOKABLE void deleteSelectedDictionary();
     Q_INVOKABLE QString getSelectedDictionaryName();
+    Q_INVOKABLE QString getSelectedDictionaryId();
     Q_INVOKABLE int getSelectedDictionaryIndex();
     Q_INVOKABLE bool isInteractionHintDisplayed();
 
@@ -38,6 +40,7 @@ public slots:
 
 signals:
     void dictionaryChanged();
+    void deletionNotSuccessful(const QString &dictionaryId);
 
 private:
     QString readLanguages(QSqlDatabase &database);

@@ -75,20 +75,24 @@
         <translation>Dict.cc-ZIP-Archive importieren</translation>
     </message>
     <message>
-        <source>Dictionary</source>
-        <translation>Wörterbuch</translation>
-    </message>
-    <message>
         <source>Dict.cc Import</source>
         <translation>Dict.cc-Import</translation>
     </message>
     <message>
-        <source>Choose the active dictionary here</source>
-        <translation>Wählen Sie hier das aktive Wörterbuch aus</translation>
-    </message>
-    <message>
         <source>Dict.cc does not allow other applications such as Wunderfitz to ship their dictionaries. Therefore, you must download them from dict.cc yourself. Use the Download link, follow the instructions and import the files here afterwards. The downloaded dict.cc ZIP files must be placed in the Downloads folder. If in doubt, use the SailfishOS E-Mail and Browser apps to store the downloads there automatically. After the import in Wunderfitz you can delete the ZIP archives. Please note that you only need to download one combination of two languages. For example if you use DE-EN, you don&apos;t need EN-DE as Wunderfitz always searches in both languages.</source>
         <translation>Dict.cc erlaubt es anderen Anwendungen wie Wunderfitz nicht, ihre Wörterbücher auszuliefern. Deshalb müssen Sie diese von dict.cc selbst herunterladen. Benutzen Sie den Herunterladen-Link, folgen Sie den Anweisungen und importieren Sie danach die Dateien hier. Die heruntergeladenen dict.cc-ZIP-Dateien müssen sich im Verzeichnis Downloads befinden. Im Zweifel nutzen Sie die SailfishOS-Anwendungen Browser und E-Mail um die Downloads dort automatisch zu speichern. Nach dem Import in Wunderfitz können Sie die ZIP-Archive löschen. Wenn Sie zum Beispiel DE-EN nutzen, benötigen Sie EN-DE nicht mehr, da Wunderfitz immer in beiden Sprachen sucht.</translation>
+    </message>
+    <message>
+        <source>Dictionary</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Choose the active dictionary here</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Delete selected dictionary</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

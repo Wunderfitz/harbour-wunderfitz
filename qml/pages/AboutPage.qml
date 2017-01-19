@@ -38,7 +38,7 @@ Page {
             }
 
             Label {
-                text: "Wunderfitz 0.3"
+                text: "Wunderfitz 0.4"
                 horizontalAlignment: Text.AlignHCenter
                 font.pixelSize: Theme.fontSizeExtraLarge
                 anchors {

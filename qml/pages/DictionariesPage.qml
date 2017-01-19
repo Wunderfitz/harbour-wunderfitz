@@ -45,6 +45,22 @@ Page {
         Behavior on opacity { NumberAnimation {} }
         opacity: dictCCImporterModel.isWorking() ? 0 : 1
 
+        Connections {
+            target: dictionaryModel
+            onDictionaryChanged: {
+                dictionaryPullDown.enabled = (dictionaryModel.getSelectedDictionaryId() === "heinzelnisse") ? false : true
+            }
+        }
+
+        PullDownMenu {
+            id: dictionaryPullDown
+            MenuItem {
+                text: qsTr("Delete selected dictionary")
+                onClicked: dictionaryModel.deleteSelectedDictionary()
+            }
+            enabled: (dictionaryModel.getSelectedDictionaryId() === "heinzelnisse") ? false : true
+        }
+
         Column {
             id: dictionariesColumn
 
@@ -72,8 +88,6 @@ Page {
                     }
                 }
             }
-
-
 
             SectionHeader {
                 text: qsTr("Dict.cc Import")
