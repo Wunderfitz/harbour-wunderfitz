@@ -75,20 +75,24 @@
         <translation>Importar dict.cc ZIP ficheros</translation>
     </message>
     <message>
-        <source>Dictionary</source>
-        <translation>Diccionario</translation>
-    </message>
-    <message>
         <source>Dict.cc Import</source>
         <translation>Dict.cc Importar</translation>
     </message>
     <message>
-        <source>Choose the active dictionary here</source>
-        <translation>Elegir un diccionario activo aquí</translation>
-    </message>
-    <message>
         <source>Dict.cc does not allow other applications such as Wunderfitz to ship their dictionaries. Therefore, you must download them from dict.cc yourself. Use the Download link, follow the instructions and import the files here afterwards. The downloaded dict.cc ZIP files must be placed in the Downloads folder. If in doubt, use the SailfishOS E-Mail and Browser apps to store the downloads there automatically. After the import in Wunderfitz you can delete the ZIP archives. Please note that you only need to download one combination of two languages. For example if you use DE-EN, you don&apos;t need EN-DE as Wunderfitz always searches in both languages.</source>
         <translation>Dict.cc no permite que otras aplicaciones como Wunderfitz envíen sus diccionarios. Lo cual, debe descargarlos de dict.cc usted mismo. Utilice el enlace Descargar, siga las instrucciones e importe los archivos aquí después. Los archivos ZIP dict.cc descargados deben colocarse en la carpeta Descargas. Por dudas, utilice las aplicaciones SailfishOS C-Elec y Navegador para almacenar las descargas allí automáticamente. Después de la importación en Wunderfitz puede eliminar los archivos ZIP. Tenga en cuenta que sólo necesita descargar una combinación de dos idiomas. Por ejemplo, si utiliza DE-EN, no necesita EN-DE ya que Wunderfitz siempre busca en ambos idiomas</translation>
+    </message>
+    <message>
+        <source>Dictionary</source>
+        <translation>Diccionrio</translation>
+    </message>
+    <message>
+        <source>Choose the active dictionary here</source>
+        <translation>Elegir el  diccionario activo aqui</translation>
+    </message>
+    <message>
+        <source>Delete selected dictionary</source>
+        <translation>Borrar diccionario seleccionado</translation>
     </message>
 </context>
 <context>
@@ -106,6 +110,10 @@
         <translation>Diccionarios</translation>
     </message>
     <message>
+        <source>Pull down the menu to import and change your dictionaries</source>
+        <translation>Jalar hacia abajo el menú para importar y cambiar sus diccionarios</translation>
+    </message> 
+    <message>
         <source>Searching...</source>
         <translation>Buscando...</translation>
     </message>
@@ -120,10 +128,6 @@
     <message>
         <source>No results found</source>
         <translation>No resultados</translation>
-    </message>
-    <message>
-        <source>Pull down the menu to import and change your dictionaries</source>
-        <translation>Jalar hacia abajo el menú para importar y cambiar sus diccionarios</translation>
     </message>
 </context>
 </TS>
