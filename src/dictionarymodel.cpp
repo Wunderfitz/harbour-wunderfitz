@@ -18,7 +18,7 @@ DictionaryModel::DictionaryModel()
 {
     initializeDatabases();
     DictCCImporterModel* myModel (&dictCCImporterModel);
-    connect(myModel, SIGNAL(importFinished()), this, SLOT(handleImportFinished()));
+    connect(myModel, SIGNAL(importFinished()), this, SLOT(handleModelChanged()));
 }
 
 QVariant DictionaryModel::data(const QModelIndex &index, int role) const {
@@ -130,18 +130,24 @@ void DictionaryModel::deleteSelectedDictionary()
 {
     QString idToDelete = selectedDictionary->getId();
     int oldIndex = selectedIndex;
+    int newIndex = selectedIndex;
     if (idToDelete != heinzelnisseId) {
         if (selectedIndex < ( availableDictionaries.size() - 1 )) {
-            selectDictionary(selectedIndex + 1);
+            newIndex++;
         } else {
-            selectDictionary(selectedIndex - 1);
+            newIndex--;
         }
+        selectDictionary(newIndex);
+        QSqlDatabase databaseToDelete = QSqlDatabase::database("connection" + idToDelete);
+        databaseToDelete.close();
         QFile fileToDelete(QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + "/harbour-wunderfitz" + "/" + idToDelete + ".db");
         if (fileToDelete.remove()) {
             qDebug() << "Dictionary deleted: " + idToDelete;
-            initializeDatabases();
+            selectedIndex = newIndex;
+            handleModelChanged();
         } else {
             qDebug() << "Unable to delete dictionary: " + idToDelete;
+            databaseToDelete.open();
             selectDictionary(oldIndex);
             emit deletionNotSuccessful(idToDelete);
         }
@@ -184,7 +190,7 @@ bool DictionaryModel::isInteractionHintDisplayed()
     }
 }
 
-void DictionaryModel::handleImportFinished()
+void DictionaryModel::handleModelChanged()
 {
     beginResetModel();
     initializeDatabases();

@@ -97,6 +97,56 @@ Page {
             }
 
             SectionHeader {
+                text: qsTr("Translations")
+            }
+
+            Row {
+                id: spanishRow
+                width: parent.width
+                Column {
+                    width: parent.width / 2 - Theme.horizontalPageMargin
+                    Label {
+                        x: Theme.horizontalPageMargin
+                        text: qsTr("Spanish")
+                        color: Theme.primaryColor
+                        font.pixelSize: Theme.fontSizeSmall
+                    }
+                }
+                Column {
+                    width: parent.width / 2 - Theme.horizontalPageMargin
+                    Label {
+                        x: Theme.horizontalPageMargin
+                        text: "Carlos Gonzales"
+                        color: Theme.primaryColor
+                        font.pixelSize: Theme.fontSizeSmall
+                    }
+                }
+            }
+
+            Row {
+                id: swedishRow
+                width: parent.width
+                Column {
+                    width: parent.width / 2 - Theme.horizontalPageMargin
+                    Label {
+                        x: Theme.horizontalPageMargin
+                        text: qsTr("Swedish")
+                        color: Theme.primaryColor
+                        font.pixelSize: Theme.fontSizeSmall
+                    }
+                }
+                Column {
+                    width: parent.width / 2 - Theme.horizontalPageMargin
+                    Label {
+                        x: Theme.horizontalPageMargin
+                        text: "Åke Engelbrektson"
+                        color: Theme.primaryColor
+                        font.pixelSize: Theme.fontSizeSmall
+                    }
+                }
+            }
+
+            SectionHeader {
                 text: qsTr("Credits")
             }
 

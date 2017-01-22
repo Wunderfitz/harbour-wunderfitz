@@ -25,6 +25,7 @@ public slots:
 signals:
     void statusChanged();
     void importFinished();
+    void dictionaryFound(const QString &languages, const QString &timestamp);
 
 private:
     QString statusText;

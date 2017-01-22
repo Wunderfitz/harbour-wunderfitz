@@ -130,7 +130,6 @@ Page {
             opacity: titlePage.interactionHintDisplayed ? 0 : 1
 
             width: titlePage.width
-            spacing: Theme.paddingLarge
 
             PageHeader {
                 id: header
@@ -146,7 +145,6 @@ Page {
 
             SearchField {
                 id: searchField
-                x: Theme.paddingMedium
                 width: parent.width
                 placeholderText: qsTr("Search in dictionary...")
                 focus: true
@@ -164,7 +162,7 @@ Page {
 
                 id: listView
 
-                height: titlePage.height - header.height - searchField.height - ( 2 * Theme.paddingLarge )
+                height: titlePage.height - header.height - searchField.height
                 width: parent.width
                 anchors.left: parent.left
                 anchors.right: parent.right
@@ -217,6 +215,7 @@ Page {
                                 truncationMode: TruncationMode.Fade
                                 text: display.wordLeft + " " + display.genderLeft
                             }
+
                             Label {
                                 color: Theme.primaryColor
                                 width: parent.width

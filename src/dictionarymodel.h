@@ -36,7 +36,7 @@ public:
     Q_INVOKABLE bool isInteractionHintDisplayed();
 
 public slots:
-    void handleImportFinished();
+    void handleModelChanged();
 
 signals:
     void dictionaryChanged();

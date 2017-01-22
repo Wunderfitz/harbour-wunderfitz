@@ -55,6 +55,18 @@
         <source>A mobile dictionary application for offline use including the Heinzelnisse database and supporting dict.cc export files.</source>
         <translation>Una aplicación de diccionario móvil para uso sin conexión con base de datos Heinzelnisse y archivos de exportación de dict.cc.</translation>
     </message>
+    <message>
+        <source>Translations</source>
+        <translation>Traducciones</translation>
+    </message>
+    <message>
+        <source>Spanish</source>
+        <translation>Español</translation>
+    </message>
+    <message>
+        <source>Swedish</source>
+        <translation>Sueco</translation>
+    </message>
 </context>
 <context>
     <name>DictionariesPage</name>
@@ -76,7 +88,7 @@
     </message>
     <message>
         <source>Dict.cc Import</source>
-        <translation>Dict.cc Importar</translation>
+        <translation>Dict.cc Importación</translation>
     </message>
     <message>
         <source>Dict.cc does not allow other applications such as Wunderfitz to ship their dictionaries. Therefore, you must download them from dict.cc yourself. Use the Download link, follow the instructions and import the files here afterwards. The downloaded dict.cc ZIP files must be placed in the Downloads folder. If in doubt, use the SailfishOS E-Mail and Browser apps to store the downloads there automatically. After the import in Wunderfitz you can delete the ZIP archives. Please note that you only need to download one combination of two languages. For example if you use DE-EN, you don&apos;t need EN-DE as Wunderfitz always searches in both languages.</source>
@@ -84,15 +96,27 @@
     </message>
     <message>
         <source>Dictionary</source>
-        <translation>Diccionrio</translation>
+        <translation>Diccionario</translation>
     </message>
     <message>
         <source>Choose the active dictionary here</source>
-        <translation>Elegir el  diccionario activo aqui</translation>
+        <translation>Elegir el diccionario activo aqui</translation>
     </message>
     <message>
         <source>Delete selected dictionary</source>
         <translation>Borrar diccionario seleccionado</translation>
+    </message>
+    <message>
+        <source>Dictionary %1 successfully imported</source>
+        <translation>Diccionario %1 importado con éxito</translation>
+    </message>
+    <message>
+        <source>Deleting dictionary %1</source>
+        <translation>Borrando diccionario %1</translation>
+    </message>
+    <message>
+        <source>Dictionary %1 imported</source>
+        <translation>Diccionario %1 importado</translation>
     </message>
 </context>
 <context>
@@ -112,7 +136,7 @@
     <message>
         <source>Pull down the menu to import and change your dictionaries</source>
         <translation>Jalar hacia abajo el menú para importar y cambiar sus diccionarios</translation>
-    </message> 
+    </message>
     <message>
         <source>Searching...</source>
         <translation>Buscando...</translation>

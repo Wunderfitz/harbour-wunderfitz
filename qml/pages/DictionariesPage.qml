@@ -1,5 +1,6 @@
 import QtQuick 2.0
 import Sailfish.Silica 1.0
+import org.nemomobile.notifications 1.0
 
 Page {
     id: dictionariesPage
@@ -9,6 +10,23 @@ Page {
         busyIndicator.running = dictCCImporterModel.isWorking()
         busyIndicatorColumn.opacity = dictCCImporterModel.isWorking() ? 1 : 0
         dictionaryFlickable.opacity = dictCCImporterModel.isWorking() ? 0 : 1
+    }
+
+    Notification {
+        id: importNotification
+        appName: "Wunderfitz"
+        appIcon: "/usr/share/icons/hicolor/256x256/apps/harbour-wunderfitz.png"
+    }
+
+    Connections {
+        target: dictCCImporterModel
+        onDictionaryFound: {
+            importNotification.summary = qsTr("Dict.cc Import")
+            importNotification.body = qsTr("Dictionary %1 successfully imported").arg(languages)
+            importNotification.previewSummary = qsTr("Dict.cc Import")
+            importNotification.previewBody = qsTr("Dictionary %1 imported").arg(languages)
+            importNotification.publish()
+        }
     }
 
     Column {
@@ -49,23 +67,26 @@ Page {
             target: dictionaryModel
             onDictionaryChanged: {
                 dictionaryPullDown.enabled = (dictionaryModel.getSelectedDictionaryId() === "heinzelnisse") ? false : true
+                dictionaryComboBox.currentIndex = dictionaryModel.getSelectedDictionaryIndex();
             }
+        }
+
+        RemorsePopup {
+            id: remorseDelete
         }
 
         PullDownMenu {
             id: dictionaryPullDown
             MenuItem {
                 text: qsTr("Delete selected dictionary")
-                onClicked: dictionaryModel.deleteSelectedDictionary()
+                onClicked: remorseDelete.execute(qsTr("Deleting dictionary %1").arg(dictionaryModel.getSelectedDictionaryId()), function() {dictionaryModel.deleteSelectedDictionary()}, 4000)
             }
             enabled: (dictionaryModel.getSelectedDictionaryId() === "heinzelnisse") ? false : true
         }
 
         Column {
             id: dictionariesColumn
-
             width: dictionariesPage.width
-            spacing: Theme.paddingLarge
 
             PageHeader {
                 id: header
@@ -73,6 +94,7 @@ Page {
             }
 
             ComboBox {
+                id: dictionaryComboBox
                 label: qsTr("Dictionary")
                 currentIndex: dictionaryModel.getSelectedDictionaryIndex()
                 description: qsTr("Choose the active dictionary here")
@@ -93,62 +115,54 @@ Page {
                 text: qsTr("Dict.cc Import")
             }
 
-            Row {
-                id: infoRow
-                x: Theme.paddingLarge
+            Column {
+                width: parent.width
                 spacing: Theme.paddingLarge
-                width : parent.width
 
-                Image {
-                    id: infoImage
-                    source: "image://theme/icon-m-about"
-                }
+                Row {
+                    id: infoRow
+                    x: Theme.paddingLarge
+                    spacing: Theme.paddingSmall
+                    width : parent.width
 
-                Label {
-                    text: qsTr("Dict.cc does not allow other applications such as Wunderfitz to ship their dictionaries. Therefore, you must download them from dict.cc yourself. Use the Download link, follow the instructions and import the files here afterwards. The downloaded dict.cc ZIP files must be placed in the Downloads folder. If in doubt, use the SailfishOS E-Mail and Browser apps to store the downloads there automatically. After the import in Wunderfitz you can delete the ZIP archives. Please note that you only need to download one combination of two languages. For example if you use DE-EN, you don't need EN-DE as Wunderfitz always searches in both languages.")
-                    font.pixelSize: Theme.fontSizeExtraSmall
-                    wrapMode: Text.Wrap
-                    width: parent.width - infoImage.width - (3 * infoRow.x)
-                }
-            }
+                    Image {
+                        id: infoImage
+                        source: "image://theme/icon-m-about"
+                    }
 
-            Text {
-                text: "<a href=\"http://www1.dict.cc/translation_file_request.php?l=e\">" + qsTr("Download dict.cc dictionaries") + "</a>"
-                anchors {
-                    horizontalCenter: parent.horizontalCenter
-                }
-                font.pixelSize: Theme.fontSizeSmall
-                linkColor: Theme.highlightColor
-
-                onLinkActivated: Qt.openUrlExternally("http://www1.dict.cc/translation_file_request.php?l=e")
-            }
-
-            Button {
-                text: qsTr("Import dict.cc ZIP archives")
-                anchors {
-                    horizontalCenter: parent.horizontalCenter
-                }
-                onClicked: dictCCImporterModel.importDictionaries()
-            }
-
-            Text {
-                id: importStatusText
-                text: dictCCImporterModel.getStatusText()
-                anchors {
-                    horizontalCenter: parent.horizontalCenter
-                }
-                font.pixelSize: Theme.fontSizeSmall
-                color: Theme.secondaryColor
-                width: parent.width - 2 * Theme.horizontalPageMargin
-                wrapMode: Text.Wrap
-                horizontalAlignment: Text.AlignHCenter
-                Connections {
-                    target: dictCCImporterModel
-                    onStatusChanged: {
-                        importStatusText.text = dictCCImporterModel.getStatusText()
+                    Label {
+                        text: qsTr("Dict.cc does not allow other applications such as Wunderfitz to ship their dictionaries. Therefore, you must download them from dict.cc yourself. Use the Download link, follow the instructions and import the files here afterwards. The downloaded dict.cc ZIP files must be placed in the Downloads folder. If in doubt, use the SailfishOS E-Mail and Browser apps to store the downloads there automatically. After the import in Wunderfitz you can delete the ZIP archives. Please note that you only need to download one combination of two languages. For example if you use DE-EN, you don't need EN-DE as Wunderfitz always searches in both languages.")
+                        font.pixelSize: Theme.fontSizeExtraSmall
+                        wrapMode: Text.Wrap
+                        width: parent.width - infoImage.width - (3 * infoRow.x)
                     }
                 }
 
+                Text {
+                    id: downloadLink
+                    text: "<a href=\"http://www1.dict.cc/translation_file_request.php?l=e\">" + qsTr("Download dict.cc dictionaries") + "</a>"
+                    anchors {
+                        horizontalCenter: parent.horizontalCenter
+                    }
+                    font.pixelSize: Theme.fontSizeSmall
+                    linkColor: Theme.highlightColor
+
+                    onLinkActivated: Qt.openUrlExternally("http://www1.dict.cc/translation_file_request.php?l=e")
+                }
+
+                Button {
+                    text: qsTr("Import dict.cc ZIP archives")
+                    anchors {
+                        horizontalCenter: parent.horizontalCenter
+                    }
+                    onClicked: dictCCImporterModel.importDictionaries()
+                }
+
+                Label {
+                    id: separatorLabel
+                    font.pixelSize: Theme.fontSizeSmall
+                    width: parent.width - 2 * Theme.horizontalPageMargin
+                }
             }
 
             VerticalScrollDecorator {}

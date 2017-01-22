@@ -81,5 +81,6 @@ void DictCCImporterModel::handleDictionaryFound(const QString &languages, const 
     importedDictionary->setTimestamp(timestamp);
     importedDictionaries.append(importedDictionary);
     endResetModel();
+    emit dictionaryFound(languages, timestamp);
 }
 

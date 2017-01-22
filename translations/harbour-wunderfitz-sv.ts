@@ -55,6 +55,18 @@
         <source>A mobile dictionary application for offline use including the Heinzelnisse database and supporting dict.cc export files.</source>
         <translation>En mobil ordboksapp för offline-användning, som inkluderar Heinzelnisse-databasen och stödjer dict.cc exportfiler.</translation>
     </message>
+    <message>
+        <source>Translations</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Spanish</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Swedish</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>DictionariesPage</name>
@@ -89,6 +101,22 @@
     <message>
         <source>Dict.cc does not allow other applications such as Wunderfitz to ship their dictionaries. Therefore, you must download them from dict.cc yourself. Use the Download link, follow the instructions and import the files here afterwards. The downloaded dict.cc ZIP files must be placed in the Downloads folder. If in doubt, use the SailfishOS E-Mail and Browser apps to store the downloads there automatically. After the import in Wunderfitz you can delete the ZIP archives. Please note that you only need to download one combination of two languages. For example if you use DE-EN, you don&apos;t need EN-DE as Wunderfitz always searches in both languages.</source>
         <translation>Dict.cc tillåter inte andra program såsom Wunderfitz, att leverera deras ordböcker. Därför måste du själv ladda ner dem från dict.cc. Använd nerladdningslänken, följ instruktionerna och importera därefter filerna här. De nerladdade ZIP-filerna måste placeras i mappen &quot;Nedladdningar&quot;. Om du är osäker kan du använda SailfishOS e-postprogram och webbläsare för att automatiskt lagra nerladdningarna där. Efter import i Wunderfitz kan du radera ZIP-arkiven. Notera att du bara behöver ladda ner en av två språkkombinationer. Om du t.ex. vill använda SV-EN, behöver du inte EN-SV, eftersom Wunderfitz alltid söker i bägge språken.</translation>
+    </message>
+    <message>
+        <source>Delete selected dictionary</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Dictionary %1 successfully imported</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Deleting dictionary %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Dictionary %1 imported</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

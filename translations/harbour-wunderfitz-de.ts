@@ -55,6 +55,18 @@
         <source>A mobile dictionary application for offline use including the Heinzelnisse database and supporting dict.cc export files.</source>
         <translation>Ein mobiles Wörterbuch für die Offline-Benutzung mit der Heinzelnisse-Datenbank und mit der Unterstützung für dict.cc-Exportdateien.</translation>
     </message>
+    <message>
+        <source>Translations</source>
+        <translation>Übersetzungen</translation>
+    </message>
+    <message>
+        <source>Spanish</source>
+        <translation>Spanisch</translation>
+    </message>
+    <message>
+        <source>Swedish</source>
+        <translation>Schwedisch</translation>
+    </message>
 </context>
 <context>
     <name>DictionariesPage</name>
@@ -84,15 +96,27 @@
     </message>
     <message>
         <source>Dictionary</source>
-        <translation type="unfinished"></translation>
+        <translation>Wörterbuch</translation>
     </message>
     <message>
         <source>Choose the active dictionary here</source>
-        <translation type="unfinished"></translation>
+        <translation>Wählen Sie hier das aktive Wörterbuch aus</translation>
     </message>
     <message>
         <source>Delete selected dictionary</source>
-        <translation type="unfinished"></translation>
+        <translation>Ausgewähltes Wörterbuch löschen</translation>
+    </message>
+    <message>
+        <source>Dictionary %1 successfully imported</source>
+        <translation>Wörterbuch %1 erfolgreich importiert</translation>
+    </message>
+    <message>
+        <source>Deleting dictionary %1</source>
+        <translation>Löscht Wörterbuch %1</translation>
+    </message>
+    <message>
+        <source>Dictionary %1 imported</source>
+        <translation>Wörterbuch %1 importiert</translation>
     </message>
 </context>
 <context>
