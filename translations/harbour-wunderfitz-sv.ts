@@ -116,7 +116,7 @@
     </message>
     <message>
         <source>Dictionary %1 imported</source>
-        <translation >Ordbok %1 importerad</translation>
+        <translation>Ordbok %1 importerad</translation>
     </message>
 </context>
 <context>

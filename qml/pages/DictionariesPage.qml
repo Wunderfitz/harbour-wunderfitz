@@ -1,6 +1,7 @@
 import QtQuick 2.0
 import Sailfish.Silica 1.0
 import org.nemomobile.notifications 1.0
+import org.nemomobile.dbus 2.0
 
 Page {
     id: dictionariesPage
@@ -25,6 +26,7 @@ Page {
             importNotification.body = qsTr("Dictionary %1 successfully imported").arg(languages)
             importNotification.previewSummary = qsTr("Dict.cc Import")
             importNotification.previewBody = qsTr("Dictionary %1 imported").arg(languages)
+            importNotification.replacesId = 0
             importNotification.publish()
         }
     }
