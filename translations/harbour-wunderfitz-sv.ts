@@ -57,15 +57,15 @@
     </message>
     <message>
         <source>Translations</source>
-        <translation type="unfinished"></translation>
+        <translation>Översättningar</translation>
     </message>
     <message>
         <source>Spanish</source>
-        <translation type="unfinished"></translation>
+        <translation>Spanska</translation>
     </message>
     <message>
         <source>Swedish</source>
-        <translation type="unfinished"></translation>
+        <translation>Svenska</translation>
     </message>
 </context>
 <context>
@@ -104,19 +104,19 @@
     </message>
     <message>
         <source>Delete selected dictionary</source>
-        <translation type="unfinished"></translation>
+        <translation>Ta bort aktuell ordbok</translation>
     </message>
     <message>
         <source>Dictionary %1 successfully imported</source>
-        <translation type="unfinished"></translation>
+        <translation>Ordbok %1 korrekt importerad</translation>
     </message>
     <message>
         <source>Deleting dictionary %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Tar bort ordbok %1</translation>
     </message>
     <message>
         <source>Dictionary %1 imported</source>
-        <translation type="unfinished"></translation>
+        <translation >Ordbok %1 importerad</translation>
     </message>
 </context>
 <context>
