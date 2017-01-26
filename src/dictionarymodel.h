@@ -19,6 +19,7 @@ public:
     static const QString heinzelnisseId;
     static const QString heinzelnisseLanguages;
     static const QString heinzelnisseTimestamp;
+    static const int currentMetadataVersion;
 
     DictionaryModel();
 

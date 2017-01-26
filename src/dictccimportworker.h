@@ -14,6 +14,8 @@ class DictCCImportWorker : public QThread
     void run() Q_DECL_OVERRIDE {
         importDictionaries();
     }
+public:
+    DictCCImportWorker();
 signals:
         void importFinished();
         void dictionaryFound(const QString &languages, const QString &timestamp);
@@ -27,6 +29,7 @@ private:
     bool isAlreadyImported(QMap<QString,QString> &metadata, QSqlDatabase &database);
     void writeMetadata(QMap<QString,QString> &metadata, QSqlDatabase &database);
     void writeDictionaryEntries(QTextStream &inputStream, QMap<QString,QString> &metadata, QSqlDatabase &database);
+    int currentMetadataVersion;
     DictCCWord getDictCCWord(QString rawWord);
     QString getTempDirectory();
     QString getDirectory(const QString &directoryString);

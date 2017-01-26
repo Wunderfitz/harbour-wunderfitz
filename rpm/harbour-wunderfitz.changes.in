@@ -17,3 +17,6 @@
 - Deletion of dictionaries supported
 - Notifications for successful imports
 - Slightly more compact UI
+
+* Sun Jan 29 2017 <sebastian@ygriega.de> 0.5
+- Case-insensitive search for non-ASCII characters now working

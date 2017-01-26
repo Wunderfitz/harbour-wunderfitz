@@ -7,6 +7,10 @@ Sebastian J. Wolf [sebastian@ygriega.de](mailto:sebastian@ygriega.de)
 ## License
 Licensed under GNU GPLv2
 
+## Translations
+- Spanish: Carlos Gonzales
+- Swedish: Åke Engelbrektson
+
 ## Credits
 This project uses
 - the Norwegian-German dictionary from [heinzelnisse.info](http://www.heinzelnisse.info) - Updated on January 7, 2017 - Thanks to the authors Heiko Klein and Julia Emmerich for making the dictionary accessible under the conditions of the GNU GPLv2!

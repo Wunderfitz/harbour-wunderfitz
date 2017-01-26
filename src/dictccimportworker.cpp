@@ -9,6 +9,11 @@
 #include <QStringList>
 #include <QStringListIterator>
 
+DictCCImportWorker::DictCCImportWorker()
+{
+    currentMetadataVersion = 1;
+}
+
 void DictCCImportWorker::importDictionaries()
 {
     emit statusChanged("Checking for new dictionaries...");
@@ -117,6 +122,18 @@ bool DictCCImportWorker::isAlreadyImported(QMap<QString, QString> &metadata, QSq
     QSqlQuery databaseQuery(database);
     QStringList existingTables = database.tables();
     if (existingTables.contains("metadata")) {
+        databaseQuery.prepare("select value from metadata where key = 'metadataVersion'");
+        databaseQuery.exec();
+        if (databaseQuery.next()) {
+            int importVersion = databaseQuery.value(0).toInt();
+            if (importVersion < currentMetadataVersion) {
+                qDebug() << "Metadata version outdated, so re-import needed";
+                return false;
+            }
+        } else {
+            qDebug() << "Metadata version not found, so outdated and re-import needed";
+            return false;
+        }
         databaseQuery.prepare("select value from metadata where key = 'timestamp'");
         databaseQuery.exec();
         if (databaseQuery.next()) {
@@ -156,6 +173,11 @@ void DictCCImportWorker::writeMetadata(QMap<QString, QString> &metadata, QSqlDat
     if (databaseQuery.exec()) {
         qDebug() << "Timestamp successfully stored in metadata table";
     }
+    databaseQuery.bindValue(":key", "metadataVersion");
+    databaseQuery.bindValue(":value", QString::number(currentMetadataVersion));
+    if (databaseQuery.exec()) {
+        qDebug() << "Metadata version successfully stored in metadata table";
+    }
 }
 
 void DictCCImportWorker::writeDictionaryEntries(QTextStream &inputStream, QMap<QString,QString> &metadata, QSqlDatabase &database)
@@ -170,7 +192,7 @@ void DictCCImportWorker::writeDictionaryEntries(QTextStream &inputStream, QMap<Q
         }
     }
 
-    databaseQuery.prepare("create virtual table entries using fts4(id integer primary key, left_word text, left_gender text, left_other text, right_word text, right_gender text, right_other text, category text, tokenize=porter)");
+    databaseQuery.prepare("create virtual table entries using fts4(id integer primary key, left_word text, left_gender text, left_other text, right_word text, right_gender text, right_other text, category text, tokenize=unicode61 \"remove_diacritics=0\")");
     if (databaseQuery.exec()) {
         qDebug() << "Entries table successfully created!";
     } else {
