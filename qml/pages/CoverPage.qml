@@ -23,7 +23,7 @@ CoverBackground {
         }
 
         fillMode: Image.PreserveAspectFit
-        opacity: 0.15
+        opacity: 0.1
     }
 
     SilicaListView {
