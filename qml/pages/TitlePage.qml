@@ -203,6 +203,7 @@ Page {
                         id: wordRow
                         width: parent.width
                         spacing: Theme.paddingMedium
+                        anchors.verticalCenter: parent.verticalCenter
                         Column {
                             id: columnLeft
                             width: parent.width / 2 - ( 2 * Theme.paddingMedium )

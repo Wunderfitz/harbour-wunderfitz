@@ -38,7 +38,7 @@ Page {
             }
 
             Label {
-                text: "Wunderfitz 0.5"
+                text: "Wunderfitz 1"
                 horizontalAlignment: Text.AlignHCenter
                 font.pixelSize: Theme.fontSizeExtraLarge
                 anchors {
@@ -101,6 +101,29 @@ Page {
             }
 
             Row {
+                id: dutchRow
+                width: parent.width
+                Column {
+                    width: parent.width / 2 - Theme.horizontalPageMargin
+                    Label {
+                        x: Theme.horizontalPageMargin
+                        text: qsTr("Dutch")
+                        color: Theme.primaryColor
+                        font.pixelSize: Theme.fontSizeSmall
+                    }
+                }
+                Column {
+                    width: parent.width / 2 - Theme.horizontalPageMargin
+                    Label {
+                        x: Theme.horizontalPageMargin
+                        text: "d9h02f"
+                        color: Theme.primaryColor
+                        font.pixelSize: Theme.fontSizeSmall
+                    }
+                }
+            }
+
+            Row {
                 id: spanishRow
                 width: parent.width
                 Column {
@@ -153,7 +176,7 @@ Page {
             Label {
                 x: Theme.horizontalPageMargin
                 width: parent.width  - ( 2 * Theme.horizontalPageMargin )
-                text: qsTr("This project uses the Norwegian-German dictionary from heinzelnisse.info - Updated on January 7, 2017 - Thanks to the authors Heiko Klein and Julia Emmerich for making the dictionary available under the conditions of the GNU GPLv2!")
+                text: qsTr("This project uses the Norwegian-German dictionary from heinzelnisse.info - Updated on May 6, 2017 - Thanks to the authors Heiko Klein and Julia Emmerich for making the dictionary available under the conditions of the GNU GPLv2!")
                 font.pixelSize: Theme.fontSizeExtraSmall
                 wrapMode: Text.Wrap
                 anchors {

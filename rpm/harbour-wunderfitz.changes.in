@@ -20,3 +20,8 @@
 
 * Sun Jan 29 2017 <sebastian@ygriega.de> 0.5
 - Case-insensitive search for non-ASCII characters now working
+
+* Sat May 20 2017 <sebastian@ygriega.de> 1.0
+- No bugs discovered/reported over the last months, also feature complete, finally calling it 1.0
+- Dutch translation by d9h02f
+- Heinzelnisse dictionary update from May 6, 2017

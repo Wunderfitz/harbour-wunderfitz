@@ -48,10 +48,6 @@
         <translation>Diese Anwendung nutzt die QuaZIP-Bibliothek in der Version 0.7.2 um ZIP-Archive zu extrahieren. Danke an Sergey A. Tachenov und die Mitwirkenden an QuaZIP, dass sie das Extrahieren von ZIP-Dateien mit Qt so einfach gemacht haben!</translation>
     </message>
     <message>
-        <source>This project uses the Norwegian-German dictionary from heinzelnisse.info - Updated on January 7, 2017 - Thanks to the authors Heiko Klein and Julia Emmerich for making the dictionary available under the conditions of the GNU GPLv2!</source>
-        <translation>Dieses Projekt nutzt das Norwegisch-Deutsch-Wörterbuch von heinzelnisse.info - aktualisiert am 7. Januar 2017 - Danke an die Autoren Heiko Klein und Julia Emmerich für die Veröffentlichung des Wörterbuchs unter den Bedingungen der GNU GPLv2!</translation>
-    </message>
-    <message>
         <source>A mobile dictionary application for offline use including the Heinzelnisse database and supporting dict.cc export files.</source>
         <translation>Ein mobiles Wörterbuch für die Offline-Benutzung mit der Heinzelnisse-Datenbank und mit der Unterstützung für dict.cc-Exportdateien.</translation>
     </message>
@@ -66,6 +62,14 @@
     <message>
         <source>Swedish</source>
         <translation>Schwedisch</translation>
+    </message>
+    <message>
+        <source>Dutch</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>This project uses the Norwegian-German dictionary from heinzelnisse.info - Updated on May 6, 2017 - Thanks to the authors Heiko Klein and Julia Emmerich for making the dictionary available under the conditions of the GNU GPLv2!</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
