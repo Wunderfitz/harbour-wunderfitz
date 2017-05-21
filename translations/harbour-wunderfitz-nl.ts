@@ -65,11 +65,11 @@
     </message>
     <message>
         <source>Dutch</source>
-        <translation type="unfinished"></translation>
+        <translation>Nederlands</translation>
     </message>
     <message>
         <source>This project uses the Norwegian-German dictionary from heinzelnisse.info - Updated on May 6, 2017 - Thanks to the authors Heiko Klein and Julia Emmerich for making the dictionary available under the conditions of the GNU GPLv2!</source>
-        <translation type="unfinished"></translation>
+        <translation>Dit project gebruikt het Noors-Duits woordenboek van heinzelnisse.info - bijgewerkt op 6 mei 2017 - met dank aan de auteurs Heiko Klein en Julia Emmerich om dit woordenboek beschikbaar te stellen onder de voorwaarden van de GNU GPLv2!</translation>
     </message>
 </context>
 <context>
