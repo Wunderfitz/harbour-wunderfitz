@@ -139,7 +139,7 @@ Page {
                     width: parent.width / 2 - Theme.horizontalPageMargin
                     Label {
                         x: Theme.horizontalPageMargin
-                        text: "Carlos Gonzales"
+                        text: "Carlos Gonzalez"
                         color: Theme.primaryColor
                         font.pixelSize: Theme.fontSizeSmall
                     }
