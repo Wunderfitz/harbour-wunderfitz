@@ -5,7 +5,7 @@
     <name>AboutPage</name>
     <message>
         <source>About Wunderfitz</source>
-        <translation>Acerca de Wunderfitz</translation>
+        <translation>Acerca de</translation>
     </message>
     <message>
         <source>By Sebastian J. Wolf</source>
@@ -25,7 +25,7 @@
     </message>
     <message>
         <source>Send E-Mail</source>
-        <translation>Enviar C-Elec</translation>
+        <translation>Enviar C-Electronico</translation>
     </message>
     <message>
         <source>Open heinzelnisse.info</source>
@@ -33,11 +33,11 @@
     </message>
     <message>
         <source>Open QuaZIP home page</source>
-        <translation>Abrir QuaZIP página inicial</translation>
+        <translation>Abrir QuaZIP</translation>
     </message>
     <message>
         <source>Open dict.cc home page</source>
-        <translation>Abrir dict.cc página inicial</translation>
+        <translation>Abrir dict.cc</translation>
     </message>
     <message>
         <source>This application supports dict.cc dictionary export files. Thanks to Paul Hemetsberger and the dict.cc team for providing the dictionaries!</source>
@@ -69,7 +69,7 @@
     </message>
     <message>
         <source>This project uses the Norwegian-German dictionary from heinzelnisse.info - Updated on May 6, 2017 - Thanks to the authors Heiko Klein and Julia Emmerich for making the dictionary available under the conditions of the GNU GPLv2!</source>
-        <translation>Este proyecto utiliza el diccionario noruego-alemán de heinzelnisse.info - Actualizado el 6 de mayo de 2017 - Gracias a autores Heiko Klein y Julia Emmerich por el diccionario disponible bajo las condiciones de la GPLv2!</translation>
+        <translation>Este proyecto utiliza el diccionario noruego-alemán de heinzelnisse.info - Actualizado el 6 de mayo de 2017 - Gracias ah autores Heiko Klein y Julia Emmerich por el diccionario disponible bajo las condiciones de la GPLv2!</translation>
     </message>
 </context>
 <context>
@@ -96,7 +96,7 @@
     </message>
     <message>
         <source>Dict.cc does not allow other applications such as Wunderfitz to ship their dictionaries. Therefore, you must download them from dict.cc yourself. Use the Download link, follow the instructions and import the files here afterwards. The downloaded dict.cc ZIP files must be placed in the Downloads folder. If in doubt, use the SailfishOS E-Mail and Browser apps to store the downloads there automatically. After the import in Wunderfitz you can delete the ZIP archives. Please note that you only need to download one combination of two languages. For example if you use DE-EN, you don&apos;t need EN-DE as Wunderfitz always searches in both languages.</source>
-        <translation>Dict.cc no permite que otras aplicaciones como Wunderfitz envíen sus diccionarios. Lo cual, debe descargarlos de dict.cc usted mismo. Utilice el enlace Descargar, siga las instrucciones e importe los archivos aquí después. Los archivos ZIP dict.cc descargados deben colocarse en la carpeta Descargas. Por dudas, utilice las aplicaciones SailfishOS C-Elec y Navegador para almacenar las descargas allí automáticamente. Después de la importación en Wunderfitz puede eliminar los archivos ZIP. Tenga en cuenta que sólo necesita descargar una combinación de dos idiomas. Por ejemplo, si utiliza DE-EN, no necesita EN-DE ya que Wunderfitz siempre busca en ambos idiomas</translation>
+        <translation>Dict.cc no permite enviar diccionarios ah aplicaciones como Wunderfitz. Debe descargarlos de dict.cc usted mismo. Utilizar el enlace Descargar, despues seguir las instrucciones eh importar los archivos aquí. Los archivos ZIP descargados de dict.cc deben colocarse en la carpeta Descargas. Por dudas, utilizar aps de SailfishOS C-Electronico y Navegador para auto almacenar en descargas. Después de la importación en Wunderfitz puedes eliminar los archivos ZIP, tener en cuenta que sólo necesita descargar una combinación de dos idiomas. Por ejemplo, si utiliza DE-EN, no necesita EN-DE ya que Wunderfitz siempre busca en ambos idiomas</translation>
     </message>
     <message>
         <source>Dictionary</source>
@@ -104,7 +104,7 @@
     </message>
     <message>
         <source>Choose the active dictionary here</source>
-        <translation>Elegir el diccionario activo aqui</translation>
+        <translation>Elegir  diccionarios aqui</translation>
     </message>
     <message>
         <source>Delete selected dictionary</source>
@@ -127,7 +127,7 @@
     <name>TitlePage</name>
     <message>
         <source>About Wunderfitz</source>
-        <translation>Acerca de Wunderfitz</translation>
+        <translation>Acerca de</translation>
     </message>
     <message>
         <source>Search in dictionary...</source>
@@ -155,7 +155,7 @@
     </message>
     <message>
         <source>No results found</source>
-        <translation>No resultados</translation>
+        <translation>Sin resultados</translation>
     </message>
 </context>
 </TS>
