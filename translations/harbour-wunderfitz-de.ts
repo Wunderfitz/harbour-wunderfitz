@@ -52,24 +52,8 @@
         <translation>Ein mobiles Wörterbuch für die Offline-Benutzung mit der Heinzelnisse-Datenbank und mit der Unterstützung für dict.cc-Exportdateien.</translation>
     </message>
     <message>
-        <source>Translations</source>
-        <translation>Übersetzungen</translation>
-    </message>
-    <message>
-        <source>Spanish</source>
-        <translation>Spanisch</translation>
-    </message>
-    <message>
-        <source>Swedish</source>
-        <translation>Schwedisch</translation>
-    </message>
-    <message>
-        <source>Dutch</source>
-        <translation>Niederländisch</translation>
-    </message>
-    <message>
-        <source>This project uses the Norwegian-German dictionary from heinzelnisse.info - Updated on May 6, 2017 - Thanks to the authors Heiko Klein and Julia Emmerich for making the dictionary available under the conditions of the GNU GPLv2!</source>
-        <translation>Dieses Projekt nutzt das Norwegisch-Deutsch-Wörterbuch von heinzelnisse.info - aktualisiert am 6. Mai 2017 - Danke an die Autoren Heiko Klein und Julia Emmerich für die Veröffentlichung des Wörterbuchs unter den Bedingungen der GNU GPLv2!</translation>
+        <source>This project uses the Norwegian-German dictionary from heinzelnisse.info - Thanks to the authors Heiko Klein and Julia Emmerich for making the dictionary available under the conditions of the GNU GPLv2!</source>
+        <translation>Dieses Projekt nutzt das Norwegisch-Deutsch-Wörterbuch von heinzelnisse.info - Danke an die Autoren Heiko Klein und Julia Emmerich für die Veröffentlichung des Wörterbuchs unter den Bedingungen der GNU GPLv2!</translation>
     </message>
 </context>
 <context>

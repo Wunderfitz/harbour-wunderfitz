@@ -9,7 +9,7 @@
 #include "dictionarymodel.h"
 #include "dictionarysearchworker.h"
 
-DatabaseManager::DatabaseManager(QObject *parent) {
+DatabaseManager::DatabaseManager(QObject *parent) : QObject(parent) {
 
     resultList = new QList<HeinzelnisseElement*>();
     searchWorker = new DictionarySearchWorker(resultList);

@@ -52,24 +52,8 @@
         <translation>Una aplicación de diccionario móvil para uso sin conexión con base de datos Heinzelnisse y archivos de exportación de dict.cc.</translation>
     </message>
     <message>
-        <source>Translations</source>
-        <translation>Traducciones</translation>
-    </message>
-    <message>
-        <source>Spanish</source>
-        <translation>Español</translation>
-    </message>
-    <message>
-        <source>Swedish</source>
-        <translation>Sueco</translation>
-    </message>
-    <message>
-        <source>Dutch</source>
-        <translation>Holandés</translation>
-    </message>
-    <message>
-        <source>This project uses the Norwegian-German dictionary from heinzelnisse.info - Updated on May 6, 2017 - Thanks to the authors Heiko Klein and Julia Emmerich for making the dictionary available under the conditions of the GNU GPLv2!</source>
-        <translation>Este proyecto utiliza el diccionario noruego-alemán de heinzelnisse.info - Actualizado el 6 de mayo de 2017 - Gracias ah autores Heiko Klein y Julia Emmerich por el diccionario disponible bajo las condiciones de la GPLv2!</translation>
+        <source>This project uses the Norwegian-German dictionary from heinzelnisse.info - Thanks to the authors Heiko Klein and Julia Emmerich for making the dictionary available under the conditions of the GNU GPLv2!</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
