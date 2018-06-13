@@ -14,6 +14,7 @@ OTHER_FILES += rpm/harbour-wunderfitz.changes.in \
     rpm/harbour-wunderfitz.yaml \
     translations/*.ts \
     harbour-wunderfitz.desktop \
+    qml/components/*.qml \
     qml/pages/*.qml \
     qml/*.qml
     db/heinzelliste.db
@@ -73,4 +74,5 @@ DISTFILES += \
     pml/pages/*.qml \
     LICENSE \
     README.md \
+    qml/components/WunderfitzButton.qml
 

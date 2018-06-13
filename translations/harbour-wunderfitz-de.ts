@@ -108,6 +108,13 @@
     </message>
 </context>
 <context>
+    <name>DictionaryButton</name>
+    <message>
+        <source>Dictionaries</source>
+        <translation type="unfinished">Wörterbücher</translation>
+    </message>
+</context>
+<context>
     <name>TitlePage</name>
     <message>
         <source>About Wunderfitz</source>
@@ -140,6 +147,10 @@
     <message>
         <source>No results found</source>
         <translation>Keine Ergebnisse gefunden</translation>
+    </message>
+    <message>
+        <source>No camera available</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

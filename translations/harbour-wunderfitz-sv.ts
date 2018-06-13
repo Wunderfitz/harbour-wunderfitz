@@ -108,6 +108,13 @@
     </message>
 </context>
 <context>
+    <name>DictionaryButton</name>
+    <message>
+        <source>Dictionaries</source>
+        <translation type="unfinished">Ordböcker</translation>
+    </message>
+</context>
+<context>
     <name>TitlePage</name>
     <message>
         <source>About Wunderfitz</source>
@@ -140,6 +147,10 @@
     <message>
         <source>Pull down the menu to import and change your dictionaries</source>
         <translation>Dra ner menyn för att importera och ändra dina ordböcker</translation>
+    </message>
+    <message>
+        <source>No camera available</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>
