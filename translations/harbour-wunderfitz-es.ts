@@ -17,7 +17,7 @@
     </message>
     <message>
         <source>Licensed under GNU GPLv2</source>
-        <translation>Licensia GPLv2</translation>
+        <translation>Licencia GPLv2</translation>
     </message>
     <message>
         <source>Sources on GitHub</source>
@@ -25,7 +25,7 @@
     </message>
     <message>
         <source>Send E-Mail</source>
-        <translation>Enviar C-Electronico</translation>
+        <translation>Enviar Correo-E</translation>
     </message>
     <message>
         <source>Open heinzelnisse.info</source>
@@ -53,7 +53,7 @@
     </message>
     <message>
         <source>This project uses the Norwegian-German dictionary from heinzelnisse.info - Thanks to the authors Heiko Klein and Julia Emmerich for making the dictionary available under the conditions of the GNU GPLv2!</source>
-        <translation type="unfinished"></translation>
+        <translation>Este proyecto utiliza el diccionario noruego-alemán de heinzelnisse.info. ¡Gracias a los autores Heiko Klein y Julia Emmerich por hacer que el diccionario esté disponible bajo las condiciones de GNU GPLv2!</translation>
     </message>
 </context>
 <context>
@@ -92,7 +92,7 @@
     </message>
     <message>
         <source>Delete selected dictionary</source>
-        <translation>Borrar diccionario seleccionado</translation>
+        <translation>Borrar diccionario elegido</translation>
     </message>
     <message>
         <source>Dictionary %1 successfully imported</source>
@@ -130,7 +130,7 @@
     </message>
     <message>
         <source>Pull down the menu to import and change your dictionaries</source>
-        <translation>Jalar hacia abajo el menú para importar y cambiar sus diccionarios</translation>
+        <translation>Halar hacia abajo el menú para importar y cambiar sus diccionarios</translation>
     </message>
     <message>
         <source>Searching...</source>
