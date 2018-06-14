@@ -118,35 +118,35 @@
     <name>TitlePage</name>
     <message>
         <source>About Wunderfitz</source>
-        <translation>Über Wunderfitz</translation>
-    </message>
-    <message>
-        <source>Search in dictionary...</source>
-        <translation>Suche im Wörterbuch...</translation>
+        <translation type="unfinished">Über Wunderfitz</translation>
     </message>
     <message>
         <source>Dictionaries</source>
-        <translation>Wörterbücher</translation>
+        <translation type="unfinished">Wörterbücher</translation>
     </message>
     <message>
         <source>Pull down the menu to import and change your dictionaries</source>
-        <translation>Ziehen Sie das Menü nach unten, um Ihre Wörterbücher zu importieren und zu ändern.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Searching...</source>
-        <translation>Suchen...</translation>
-    </message>
-    <message>
-        <source>Copy to clipboard</source>
-        <translation>In die Zwischenablage kopieren</translation>
-    </message>
-    <message>
-        <source>Search for &apos;%1&apos;</source>
-        <translation>Nach &apos;%1&apos; suchen</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>No results found</source>
-        <translation>Keine Ergebnisse gefunden</translation>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Search in dictionary...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Copy to clipboard</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Search for &apos;%1&apos;</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>No camera available</source>

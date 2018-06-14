@@ -118,35 +118,35 @@
     <name>TitlePage</name>
     <message>
         <source>About Wunderfitz</source>
-        <translation>Om Wunderfitz</translation>
-    </message>
-    <message>
-        <source>Search in dictionary...</source>
-        <translation>Sök i ordboken...</translation>
+        <translation type="unfinished">Om Wunderfitz</translation>
     </message>
     <message>
         <source>Dictionaries</source>
-        <translation>Ordböcker</translation>
-    </message>
-    <message>
-        <source>Searching...</source>
-        <translation>Söker...</translation>
-    </message>
-    <message>
-        <source>Copy to clipboard</source>
-        <translation>Kopiera till urklipp</translation>
-    </message>
-    <message>
-        <source>Search for &apos;%1&apos;</source>
-        <translation>Sök efter &quot;%1&quot;</translation>
-    </message>
-    <message>
-        <source>No results found</source>
-        <translation>Inga träffar</translation>
+        <translation type="unfinished">Ordböcker</translation>
     </message>
     <message>
         <source>Pull down the menu to import and change your dictionaries</source>
-        <translation>Dra ner menyn för att importera och ändra dina ordböcker</translation>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Searching...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>No results found</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Search in dictionary...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Copy to clipboard</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Search for &apos;%1&apos;</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>No camera available</source>

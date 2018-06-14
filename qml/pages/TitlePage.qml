@@ -365,6 +365,12 @@ Page {
                                 Camera {
                                     id: camera
                                     deviceId: QtMultimedia.defaultCamera.deviceId
+                                    onCameraStateChanged: {
+                                        console.log(cameraState);
+                                        if (cameraState == Camera.ActiveState) {
+                                            console.log("We are loaded!");
+                                        }
+                                    }
                                 }
 
                                 Label {
@@ -382,21 +388,59 @@ Page {
                                 }
 
                                 VideoOutput {
-                                    width: titlePage.width > titlePage.height ? ( titlePage.height - ( 2 * Theme.horizontalPageMargin) ) : ( titlePage.width - ( 2 * Theme.horizontalPageMargin) )
-                                    height: width
+                                    id: videoOutput
+                                    width: parent.width
+                                    height: parent.height
                                     anchors.top : parent.top
-                                    anchors.topMargin: Theme.horizontalPageMargin
                                     anchors.left: parent.left
-                                    anchors.leftMargin: Theme.horizontalPageMargin
                                     source: camera
                                     fillMode: VideoOutput.PreserveAspectCrop
                                     visible: camera.availability === Camera.Available
+                                    rotation: ( titlePage.orientation === Orientation.Portrait ? 0 : ( titlePage.orientation === Orientation.Landscape ? -90 : ( titlePage.orientation === Orientation.PortraitInverted ? 180 : -270 ) ) )
                                     MouseArea {
                                         anchors.fill: parent
                                         onClicked: {
                                             camera.searchAndLock();
                                         }
                                     }
+                                    function adjustOutputMargin() {
+                                        if (titlePage.isLandscape) {
+                                            anchors.topMargin = - (( height - width ) / 2 );
+                                            anchors.leftMargin = anchors.topMargin;
+                                        } else {
+                                            anchors.topMargin = - ( height - width );
+                                            anchors.leftMargin = 0;
+                                        }
+                                    }
+
+                                    onSourceRectChanged: {
+                                        width = sourceRect.width
+                                        height = sourceRect.height
+                                        adjustOutputMargin();
+                                    }
+                                    onRotationChanged: {
+                                        adjustOutputMargin();
+                                    }
+                                }
+
+                                Slider {
+                                    id: zoomSlider
+                                    anchors.top: parent.top
+                                    anchors.left: parent.left
+                                    width: videoOutput.width
+                                    minimumValue: 1
+                                    maximumValue: 100
+                                    onValueChanged: {
+                                        camera.digitalZoom = value;
+                                    }
+                                }
+
+                                IconButton {
+                                    id: snapshotButton
+                                    icon.source: "image://theme/icon-m-dot"
+                                    anchors.left: parent.left
+                                    anchors.leftMargin: ( videoOutput.width / 2 ) - ( width / 2 )
+                                    anchors.bottom: titlePage.isPortrait ? videoOutput.bottom : parent.bottom
                                 }
                             }
                         }

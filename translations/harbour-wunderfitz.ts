@@ -118,35 +118,35 @@
     <name>TitlePage</name>
     <message>
         <source>About Wunderfitz</source>
-        <translation>About Wunderfitz</translation>
-    </message>
-    <message>
-        <source>Search in dictionary...</source>
-        <translation>Search in dictionary...</translation>
+        <translation type="unfinished">About Wunderfitz</translation>
     </message>
     <message>
         <source>Dictionaries</source>
-        <translation>Dictionaries</translation>
-    </message>
-    <message>
-        <source>Searching...</source>
-        <translation>Searching...</translation>
-    </message>
-    <message>
-        <source>Copy to clipboard</source>
-        <translation>Copy to clipboard</translation>
-    </message>
-    <message>
-        <source>Search for &apos;%1&apos;</source>
-        <translation>Search for &apos;%1&apos;</translation>
-    </message>
-    <message>
-        <source>No results found</source>
-        <translation>No results found</translation>
+        <translation type="unfinished">Dictionaries</translation>
     </message>
     <message>
         <source>Pull down the menu to import and change your dictionaries</source>
-        <translation>Pull down the menu to import and change your dictionaries</translation>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Searching...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>No results found</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Search in dictionary...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Copy to clipboard</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Search for &apos;%1&apos;</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>No camera available</source>
