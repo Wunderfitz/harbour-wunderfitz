@@ -153,4 +153,11 @@
         <translation type="unfinished"></translation>
     </message>
 </context>
+<context>
+    <name>WunderfitzButton</name>
+    <message>
+        <source>Curiosity</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
 </TS>

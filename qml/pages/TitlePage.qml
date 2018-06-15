@@ -362,11 +362,20 @@ Page {
 
                             Item {
 
+                                anchors.fill: parent
+
                                 Camera {
                                     id: camera
                                     deviceId: QtMultimedia.defaultCamera.deviceId
+                                    imageCapture {
+                                        onImageSaved: {
+                                            console.log("Image captured");
+                                            snapshotRectangle.visible = true;
+                                            snapshotRectangle.opacity = 1;
+                                            snapshotTimer.start();
+                                        }
+                                    }
                                     onCameraStateChanged: {
-                                        console.log(cameraState);
                                         if (cameraState == Camera.ActiveState) {
                                             console.log("We are loaded!");
                                         }
@@ -391,7 +400,7 @@ Page {
                                     id: videoOutput
                                     width: parent.width
                                     height: parent.height
-                                    anchors.top : parent.top
+                                    anchors.top: parent.top
                                     anchors.left: parent.left
                                     source: camera
                                     fillMode: VideoOutput.PreserveAspectCrop
@@ -406,9 +415,9 @@ Page {
                                     function adjustOutputMargin() {
                                         if (titlePage.isLandscape) {
                                             anchors.topMargin = - (( height - width ) / 2 );
-                                            anchors.leftMargin = anchors.topMargin;
+                                            anchors.leftMargin = navigationColumn.width / 2
                                         } else {
-                                            anchors.topMargin = - ( height - width );
+                                            anchors.topMargin = - navigationRow.height
                                             anchors.leftMargin = 0;
                                         }
                                     }
@@ -426,8 +435,9 @@ Page {
                                 Slider {
                                     id: zoomSlider
                                     anchors.top: parent.top
+                                    anchors.topMargin: Theme.paddingMedium
                                     anchors.left: parent.left
-                                    width: videoOutput.width
+                                    width: titlePage.isPortrait ? videoOutput.width : parent.width
                                     minimumValue: 1
                                     maximumValue: 100
                                     onValueChanged: {
@@ -439,8 +449,31 @@ Page {
                                     id: snapshotButton
                                     icon.source: "image://theme/icon-m-dot"
                                     anchors.left: parent.left
-                                    anchors.leftMargin: ( videoOutput.width / 2 ) - ( width / 2 )
+                                    anchors.leftMargin: titlePage.isPortrait ? ( videoOutput.width / 2 ) - ( width / 2 ) : parent.width - width - Theme.horizontalPageMargin
                                     anchors.bottom: titlePage.isPortrait ? videoOutput.bottom : parent.bottom
+                                    anchors.bottomMargin: Theme.horizontalPageMargin
+                                    onClicked: {
+                                        camera.imageCapture.capture();
+                                    }
+                                }
+
+                                Rectangle {
+                                    id: snapshotRectangle
+                                    anchors.fill: parent
+                                    color: "white"
+                                    visible: false
+                                    opacity: 0
+                                    Behavior on opacity { NumberAnimation {} }
+                                }
+
+                                Timer {
+                                    id: snapshotTimer
+                                    repeat: false
+                                    interval: 125
+                                    onTriggered: {
+                                        snapshotRectangle.opacity = 0;
+                                        snapshotRectangle.visible = false;
+                                    }
                                 }
                             }
                         }

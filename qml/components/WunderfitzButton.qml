@@ -41,7 +41,7 @@ Column {
     }
     Label {
         id: wunderfitzButtonText
-        text: "Wunderfitz"
+        text: qsTr("Curiosity")
         font.pixelSize: Theme.fontSizeTiny
         color: wunderfitzButton.isActive ? Theme.highlightColor : Theme.primaryColor
         truncationMode: TruncationMode.Fade
