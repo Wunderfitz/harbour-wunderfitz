@@ -13,7 +13,7 @@
     </message>
     <message>
         <source>Credits</source>
-        <translation>Creditos</translation>
+        <translation>Créditos</translation>
     </message>
     <message>
         <source>Licensed under GNU GPLv2</source>
@@ -111,53 +111,53 @@
     <name>DictionaryButton</name>
     <message>
         <source>Dictionaries</source>
-        <translation type="unfinished">Diccionarios</translation>
+        <translation>Diccionarios</translation>
     </message>
 </context>
 <context>
     <name>TitlePage</name>
     <message>
         <source>About Wunderfitz</source>
-        <translation type="unfinished">Acerca de</translation>
+        <translation>Acerca de</translation>
     </message>
     <message>
         <source>Dictionaries</source>
-        <translation type="unfinished">Diccionarios</translation>
+        <translation>Diccionarios</translation>
     </message>
     <message>
         <source>Pull down the menu to import and change your dictionaries</source>
-        <translation type="unfinished"></translation>
+        <translation>Halar hacia abajo para el menú e importar y cambiar los diccionarios</translation>
     </message>
     <message>
         <source>Searching...</source>
-        <translation type="unfinished"></translation>
+        <translation>Buscando...</translation>
     </message>
     <message>
         <source>No results found</source>
-        <translation type="unfinished"></translation>
+        <translation>Sin resultados</translation>
     </message>
     <message>
         <source>Search in dictionary...</source>
-        <translation type="unfinished"></translation>
+        <translation>Buscando en diccionario...</translation>
     </message>
     <message>
         <source>Copy to clipboard</source>
-        <translation type="unfinished"></translation>
+        <translation>Copiar al portapapeles</translation>
     </message>
     <message>
         <source>Search for &apos;%1&apos;</source>
-        <translation type="unfinished"></translation>
+        <translation>Buscar para &apos;%1&apos;</translation>
     </message>
     <message>
         <source>No camera available</source>
-        <translation type="unfinished"></translation>
+        <translation>No hay cámara disponible</translation>
     </message>
 </context>
 <context>
     <name>WunderfitzButton</name>
     <message>
         <source>Curiosity</source>
-        <translation type="unfinished"></translation>
+        <translation>Curiosidad</translation>
     </message>
 </context>
 </TS>
