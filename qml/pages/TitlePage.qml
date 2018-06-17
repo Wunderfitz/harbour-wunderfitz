@@ -453,7 +453,7 @@ Page {
                                     anchors.bottom: titlePage.isPortrait ? videoOutput.bottom : parent.bottom
                                     anchors.bottomMargin: Theme.horizontalPageMargin
                                     onClicked: {
-                                        camera.imageCapture.capture();
+                                        camera.imageCapture.captureToLocation(curiosity.getTemporaryDirectoryPath());
                                     }
                                 }
 

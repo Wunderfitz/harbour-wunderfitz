@@ -22,7 +22,8 @@ SOURCES += harbour-wunderfitz.cpp \
     dictionarymodel.cpp \
     dictionarymetadata.cpp \
     dictccword.cpp \
-    dictionarysearchworker.cpp
+    dictionarysearchworker.cpp \
+    curiosity.cpp
 
 HEADERS += \
     heinzelnisseelement.h \
@@ -33,5 +34,6 @@ HEADERS += \
     dictionarymodel.h \
     dictionarymetadata.h \
     dictccword.h \
-    dictionarysearchworker.h
+    dictionarysearchworker.h \
+    curiosity.h
 
