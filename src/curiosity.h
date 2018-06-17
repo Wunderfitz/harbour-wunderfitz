@@ -21,6 +21,7 @@
 #define CURIOSITY_H
 
 #include <QObject>
+#include "cloudapi.h"
 
 class Curiosity : public QObject
 {
@@ -32,15 +33,19 @@ public:
     Q_INVOKABLE void captureRequested(const int &orientation, const int &viewfinderDimension, const int &offset);
     Q_INVOKABLE void captureCompleted(const QString &path);
 
+    CloudApi *getCloudApi();
+
 signals:
 
 public slots:
+    void handleOcrProcessingSuccessful(const QString &fileName, const QJsonObject &result);
 
 private:
     int captureOrientation;
     int captureOffset;
     int captureViewfinderDimension;
     QString capturePath;
+    CloudApi *cloudApi;
 
     void processCapture();
 

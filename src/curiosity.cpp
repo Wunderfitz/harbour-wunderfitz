@@ -28,6 +28,7 @@
 #include <QImage>
 #include <QMatrix>
 #include <QRect>
+#include <QJsonObject>
 
 Curiosity::Curiosity(QObject *parent) : QObject(parent)
 {
@@ -44,6 +45,9 @@ Curiosity::Curiosity(QObject *parent) : QObject(parent)
         qDebug() << "[Curiosity] Cleaning temporary files...";
         removeTemporaryFiles();
     }
+    this->cloudApi = new CloudApi(this);
+
+    connect(cloudApi, SIGNAL(ocrUploadSuccessful(QString,QJsonObject)), this, SLOT(handleOcrProcessingSuccessful(QString,QJsonObject)));
 }
 
 QString Curiosity::getTemporaryDirectoryPath()
@@ -74,6 +78,31 @@ void Curiosity::captureCompleted(const QString &path)
     qDebug() << "[Curiosity] Capture completed" << path;
     this->capturePath = path;
     this->processCapture();
+}
+
+CloudApi *Curiosity::getCloudApi()
+{
+    return this->cloudApi;
+}
+
+void Curiosity::handleOcrProcessingSuccessful(const QString &fileName, const QJsonObject &result)
+{
+    qDebug() << "[Curiosity] Processing OCR result..." << fileName;
+    QJsonArray regionArray = result.value("regions").toArray();
+    QString completeText;
+    foreach (const QJsonValue &region, regionArray) {
+        QJsonArray lineArray = region.toObject().value("lines").toArray();
+        foreach (const QJsonValue &line, lineArray) {
+            QJsonArray wordArray = line.toObject().value("words").toArray();
+            foreach (const QJsonValue &word, wordArray) {
+                if (!completeText.isEmpty()) {
+                    completeText.append(" ");
+                }
+                completeText.append(word.toObject().value("text").toString());
+            }
+        }
+    }
+    qDebug() << completeText;
 }
 
 void Curiosity::processCapture()
@@ -116,4 +145,6 @@ void Curiosity::processCapture()
     qDebug() << imageDimensions;
     finalImage = myImage.copy(imageDimensions);
     finalImage.save(this->capturePath);
+
+    cloudApi->opticalCharacterRecognition(this->capturePath);
 }
