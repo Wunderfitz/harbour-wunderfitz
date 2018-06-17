@@ -373,6 +373,7 @@ Page {
                                             snapshotRectangle.visible = true;
                                             snapshotRectangle.opacity = 1;
                                             snapshotTimer.start();
+                                            curiosity.captureCompleted(path);
                                         }
                                     }
                                     onCameraStateChanged: {
@@ -454,6 +455,7 @@ Page {
                                     anchors.bottomMargin: Theme.horizontalPageMargin
                                     onClicked: {
                                         camera.imageCapture.captureToLocation(curiosity.getTemporaryDirectoryPath());
+                                        curiosity.captureRequested(titlePage.orientation, videoOutput.height, titlePage.isLandscape ? navigationColumn.width : navigationRow.height );
                                     }
                                 }
 

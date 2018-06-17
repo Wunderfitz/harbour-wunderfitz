@@ -29,12 +29,20 @@ public:
     explicit Curiosity(QObject *parent = 0);
     Q_INVOKABLE QString getTemporaryDirectoryPath();
     Q_INVOKABLE void removeTemporaryFiles();
+    Q_INVOKABLE void captureRequested(const int &orientation, const int &viewfinderDimension, const int &offset);
+    Q_INVOKABLE void captureCompleted(const QString &path);
 
 signals:
 
 public slots:
 
+private:
+    int captureOrientation;
+    int captureOffset;
+    int captureViewfinderDimension;
+    QString capturePath;
 
+    void processCapture();
 
 };
 
