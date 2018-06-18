@@ -48,6 +48,10 @@ Curiosity::Curiosity(QObject *parent) : QObject(parent)
     this->cloudApi = new CloudApi(this);
 
     connect(cloudApi, SIGNAL(ocrUploadSuccessful(QString,QJsonObject)), this, SLOT(handleOcrProcessingSuccessful(QString,QJsonObject)));
+    connect(cloudApi, SIGNAL(ocrUploadError(QString,QString)), this, SLOT(handleOcrProcessingError(QString,QString)));
+    connect(cloudApi, SIGNAL(ocrUploadStatus(QString,qint64,qint64)), this, SLOT(handleOcrProcessingStatus(QString,qint64,qint64)));
+    connect(cloudApi, SIGNAL(translateSuccessful(QJsonArray)), this, SLOT(handleTranslationSuccessful(QJsonArray)));
+    connect(cloudApi, SIGNAL(translateError(QString)), this, SLOT(handleTranslationError(QString)));
 }
 
 QString Curiosity::getTemporaryDirectoryPath()
@@ -103,6 +107,36 @@ void Curiosity::handleOcrProcessingSuccessful(const QString &fileName, const QJs
         }
     }
     qDebug() << completeText;
+    emit ocrSuccessful();
+    cloudApi->translate(completeText);
+}
+
+void Curiosity::handleOcrProcessingError(const QString &fileName, const QString &errorMessage)
+{
+    qDebug() << "[Curiosity] OCR processing error..." << fileName << errorMessage;
+    emit ocrError(errorMessage);
+}
+
+void Curiosity::handleOcrProcessingStatus(const QString &fileName, qint64 bytesSent, qint64 bytesTotal)
+{
+    qDebug() << "[Curiosity] OCR processing status update" << fileName << bytesSent << bytesTotal;
+    if (bytesTotal == 0) {
+        return;
+    }
+    int percentCompleted = 100 * bytesSent / bytesTotal;
+    emit ocrProgress(percentCompleted);
+}
+
+void Curiosity::handleTranslationSuccessful(const QJsonArray &result)
+{
+    qDebug() << "[Curiosity] Processing translation result...";
+    emit translationSuccessful(result.at(0).toObject().value("translations").toArray().at(0).toObject().value("text").toString());
+}
+
+void Curiosity::handleTranslationError(const QString &errorMessage)
+{
+    qDebug() << "[Curiosity] Translation error..." << errorMessage;
+    emit translationError(errorMessage);
 }
 
 void Curiosity::processCapture()

@@ -36,9 +36,18 @@ public:
     CloudApi *getCloudApi();
 
 signals:
+    void translationSuccessful(const QString &text);
+    void translationError(const QString &errorMessage);
+    void ocrProgress(const int &percentCompleted);
+    void ocrError(const QString &errorMessage);
+    void ocrSuccessful();
 
 public slots:
-    void handleOcrProcessingSuccessful(const QString &fileName, const QJsonObject &result);
+    void handleTranslationSuccessful(const QJsonArray &result);
+    void handleTranslationError(const QString &errorMessage);
+    void handleOcrProcessingSuccessful(const QString &fileName, const QJsonObject &result);    
+    void handleOcrProcessingError(const QString &fileName, const QString &errorMessage);
+    void handleOcrProcessingStatus(const QString &fileName, qint64 bytesSent, qint64 bytesTotal);
 
 private:
     int captureOrientation;

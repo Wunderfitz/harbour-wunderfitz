@@ -35,6 +35,7 @@
 #include "cloudcredentials.h"
 
 const char API_OCR[] = "https://westeurope.api.cognitive.microsoft.com/vision/v1.0/ocr";
+const char API_TRANSLATE[] = "https://api.cognitive.microsofttranslator.com/translate";
 
 class CloudApi : public QObject
 {
@@ -43,16 +44,21 @@ public:
     explicit CloudApi(QObject *parent = 0);
 
     Q_INVOKABLE void opticalCharacterRecognition(const QString &imagePath);
+    Q_INVOKABLE void translate(const QString &text);
 
 signals:
     void ocrUploadSuccessful(const QString &fileName, const QJsonObject &result);
     void ocrUploadError(const QString &fileName, const QString &errorMessage);
     void ocrUploadStatus(const QString &fileName, qint64 bytesSent, qint64 bytesTotal);
+    void translateSuccessful(const QJsonArray &result);
+    void translateError(const QString &errorMessage);
 
 public slots:
     void handleOcrUploadProgress(qint64 bytesSent, qint64 bytesTotal);
     void handleOcrUploadError(QNetworkReply::NetworkError error);
     void handleOcrUploadFinished();
+    void handleTranslateError(QNetworkReply::NetworkError error);
+    void handleTranslateFinished();
 
 private:
 

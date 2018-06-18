@@ -115,6 +115,20 @@
     </message>
 </context>
 <context>
+    <name>LoadingIndicator</name>
+    <message>
+        <source>Loading...</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>TextPage</name>
+    <message>
+        <source>Copy text to clipboard</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>TitlePage</name>
     <message>
         <source>About Wunderfitz</source>
@@ -150,6 +164,18 @@
     </message>
     <message>
         <source>No camera available</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Processing image...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Uploading image, %1% completed...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Translating text...</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

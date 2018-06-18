@@ -86,6 +86,26 @@ Page {
         openTab(0);
     }
 
+    Connections {
+        target: curiosity
+        onTranslationSuccessful: {
+            wunderfitzView.isProcessing = false;
+            pageStack.push(Qt.resolvedUrl("../pages/TextPage.qml"), {"text": text});
+        }
+        onTranslationError: {
+            wunderfitzView.isProcessing = false;
+            titleNotification.show(errorMessage);
+        }
+        onOcrError: {
+            wunderfitzView.isProcessing = false;
+            titleNotification.show(errorMessage);
+        }
+    }
+
+    AppNotification {
+        id: titleNotification
+    }
+
     Timer {
         id: searchTimer
         interval: 800
@@ -357,6 +377,8 @@ Page {
                         width: viewsSlideshow.width
                         height: viewsSlideshow.height
 
+                        property bool isProcessing: false;
+
                         Component {
                             id: viewfinderComponent
 
@@ -370,9 +392,6 @@ Page {
                                     imageCapture {
                                         onImageSaved: {
                                             console.log("Image captured");
-                                            snapshotRectangle.visible = true;
-                                            snapshotRectangle.opacity = 1;
-                                            snapshotTimer.start();
                                             curiosity.captureCompleted(path);
                                         }
                                     }
@@ -407,6 +426,7 @@ Page {
                                     fillMode: VideoOutput.PreserveAspectCrop
                                     visible: camera.availability === Camera.Available
                                     rotation: ( titlePage.orientation === Orientation.Portrait ? 0 : ( titlePage.orientation === Orientation.Landscape ? -90 : ( titlePage.orientation === Orientation.PortraitInverted ? 180 : -270 ) ) )
+                                    enabled: !wunderfitzView.isProcessing
                                     MouseArea {
                                         anchors.fill: parent
                                         onClicked: {
@@ -441,6 +461,7 @@ Page {
                                     width: titlePage.isPortrait ? videoOutput.width : parent.width
                                     minimumValue: 1
                                     maximumValue: 100
+                                    enabled: !wunderfitzView.isProcessing
                                     onValueChanged: {
                                         camera.digitalZoom = value;
                                     }
@@ -453,10 +474,33 @@ Page {
                                     anchors.leftMargin: titlePage.isPortrait ? ( videoOutput.width / 2 ) - ( width / 2 ) : parent.width - width - Theme.horizontalPageMargin
                                     anchors.bottom: titlePage.isPortrait ? videoOutput.bottom : parent.bottom
                                     anchors.bottomMargin: Theme.horizontalPageMargin
+                                    enabled: !wunderfitzView.isProcessing
                                     onClicked: {
                                         camera.imageCapture.captureToLocation(curiosity.getTemporaryDirectoryPath());
+                                        snapshotRectangle.visible = true;
+                                        snapshotRectangle.opacity = 1;
+                                        snapshotTimer.start();
+                                        wunderfitzView.isProcessing = true;
+                                        wunderfitzProcessingIndicator.informationText = qsTr("Processing image...");
                                         curiosity.captureRequested(titlePage.orientation, videoOutput.height, titlePage.isLandscape ? navigationColumn.width : navigationRow.height );
                                     }
+                                }
+
+                                Connections {
+                                    target: curiosity
+                                    onOcrProgress: {
+                                        wunderfitzProcessingIndicator.informationText = qsTr("Uploading image, %1\% completed...").arg(percentCompleted);
+                                    }
+                                    onOcrSuccessful: {
+                                        wunderfitzProcessingIndicator.informationText = qsTr("Translating text...");
+                                    }
+                                }
+
+                                LoadingIndicator {
+                                    id: wunderfitzProcessingIndicator
+                                    visible: wunderfitzView.isProcessing
+                                    Behavior on opacity { NumberAnimation {} }
+                                    opacity: wunderfitzView.isProcessing ? 1 : 0
                                 }
 
                                 Rectangle {
@@ -482,7 +526,7 @@ Page {
 
                         Loader {
                             id: viewfinderLoader
-                            active: titlePage.activeTabId === 1
+                            active: ( titlePage.activeTabId === 1 && pageStack.currentPage === titlePage )
                             width: parent.width
                             height: parent.height
                             sourceComponent: viewfinderComponent

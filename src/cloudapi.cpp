@@ -51,6 +51,34 @@ void CloudApi::opticalCharacterRecognition(const QString &imagePath)
     connect(reply, SIGNAL(uploadProgress(qint64,qint64)), this, SLOT(handleOcrUploadProgress(qint64,qint64)));
 }
 
+void CloudApi::translate(const QString &text)
+{
+    qDebug() << "CloudApi::translate" << text;
+
+    QUrl url = QUrl(QString(API_TRANSLATE));
+    QUrlQuery urlQuery = QUrlQuery();
+    urlQuery.addQueryItem("api-version", "3.0");
+    urlQuery.addQueryItem("to", "en");
+    url.setQuery(urlQuery);
+    QNetworkRequest request(url);
+    request.setHeader(QNetworkRequest::ContentTypeHeader, "application/json");
+    request.setRawHeader(QByteArray("Ocp-Apim-Subscription-Key"), QByteArray(AZURE_TRANSLATOR_TEXT_KEY));
+
+    QJsonObject jsonText;
+    jsonText.insert("Text", text);
+    QJsonArray jsonArray;
+    jsonArray.append(jsonText);
+
+    QJsonDocument requestDocument(jsonArray);
+    qDebug() << requestDocument.toJson();
+    QByteArray jsonAsByteArray = requestDocument.toJson();
+
+    QNetworkReply *reply = networkAccessManager->post(request, jsonAsByteArray);
+
+    connect(reply, SIGNAL(error(QNetworkReply::NetworkError)), this, SLOT(handleTranslateError(QNetworkReply::NetworkError)));
+    connect(reply, SIGNAL(finished()), this, SLOT(handleTranslateFinished()));
+}
+
 void CloudApi::handleOcrUploadProgress(qint64 bytesSent, qint64 bytesTotal)
 {
     qDebug() << "CloudApi::handleOcrUploadProgress" << bytesSent << bytesTotal;
@@ -80,5 +108,31 @@ void CloudApi::handleOcrUploadFinished()
         emit ocrUploadSuccessful(reply->objectName(), jsonDocument.object());
     } else {
         emit ocrUploadError(reply->objectName(), "Wunderfitz couldn't understand Azure's response!");
+    }
+}
+
+void CloudApi::handleTranslateError(QNetworkReply::NetworkError error)
+{
+    QNetworkReply *reply = qobject_cast<QNetworkReply *>(sender());
+    reply->deleteLater();
+    qWarning() << "CloudApi::handleTranslateError:" << (int)error << reply->errorString() << reply->readAll();
+    emit translateError(reply->errorString());
+}
+
+void CloudApi::handleTranslateFinished()
+{
+    qDebug() << "CloudApi::handleTranslateFinished";
+    QNetworkReply *reply = qobject_cast<QNetworkReply *>(sender());
+    reply->deleteLater();
+    if (reply->error() != QNetworkReply::NoError) {
+        return;
+    }
+
+    QJsonDocument jsonDocument = QJsonDocument::fromJson(reply->readAll());
+    qDebug() << jsonDocument.toJson();
+    if (jsonDocument.isArray()) {
+        emit translateSuccessful(jsonDocument.array());
+    } else {
+        emit translateError("Wunderfitz couldn't understand Azure's response!");
     }
 }

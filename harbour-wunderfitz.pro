@@ -74,5 +74,6 @@ DISTFILES += \
     pml/pages/*.qml \
     LICENSE \
     README.md \
-    qml/components/WunderfitzButton.qml
+    qml/components/WunderfitzButton.qml \
+    qml/pages/TextPage.qml
 
