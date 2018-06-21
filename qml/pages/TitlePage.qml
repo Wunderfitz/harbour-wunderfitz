@@ -86,22 +86,6 @@ Page {
         openTab(0);
     }
 
-    Connections {
-        target: curiosity
-        onTranslationSuccessful: {
-            wunderfitzView.isProcessing = false;
-            pageStack.push(Qt.resolvedUrl("../pages/TextPage.qml"), {"text": text});
-        }
-        onTranslationError: {
-            wunderfitzView.isProcessing = false;
-            titleNotification.show(errorMessage);
-        }
-        onOcrError: {
-            wunderfitzView.isProcessing = false;
-            titleNotification.show(errorMessage);
-        }
-    }
-
     AppNotification {
         id: titleNotification
     }
@@ -384,6 +368,25 @@ Page {
 
                             Item {
 
+                                Connections {
+                                    target: curiosity
+                                    onTranslationSuccessful: {
+                                        wunderfitzView.isProcessing = false;
+                                        previewImage.visible = false;
+                                        pageStack.push(Qt.resolvedUrl("../pages/TextPage.qml"), {"text": text});
+                                    }
+                                    onTranslationError: {
+                                        wunderfitzView.isProcessing = false;
+                                        previewImage.visible = false;
+                                        titleNotification.show(errorMessage);
+                                    }
+                                    onOcrError: {
+                                        wunderfitzView.isProcessing = false;
+                                        previewImage.visible = false;
+                                        titleNotification.show(errorMessage);
+                                    }
+                                }
+
                                 anchors.fill: parent
 
                                 Camera {
@@ -393,6 +396,8 @@ Page {
                                         onImageSaved: {
                                             console.log("Image captured");
                                             curiosity.captureCompleted(path);
+                                            previewImage.source = path;
+                                            previewImage.visible = true;
                                         }
                                     }
                                     onCameraStateChanged: {
@@ -424,9 +429,8 @@ Page {
                                     anchors.left: parent.left
                                     source: camera
                                     fillMode: VideoOutput.PreserveAspectCrop
-                                    visible: camera.availability === Camera.Available
+                                    visible: camera.availability === Camera.Available && !wunderfitzView.isProcessing
                                     rotation: ( titlePage.orientation === Orientation.Portrait ? 0 : ( titlePage.orientation === Orientation.Landscape ? -90 : ( titlePage.orientation === Orientation.PortraitInverted ? 180 : -270 ) ) )
-                                    enabled: !wunderfitzView.isProcessing
                                     MouseArea {
                                         anchors.fill: parent
                                         onClicked: {
@@ -461,7 +465,7 @@ Page {
                                     width: titlePage.isPortrait ? videoOutput.width : parent.width
                                     minimumValue: 1
                                     maximumValue: 100
-                                    enabled: !wunderfitzView.isProcessing
+                                    visible: !wunderfitzView.isProcessing
                                     onValueChanged: {
                                         camera.digitalZoom = value;
                                     }
@@ -505,6 +509,7 @@ Page {
                                     anchors.bottom: targetLanguageBox.top
                                     anchors.horizontalCenter: parent.horizontalCenter
                                     label: qsTr("Source Language")
+                                    visible: !wunderfitzView.isProcessing
                                     menu: ContextMenu {
                                         MenuItem { text: qsTr("Auto-Detect") }
                                         MenuItem { text: qsTr("Chinese-Simplified") }
@@ -641,6 +646,7 @@ Page {
                                     anchors.bottom: snapshotButton.top
                                     anchors.horizontalCenter: parent.horizontalCenter
                                     label: qsTr("Target Language")
+                                    visible: !wunderfitzView.isProcessing
                                     menu: ContextMenu {
                                         MenuItem { text: qsTr("English") }
                                         MenuItem { text: qsTr("Afrikaans") }
@@ -780,7 +786,7 @@ Page {
                                     anchors.leftMargin: titlePage.isPortrait ? ( videoOutput.width / 2 ) - ( width / 2 ) : parent.width - width - Theme.horizontalPageMargin
                                     anchors.bottom: titlePage.isPortrait ? videoOutput.bottom : parent.bottom
                                     anchors.bottomMargin: Theme.horizontalPageMargin
-                                    enabled: !wunderfitzView.isProcessing
+                                    visible: !wunderfitzView.isProcessing
                                     onClicked: {
                                         camera.imageCapture.captureToLocation(curiosity.getTemporaryDirectoryPath());
                                         snapshotRectangle.visible = true;
@@ -790,6 +796,14 @@ Page {
                                         wunderfitzProcessingIndicator.informationText = qsTr("Processing image...");
                                         curiosity.captureRequested(titlePage.orientation, videoOutput.height, titlePage.isLandscape ? navigationColumn.width : navigationRow.height );
                                     }
+                                }
+
+                                Image {
+                                    id: previewImage
+                                    anchors.fill: parent
+                                    asynchronous: true
+                                    visible: false
+                                    fillMode: Image.PreserveAspectFit
                                 }
 
                                 Connections {
