@@ -43,8 +43,8 @@ class CloudApi : public QObject
 public:
     explicit CloudApi(QObject *parent = 0);
 
-    Q_INVOKABLE void opticalCharacterRecognition(const QString &imagePath);
-    Q_INVOKABLE void translate(const QString &text);
+    Q_INVOKABLE void opticalCharacterRecognition(const QString &imagePath, const QString &sourceLanguage);
+    Q_INVOKABLE void translate(const QString &text, const QString &targetLanguage);
 
 signals:
     void ocrUploadSuccessful(const QString &fileName, const QJsonObject &result);

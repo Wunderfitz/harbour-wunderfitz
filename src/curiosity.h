@@ -21,6 +21,7 @@
 #define CURIOSITY_H
 
 #include <QObject>
+#include <QSettings>
 #include "cloudapi.h"
 
 class Curiosity : public QObject
@@ -32,6 +33,10 @@ public:
     Q_INVOKABLE void removeTemporaryFiles();
     Q_INVOKABLE void captureRequested(const int &orientation, const int &viewfinderDimension, const int &offset);
     Q_INVOKABLE void captureCompleted(const QString &path);
+    Q_INVOKABLE QString getSourceLanguage();
+    Q_INVOKABLE void setSourceLanguage(const QString &sourceLanguage);
+    Q_INVOKABLE QString getTargetLanguage();
+    Q_INVOKABLE void setTargetLanguage(const QString &targetLanguage);
 
     CloudApi *getCloudApi();
 
@@ -54,6 +59,7 @@ private:
     int captureOffset;
     int captureViewfinderDimension;
     QString capturePath;
+    QSettings settings;
     CloudApi *cloudApi;
 
     void processCapture();

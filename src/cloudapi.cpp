@@ -24,16 +24,16 @@ CloudApi::CloudApi(QObject *parent) : QObject(parent)
     this->networkAccessManager = new QNetworkAccessManager(this);
 }
 
-void CloudApi::opticalCharacterRecognition(const QString &imagePath)
+void CloudApi::opticalCharacterRecognition(const QString &imagePath, const QString &sourceLanguage)
 {
-    qDebug() << "CloudApi::opticalCharacterRecognition" << imagePath;
+    qDebug() << "CloudApi::opticalCharacterRecognition" << imagePath << sourceLanguage;
 
     QUrl url = QUrl(QString(API_OCR));
     QNetworkRequest request(url);
     request.setHeader(QNetworkRequest::ContentTypeHeader, "application/octet-stream");
     request.setRawHeader(QByteArray("Ocp-Apim-Subscription-Key"), QByteArray(AZURE_COMPUTER_VISION_KEY));
     QUrlQuery urlQuery = QUrlQuery();
-    urlQuery.addQueryItem("language", "unk");
+    urlQuery.addQueryItem("language", sourceLanguage);
     urlQuery.addQueryItem("detectOrientation", "true");
     url.setQuery(urlQuery);
 
@@ -51,14 +51,14 @@ void CloudApi::opticalCharacterRecognition(const QString &imagePath)
     connect(reply, SIGNAL(uploadProgress(qint64,qint64)), this, SLOT(handleOcrUploadProgress(qint64,qint64)));
 }
 
-void CloudApi::translate(const QString &text)
+void CloudApi::translate(const QString &text, const QString &targetLanguage)
 {
-    qDebug() << "CloudApi::translate" << text;
+    qDebug() << "CloudApi::translate" << text << targetLanguage;
 
     QUrl url = QUrl(QString(API_TRANSLATE));
     QUrlQuery urlQuery = QUrlQuery();
     urlQuery.addQueryItem("api-version", "3.0");
-    urlQuery.addQueryItem("to", "en");
+    urlQuery.addQueryItem("to", targetLanguage);
     url.setQuery(urlQuery);
     QNetworkRequest request(url);
     request.setHeader(QNetworkRequest::ContentTypeHeader, "application/json");

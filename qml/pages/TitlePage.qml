@@ -467,6 +467,312 @@ Page {
                                     }
                                 }
 
+                                ComboBox {
+                                    Component.onCompleted: {
+                                        var languageCode = curiosity.getSourceLanguage();
+                                        switch (languageCode) {
+                                            case "unk": sourceLanguageBox.currentIndex = 0; break;
+                                            case "zh-Hans": sourceLanguageBox.currentIndex = 1; break;
+                                            case "zh-Hant": sourceLanguageBox.currentIndex = 2; break;
+                                            case "cs": sourceLanguageBox.currentIndex = 3; break;
+                                            case "da": sourceLanguageBox.currentIndex = 4; break;
+                                            case "nl": sourceLanguageBox.currentIndex = 5; break;
+                                            case "en": sourceLanguageBox.currentIndex = 6; break;
+                                            case "fi": sourceLanguageBox.currentIndex = 7; break;
+                                            case "fr": sourceLanguageBox.currentIndex = 8; break;
+                                            case "de": sourceLanguageBox.currentIndex = 9; break;
+                                            case "el": sourceLanguageBox.currentIndex = 10; break;
+                                            case "hu": sourceLanguageBox.currentIndex = 11; break;
+                                            case "it": sourceLanguageBox.currentIndex = 12; break;
+                                            case "ja": sourceLanguageBox.currentIndex = 13; break;
+                                            case "ko": sourceLanguageBox.currentIndex = 14; break;
+                                            case "nb": sourceLanguageBox.currentIndex = 15; break;
+                                            case "pl": sourceLanguageBox.currentIndex = 16; break;
+                                            case "pt": sourceLanguageBox.currentIndex = 17; break;
+                                            case "ru": sourceLanguageBox.currentIndex = 18; break;
+                                            case "es": sourceLanguageBox.currentIndex = 19; break;
+                                            case "sv": sourceLanguageBox.currentIndex = 20; break;
+                                            case "tr": sourceLanguageBox.currentIndex = 21; break;
+                                            case "ar": sourceLanguageBox.currentIndex = 22; break;
+                                            case "ro": sourceLanguageBox.currentIndex = 23; break;
+                                            case "sr-Cyrl": sourceLanguageBox.currentIndex = 24; break;
+                                            case "sr-Latn": sourceLanguageBox.currentIndex = 25; break;
+                                            case "sk": sourceLanguageBox.currentIndex = 26; break;
+                                        }
+                                    }
+
+                                    id: sourceLanguageBox
+                                    anchors.bottom: targetLanguageBox.top
+                                    anchors.horizontalCenter: parent.horizontalCenter
+                                    label: qsTr("Source Language")
+                                    menu: ContextMenu {
+                                        MenuItem { text: qsTr("Auto-Detect") }
+                                        MenuItem { text: qsTr("Chinese-Simplified") }
+                                        MenuItem { text: qsTr("Chinese-Traditional") }
+                                        MenuItem { text: qsTr("Czech") }
+                                        MenuItem { text: qsTr("Danish") }
+                                        MenuItem { text: qsTr("Dutch") }
+                                        MenuItem { text: qsTr("English") }
+                                        MenuItem { text: qsTr("Finnish") }
+                                        MenuItem { text: qsTr("French") }
+                                        MenuItem { text: qsTr("German") }
+                                        MenuItem { text: qsTr("Greek") }
+                                        MenuItem { text: qsTr("Hungarian") }
+                                        MenuItem { text: qsTr("Italian") }
+                                        MenuItem { text: qsTr("Japanese") }
+                                        MenuItem { text: qsTr("Korean") }
+                                        MenuItem { text: qsTr("Norwegian") }
+                                        MenuItem { text: qsTr("Polish") }
+                                        MenuItem { text: qsTr("Portuguese") }
+                                        MenuItem { text: qsTr("Russian") }
+                                        MenuItem { text: qsTr("Spanish") }
+                                        MenuItem { text: qsTr("Swedish") }
+                                        MenuItem { text: qsTr("Turkish") }
+                                        MenuItem { text: qsTr("Arabic") }
+                                        MenuItem { text: qsTr("Romanian") }
+                                        MenuItem { text: qsTr("Serbian-Cyrillic") }
+                                        MenuItem { text: qsTr("Serbian-Latin") }
+                                        MenuItem { text: qsTr("Slovak") }
+                                    }
+                                    onCurrentIndexChanged: {
+                                        switch (sourceLanguageBox.currentIndex) {
+                                            case 0: curiosity.setSourceLanguage("unk"); break;
+                                            case 1: curiosity.setSourceLanguage("zh-Hans"); break;
+                                            case 2: curiosity.setSourceLanguage("zh-Hant"); break;
+                                            case 3: curiosity.setSourceLanguage("cs"); break;
+                                            case 4: curiosity.setSourceLanguage("da"); break;
+                                            case 5: curiosity.setSourceLanguage("nl"); break;
+                                            case 6: curiosity.setSourceLanguage("en"); break;
+                                            case 7: curiosity.setSourceLanguage("fi"); break;
+                                            case 8: curiosity.setSourceLanguage("fr"); break;
+                                            case 9: curiosity.setSourceLanguage("de"); break;
+                                            case 10: curiosity.setSourceLanguage("el"); break;
+                                            case 11: curiosity.setSourceLanguage("hu"); break;
+                                            case 12: curiosity.setSourceLanguage("it"); break;
+                                            case 13: curiosity.setSourceLanguage("ja"); break;
+                                            case 14: curiosity.setSourceLanguage("ko"); break;
+                                            case 15: curiosity.setSourceLanguage("nb"); break;
+                                            case 16: curiosity.setSourceLanguage("pl"); break;
+                                            case 17: curiosity.setSourceLanguage("pt"); break;
+                                            case 18: curiosity.setSourceLanguage("ru"); break;
+                                            case 19: curiosity.setSourceLanguage("es"); break;
+                                            case 20: curiosity.setSourceLanguage("sv"); break;
+                                            case 21: curiosity.setSourceLanguage("tr"); break;
+                                            case 22: curiosity.setSourceLanguage("ar"); break;
+                                            case 23: curiosity.setSourceLanguage("ro"); break;
+                                            case 24: curiosity.setSourceLanguage("sr-Cyrl"); break;
+                                            case 25: curiosity.setSourceLanguage("sr-Latn"); break;
+                                            case 26: curiosity.setSourceLanguage("sk"); break;
+                                        }
+                                    }
+                                }
+
+
+                                ComboBox {
+                                    Component.onCompleted: {
+                                        var languageCode = curiosity.getTargetLanguage();
+                                        switch (languageCode) {
+                                            case "en": targetLanguageBox.currentIndex = 0; break;
+                                            case "af": targetLanguageBox.currentIndex = 1; break;
+                                            case "ar": targetLanguageBox.currentIndex = 2; break;
+                                            case "bg": targetLanguageBox.currentIndex = 3; break;
+                                            case "bn": targetLanguageBox.currentIndex = 4; break;
+                                            case "bs": targetLanguageBox.currentIndex = 5; break;
+                                            case "ca": targetLanguageBox.currentIndex = 6; break;
+                                            case "cs": targetLanguageBox.currentIndex = 7; break;
+                                            case "cy": targetLanguageBox.currentIndex = 8; break;
+                                            case "da": targetLanguageBox.currentIndex = 9; break;
+                                            case "de": targetLanguageBox.currentIndex = 10; break;
+                                            case "el": targetLanguageBox.currentIndex = 11; break;
+                                            case "es": targetLanguageBox.currentIndex = 12; break;
+                                            case "et": targetLanguageBox.currentIndex = 13; break;
+                                            case "fa": targetLanguageBox.currentIndex = 14; break;
+                                            case "fi": targetLanguageBox.currentIndex = 15; break;
+                                            case "fil": targetLanguageBox.currentIndex = 16; break;
+                                            case "fj": targetLanguageBox.currentIndex = 17; break;
+                                            case "fr": targetLanguageBox.currentIndex = 18; break;
+                                            case "he": targetLanguageBox.currentIndex = 19; break;
+                                            case "hi": targetLanguageBox.currentIndex = 20; break;
+                                            case "hr": targetLanguageBox.currentIndex = 21; break;
+                                            case "ht": targetLanguageBox.currentIndex = 22; break;
+                                            case "hu": targetLanguageBox.currentIndex = 23; break;
+                                            case "id": targetLanguageBox.currentIndex = 24; break;
+                                            case "is": targetLanguageBox.currentIndex = 25; break;
+                                            case "it": targetLanguageBox.currentIndex = 26; break;
+                                            case "ja": targetLanguageBox.currentIndex = 27; break;
+                                            case "ko": targetLanguageBox.currentIndex = 28; break;
+                                            case "lt": targetLanguageBox.currentIndex = 29; break;
+                                            case "lv": targetLanguageBox.currentIndex = 30; break;
+                                            case "mg": targetLanguageBox.currentIndex = 31; break;
+                                            case "ms": targetLanguageBox.currentIndex = 32; break;
+                                            case "mt": targetLanguageBox.currentIndex = 33; break;
+                                            case "mww": targetLanguageBox.currentIndex = 34; break;
+                                            case "nb": targetLanguageBox.currentIndex = 35; break;
+                                            case "nl": targetLanguageBox.currentIndex = 36; break;
+                                            case "otq": targetLanguageBox.currentIndex = 37; break;
+                                            case "pl": targetLanguageBox.currentIndex = 38; break;
+                                            case "pt": targetLanguageBox.currentIndex = 39; break;
+                                            case "ro": targetLanguageBox.currentIndex = 40; break;
+                                            case "ru": targetLanguageBox.currentIndex = 41; break;
+                                            case "sk": targetLanguageBox.currentIndex = 42; break;
+                                            case "sl": targetLanguageBox.currentIndex = 43; break;
+                                            case "sm": targetLanguageBox.currentIndex = 44; break;
+                                            case "sr-Cyrl": targetLanguageBox.currentIndex = 45; break;
+                                            case "sr-Latn": targetLanguageBox.currentIndex = 46; break;
+                                            case "sv": targetLanguageBox.currentIndex = 47; break;
+                                            case "sw": targetLanguageBox.currentIndex = 48; break;
+                                            case "ta": targetLanguageBox.currentIndex = 49; break;
+                                            case "th": targetLanguageBox.currentIndex = 50; break;
+                                            case "tlh": targetLanguageBox.currentIndex = 51; break;
+                                            case "to": targetLanguageBox.currentIndex = 52; break;
+                                            case "tr": targetLanguageBox.currentIndex = 53; break;
+                                            case "ty": targetLanguageBox.currentIndex = 54; break;
+                                            case "uk": targetLanguageBox.currentIndex = 55; break;
+                                            case "ur": targetLanguageBox.currentIndex = 56; break;
+                                            case "vi": targetLanguageBox.currentIndex = 57; break;
+                                            case "yua": targetLanguageBox.currentIndex = 58; break;
+                                            case "yue": targetLanguageBox.currentIndex = 59; break;
+                                            case "zh-Hans": targetLanguageBox.currentIndex = 60; break;
+                                            case "zh-Hant": targetLanguageBox.currentIndex = 61; break;
+                                        }
+                                    }
+
+                                    id: targetLanguageBox
+                                    anchors.bottom: snapshotButton.top
+                                    anchors.horizontalCenter: parent.horizontalCenter
+                                    label: qsTr("Target Language")
+                                    menu: ContextMenu {
+                                        MenuItem { text: qsTr("English") }
+                                        MenuItem { text: qsTr("Afrikaans") }
+                                        MenuItem { text: qsTr("Arabic") }
+                                        MenuItem { text: qsTr("Bulgarian") }
+                                        MenuItem { text: qsTr("Bangla") }
+                                        MenuItem { text: qsTr("Bosnian") }
+                                        MenuItem { text: qsTr("Catalan") }
+                                        MenuItem { text: qsTr("Czech") }
+                                        MenuItem { text: qsTr("Welsh") }
+                                        MenuItem { text: qsTr("Danish") }
+                                        MenuItem { text: qsTr("German") }
+                                        MenuItem { text: qsTr("Greek") }
+                                        MenuItem { text: qsTr("Spanish") }
+                                        MenuItem { text: qsTr("Estonian") }
+                                        MenuItem { text: qsTr("Persian") }
+                                        MenuItem { text: qsTr("Finnish") }
+                                        MenuItem { text: qsTr("Filipino") }
+                                        MenuItem { text: qsTr("Fijian") }
+                                        MenuItem { text: qsTr("French") }
+                                        MenuItem { text: qsTr("Hebrew") }
+                                        MenuItem { text: qsTr("Hindi") }
+                                        MenuItem { text: qsTr("Croatian") }
+                                        MenuItem { text: qsTr("Haitian Creole") }
+                                        MenuItem { text: qsTr("Hungarian") }
+                                        MenuItem { text: qsTr("Indonesian") }
+                                        MenuItem { text: qsTr("Icelandic") }
+                                        MenuItem { text: qsTr("Italian") }
+                                        MenuItem { text: qsTr("Japanese") }
+                                        MenuItem { text: qsTr("Korean") }
+                                        MenuItem { text: qsTr("Lithuanian") }
+                                        MenuItem { text: qsTr("Latvian") }
+                                        MenuItem { text: qsTr("Malagasy") }
+                                        MenuItem { text: qsTr("Malay") }
+                                        MenuItem { text: qsTr("Maltese") }
+                                        MenuItem { text: qsTr("Hmong Daw") }
+                                        MenuItem { text: qsTr("Norwegian") }
+                                        MenuItem { text: qsTr("Dutch") }
+                                        MenuItem { text: qsTr("Querétaro Otomi") }
+                                        MenuItem { text: qsTr("Polish") }
+                                        MenuItem { text: qsTr("Portuguese") }
+                                        MenuItem { text: qsTr("Romanian") }
+                                        MenuItem { text: qsTr("Russian") }
+                                        MenuItem { text: qsTr("Slovak") }
+                                        MenuItem { text: qsTr("Slovenian") }
+                                        MenuItem { text: qsTr("Samoan") }
+                                        MenuItem { text: qsTr("Serbian-Cyrillic") }
+                                        MenuItem { text: qsTr("Serbian-Latin") }
+                                        MenuItem { text: qsTr("Swedish") }
+                                        MenuItem { text: qsTr("Kiswahili") }
+                                        MenuItem { text: qsTr("Tamil") }
+                                        MenuItem { text: qsTr("Thai") }
+                                        MenuItem { text: qsTr("Klingon") }
+                                        MenuItem { text: qsTr("Tongan") }
+                                        MenuItem { text: qsTr("Turkish") }
+                                        MenuItem { text: qsTr("Tahitian") }
+                                        MenuItem { text: qsTr("Ukrainian") }
+                                        MenuItem { text: qsTr("Urdu") }
+                                        MenuItem { text: qsTr("Vietnamese") }
+                                        MenuItem { text: qsTr("Yucatec Maya") }
+                                        MenuItem { text: qsTr("Cantonese-Traditional") }
+                                        MenuItem { text: qsTr("Chinese-Simplified") }
+                                        MenuItem { text: qsTr("Chinese-Traditional") }
+                                    }
+                                    onCurrentIndexChanged: {
+                                        switch (targetLanguageBox.currentIndex) {
+                                            case 0: curiosity.setTargetLanguage("en"); break;
+                                            case 1: curiosity.setTargetLanguage("af"); break;
+                                            case 2: curiosity.setTargetLanguage("ar"); break;
+                                            case 3: curiosity.setTargetLanguage("bg"); break;
+                                            case 4: curiosity.setTargetLanguage("bn"); break;
+                                            case 5: curiosity.setTargetLanguage("bs"); break;
+                                            case 6: curiosity.setTargetLanguage("ca"); break;
+                                            case 7: curiosity.setTargetLanguage("cs"); break;
+                                            case 8: curiosity.setTargetLanguage("cy"); break;
+                                            case 9: curiosity.setTargetLanguage("da"); break;
+                                            case 10: curiosity.setTargetLanguage("de"); break;
+                                            case 11: curiosity.setTargetLanguage("el"); break;
+                                            case 12: curiosity.setTargetLanguage("es"); break;
+                                            case 13: curiosity.setTargetLanguage("et"); break;
+                                            case 14: curiosity.setTargetLanguage("fa"); break;
+                                            case 15: curiosity.setTargetLanguage("fi"); break;
+                                            case 16: curiosity.setTargetLanguage("fil"); break;
+                                            case 17: curiosity.setTargetLanguage("fj"); break;
+                                            case 18: curiosity.setTargetLanguage("fr"); break;
+                                            case 19: curiosity.setTargetLanguage("he"); break;
+                                            case 20: curiosity.setTargetLanguage("hi"); break;
+                                            case 21: curiosity.setTargetLanguage("hr"); break;
+                                            case 22: curiosity.setTargetLanguage("ht"); break;
+                                            case 23: curiosity.setTargetLanguage("hu"); break;
+                                            case 24: curiosity.setTargetLanguage("id"); break;
+                                            case 25: curiosity.setTargetLanguage("is"); break;
+                                            case 26: curiosity.setTargetLanguage("it"); break;
+                                            case 27: curiosity.setTargetLanguage("ja"); break;
+                                            case 28: curiosity.setTargetLanguage("lt"); break;
+                                            case 29: curiosity.setTargetLanguage("lv"); break;
+                                            case 30: curiosity.setTargetLanguage("ko"); break;
+                                            case 31: curiosity.setTargetLanguage("mg"); break;
+                                            case 32: curiosity.setTargetLanguage("ms"); break;
+                                            case 33: curiosity.setTargetLanguage("mt"); break;
+                                            case 34: curiosity.setTargetLanguage("mww"); break;
+                                            case 35: curiosity.setTargetLanguage("nb"); break;
+                                            case 36: curiosity.setTargetLanguage("nl"); break;
+                                            case 37: curiosity.setTargetLanguage("otq"); break;
+                                            case 38: curiosity.setTargetLanguage("pl"); break;
+                                            case 39: curiosity.setTargetLanguage("pt"); break;
+                                            case 40: curiosity.setTargetLanguage("ro"); break;
+                                            case 41: curiosity.setTargetLanguage("ru"); break;
+                                            case 42: curiosity.setTargetLanguage("sk"); break;
+                                            case 43: curiosity.setTargetLanguage("sl"); break;
+                                            case 44: curiosity.setTargetLanguage("sm"); break;
+                                            case 45: curiosity.setTargetLanguage("sr-Cyrl"); break;
+                                            case 46: curiosity.setTargetLanguage("sr-Latn"); break;
+                                            case 47: curiosity.setTargetLanguage("sv"); break;
+                                            case 48: curiosity.setTargetLanguage("sw"); break;
+                                            case 49: curiosity.setTargetLanguage("ta"); break;
+                                            case 50: curiosity.setTargetLanguage("th"); break;
+                                            case 51: curiosity.setTargetLanguage("tlh"); break;
+                                            case 52: curiosity.setTargetLanguage("to"); break;
+                                            case 53: curiosity.setTargetLanguage("tr"); break;
+                                            case 54: curiosity.setTargetLanguage("ty"); break;
+                                            case 55: curiosity.setTargetLanguage("uk"); break;
+                                            case 56: curiosity.setTargetLanguage("ur"); break;
+                                            case 57: curiosity.setTargetLanguage("vi"); break;
+                                            case 58: curiosity.setTargetLanguage("yua"); break;
+                                            case 59: curiosity.setTargetLanguage("yue"); break;
+                                            case 60: curiosity.setTargetLanguage("zh-Hans"); break;
+                                            case 61: curiosity.setTargetLanguage("zh-Hant"); break;
+                                        }
+                                    }
+                                }
+
                                 IconButton {
                                     id: snapshotButton
                                     icon.source: "image://theme/icon-m-dot"
@@ -526,7 +832,7 @@ Page {
 
                         Loader {
                             id: viewfinderLoader
-                            active: ( titlePage.activeTabId === 1 && pageStack.currentPage === titlePage )
+                            active: ( titlePage.activeTabId === 1 )
                             width: parent.width
                             height: parent.height
                             sourceComponent: viewfinderComponent

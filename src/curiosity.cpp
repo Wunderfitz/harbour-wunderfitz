@@ -30,6 +30,9 @@
 #include <QRect>
 #include <QJsonObject>
 
+const char SETTINGS_SOURCE_LANGUAGE[] = "settings/sourceLanguage";
+const char SETTINGS_TARGET_LANGUAGE[] = "settings/targetLanguage";
+
 Curiosity::Curiosity(QObject *parent) : QObject(parent)
 {
     QString tempDirectoryString = getTemporaryDirectoryPath();
@@ -84,6 +87,28 @@ void Curiosity::captureCompleted(const QString &path)
     this->processCapture();
 }
 
+QString Curiosity::getSourceLanguage()
+{
+    return settings.value(SETTINGS_SOURCE_LANGUAGE, "unk").toString();
+}
+
+void Curiosity::setSourceLanguage(const QString &sourceLanguage)
+{
+    qDebug() << "[Curiosity] Set source language" << sourceLanguage;
+    settings.setValue(SETTINGS_SOURCE_LANGUAGE, sourceLanguage);
+}
+
+QString Curiosity::getTargetLanguage()
+{
+    return settings.value(SETTINGS_TARGET_LANGUAGE, "en").toString();
+}
+
+void Curiosity::setTargetLanguage(const QString &targetLanguage)
+{
+    qDebug() << "[Curiosity] Set target language" << targetLanguage;
+    settings.setValue(SETTINGS_TARGET_LANGUAGE, targetLanguage);
+}
+
 CloudApi *Curiosity::getCloudApi()
 {
     return this->cloudApi;
@@ -108,7 +133,7 @@ void Curiosity::handleOcrProcessingSuccessful(const QString &fileName, const QJs
     }
     qDebug() << completeText;
     emit ocrSuccessful();
-    cloudApi->translate(completeText);
+    cloudApi->translate(completeText, this->getTargetLanguage());
 }
 
 void Curiosity::handleOcrProcessingError(const QString &fileName, const QString &errorMessage)
@@ -180,5 +205,5 @@ void Curiosity::processCapture()
     finalImage = myImage.copy(imageDimensions);
     finalImage.save(this->capturePath);
 
-    cloudApi->opticalCharacterRecognition(this->capturePath);
+    cloudApi->opticalCharacterRecognition(this->capturePath, this->getSourceLanguage());
 }
