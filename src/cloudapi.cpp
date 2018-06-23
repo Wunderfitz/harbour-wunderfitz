@@ -19,9 +19,9 @@
 
 #include "cloudapi.h"
 
-CloudApi::CloudApi(QObject *parent) : QObject(parent)
+CloudApi::CloudApi(QNetworkAccessManager *manager, QObject *parent) : QObject(parent)
 {
-    this->networkAccessManager = new QNetworkAccessManager(this);
+    this->networkAccessManager = manager;
 }
 
 void CloudApi::opticalCharacterRecognition(const QString &imagePath, const QString &sourceLanguage)

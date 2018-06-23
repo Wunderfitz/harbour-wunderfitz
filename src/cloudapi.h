@@ -41,7 +41,7 @@ class CloudApi : public QObject
 {
     Q_OBJECT
 public:
-    explicit CloudApi(QObject *parent = 0);
+    explicit CloudApi(QNetworkAccessManager *manager, QObject *parent = 0);
 
     Q_INVOKABLE void opticalCharacterRecognition(const QString &imagePath, const QString &sourceLanguage);
     Q_INVOKABLE void translate(const QString &text, const QString &targetLanguage);

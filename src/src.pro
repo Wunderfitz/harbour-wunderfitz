@@ -1,7 +1,9 @@
 CONFIG += sailfishapp
 LIBS += -lz -lquazip -L../quazip/quazip
 
-QT += sql
+QT += sql core
+
+include(wagnis/wagnis.pri)
 
 DEPENDPATH += . ../quazip/quazip
 INCLUDEPATH += . ../quazip/quazip

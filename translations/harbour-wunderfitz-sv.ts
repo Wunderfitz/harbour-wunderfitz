@@ -122,6 +122,189 @@
     </message>
 </context>
 <context>
+    <name>RegistrationPage</name>
+    <message>
+        <source>the next %1 days</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>the next day</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>the next %1 hours</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>the next hour</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>the next %1 minutes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>the next minute</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Welcome to Wunderfitz!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Committed to Free Software</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Welcome to Wunderfitz - a mobile dictionary and translator for SailfishOS! Wunderfitz is &lt;a href=&quot;https://www.gnu.org/philosophy/free-sw&quot;&gt;free software&lt;/a&gt; and licensed under the conditions of the &lt;a href=&quot;https://www.gnu.org/licenses/old-licenses/gpl-2.0&quot;&gt;General Public License in version 2 (GPLv2)&lt;/a&gt;. By using this software, you accept the terms and conditions of this license.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Anonymous Registration</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Moreover, Wunderfitz will register this installation automatically on our server if you press &apos;Accept&apos;. We respect your privacy, therefore only anonymous and a very limited set of information will be transmitted: a unique identifer for this installation and your country. We simply would like to know how many users Wunderfitz has and where they come from. If this is not OK for you, simply close the application. No information has been transmitted so far.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Show Registration Data</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The data isn&apos;t shared with anyone else. Please see the &lt;a href=&quot;https://werkwolf.eu/terms.html&quot;&gt;legal notice&lt;/a&gt; for additional information how the data is processed. For additional details about the motivation for this, the unique ID and how it is generated please see my page &lt;a href=&quot;https://werkwolf.eu/terms.html#wagnis&quot;&gt;about Wagnis&lt;/a&gt;.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Have fun with Wunderfitz! Sebastian J. Wolf</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Accept</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Registration Error</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Registration failed. Please ensure that your device is connected to the Internet and press &apos;Restart Registration&apos;. In case a restart doesn&apos;t work, please contact me via &lt;a href=&quot;mailto:contact@werkwolf.eu&quot;&gt;E-Mail&lt;/a&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Restart Registration</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Registration Invalid</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The registration file on your device is corrupt. The registration process needs to be restarted. Please ensure that your device is connected to the Internet and press &apos;Restart Registration&apos;. In case the new registration isn&apos;t successful, please contact me via &lt;a href=&quot;mailto:contact@werkwolf.eu&quot;&gt;E-Mail&lt;/a&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Development Contribution</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Please contribute to Wunderfitz</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Wunderfitz is and will remain Open Source Software. However, in order to support the development of Wunderfitz, we&apos;d like to ask you for a contribution before you can run it. Such a contribution can be made by translating Wunderfitz to another language, help developing it or simply by purchasing a key.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>You have the choice between 4 different contributions: S, M, L, XL. No matter which size you choose, the purchased key will unlock the complete application. It&apos;s up to you to decide how much the app is worth to you.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>If you&apos;ve already contributed to Wunderfitz, please &lt;a href=&quot;mailto:contact@werkwolf.eu&quot;&gt;contact me&lt;/a&gt; directly.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Contribution</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Choose your contribution here</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Wunderfitz S - 3,33 €</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Wunderfitz M - 5,55 €</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Wunderfitz L - 7,77 €</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Wunderfitz XL - 9,99 €</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Purchase Contribution Key</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Validate your contribution key</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>After you have received your key by purchasing it or for another contribution, please validate your key here to run Wunderfitz.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>If you have already validated your key on another device, you can reuse it for up to 3 additional devices without the need of another contribution.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Enter the contribution key here</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Validate Contribution Key</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>You can skip the contribution for %1 if you want to test Wunderfitz before.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Continue Testing</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Contribution not validated!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Your contribution could not be validated. Please ensure that your device is connected to the Internet and press &apos;Restart Validation&apos;. In case you have a valid contribution key and it can&apos;t be validated, please contact me via &lt;a href=&quot;mailto:contact@werkwolf.eu&quot;&gt;E-Mail&lt;/a&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Restart Validation</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Thank You!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Your contribution was successfully validated. Thank you very much for your contribution to the development of Wunderfitz!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>OK</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>TextPage</name>
     <message>
         <source>Copy text to clipboard</source>

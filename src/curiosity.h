@@ -23,6 +23,7 @@
 #include <QObject>
 #include <QSettings>
 #include "cloudapi.h"
+#include "wagnis/wagnis.h"
 
 class Curiosity : public QObject
 {
@@ -39,6 +40,7 @@ public:
     Q_INVOKABLE void setTargetLanguage(const QString &targetLanguage);
 
     CloudApi *getCloudApi();
+    Wagnis *getWagnis();
 
 signals:
     void translationSuccessful(const QString &text);
@@ -61,6 +63,9 @@ private:
     QString capturePath;
     QSettings settings;
     CloudApi *cloudApi;
+
+    QNetworkAccessManager *networkAccessManager;
+    Wagnis *wagnis;
 
     void processCapture();
 
