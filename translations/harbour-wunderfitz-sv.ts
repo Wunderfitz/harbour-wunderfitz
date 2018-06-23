@@ -55,6 +55,10 @@
         <source>This project uses the Norwegian-German dictionary from heinzelnisse.info - Thanks to the authors Heiko Klein and Julia Emmerich for making the dictionary available under the conditions of the GNU GPLv2!</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Wunderfitz was translated to several languages. Thanks to the contributors for making that happen!</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>DictionariesPage</name>

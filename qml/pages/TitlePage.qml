@@ -844,9 +844,23 @@ Page {
                             }
                         }
 
+                        Timer {
+                            id: cameraLoaderTimer
+                            interval: 1000
+                            running: true
+                            repeat: true
+                            onTriggered: {
+                                if (pageStack.currentPage !== titlePage) {
+                                    viewfinderLoader.active = false;
+                                } else {
+                                    viewfinderLoader.active = titlePage.activeTabId === 1;
+                                }
+                            }
+                        }
+
                         Loader {
                             id: viewfinderLoader
-                            active: ( titlePage.activeTabId === 1 )
+                            active: titlePage.activeTabId === 1
                             width: parent.width
                             height: parent.height
                             sourceComponent: viewfinderComponent
