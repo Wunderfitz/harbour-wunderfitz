@@ -38,6 +38,8 @@ public:
     Q_INVOKABLE void setSourceLanguage(const QString &sourceLanguage);
     Q_INVOKABLE QString getTargetLanguage();
     Q_INVOKABLE void setTargetLanguage(const QString &targetLanguage);
+    Q_INVOKABLE bool getUseCloud();
+    Q_INVOKABLE void setUseCloud(const bool &useCloud);
 
     CloudApi *getCloudApi();
     Wagnis *getWagnis();

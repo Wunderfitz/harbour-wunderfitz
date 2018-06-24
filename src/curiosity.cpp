@@ -32,6 +32,7 @@
 
 const char SETTINGS_SOURCE_LANGUAGE[] = "settings/sourceLanguage";
 const char SETTINGS_TARGET_LANGUAGE[] = "settings/targetLanguage";
+const char SETTINGS_USE_CLOUD[] = "settings/useCloud";
 
 Curiosity::Curiosity(QObject *parent) : QObject(parent)
 {
@@ -109,6 +110,17 @@ void Curiosity::setTargetLanguage(const QString &targetLanguage)
 {
     qDebug() << "[Curiosity] Set target language" << targetLanguage;
     settings.setValue(SETTINGS_TARGET_LANGUAGE, targetLanguage);
+}
+
+bool Curiosity::getUseCloud()
+{
+    return settings.value(SETTINGS_USE_CLOUD, false).toBool();
+}
+
+void Curiosity::setUseCloud(const bool &useCloud)
+{
+    qDebug() << "[Curiosity] Set use cloud" << useCloud;
+    settings.setValue(SETTINGS_USE_CLOUD, useCloud);
 }
 
 CloudApi *Curiosity::getCloudApi()

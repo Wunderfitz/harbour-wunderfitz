@@ -841,6 +841,108 @@ Page {
                                         snapshotRectangle.visible = false;
                                     }
                                 }
+
+                                Rectangle {
+                                    id: cloudWarningBackground
+                                    anchors.fill: parent
+                                    color: "black"
+                                    opacity: 0.8
+                                    visible: !curiosity.getUseCloud()
+                                }
+
+                                SilicaFlickable {
+                                    id: cloudWarningFlickable
+                                    contentHeight: warningColumn.height
+                                    anchors.fill: parent
+                                    visible: !curiosity.getUseCloud()
+
+                                    Column {
+                                        id: warningColumn
+                                        width: parent.width
+                                        spacing: Theme.paddingLarge
+
+                                        PageHeader {
+                                            id: warningHeader
+                                            title: qsTr("Cloud and Beta Warning")
+                                        }
+
+                                        Image {
+                                            id: warningImage
+                                            source: "image://theme/icon-l-attention"
+                                            anchors {
+                                                horizontalCenter: parent.horizontalCenter
+                                            }
+
+                                            fillMode: Image.PreserveAspectFit
+                                            width: Theme.iconSizeLarge
+                                            height: Theme.iconSizeLarge
+                                        }
+
+                                        Text {
+                                            id: textContentCloud
+                                            width: parent.width - 2 * Theme.horizontalPageMargin
+                                            anchors.horizontalCenter: parent.horizontalCenter
+                                            font.pixelSize: Theme.fontSizeSmall
+                                            color: Theme.primaryColor
+                                            linkColor: Theme.highlightColor
+                                            wrapMode: Text.Wrap
+                                            textFormat: Text.PlainText
+                                            text: qsTr("The Curiosity feature - taking a picture and automatically translating all recognized text on it - uses other people's computers (aka \"Cloud\") to work. So, your picture is uploaded to another server, analyzed and the information is sent back to this app. So, be cautious if you take pictures of private or confidential data! The Cloud provider is Microsoft Azure. (You see the irony of having Microsoft services running on Sailfish OS ;) ?) By using this service you accept")
+
+                                            onLinkActivated: Qt.openUrlExternally(link);
+                                        }
+
+                                        Text {
+                                            text: "<a href=\"https://azure.microsoft.com/support/legal/\">The Microsoft Azure terms of service and privacy statement</a>"
+                                            anchors {
+                                                horizontalCenter: parent.horizontalCenter
+                                            }
+                                            width: parent.width - 2 * Theme.horizontalPageMargin
+                                            font.pixelSize: Theme.fontSizeSmall
+                                            linkColor: Theme.highlightColor
+                                            wrapMode: Text.Wrap
+
+                                            onLinkActivated: Qt.openUrlExternally(link);
+                                        }
+
+                                        Text {
+                                            id: textContentBeta
+                                            width: parent.width - 2 * Theme.horizontalPageMargin
+                                            anchors.horizontalCenter: parent.horizontalCenter
+                                            font.pixelSize: Theme.fontSizeSmall
+                                            color: Theme.primaryColor
+                                            linkColor: Theme.highlightColor
+                                            wrapMode: Text.Wrap
+                                            textFormat: Text.PlainText
+                                            text: qsTr("Moreover, the Curiosity feature is beta! This means that there is no guarantee that it works as you wish or that it will continue working forever in this or a future version of Wunderfitz. It may cease to work without any prior warning... Please also be aware that Cloud infrastructure costs actual money! Keeping this app in a pay once - use forever model requires cooperation by all users. So please don't use that excessively, thanks!")
+                                        }
+
+                                        Button {
+                                            text: qsTr("Accept")
+                                            anchors {
+                                                horizontalCenter: parent.horizontalCenter
+                                            }
+                                            onClicked: {
+                                                curiosity.setUseCloud(true);
+                                                cloudWarningBackground.visible = false;
+                                                cloudWarningFlickable.visible = false;
+                                            }
+                                        }
+
+                                        Label {
+                                            x: Theme.horizontalPageMargin
+                                            width: parent.width  - ( 2 * Theme.horizontalPageMargin )
+                                            font.pixelSize: Theme.fontSizeExtraSmall
+                                            wrapMode: Text.Wrap
+                                            anchors {
+                                                horizontalCenter: parent.horizontalCenter
+                                            }
+                                        }
+
+                                        VerticalScrollDecorator {}
+                                    }
+
+                                }
                             }
                         }
 
