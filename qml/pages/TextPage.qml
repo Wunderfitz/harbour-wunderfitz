@@ -25,7 +25,8 @@ Page {
     id: textPage
     allowedOrientations: Orientation.All
 
-    property string text;
+    property string original;
+    property string translation;
 
     SilicaFlickable {
         id: textContainer
@@ -34,9 +35,15 @@ Page {
 
         PullDownMenu {
             MenuItem {
-                text: qsTr("Copy text to clipboard")
+                text: qsTr("Copy translation to clipboard")
                 onClicked: {
-                    Clipboard.text = textContent.text
+                    Clipboard.text = translationContent.text
+                }
+            }
+            MenuItem {
+                text: qsTr("Copy original to clipboard")
+                onClicked: {
+                    Clipboard.text = originalContent.text
                 }
             }
         }
@@ -48,11 +55,16 @@ Page {
 
             PageHeader {
                 id: textHeader
-                title: "Translation"
+                title: qsTr("Result")
+            }
+
+            SectionHeader {
+                id: originalHeader
+                text: qsTr("Original")
             }
 
             Text {
-                id: textContent
+                id: originalContent
                 width: parent.width - 2 * Theme.horizontalPageMargin
                 anchors.horizontalCenter: parent.horizontalCenter
                 font.pixelSize: Theme.fontSizeMedium
@@ -60,7 +72,24 @@ Page {
                 linkColor: Theme.highlightColor
                 wrapMode: Text.Wrap
                 textFormat: Text.PlainText
-                text: textPage.text
+                text: textPage.original
+            }
+
+            SectionHeader {
+                id: translationHeader
+                text: qsTr("Translation")
+            }
+
+            Text {
+                id: translationContent
+                width: parent.width - 2 * Theme.horizontalPageMargin
+                anchors.horizontalCenter: parent.horizontalCenter
+                font.pixelSize: Theme.fontSizeMedium
+                color: Theme.primaryColor
+                linkColor: Theme.highlightColor
+                wrapMode: Text.Wrap
+                textFormat: Text.PlainText
+                text: textPage.translation
             }
 
             VerticalScrollDecorator {}

@@ -14,9 +14,9 @@ Name:       harbour-wunderfitz
 %{!?qtc_qmake5:%define qtc_qmake5 %qmake5}
 %{!?qtc_make:%define qtc_make make}
 %{?qtc_builddir:%define _builddir %qtc_builddir}
-Summary:    A mobile dictionary application for offline use, supporting dict.cc and Heinzelnisse
+Summary:    An offline dictionary (supporting dict.cc and Heinzelnisse) and OCR translator
 Version:    1.1
-Release:    1
+Release:    3
 Group:      Qt/Qt
 License:    LICENSE
 URL:        http://www.wunderfitz.org/

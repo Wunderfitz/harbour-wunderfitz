@@ -40,6 +40,7 @@ public:
     Q_INVOKABLE void setTargetLanguage(const QString &targetLanguage);
     Q_INVOKABLE bool getUseCloud();
     Q_INVOKABLE void setUseCloud(const bool &useCloud);
+    Q_INVOKABLE QString getTranslatedText();
 
     CloudApi *getCloudApi();
     Wagnis *getWagnis();
@@ -63,6 +64,7 @@ private:
     int captureOffset;
     int captureViewfinderDimension;
     QString capturePath;
+    QString translatedText;
     QSettings settings;
     CloudApi *cloudApi;
 

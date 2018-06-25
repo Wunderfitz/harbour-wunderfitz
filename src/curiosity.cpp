@@ -78,6 +78,7 @@ void Curiosity::removeTemporaryFiles()
 void Curiosity::captureRequested(const int &orientation, const int &viewfinderDimension, const int &offset)
 {
     qDebug() << "[Curiosity] Capture requested" << orientation << viewfinderDimension << offset;
+    this->translatedText = "";
     this->captureOrientation = orientation;
     this->captureViewfinderDimension = viewfinderDimension;
     this->captureOffset = offset;
@@ -123,6 +124,11 @@ void Curiosity::setUseCloud(const bool &useCloud)
     settings.setValue(SETTINGS_USE_CLOUD, useCloud);
 }
 
+QString Curiosity::getTranslatedText()
+{
+    return this->translatedText;
+}
+
 CloudApi *Curiosity::getCloudApi()
 {
     return this->cloudApi;
@@ -151,6 +157,7 @@ void Curiosity::handleOcrProcessingSuccessful(const QString &fileName, const QJs
         }
     }
     qDebug() << completeText;
+    this->translatedText = completeText;
     emit ocrSuccessful();
     cloudApi->translate(completeText, this->getTargetLanguage());
 }
