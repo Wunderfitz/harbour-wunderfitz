@@ -565,14 +565,14 @@ Page {
                                 if (pageStack.currentPage !== titlePage) {
                                     viewfinderLoader.active = false;
                                 } else {
-                                    viewfinderLoader.active = titlePage.activeTabId === 1;
+                                    viewfinderLoader.active = ( titlePage.activeTabId === 1 && Qt.application.state === Qt.ApplicationActive);
                                 }
                             }
                         }
 
                         Loader {
                             id: viewfinderLoader
-                            active: titlePage.activeTabId === 1
+                            active: titlePage.activeTabId === 1 && Qt.application.state === Qt.ApplicationActive
                             width: parent.width
                             height: parent.height
                             sourceComponent: viewfinderComponent
@@ -758,7 +758,7 @@ Page {
 
                             id: targetLanguageBox
                             anchors.bottom: parent.bottom
-                            anchors.bottomMargin: Theme.iconSizeMedium + Theme.paddingLarge
+                            anchors.bottomMargin: Theme.iconSizeMedium + ( 2 * Theme.paddingLarge )
                             anchors.horizontalCenter: parent.horizontalCenter
                             label: qsTr("Target Language")
                             visible: !wunderfitzView.isProcessing && viewfinderLoader.active

@@ -16,7 +16,7 @@ Name:       harbour-wunderfitz
 %{?qtc_builddir:%define _builddir %qtc_builddir}
 Summary:    An offline dictionary (supporting dict.cc and Heinzelnisse) and OCR translator
 Version:    1.1
-Release:    3
+Release:    4
 Group:      Qt/Qt
 License:    LICENSE
 URL:        http://www.wunderfitz.org/
