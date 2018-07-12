@@ -484,20 +484,6 @@ Page {
                 onLinkActivated: Qt.openUrlExternally(link)
             }
 
-            Text {
-                wrapMode: Text.Wrap
-                x: Theme.horizontalPageMargin
-                width: parent.width - ( 2 * Theme.horizontalPageMargin )
-                horizontalAlignment: Text.AlignHCenter
-                text: "THIS IS A TEST VERSION! \nPurchasing a key is not yet supported!"
-                font.pixelSize: Theme.fontSizeMedium
-                linkColor: Theme.highlightColor
-                color: Theme.primaryColor
-                anchors {
-                    horizontalCenter: parent.horizontalCenter
-                }
-            }
-
             ComboBox {
                 id: contributionComboBox
                 label: qsTr("Contribution")
@@ -517,7 +503,6 @@ Page {
                      }
                 }
                 currentIndex: 1
-                visible: false
             }
 
             Button {
@@ -531,25 +516,24 @@ Page {
                     switch (contributionComboBox.currentIndex) {
                         case 0:
                             payment = "3,33 €";
-                            purchaseLink = "https://www.werkwolf.eu/";
+                            purchaseLink = "https://www.digistore24.com/product/233013";
                             break;
                         case 1:
                             payment = "5,55 €";
-                            purchaseLink = "https://www.werkwolf.eu/";
+                            purchaseLink = "https://www.digistore24.com/product/233015";
                             break;
                         case 2:
                             payment = "7,77 €";
-                            purchaseLink = "https://www.werkwolf.eu/";
+                            purchaseLink = "https://www.digistore24.com/product/233017";
                             break;
                         case 3:
                             payment = "9,99 €";
-                            purchaseLink = "https://www.werkwolf.eu/";
+                            purchaseLink = "https://www.digistore24.com/product/233018";
                             break;
                     }
                     console.log("Payment selected: " + payment);
                     Qt.openUrlExternally(purchaseLink);
                 }
-                visible: false
             }
 
             SectionHeader {

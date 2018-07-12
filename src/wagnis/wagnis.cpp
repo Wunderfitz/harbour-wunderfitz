@@ -196,7 +196,7 @@
         // Additional components of the hash are the current application name...
         idHash.addData(this->applicationName.toUtf8());
         // ...and the identifier of this Wagnis release.
-        idHash.addData(QString("Wagnis 42").toUtf8());
+        idHash.addData(QString("Wagnis 42.1807").toUtf8());
         idHash.result().toHex();
 
         QString uidHash = QString::fromUtf8(idHash.result().toHex());
