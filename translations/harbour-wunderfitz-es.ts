@@ -21,7 +21,7 @@
     </message>
     <message>
         <source>Sources on GitHub</source>
-        <translation>Código fuente en GitHub</translation>
+        <translation>Código fuente</translation>
     </message>
     <message>
         <source>Send E-Mail</source>
@@ -57,7 +57,7 @@
     </message>
     <message>
         <source>Wunderfitz was translated to several languages. Thanks to the contributors for making that happen!</source>
-        <translation>Wunderfitz fue traducido a varios lenguajes. Gracias a los contribuyentes por hacer esto realidad!</translation>
+        <translation>Wunderfitz es traducido a varios lenguajes. Gracias a los contribuyentes por hacer esto realidad!</translation>
     </message>
 </context>
 <context>
@@ -221,114 +221,114 @@
     </message>
     <message>
         <source>You have the choice between 4 different contributions: S, M, L, XL. No matter which size you choose, the purchased key will unlock the complete application. It&apos;s up to you to decide how much the app is worth to you.</source>
-        <translation type="unfinished"></translation>
+        <translation>Puedes elegir entre 4 contribuciones diferentes: S, M, L, XL. No importa qué tamaño elijas, la llave adquirida desbloqueará la aplicación completa. Depende de usted decidir cuánto vale la aplicación para usted.</translation>
     </message>
     <message>
         <source>If you&apos;ve already contributed to Wunderfitz, please &lt;a href=&quot;mailto:contact@werkwolf.eu&quot;&gt;contact me&lt;/a&gt; directly.</source>
-        <translation type="unfinished"></translation>
+        <translation>Si ya has contribuido a Wunderfitz, por favor &lt;a href=&quot;mailto:contact@werkwolf.eu&quot;&gt;contactarme&lt;/a&gt; directamente.</translation>
     </message>
     <message>
         <source>Contribution</source>
-        <translation type="unfinished"></translation>
+        <translation>Contribución</translation>
     </message>
     <message>
         <source>Choose your contribution here</source>
-        <translation type="unfinished"></translation>
+        <translation>Eligir su contribución aquí</translation>
     </message>
     <message>
         <source>Wunderfitz S - 3,33 €</source>
-        <translation type="unfinished"></translation>
+        <translation>Wunderfitz S - 3,33 €</translation>
     </message>
     <message>
         <source>Wunderfitz M - 5,55 €</source>
-        <translation type="unfinished"></translation>
+        <translation>Wunderfitz M - 5,55 €</translation>
     </message>
     <message>
         <source>Wunderfitz L - 7,77 €</source>
-        <translation type="unfinished"></translation>
+        <translation>Wunderfitz L - 7,77 €</translation>
     </message>
     <message>
         <source>Wunderfitz XL - 9,99 €</source>
-        <translation type="unfinished"></translation>
+        <translation>Wunderfitz XL - 9,99 €</translation>
     </message>
     <message>
         <source>Purchase Contribution Key</source>
-        <translation type="unfinished"></translation>
+        <translation>Comprar llave de contribución</translation>
     </message>
     <message>
         <source>Validate your contribution key</source>
-        <translation type="unfinished"></translation>
+        <translation>Validar su llave de contribución</translation>
     </message>
     <message>
         <source>After you have received your key by purchasing it or for another contribution, please validate your key here to run Wunderfitz.</source>
-        <translation type="unfinished"></translation>
+        <translation>Después de haber recibido su llave comprándola o por otra contribución, por favor validar su llave aquí para ejecutar Wunderfitz.</translation>
     </message>
     <message>
         <source>If you have already validated your key on another device, you can reuse it for up to 3 additional devices without the need of another contribution.</source>
-        <translation type="unfinished"></translation>
+        <translation>Si ya tienes validada una llave en otro dispositivo, puedes reutilizarla para hasta 3 dispositivos adicionales sin la necesidad de otra contribución.</translation>
     </message>
     <message>
         <source>Enter the contribution key here</source>
-        <translation type="unfinished"></translation>
+        <translation>Ingresar la llave de contribución aquí</translation>
     </message>
     <message>
         <source>Validate Contribution Key</source>
-        <translation type="unfinished"></translation>
+        <translation>Validar llave de contribución</translation>
     </message>
     <message>
         <source>You can skip the contribution for %1 if you want to test Wunderfitz before.</source>
-        <translation type="unfinished"></translation>
+        <translation>Usted puede omitir la contribución para %1 si desea probar Wunderfitz antes.</translation>
     </message>
     <message>
         <source>Continue Testing</source>
-        <translation type="unfinished"></translation>
+        <translation>Continuar prueba</translation>
     </message>
     <message>
         <source>Contribution not validated!</source>
-        <translation type="unfinished"></translation>
+        <translation>Contribución no validada!</translation>
     </message>
     <message>
         <source>Your contribution could not be validated. Please ensure that your device is connected to the Internet and press &apos;Restart Validation&apos;. In case you have a valid contribution key and it can&apos;t be validated, please contact me via &lt;a href=&quot;mailto:contact@werkwolf.eu&quot;&gt;E-Mail&lt;/a&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Su contribución no pudo ser validada. Asegúrarse de que su dispositivo esté conectado a internet y presionar &apos;reanudar validación&apos;. En caso de que tenga una llave de contribución válida y no pueda ser validada, contácteme a &lt;a href=&quot;mailto:contact@werkwolf.eu&quot;&gt;E-Mail&lt;/a&gt;</translation>
     </message>
     <message>
         <source>Restart Validation</source>
-        <translation type="unfinished"></translation>
+        <translation>Reanudar validación</translation>
     </message>
     <message>
         <source>Thank You!</source>
-        <translation type="unfinished"></translation>
+        <translation>Gracias!</translation>
     </message>
     <message>
         <source>Your contribution was successfully validated. Thank you very much for your contribution to the development of Wunderfitz!</source>
-        <translation type="unfinished"></translation>
+        <translation>Su contribución fue validada con éxito. Muchas gracias por su contribución al desarrollo de Wunderfitz!</translation>
     </message>
     <message>
         <source>OK</source>
-        <translation type="unfinished"></translation>
+        <translation>Aceptar</translation>
     </message>
 </context>
 <context>
     <name>TextPage</name>
     <message>
         <source>Copy translation to clipboard</source>
-        <translation type="unfinished"></translation>
+        <translation>copiar traducción</translation>
     </message>
     <message>
         <source>Copy original to clipboard</source>
-        <translation type="unfinished"></translation>
+        <translation>Copiar original</translation>
     </message>
     <message>
         <source>Result</source>
-        <translation type="unfinished"></translation>
+        <translation>Resultados</translation>
     </message>
     <message>
         <source>Original</source>
-        <translation type="unfinished"></translation>
+        <translation>Original</translation>
     </message>
     <message>
         <source>Translation</source>
-        <translation type="unfinished"></translation>
+        <translation>Traducción</translation>
     </message>
 </context>
 <context>
@@ -371,295 +371,295 @@
     </message>
     <message>
         <source>Processing image...</source>
-        <translation type="unfinished"></translation>
+        <translation>Procesando imagen...</translation>
     </message>
     <message>
         <source>Uploading image, %1% completed...</source>
-        <translation type="unfinished"></translation>
+        <translation>Subiendo imagen,%1% completado</translation>
     </message>
     <message>
         <source>Translating text...</source>
-        <translation type="unfinished"></translation>
+        <translation>Traduciendo texto...</translation>
     </message>
     <message>
         <source>Source Language</source>
-        <translation type="unfinished"></translation>
+        <translation>Lenguaje fuente</translation>
     </message>
     <message>
         <source>Chinese-Simplified</source>
-        <translation type="unfinished"></translation>
+        <translation>Chino simplicado</translation>
     </message>
     <message>
         <source>Chinese-Traditional</source>
-        <translation type="unfinished"></translation>
+        <translation>Chino tradicional</translation>
     </message>
     <message>
         <source>Czech</source>
-        <translation type="unfinished"></translation>
+        <translation>Checo</translation>
     </message>
     <message>
         <source>Danish</source>
-        <translation type="unfinished"></translation>
+        <translation>Danés</translation>
     </message>
     <message>
         <source>Dutch</source>
-        <translation type="unfinished"></translation>
+        <translation>Holandés</translation>
     </message>
     <message>
         <source>English</source>
-        <translation type="unfinished"></translation>
+        <translation>Inglés</translation>
     </message>
     <message>
         <source>Finnish</source>
-        <translation type="unfinished"></translation>
+        <translation>Finlandés</translation>
     </message>
     <message>
         <source>French</source>
-        <translation type="unfinished"></translation>
+        <translation>Francés</translation>
     </message>
     <message>
         <source>German</source>
-        <translation type="unfinished"></translation>
+        <translation>Alemán</translation>
     </message>
     <message>
         <source>Greek</source>
-        <translation type="unfinished"></translation>
+        <translation>Griego</translation>
     </message>
     <message>
         <source>Hungarian</source>
-        <translation type="unfinished"></translation>
+        <translation>Húngaro</translation>
     </message>
     <message>
         <source>Italian</source>
-        <translation type="unfinished"></translation>
+        <translation>Italiano</translation>
     </message>
     <message>
         <source>Japanese</source>
-        <translation type="unfinished"></translation>
+        <translation>Japonés</translation>
     </message>
     <message>
         <source>Korean</source>
-        <translation type="unfinished"></translation>
+        <translation>Coreano</translation>
     </message>
     <message>
         <source>Norwegian</source>
-        <translation type="unfinished"></translation>
+        <translation>Noruego</translation>
     </message>
     <message>
         <source>Polish</source>
-        <translation type="unfinished"></translation>
+        <translation>Polaco</translation>
     </message>
     <message>
         <source>Portuguese</source>
-        <translation type="unfinished"></translation>
+        <translation>Portugués</translation>
     </message>
     <message>
         <source>Russian</source>
-        <translation type="unfinished"></translation>
+        <translation>Ruso</translation>
     </message>
     <message>
         <source>Spanish</source>
-        <translation type="unfinished"></translation>
+        <translation>Español</translation>
     </message>
     <message>
         <source>Swedish</source>
-        <translation type="unfinished"></translation>
+        <translation>Sueco</translation>
     </message>
     <message>
         <source>Turkish</source>
-        <translation type="unfinished"></translation>
+        <translation>Turco</translation>
     </message>
     <message>
         <source>Arabic</source>
-        <translation type="unfinished"></translation>
+        <translation>Arábica</translation>
     </message>
     <message>
         <source>Romanian</source>
-        <translation type="unfinished"></translation>
+        <translation>Rumano</translation>
     </message>
     <message>
         <source>Serbian-Cyrillic</source>
-        <translation type="unfinished"></translation>
+        <translation>Serbio cirílico</translation>
     </message>
     <message>
         <source>Serbian-Latin</source>
-        <translation type="unfinished"></translation>
+        <translation>Serbio latino</translation>
     </message>
     <message>
         <source>Slovak</source>
-        <translation type="unfinished"></translation>
+        <translation>Eslovaco</translation>
     </message>
     <message>
         <source>Auto-Detect</source>
-        <translation type="unfinished"></translation>
+        <translation>Autodetectar</translation>
     </message>
     <message>
         <source>Target Language</source>
-        <translation type="unfinished"></translation>
+        <translation>Lenguaje objetivo</translation>
     </message>
     <message>
         <source>Afrikaans</source>
-        <translation type="unfinished"></translation>
+        <translation>Africano</translation>
     </message>
     <message>
         <source>Bulgarian</source>
-        <translation type="unfinished"></translation>
+        <translation>Búlgaro</translation>
     </message>
     <message>
         <source>Bangla</source>
-        <translation type="unfinished"></translation>
+        <translation>Bangla</translation>
     </message>
     <message>
         <source>Bosnian</source>
-        <translation type="unfinished"></translation>
+        <translation>Bosnia</translation>
     </message>
     <message>
         <source>Catalan</source>
-        <translation type="unfinished"></translation>
+        <translation>Catalán</translation>
     </message>
     <message>
         <source>Welsh</source>
-        <translation type="unfinished"></translation>
+        <translation>Galés</translation>
     </message>
     <message>
         <source>Estonian</source>
-        <translation type="unfinished"></translation>
+        <translation>estonia</translation>
     </message>
     <message>
         <source>Persian</source>
-        <translation type="unfinished"></translation>
+        <translation>Persa</translation>
     </message>
     <message>
         <source>Filipino</source>
-        <translation type="unfinished"></translation>
+        <translation>Filipino</translation>
     </message>
     <message>
         <source>Fijian</source>
-        <translation type="unfinished"></translation>
+        <translation>Fijiano</translation>
     </message>
     <message>
         <source>Hebrew</source>
-        <translation type="unfinished"></translation>
+        <translation>Hebreo</translation>
     </message>
     <message>
         <source>Hindi</source>
-        <translation type="unfinished"></translation>
+        <translation>Hindi</translation>
     </message>
     <message>
         <source>Croatian</source>
-        <translation type="unfinished"></translation>
+        <translation>Croata</translation>
     </message>
     <message>
         <source>Haitian Creole</source>
-        <translation type="unfinished"></translation>
+        <translation>Criollo haitiano</translation>
     </message>
     <message>
         <source>Indonesian</source>
-        <translation type="unfinished"></translation>
+        <translation>Indonesio</translation>
     </message>
     <message>
         <source>Icelandic</source>
-        <translation type="unfinished"></translation>
+        <translation>Islandés</translation>
     </message>
     <message>
         <source>Lithuanian</source>
-        <translation type="unfinished"></translation>
+        <translation>Lituano</translation>
     </message>
     <message>
         <source>Latvian</source>
-        <translation type="unfinished"></translation>
+        <translation>Letón</translation>
     </message>
     <message>
         <source>Malagasy</source>
-        <translation type="unfinished"></translation>
+        <translation>Madagascarí</translation>
     </message>
     <message>
         <source>Malay</source>
-        <translation type="unfinished"></translation>
+        <translation>Malayo</translation>
     </message>
     <message>
         <source>Maltese</source>
-        <translation type="unfinished"></translation>
+        <translation>Maltés</translation>
     </message>
     <message>
         <source>Hmong Daw</source>
-        <translation type="unfinished"></translation>
+        <translation>Hmong Daw</translation>
     </message>
     <message>
         <source>Querétaro Otomi</source>
-        <translation type="unfinished"></translation>
+        <translation>Querétaro Otomi</translation>
     </message>
     <message>
         <source>Slovenian</source>
-        <translation type="unfinished"></translation>
+        <translation>Esloveno</translation>
     </message>
     <message>
         <source>Samoan</source>
-        <translation type="unfinished"></translation>
+        <translation>Samoano</translation>
     </message>
     <message>
         <source>Kiswahili</source>
-        <translation type="unfinished"></translation>
+        <translation>Kiswahili</translation>
     </message>
     <message>
         <source>Tamil</source>
-        <translation type="unfinished"></translation>
+        <translation>Tamil</translation>
     </message>
     <message>
         <source>Thai</source>
-        <translation type="unfinished"></translation>
+        <translation>Tailandés</translation>
     </message>
     <message>
         <source>Klingon</source>
-        <translation type="unfinished"></translation>
+        <translation>Klingon</translation>
     </message>
     <message>
         <source>Tongan</source>
-        <translation type="unfinished"></translation>
+        <translation>Tongano</translation>
     </message>
     <message>
         <source>Tahitian</source>
-        <translation type="unfinished"></translation>
+        <translation>Tahitiano</translation>
     </message>
     <message>
         <source>Ukrainian</source>
-        <translation type="unfinished"></translation>
+        <translation>Ucranio</translation>
     </message>
     <message>
         <source>Urdu</source>
-        <translation type="unfinished"></translation>
+        <translation>Urdu</translation>
     </message>
     <message>
         <source>Vietnamese</source>
-        <translation type="unfinished"></translation>
+        <translation>Vietnamita</translation>
     </message>
     <message>
         <source>Yucatec Maya</source>
-        <translation type="unfinished"></translation>
+        <translation>Maya Yucateco</translation>
     </message>
     <message>
         <source>Cantonese-Traditional</source>
-        <translation type="unfinished"></translation>
+        <translation>Cantonés tradicional</translation>
     </message>
     <message>
         <source>Cloud and Beta Warning</source>
-        <translation type="unfinished"></translation>
+        <translation>Advertencia de nube y beta</translation>
     </message>
     <message>
         <source>Accept</source>
-        <translation type="unfinished"></translation>
+        <translation>Aceptar</translation>
     </message>
     <message>
         <source>The Curiosity feature - taking a picture and automatically translating all recognized text on it - uses other people&apos;s computers (aka &quot;Cloud&quot;) to work. So, your picture is uploaded to another server, analyzed and the information is sent back to this app. So, be cautious if you take pictures of private or confidential data! The Cloud provider is Microsoft Azure. (You see the irony of having Microsoft services running on Sailfish OS ;) ?) By using this service you accept</source>
-        <translation type="unfinished"></translation>
+        <translation>La característica de Curiosidad, toma una fotografía y traduce automáticamente todo el texto reconocido en ella, utiliza computadoras de terceros (aka &quot;Nube&quot;) para que funcione. Por lo tanto, su imagen se carga en otro servidor, se analiza la información y se envía de vuelta a esta aplicación. Por lo tanto, tener cuidado si toma imágenes de datos privados o confidenciales. El proveedor de la nube es Microsoft Azure. (Usted ve la ironía de tener los servicios de Microsoft ejecutándose en el sistema operativo Sailfish;)?) Al usar este servicio, acepta</translation>
     </message>
     <message>
         <source>Moreover, the Curiosity feature is beta! This means that there is no guarantee that it works as you wish or that it will continue working forever in this or a future version of Wunderfitz. It may cease to work without any prior warning... Please also be aware that Cloud infrastructure costs actual money! Keeping this app in a one-time contribution model (without subscription) requires cooperation by all users. So please don&apos;t use that excessively, thanks!</source>
-        <translation type="unfinished"></translation>
+        <translation>Además, la función curiosidad es beta! Esto significa que no hay garantía de que funcione como usted desee o que continuará funcionando para siempre en esta versión o en una versión futura de Wunderfitz. Puede dejar de funcionar sin previo aviso ... ¡Tener en cuenta también que la infraestructura de nube cuesta dinero real! Mantener esta aplicación en un modelo de contribución única (sin suscripción) requiere la cooperación de todos los usuarios. Entonces, por favor, no lo usarlo excesivamente, gracias!</translation>
     </message>
     <message>
         <source>&lt;a href=&quot;https://azure.microsoft.com/support/legal/&quot;&gt;The Microsoft Azure terms of service and privacy statement&lt;/a&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;a href=&quot;https://azure.microsoft.com/support/legal/&quot;&gt;Los términos de servicio y la declaración de privacidad de Microsoft Azure&lt;/a&gt;</translation>
     </message>
 </context>
 <context>
