@@ -29,15 +29,15 @@
     </message>
     <message>
         <source>Open heinzelnisse.info</source>
-        <translation>Abrir heinzelnisse.info</translation>
+        <translation>heinzelnisse.info</translation>
     </message>
     <message>
         <source>Open QuaZIP home page</source>
-        <translation>Abrir QuaZIP</translation>
+        <translation>quaZIP</translation>
     </message>
     <message>
         <source>Open dict.cc home page</source>
-        <translation>Abrir dict.cc</translation>
+        <translation>dict.cc</translation>
     </message>
     <message>
         <source>This application supports dict.cc dictionary export files. Thanks to Paul Hemetsberger and the dict.cc team for providing the dictionaries!</source>
@@ -57,7 +57,7 @@
     </message>
     <message>
         <source>Wunderfitz was translated to several languages. Thanks to the contributors for making that happen!</source>
-        <translation type="unfinished"></translation>
+        <translation>Wunderfitz fue traducido a varios lenguajes. Gracias a los contribuyentes por hacer esto realidad!</translation>
     </message>
 </context>
 <context>
@@ -80,7 +80,7 @@
     </message>
     <message>
         <source>Dict.cc Import</source>
-        <translation>Dict.cc Importación</translation>
+        <translation>Dict.cc importación</translation>
     </message>
     <message>
         <source>Dict.cc does not allow other applications such as Wunderfitz to ship their dictionaries. Therefore, you must download them from dict.cc yourself. Use the Download link, follow the instructions and import the files here afterwards. The downloaded dict.cc ZIP files must be placed in the Downloads folder. If in doubt, use the SailfishOS E-Mail and Browser apps to store the downloads there automatically. After the import in Wunderfitz you can delete the ZIP archives. Please note that you only need to download one combination of two languages. For example if you use DE-EN, you don&apos;t need EN-DE as Wunderfitz always searches in both languages.</source>
@@ -122,102 +122,102 @@
     <name>LoadingIndicator</name>
     <message>
         <source>Loading...</source>
-        <translation type="unfinished"></translation>
+        <translation>Cargando...</translation>
     </message>
 </context>
 <context>
     <name>RegistrationPage</name>
     <message>
         <source>the next %1 days</source>
-        <translation type="unfinished"></translation>
+        <translation>los próximos %1 días</translation>
     </message>
     <message>
         <source>the next day</source>
-        <translation type="unfinished"></translation>
+        <translation>el próximo día</translation>
     </message>
     <message>
         <source>the next %1 hours</source>
-        <translation type="unfinished"></translation>
+        <translation>las próximas %1 horas</translation>
     </message>
     <message>
         <source>the next hour</source>
-        <translation type="unfinished"></translation>
+        <translation>las próximas hora</translation>
     </message>
     <message>
         <source>the next %1 minutes</source>
-        <translation type="unfinished"></translation>
+        <translation>los próximos %1 minutos</translation>
     </message>
     <message>
         <source>the next minute</source>
-        <translation type="unfinished"></translation>
+        <translation>el próximo  minuto</translation>
     </message>
     <message>
         <source>Welcome to Wunderfitz!</source>
-        <translation type="unfinished"></translation>
+        <translation>Bienvenidos a Wunderfitz!</translation>
     </message>
     <message>
         <source>Committed to Free Software</source>
-        <translation type="unfinished"></translation>
+        <translation>Un programa libre</translation>
     </message>
     <message>
         <source>Welcome to Wunderfitz - a mobile dictionary and translator for SailfishOS! Wunderfitz is &lt;a href=&quot;https://www.gnu.org/philosophy/free-sw&quot;&gt;free software&lt;/a&gt; and licensed under the conditions of the &lt;a href=&quot;https://www.gnu.org/licenses/old-licenses/gpl-2.0&quot;&gt;General Public License in version 2 (GPLv2)&lt;/a&gt;. By using this software, you accept the terms and conditions of this license.</source>
-        <translation type="unfinished"></translation>
+        <translation>Bienvenido a Wunderfitz, un diccionario móvil y traductor para SailfishOS Wunderfitz es &lt;a href=&quot;https://www.gnu.org/philosophy/free-sw&quot;&gt;programa libre&lt;/a&gt; y bajo las condiciones de la &lt;a href=&quot;https://www.gnu.org/licenses/old-licenses/gpl-2.0&quot;&gt;GPLv2&lt;/a&gt;Al usar este programa, usted acepta los términos y condiciones de esta licencia.</translation>
     </message>
     <message>
         <source>Anonymous Registration</source>
-        <translation type="unfinished"></translation>
+        <translation>Registrar anónimo</translation>
     </message>
     <message>
         <source>Moreover, Wunderfitz will register this installation automatically on our server if you press &apos;Accept&apos;. We respect your privacy, therefore only anonymous and a very limited set of information will be transmitted: a unique identifer for this installation and your country. We simply would like to know how many users Wunderfitz has and where they come from. If this is not OK for you, simply close the application. No information has been transmitted so far.</source>
-        <translation type="unfinished"></translation>
+        <translation>Además, Wunderfitz registrará esta instalación automáticamente en nuestro servidor si presiona  &apos;Aceptar&apos;. Respetamos su privacidad, por lo tanto, solo se transmitirá un conjunto de información anónimo y muy limitado: un identificador único para esta instalación y su país. Simplemente nos gustaría saber cuántos usuarios tiene Wunderfitz y de dónde provienen. Si esto no está bien para usted, simplemente cerrar la aplicación. No se ha transmitido ninguna información hasta el momento.</translation>
     </message>
     <message>
         <source>Show Registration Data</source>
-        <translation type="unfinished"></translation>
+        <translation>Mostrar datos de registro</translation>
     </message>
     <message>
         <source>The data isn&apos;t shared with anyone else. Please see the &lt;a href=&quot;https://werkwolf.eu/terms.html&quot;&gt;legal notice&lt;/a&gt; for additional information how the data is processed. For additional details about the motivation for this, the unique ID and how it is generated please see my page &lt;a href=&quot;https://werkwolf.eu/terms.html#wagnis&quot;&gt;about Wagnis&lt;/a&gt;.</source>
-        <translation type="unfinished"></translation>
+        <translation>Los datos no se comparten con nadie más. Por favor mirar la &lt;a href=&quot;https://werkwolf.eu/terms.html&quot;&gt;legal notice&lt;/a&gt; para obtener información adicional sobre cómo se procesan los datos. Para obtener detalles adicionales sobre la motivación para esto, la ID única y cómo se genera, consultar mi página digital &lt;a href=&quot;https://werkwolf.eu/terms.html#wagnis&quot;&gt;about Wagnis&lt;/a&gt;.</translation>
     </message>
     <message>
         <source>Have fun with Wunderfitz! Sebastian J. Wolf</source>
-        <translation type="unfinished"></translation>
+        <translation>Que te diviertas con Wunderfitz! Sebastian J. Wolf</translation>
     </message>
     <message>
         <source>Accept</source>
-        <translation type="unfinished"></translation>
+        <translation>Aceptar</translation>
     </message>
     <message>
         <source>Registration Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Error de registro</translation>
     </message>
     <message>
         <source>Registration failed. Please ensure that your device is connected to the Internet and press &apos;Restart Registration&apos;. In case a restart doesn&apos;t work, please contact me via &lt;a href=&quot;mailto:contact@werkwolf.eu&quot;&gt;E-Mail&lt;/a&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>La Registración a fallado. Asegurarse de que su dispositivo esté conectado a internet y presionar </translation>
     </message>
     <message>
         <source>Restart Registration</source>
-        <translation type="unfinished"></translation>
+        <translation>Reanudar registración</translation>
     </message>
     <message>
         <source>Registration Invalid</source>
-        <translation type="unfinished"></translation>
+        <translation>Registración inválida</translation>
     </message>
     <message>
         <source>The registration file on your device is corrupt. The registration process needs to be restarted. Please ensure that your device is connected to the Internet and press &apos;Restart Registration&apos;. In case the new registration isn&apos;t successful, please contact me via &lt;a href=&quot;mailto:contact@werkwolf.eu&quot;&gt;E-Mail&lt;/a&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>El archivo de registración en su dispositivo está dañado. El proceso de registro debe reanudarse.</translation>
     </message>
     <message>
         <source>Development Contribution</source>
-        <translation type="unfinished"></translation>
+        <translation>Contribución al desarrollo</translation>
     </message>
     <message>
         <source>Please contribute to Wunderfitz</source>
-        <translation type="unfinished"></translation>
+        <translation>Por favor apoyar a Wunderfitz</translation>
     </message>
     <message>
         <source>Wunderfitz is and will remain Open Source Software. However, in order to support the development of Wunderfitz, we&apos;d like to ask you for a contribution before you can run it. Such a contribution can be made by translating Wunderfitz to another language, help developing it or simply by purchasing a key.</source>
-        <translation type="unfinished"></translation>
+        <translation>Wunderfitz es y seguirá siendo programa de código abierto.</translation>
     </message>
     <message>
         <source>You have the choice between 4 different contributions: S, M, L, XL. No matter which size you choose, the purchased key will unlock the complete application. It&apos;s up to you to decide how much the app is worth to you.</source>
