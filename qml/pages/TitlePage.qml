@@ -428,7 +428,7 @@ Page {
                                     anchors.top: parent.top
                                     anchors.left: parent.left
                                     source: camera
-                                    fillMode: VideoOutput.PreserveAspectFit
+                                    fillMode: VideoOutput.PreserveAspectCrop
                                     visible: camera.availability === Camera.Available && !wunderfitzView.isProcessing
                                     rotation: ( titlePage.orientation === Orientation.Portrait ? 0 : ( titlePage.orientation === Orientation.Landscape ? -90 : ( titlePage.orientation === Orientation.PortraitInverted ? 180 : -270 ) ) )
                                     MouseArea {
@@ -496,7 +496,7 @@ Page {
                                     icon.source: "image://theme/icon-m-dot"
                                     anchors.left: parent.left
                                     anchors.leftMargin: titlePage.isPortrait ? ( videoOutput.width / 2 ) - ( width / 2 ) : parent.width - width - Theme.horizontalPageMargin
-                                    anchors.bottom: titlePage.isPortrait ? videoOutput.bottom : parent.bottom
+                                    anchors.bottom: parent.bottom // titlePage.isPortrait ? videoOutput.bottom : parent.bottom
                                     anchors.bottomMargin: Theme.horizontalPageMargin
                                     visible: !wunderfitzView.isProcessing
                                     onClicked: {
@@ -758,7 +758,7 @@ Page {
 
                             id: targetLanguageBox
                             anchors.bottom: parent.bottom
-                            anchors.bottomMargin: Theme.iconSizeMedium + ( 2 * Theme.paddingLarge )
+                            anchors.bottomMargin: Theme.iconSizeMedium + Theme.horizontalPageMargin + ( 2 * Theme.paddingLarge )
                             anchors.horizontalCenter: parent.horizontalCenter
                             label: qsTr("Target Language")
                             visible: !wunderfitzView.isProcessing && viewfinderLoader.active

@@ -224,7 +224,7 @@ void DictCCImportWorker::writeDictionaryEntries(QTextStream &inputStream, QMap<Q
         div_t divisionResult = div(currentLineNumber * 100, lineCount);
         div_t everyXResult = div(currentLineNumber, 1000);
         QStringList currentResult = rawEntriesIterator.next().split("\t");
-        if (currentResult.count() == 3) {
+        if (currentResult.count() >= 3) {
             databaseQuery.bindValue(":id", currentLineNumber);
             DictCCWord leftWord = getDictCCWord(currentResult.value(0));
             databaseQuery.bindValue(":left_word", leftWord.getWord());

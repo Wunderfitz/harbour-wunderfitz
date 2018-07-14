@@ -1,11 +1,11 @@
 Name: harbour-wunderfitz
-Summary: An offline dictionary (supporting dict.cc and Heinzelnisse) and OCR translator
+Summary: An offline dictionary (supporting dict.cc and Heinzelnisse)
 Version: 1.1
-Release: 4
+Release: 5
 # The contents of the Group field should be one of the groups listed here:
 # http://gitorious.org/meego-developer-tools/spectacle/blobs/master/data/GROUPS
 Group: Qt/Qt
-URL: http://www.wunderfitz.org/
+URL: http://www.werkwolf.eu/
 License: LICENSE
 # This must be generated before uploading a package to a remote build service.
 # Usually this line does not need to be modified.

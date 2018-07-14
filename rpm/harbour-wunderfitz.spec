@@ -14,12 +14,12 @@ Name:       harbour-wunderfitz
 %{!?qtc_qmake5:%define qtc_qmake5 %qmake5}
 %{!?qtc_make:%define qtc_make make}
 %{?qtc_builddir:%define _builddir %qtc_builddir}
-Summary:    An offline dictionary (supporting dict.cc and Heinzelnisse) and OCR translator
+Summary:    An offline dictionary (supporting dict.cc and Heinzelnisse)
 Version:    1.1
-Release:    4
+Release:    5
 Group:      Qt/Qt
 License:    LICENSE
-URL:        http://www.wunderfitz.org/
+URL:        http://www.werkwolf.eu/
 Source0:    %{name}-%{version}.tar.bz2
 Source100:  harbour-wunderfitz.yaml
 Requires:   sailfishsilica-qt5 >= 0.10.9

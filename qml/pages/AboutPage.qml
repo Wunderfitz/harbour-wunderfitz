@@ -81,14 +81,41 @@ Page {
             }
 
             Text {
-                text: "<a href=\"mailto:sebastian@ygriega.de\">" + qsTr("Send E-Mail") + "</a>"
+                text: "<a href=\"mailto:contact@werkwolf.eu\">" + qsTr("Send E-Mail") + "</a>"
                 anchors {
                     horizontalCenter: parent.horizontalCenter
                 }
                 font.pixelSize: Theme.fontSizeSmall
                 linkColor: Theme.highlightColor
 
-                onLinkActivated: Qt.openUrlExternally("mailto:sebastian@ygriega.de")
+                onLinkActivated: Qt.openUrlExternally("mailto:contact@werkwolf.eu")
+            }
+
+            Separator {
+                width: parent.width
+                color: Theme.primaryColor
+                horizontalAlignment: Qt.AlignHCenter
+            }
+
+            Text {
+                wrapMode: Text.Wrap
+                width: parent.width - ( 2 * Theme.horizontalPageMargin )
+                text: qsTr("This product uses <a href=\"https://werkwolf.eu/terms.html#wagnis\">Wagnis</a> and is distributed by <a href=\"https://werkwolf.eu\">WerkWolf OÜ</a>.")
+                font.pixelSize: Theme.fontSizeSmall
+                linkColor: Theme.highlightColor
+                anchors {
+                    horizontalCenter: parent.horizontalCenter
+                }
+                color: Theme.primaryColor
+                textFormat: Text.StyledText
+                horizontalAlignment: Text.AlignHCenter
+                onLinkActivated: Qt.openUrlExternally(link);
+            }
+
+            Separator {
+                width: parent.width
+                color: Theme.primaryColor
+                horizontalAlignment: Qt.AlignHCenter
             }
 
             Label {
@@ -108,6 +135,31 @@ Page {
                 linkColor: Theme.highlightColor
 
                 onLinkActivated: Qt.openUrlExternally("https://github.com/Wunderfitz/harbour-wunderfitz")
+            }
+
+            SectionHeader {
+                text: "Wagnis"
+            }
+
+            Label {
+                id: wagnisIdLabel
+                text: qsTr("Wagnis ID: ") + wagnis.getId()
+                font.pixelSize: Theme.fontSizeSmall
+                anchors {
+                    horizontalCenter: parent.horizontalCenter
+                }
+                visible: false
+            }
+            Button {
+                id: showWagnisIdButton
+                text: qsTr("Show Wagnis ID")
+                anchors {
+                    horizontalCenter: parent.horizontalCenter
+                }
+                onClicked: {
+                    showWagnisIdButton.visible = false;
+                    wagnisIdLabel.visible = true;
+                }
             }
 
             SectionHeader {

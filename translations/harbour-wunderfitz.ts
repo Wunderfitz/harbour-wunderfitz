@@ -59,6 +59,18 @@
         <source>Wunderfitz was translated to several languages. Thanks to the contributors for making that happen!</source>
         <translation>Wunderfitz was translated to several languages. Thanks to the contributors for making that happen!</translation>
     </message>
+    <message>
+        <source>Wagnis ID: </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Show Wagnis ID</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>This product uses &lt;a href=&quot;https://werkwolf.eu/terms.html#wagnis&quot;&gt;Wagnis&lt;/a&gt; and is distributed by &lt;a href=&quot;https://werkwolf.eu&quot;&gt;WerkWolf OÜ&lt;/a&gt;.</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>DictionariesPage</name>
