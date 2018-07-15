@@ -61,15 +61,15 @@
     </message>
     <message>
         <source>Wagnis ID: </source>
-        <translation type="unfinished"></translation>
+        <translation>Identificación Wagnis: </translation>
     </message>
     <message>
         <source>Show Wagnis ID</source>
-        <translation type="unfinished"></translation>
+        <translation>Mostrar identificación</translation>
     </message>
     <message>
         <source>This product uses &lt;a href=&quot;https://werkwolf.eu/terms.html#wagnis&quot;&gt;Wagnis&lt;/a&gt; and is distributed by &lt;a href=&quot;https://werkwolf.eu&quot;&gt;WerkWolf OÜ&lt;/a&gt;.</source>
-        <translation type="unfinished"></translation>
+        <translation>Este producto usa &lt;a href=&quot;https://werkwolf.eu/terms.html#wagnis&quot;&gt;Wagnis&lt;/a&gt; y esta distribuido por &lt;a href=&quot;https://werkwolf.eu&quot;&gt;WerkWolf OÜ&lt;/a&gt;.</translation>
     </message>
 </context>
 <context>
@@ -104,7 +104,7 @@
     </message>
     <message>
         <source>Choose the active dictionary here</source>
-        <translation>Elegir  diccionarios aqui</translation>
+        <translation>Elegir diccionarios aqui</translation>
     </message>
     <message>
         <source>Delete selected dictionary</source>
@@ -173,11 +173,11 @@
     </message>
     <message>
         <source>Welcome to Wunderfitz - a mobile dictionary and translator for SailfishOS! Wunderfitz is &lt;a href=&quot;https://www.gnu.org/philosophy/free-sw&quot;&gt;free software&lt;/a&gt; and licensed under the conditions of the &lt;a href=&quot;https://www.gnu.org/licenses/old-licenses/gpl-2.0&quot;&gt;General Public License in version 2 (GPLv2)&lt;/a&gt;. By using this software, you accept the terms and conditions of this license.</source>
-        <translation>Bienvenido a Wunderfitz, un diccionario móvil y traductor para SailfishOS Wunderfitz es &lt;a href=&quot;https://www.gnu.org/philosophy/free-sw&quot;&gt;programa libre&lt;/a&gt; y bajo las condiciones de la &lt;a href=&quot;https://www.gnu.org/licenses/old-licenses/gpl-2.0&quot;&gt;GPLv2&lt;/a&gt;Al usar este programa, usted acepta los términos y condiciones de esta licencia.</translation>
+        <translation>Bienvenido a Wunderfitz, un diccionario y traductor sin conexión para SailfishOS Wunderfitz es &lt;a href=&quot;https://www.gnu.org/philosophy/free-sw&quot;&gt;programa libre&lt;/a&gt; y bajo las condiciones de la &lt;a href=&quot;https://www.gnu.org/licenses/old-licenses/gpl-2.0&quot;&gt;GPLv2&lt;/a&gt;Al usar este programa, usted acepta los términos y condiciones de esta licencia.</translation>
     </message>
     <message>
         <source>Anonymous Registration</source>
-        <translation>Registrar anónimo</translation>
+        <translation>Registración anónima</translation>
     </message>
     <message>
         <source>Moreover, Wunderfitz will register this installation automatically on our server if you press &apos;Accept&apos;. We respect your privacy, therefore only anonymous and a very limited set of information will be transmitted: a unique identifer for this installation and your country. We simply would like to know how many users Wunderfitz has and where they come from. If this is not OK for you, simply close the application. No information has been transmitted so far.</source>
@@ -185,7 +185,7 @@
     </message>
     <message>
         <source>Show Registration Data</source>
-        <translation>Mostrar datos de registro</translation>
+        <translation>Mostrar datos de registración</translation>
     </message>
     <message>
         <source>The data isn&apos;t shared with anyone else. Please see the &lt;a href=&quot;https://werkwolf.eu/terms.html&quot;&gt;legal notice&lt;/a&gt; for additional information how the data is processed. For additional details about the motivation for this, the unique ID and how it is generated please see my page &lt;a href=&quot;https://werkwolf.eu/terms.html#wagnis&quot;&gt;about Wagnis&lt;/a&gt;.</source>
@@ -201,7 +201,7 @@
     </message>
     <message>
         <source>Registration Error</source>
-        <translation>Error de registro</translation>
+        <translation>Error de registración</translation>
     </message>
     <message>
         <source>Registration failed. Please ensure that your device is connected to the Internet and press &apos;Restart Registration&apos;. In case a restart doesn&apos;t work, please contact me via &lt;a href=&quot;mailto:contact@werkwolf.eu&quot;&gt;E-Mail&lt;/a&gt;</source>
@@ -324,7 +324,7 @@
     <name>TextPage</name>
     <message>
         <source>Copy translation to clipboard</source>
-        <translation>copiar traducción</translation>
+        <translation>Copiar traducción</translation>
     </message>
     <message>
         <source>Copy original to clipboard</source>
@@ -355,7 +355,7 @@
     </message>
     <message>
         <source>Pull down the menu to import and change your dictionaries</source>
-        <translation>Halar hacia abajo para el menú e importar y cambiar los diccionarios</translation>
+        <translation>Halar hacia abajo para el menú eh importar y cambiar los diccionarios</translation>
     </message>
     <message>
         <source>Searching...</source>
@@ -387,7 +387,7 @@
     </message>
     <message>
         <source>Uploading image, %1% completed...</source>
-        <translation>Subiendo imagen,%1% completado</translation>
+        <translation>Subiendo imagen, %1% completado</translation>
     </message>
     <message>
         <source>Translating text...</source>
@@ -663,11 +663,11 @@
     </message>
     <message>
         <source>The Curiosity feature - taking a picture and automatically translating all recognized text on it - uses other people&apos;s computers (aka &quot;Cloud&quot;) to work. So, your picture is uploaded to another server, analyzed and the information is sent back to this app. So, be cautious if you take pictures of private or confidential data! The Cloud provider is Microsoft Azure. (You see the irony of having Microsoft services running on Sailfish OS ;) ?) By using this service you accept</source>
-        <translation>La característica de Curiosidad, toma una fotografía y traduce automáticamente todo el texto reconocido en ella, utiliza computadoras de terceros (aka &quot;Nube&quot;) para que funcione. Por lo tanto, su imagen se carga en otro servidor, se analiza la información y se envía de vuelta a esta aplicación. Por lo tanto, tener cuidado si toma imágenes de datos privados o confidenciales. El proveedor de la nube es Microsoft Azure. (Usted ve la ironía de tener los servicios de Microsoft ejecutándose en el sistema operativo Sailfish;)?) Al usar este servicio, acepta</translation>
+        <translation>La característica Curiosidad, toma una fotografía y traduce automáticamente todo el texto reconocido en ella, utiliza computadoras de terceros (aka &quot;Nube&quot;) para que funcione. Por lo tanto, su imagen se carga en otro servidor, se analiza la información y se envía de vuelta a esta aplicación. Por lo tanto, tener cuidado si toma imágenes de datos privados o confidenciales. El proveedor de la nube es Microsoft Azure. (Usted ve la ironía de tener los servicios de Microsoft ejecutándose en el sistema operativo Sailfish;)?) Al usar este servicio, acepta</translation>
     </message>
     <message>
         <source>Moreover, the Curiosity feature is beta! This means that there is no guarantee that it works as you wish or that it will continue working forever in this or a future version of Wunderfitz. It may cease to work without any prior warning... Please also be aware that Cloud infrastructure costs actual money! Keeping this app in a one-time contribution model (without subscription) requires cooperation by all users. So please don&apos;t use that excessively, thanks!</source>
-        <translation>Además, la función curiosidad es beta! Esto significa que no hay garantía de que funcione como usted desee o que continuará funcionando para siempre en esta versión o en una versión futura de Wunderfitz. Puede dejar de funcionar sin previo aviso ... ¡Tener en cuenta también que la infraestructura de nube cuesta dinero real! Mantener esta aplicación en un modelo de contribución única (sin suscripción) requiere la cooperación de todos los usuarios. Entonces, por favor, no lo usarlo excesivamente, gracias!</translation>
+        <translation>Además, la función curiosidad es beta! Esto significa que no hay garantía de que funcione como usted desee o que continuará funcionando para siempre en esta versión o en una versión futura de Wunderfitz. Puede dejar de funcionar sin previo aviso ... ¡Tener en cuenta también que la infraestructura de nube cuesta dinero real! Mantener esta aplicación en un modelo de contribución única (sin suscripción) requiere la cooperación de todos los usuarios. Entonces, por favor, no  usarlo excesivamente, gracias!</translation>
     </message>
     <message>
         <source>&lt;a href=&quot;https://azure.microsoft.com/support/legal/&quot;&gt;The Microsoft Azure terms of service and privacy statement&lt;/a&gt;</source>
