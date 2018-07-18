@@ -324,7 +324,7 @@
     <name>TextPage</name>
     <message>
         <source>Copy translation to clipboard</source>
-        <translation>Copy translation to clipboard</translation>
+        <translation>Kopiuj tłumaczenie do schowka</translation>
     </message>
     <message>
         <source>Copy original to clipboard</source>
@@ -355,7 +355,7 @@
     </message>
     <message>
         <source>Pull down the menu to import and change your dictionaries</source>
-        <translation>Pull down the menu to import and change your dictionaries</translation>
+        <translation>Przeciągnij w dół aby zaimportować i zmienić swoje słowniki</translation>
     </message>
     <message>
         <source>Searching...</source>
@@ -375,7 +375,7 @@
     </message>
     <message>
         <source>Search for &apos;%1&apos;</source>
-        <translation>Search for &apos;%1&apos;</translation>
+        <translation>Szykaj &apos;%1&apos;</translation>
     </message>
     <message>
         <source>No camera available</source>
@@ -507,7 +507,7 @@
     </message>
     <message>
         <source>Target Language</source>
-        <translation>Target Language</translation>
+        <translation>Wybrany język</translation>
     </message>
     <message>
         <source>Afrikaans</source>
@@ -623,7 +623,7 @@
     </message>
     <message>
         <source>Klingon</source>
-        <translation>Klingon</translation>
+        <translation>klingoński</translation>
     </message>
     <message>
         <source>Tongan</source>
@@ -671,14 +671,14 @@
     </message>
     <message>
         <source>&lt;a href=&quot;https://azure.microsoft.com/support/legal/&quot;&gt;The Microsoft Azure terms of service and privacy statement&lt;/a&gt;</source>
-        <translation>&lt;a href=&quot;https://azure.microsoft.com/support/legal/&quot;&gt;The Microsoft Azure terms of service and privacy statement&lt;/a&gt;</translation>
+        <translation>&lt;a href=&quot;https://azure.microsoft.com/support/legal/&quot;&gt;The Microsoft Azure warunki usługi i prywatności&lt;/a&gt;</translation>
     </message>
 </context>
 <context>
     <name>WunderfitzButton</name>
     <message>
         <source>Curiosity</source>
-        <translation>Curiosity</translation>
+        <translation>Ciekawostka</translation>
     </message>
 </context>
 </TS>
