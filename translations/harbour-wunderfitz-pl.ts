@@ -112,22 +112,22 @@
     </message>
     <message>
         <source>Dictionary %1 successfully imported</source>
-        <translation>Dictionary %1 successfully imported</translation>
+        <translation>Słownik %1 został zaimportowany</translation>
     </message>
     <message>
         <source>Deleting dictionary %1</source>
-        <translation>Deleting dictionary %1</translation>
+        <translation>Usuwanie słownika %1</translation>
     </message>
     <message>
         <source>Dictionary %1 imported</source>
-        <translation>Dictionary %1 imported</translation>
+        <translation>Słownik %1 zaimportowany</translation>
     </message>
 </context>
 <context>
     <name>DictionaryButton</name>
     <message>
         <source>Dictionaries</source>
-        <translation>Dictionaries</translation>
+        <translation>Słowniki</translation>
     </message>
 </context>
 <context>
@@ -145,7 +145,7 @@
     </message>
     <message>
         <source>Have fun with Wunderfitz! Sebastian J. Wolf</source>
-        <translation>Have fun with Wunderfitz! Sebastian J. Wolf</translation>
+        <translation>Udanej zabawy z Wunderfitz! Sebastian J. Wolf</translation>
     </message>
     <message>
         <source>Accept</source>
@@ -153,31 +153,31 @@
     </message>
     <message>
         <source>Welcome to Wunderfitz - a mobile dictionary and translator for SailfishOS! Wunderfitz is &lt;a href=&quot;https://www.gnu.org/philosophy/free-sw&quot;&gt;free software&lt;/a&gt; and licensed under the conditions of the &lt;a href=&quot;https://www.gnu.org/licenses/old-licenses/gpl-2.0&quot;&gt;General Public License in version 2 (GPLv2)&lt;/a&gt;. By using this software, you accept the terms and conditions of this license.</source>
-        <translation>Welcome to Wunderfitz - a mobile dictionary and translator for SailfishOS! Wunderfitz is &lt;a href=&quot;https://www.gnu.org/philosophy/free-sw&quot;&gt;free software&lt;/a&gt; and licensed under the conditions of the &lt;a href=&quot;https://www.gnu.org/licenses/old-licenses/gpl-2.0&quot;&gt;General Public License in version 2 (GPLv2)&lt;/a&gt;. By using this software, you accept the terms and conditions of this license.</translation>
+        <translation>Witaj w Wunderfitz - mobilny słownik i tłumacz dla SailfishOS! Wunderfitz jest &lt;a href=&quot;https://www.gnu.org/philosophy/free-sw&quot;&gt;free software&lt;/a&gt; and licencjonowany na  &lt;a href=&quot;https://www.gnu.org/licenses/old-licenses/gpl-2.0&quot;&gt;General Public License in version 2 (GPLv2)&lt;/a&gt;. Uzywając tego programu, akceptujesz warunki i obostrzenia tej licencji.</translation>
     </message>
     <message>
         <source>Committed to Free Software</source>
-        <translation>Committed to Free Software</translation>
+        <translation>Zaangażowanie w darmowe oprogramowanie</translation>
     </message>
     <message>
         <source>Anonymous Registration</source>
-        <translation>Anonymous Registration</translation>
+        <translation>Anonimowa rejestracja</translation>
     </message>
     <message>
         <source>Registration Error</source>
-        <translation>Registration Error</translation>
+        <translation>Błąd rejestracji</translation>
     </message>
     <message>
         <source>Registration failed. Please ensure that your device is connected to the Internet and press &apos;Restart Registration&apos;. In case a restart doesn&apos;t work, please contact me via &lt;a href=&quot;mailto:contact@werkwolf.eu&quot;&gt;E-Mail&lt;/a&gt;</source>
-        <translation>Registration failed. Please ensure that your device is connected to the Internet and press &apos;Restart Registration&apos;. In case a restart doesn&apos;t work, please contact me via &lt;a href=&quot;mailto:contact@werkwolf.eu&quot;&gt;E-Mail&lt;/a&gt;</translation>
+        <translation>Rejestracja nie powiodła się. Upewnij się, że twoje urządzenie podpięte jest do internetu i naciśnij &apos;Uruchom ponownie rejestrację&apos;. Jeśli restart rejestracji nie pomógł, skontaktuj się ze mną &lt;a href=&quot;mailto:contact@werkwolf.eu&quot;&gt;E-Mail&lt;/a&gt;</translation>
     </message>
     <message>
         <source>Restart Registration</source>
-        <translation>Restart Registration</translation>
+        <translation>Uruchom ponownie rejestrację</translation>
     </message>
     <message>
         <source>Registration Invalid</source>
-        <translation>Registration Invalid</translation>
+        <translation>Nieprawidłowa rejestracja</translation>
     </message>
     <message>
         <source>The registration file on your device is corrupt. The registration process needs to be restarted. Please ensure that your device is connected to the Internet and press &apos;Restart Registration&apos;. In case the new registration isn&apos;t successful, please contact me via &lt;a href=&quot;mailto:contact@werkwolf.eu&quot;&gt;E-Mail&lt;/a&gt;</source>
@@ -185,7 +185,7 @@
     </message>
     <message>
         <source>Show Registration Data</source>
-        <translation>Show Registration Data</translation>
+        <translation>Pokaż dane rejestracji</translation>
     </message>
     <message>
         <source>The data isn&apos;t shared with anyone else. Please see the &lt;a href=&quot;https://werkwolf.eu/terms.html&quot;&gt;legal notice&lt;/a&gt; for additional information how the data is processed. For additional details about the motivation for this, the unique ID and how it is generated please see my page &lt;a href=&quot;https://werkwolf.eu/terms.html#wagnis&quot;&gt;about Wagnis&lt;/a&gt;.</source>
@@ -193,11 +193,11 @@
     </message>
     <message>
         <source>Development Contribution</source>
-        <translation>Development Contribution</translation>
+        <translation>Udział w rozwoju aplikacji</translation>
     </message>
     <message>
         <source>Please contribute to Wunderfitz</source>
-        <translation>Please contribute to Wunderfitz</translation>
+        <translation>Pomóż w rozwoju Wunderfitz</translation>
     </message>
     <message>
         <source>You can skip the contribution for %1 if you want to test Wunderfitz before.</source>
@@ -205,7 +205,7 @@
     </message>
     <message>
         <source>Continue Testing</source>
-        <translation>Continue Testing</translation>
+        <translation>Kontunuuj testowanie</translation>
     </message>
     <message>
         <source>If you&apos;ve already contributed to Wunderfitz, please &lt;a href=&quot;mailto:contact@werkwolf.eu&quot;&gt;contact me&lt;/a&gt; directly.</source>
@@ -273,7 +273,7 @@
     </message>
     <message>
         <source>Thank You!</source>
-        <translation>Thank You!</translation>
+        <translation>Dziękuję!</translation>
     </message>
     <message>
         <source>Your contribution was successfully validated. Thank you very much for your contribution to the development of Wunderfitz!</source>
@@ -328,30 +328,30 @@
     </message>
     <message>
         <source>Copy original to clipboard</source>
-        <translation>Copy original to clipboard</translation>
+        <translation>Kopiuj oryginał do schowka</translation>
     </message>
     <message>
         <source>Result</source>
-        <translation>Result</translation>
+        <translation>Wynik</translation>
     </message>
     <message>
         <source>Original</source>
-        <translation>Original</translation>
+        <translation>Oryginał</translation>
     </message>
     <message>
         <source>Translation</source>
-        <translation>Translation</translation>
+        <translation>Tłumaczenie</translation>
     </message>
 </context>
 <context>
     <name>TitlePage</name>
     <message>
         <source>About Wunderfitz</source>
-        <translation>About Wunderfitz</translation>
+        <translation>O Wunderfitz</translation>
     </message>
     <message>
         <source>Dictionaries</source>
-        <translation>Dictionaries</translation>
+        <translation>Słowniki</translation>
     </message>
     <message>
         <source>Pull down the menu to import and change your dictionaries</source>
@@ -359,19 +359,19 @@
     </message>
     <message>
         <source>Searching...</source>
-        <translation>Searching...</translation>
+        <translation>Wyszukiwanie...</translation>
     </message>
     <message>
         <source>No results found</source>
-        <translation>No results found</translation>
+        <translation>Brak wyników</translation>
     </message>
     <message>
         <source>Search in dictionary...</source>
-        <translation>Search in dictionary...</translation>
+        <translation>Szukaj w słowniku...</translation>
     </message>
     <message>
         <source>Copy to clipboard</source>
-        <translation>Copy to clipboard</translation>
+        <translation>Kopiuj do schowka</translation>
     </message>
     <message>
         <source>Search for &apos;%1&apos;</source>
@@ -379,131 +379,131 @@
     </message>
     <message>
         <source>No camera available</source>
-        <translation>No camera available</translation>
+        <translation>Brak dostępnej kamery</translation>
     </message>
     <message>
         <source>Processing image...</source>
-        <translation>Processing image...</translation>
+        <translation>Przetwarzanie obrazu...</translation>
     </message>
     <message>
         <source>Uploading image, %1% completed...</source>
-        <translation>Uploading image, %1% completed...</translation>
+        <translation>Wgrywanie obrazu, %1% ukończone...</translation>
     </message>
     <message>
         <source>Translating text...</source>
-        <translation>Translating text...</translation>
+        <translation>Tłumaczenie tekstu...</translation>
     </message>
     <message>
         <source>Source Language</source>
-        <translation>Source Language</translation>
+        <translation>Źródło jezyka</translation>
     </message>
     <message>
         <source>Chinese-Simplified</source>
-        <translation>Chinese-Simplified</translation>
+        <translation>chiński-uproszczony</translation>
     </message>
     <message>
         <source>Chinese-Traditional</source>
-        <translation>Chinese-Traditional</translation>
+        <translation>chiński-tradycyjny</translation>
     </message>
     <message>
         <source>Czech</source>
-        <translation>Czech</translation>
+        <translation>czeski</translation>
     </message>
     <message>
         <source>Danish</source>
-        <translation>Danish</translation>
+        <translation>duński</translation>
     </message>
     <message>
         <source>Dutch</source>
-        <translation>Dutch</translation>
+        <translation>holenderski</translation>
     </message>
     <message>
         <source>English</source>
-        <translation>English</translation>
+        <translation>angielski</translation>
     </message>
     <message>
         <source>Finnish</source>
-        <translation>Finnish</translation>
+        <translation>fiński</translation>
     </message>
     <message>
         <source>French</source>
-        <translation>French</translation>
+        <translation>francuski</translation>
     </message>
     <message>
         <source>German</source>
-        <translation>German</translation>
+        <translation>niemiecki</translation>
     </message>
     <message>
         <source>Greek</source>
-        <translation>Greek</translation>
+        <translation>grecki</translation>
     </message>
     <message>
         <source>Hungarian</source>
-        <translation>Hungarian</translation>
+        <translation>węgierski</translation>
     </message>
     <message>
         <source>Italian</source>
-        <translation>Italian</translation>
+        <translation>włoski</translation>
     </message>
     <message>
         <source>Japanese</source>
-        <translation>Japanese</translation>
+        <translation>japoński</translation>
     </message>
     <message>
         <source>Korean</source>
-        <translation>Korean</translation>
+        <translation>koreański</translation>
     </message>
     <message>
         <source>Norwegian</source>
-        <translation>Norwegian</translation>
+        <translation>norweski</translation>
     </message>
     <message>
         <source>Polish</source>
-        <translation>Polish</translation>
+        <translation>polski</translation>
     </message>
     <message>
         <source>Portuguese</source>
-        <translation>Portuguese</translation>
+        <translation>portugalski</translation>
     </message>
     <message>
         <source>Russian</source>
-        <translation>Russian</translation>
+        <translation>rosyjski</translation>
     </message>
     <message>
         <source>Spanish</source>
-        <translation>Spanish</translation>
+        <translation>hiszpański</translation>
     </message>
     <message>
         <source>Swedish</source>
-        <translation>Swedish</translation>
+        <translation>szwedzki</translation>
     </message>
     <message>
         <source>Turkish</source>
-        <translation>Turkish</translation>
+        <translation>turecki</translation>
     </message>
     <message>
         <source>Arabic</source>
-        <translation>Arabic</translation>
+        <translation>arabski</translation>
     </message>
     <message>
         <source>Romanian</source>
-        <translation>Romanian</translation>
+        <translation>rumuński</translation>
     </message>
     <message>
         <source>Serbian-Cyrillic</source>
-        <translation>Serbian-Cyrillic</translation>
+        <translation>serbski-cyrylica</translation>
     </message>
     <message>
         <source>Serbian-Latin</source>
-        <translation>Serbian-Latin</translation>
+        <translation>serbski-łaciński</translation>
     </message>
     <message>
         <source>Slovak</source>
-        <translation>Slovak</translation>
+        <translation>slowacki</translation>
     </message>
     <message>
         <source>Auto-Detect</source>
-        <translation>Auto-Detect</translation>
+        <translation>autodetekcja</translation>
     </message>
     <message>
         <source>Target Language</source>
@@ -515,7 +515,7 @@
     </message>
     <message>
         <source>Bulgarian</source>
-        <translation>Bulgarian</translation>
+        <translation>bułgarski</translation>
     </message>
     <message>
         <source>Bangla</source>
@@ -523,35 +523,35 @@
     </message>
     <message>
         <source>Bosnian</source>
-        <translation>Bosnian</translation>
+        <translation>bośniacki</translation>
     </message>
     <message>
         <source>Catalan</source>
-        <translation>Catalan</translation>
+        <translation>kataloński</translation>
     </message>
     <message>
         <source>Welsh</source>
-        <translation>Welsh</translation>
+        <translation>walijski</translation>
     </message>
     <message>
         <source>Estonian</source>
-        <translation>Estonian</translation>
+        <translation>estoński</translation>
     </message>
     <message>
         <source>Persian</source>
-        <translation>Persian</translation>
+        <translation>perski</translation>
     </message>
     <message>
         <source>Filipino</source>
-        <translation>Filipino</translation>
+        <translation>filipiński</translation>
     </message>
     <message>
         <source>Fijian</source>
-        <translation>Fijian</translation>
+        <translation>fidżi</translation>
     </message>
     <message>
         <source>Hebrew</source>
-        <translation>Hebrew</translation>
+        <translation>hebrajski</translation>
     </message>
     <message>
         <source>Hindi</source>
@@ -559,7 +559,7 @@
     </message>
     <message>
         <source>Croatian</source>
-        <translation>Croatian</translation>
+        <translation>chorwacki</translation>
     </message>
     <message>
         <source>Haitian Creole</source>
@@ -567,7 +567,7 @@
     </message>
     <message>
         <source>Indonesian</source>
-        <translation>Indonesian</translation>
+        <translation>indonezyjski</translation>
     </message>
     <message>
         <source>Icelandic</source>
@@ -575,23 +575,23 @@
     </message>
     <message>
         <source>Lithuanian</source>
-        <translation>Lithuanian</translation>
+        <translation>litewski</translation>
     </message>
     <message>
         <source>Latvian</source>
-        <translation>Latvian</translation>
+        <translation>łotewski</translation>
     </message>
     <message>
         <source>Malagasy</source>
-        <translation>Malagasy</translation>
+        <translation>malgaski</translation>
     </message>
     <message>
         <source>Malay</source>
-        <translation>Malay</translation>
+        <translation>malajski</translation>
     </message>
     <message>
         <source>Maltese</source>
-        <translation>Maltese</translation>
+        <translation>maltański</translation>
     </message>
     <message>
         <source>Hmong Daw</source>
@@ -603,7 +603,7 @@
     </message>
     <message>
         <source>Slovenian</source>
-        <translation>Slovenian</translation>
+        <translation>słoweński</translation>
     </message>
     <message>
         <source>Samoan</source>
@@ -635,7 +635,7 @@
     </message>
     <message>
         <source>Ukrainian</source>
-        <translation>Ukrainian</translation>
+        <translation>ukraiński</translation>
     </message>
     <message>
         <source>Urdu</source>
@@ -643,7 +643,7 @@
     </message>
     <message>
         <source>Vietnamese</source>
-        <translation>Vietnamese</translation>
+        <translation>wietnamski</translation>
     </message>
     <message>
         <source>Yucatec Maya</source>
@@ -651,7 +651,7 @@
     </message>
     <message>
         <source>Cantonese-Traditional</source>
-        <translation>Cantonese-Traditional</translation>
+        <translation>kantoński-tradycyjny</translation>
     </message>
     <message>
         <source>Cloud and Beta Warning</source>
@@ -659,7 +659,7 @@
     </message>
     <message>
         <source>Accept</source>
-        <translation>Accept</translation>
+        <translation>Akceptuj</translation>
     </message>
     <message>
         <source>The Curiosity feature - taking a picture and automatically translating all recognized text on it - uses other people&apos;s computers (aka &quot;Cloud&quot;) to work. So, your picture is uploaded to another server, analyzed and the information is sent back to this app. So, be cautious if you take pictures of private or confidential data! The Cloud provider is Microsoft Azure. (You see the irony of having Microsoft services running on Sailfish OS ;) ?) By using this service you accept</source>
