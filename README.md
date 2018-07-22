@@ -9,6 +9,8 @@ Licensed under GNU GPLv2
 
 ## Translations
 - Dutch: d9h02f
+- Hungarian: Szabó Géza
+- Polish: [Atlochowski](https://github.com/atlochowski)
 - Spanish: Carlos Gonzales
 - Swedish: Åke Engelbrektson
 
