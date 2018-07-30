@@ -10,6 +10,8 @@ Licensed under GNU GPLv2
 ## Translations
 - Dutch: d9h02f
 - Italian: Alessandro Pra
+- Hungarian: Szabó Géza
+- Polish: [Atlochowski](https://github.com/atlochowski)
 - Spanish: Carlos Gonzales
 - Swedish: Åke Engelbrektson
 
