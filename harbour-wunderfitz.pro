@@ -30,6 +30,7 @@ CONFIG += sailfishapp_i18n
 # following TRANSLATIONS line. And also do not forget to
 # modify the localized app name in the the .desktop file.
 TRANSLATIONS += translations/harbour-wunderfitz-de.ts \
+     translations/harbour-wunderfitz-it.ts \
      translations/harbour-wunderfitz-nl.ts \
      translations/harbour-wunderfitz-sv.ts \
      translations/harbour-wunderfitz-es.ts

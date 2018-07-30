@@ -52,7 +52,7 @@ Page {
             }
 
             Label {
-                text: "Wunderfitz 1.1"
+                text: "Wunderfitz 1.1.1"
                 horizontalAlignment: Text.AlignHCenter
                 font.pixelSize: Theme.fontSizeExtraLarge
                 anchors {
@@ -180,7 +180,7 @@ Page {
             Label {
                 x: Theme.horizontalPageMargin
                 width: parent.width  - ( 2 * Theme.horizontalPageMargin )
-                text: "d9h02f, Carlos Gonzales, Åke Engelbrektson"
+                text: "d9h02f, Carlos Gonzales, Åke Engelbrektson, Alessandro Pra"
                 horizontalAlignment: Text.AlignHCenter
                 wrapMode: Text.Wrap
                 anchors {

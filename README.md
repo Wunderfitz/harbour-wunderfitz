@@ -9,6 +9,7 @@ Licensed under GNU GPLv2
 
 ## Translations
 - Dutch: d9h02f
+- Italian: Alessandro Pra
 - Spanish: Carlos Gonzales
 - Swedish: Åke Engelbrektson
 
