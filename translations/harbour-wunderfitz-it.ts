@@ -25,7 +25,7 @@
     </message>
     <message>
         <source>Send E-Mail</source>
-        <translation>Invia eMail</translation>
+        <translation>Invia email</translation>
     </message>
     <message>
         <source>Open heinzelnisse.info</source>
@@ -367,7 +367,7 @@
     </message>
     <message>
         <source>Search in dictionary...</source>
-        <translation>RIcerca nel dizionario...</translation>
+        <translation>Ricerca nel dizionario...</translation>
     </message>
     <message>
         <source>Copy to clipboard</source>
