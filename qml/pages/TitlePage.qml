@@ -225,15 +225,16 @@ Page {
 
                             width: parent.width
 
-                            // Simple, invisible spacer from the top
-                            Rectangle {
-                                width: Theme.paddingLarge
-                                height: Theme.paddingLarge
-                                opacity: 0.0
-                            }
-
                             PageHeader {
                                 id: header
+
+                                // Simple, invisible spacer from the top
+                                Rectangle {
+                                    width: Theme.paddingLarge
+                                    height: Theme.paddingLarge
+                                    opacity: 0.0
+                                }
+
                                 ComboBox {
                                     id: headerDictionaryBox
                                     label: qsTranslate("DictionariesPage", "Dictionary")
