@@ -180,10 +180,6 @@
         <translation>Nieprawidłowa rejestracja</translation>
     </message>
     <message>
-        <source>The registration file on your device is corrupt. The registration process needs to be restarted. Please ensure that your device is connected to the Internet and press "Uruchom ponownie rejestrację". Jeśli nowa rejestracja się nie powiedzie, skontaktuj się ze mną za pośrednictwem &lt;a href=&quot;mailto:contact@werkwolf.eu&quot;&gt;E-Mail&lt;/a&gt;</source>
-        <translation>Plik rejestracyjny na Twoim urządzeniu jest uszkodzony. Proces rejestracji musi zostać uruchomiony ponownie. Upewnij się, że Twoje urządzenie jest podłączone do Internetu i naciśnij</translation>
-    </message>
-    <message>
         <source>Show Registration Data</source>
         <translation>Pokaż dane rejestracji</translation>
     </message>
@@ -313,11 +309,15 @@
     </message>
     <message>
         <source>Moreover, Wunderfitz will register this installation automatically on our server if you press &apos;Accept&apos;. We respect your privacy, therefore only anonymous and a very limited set of information will be transmitted: a unique identifer for this installation and your country. We simply would like to know how many users Wunderfitz has and where they come from. If this is not OK for you, simply close the application. No information has been transmitted so far.</source>
-        <translation>Ponadto Wunderfitz automatycznie zarejestruje tę instalację na naszym serwerze, jeśli naciśniesz "Zaakceptuj". Szanujemy Twoją prywatność, dlatego tylko anonimowy i bardzo ograniczony zestaw informacji zostanie przekazany: unikalna identyfikacja dla tej instalacji i Twojego kraju. Chcielibyśmy wiedzieć, ilu użytkowników ma Wunderfitz i skąd pochodzą. Jeśli nie jest to dla Ciebie odpowiednie, po prostu zamknij aplikację. Do tej pory nie przesłano żadnych informacji.</translation>
+        <translation>Ponadto Wunderfitz automatycznie zarejestruje tę instalację na naszym serwerze, jeśli naciśniesz &quot;Zaakceptuj&quot;. Szanujemy Twoją prywatność, dlatego tylko anonimowy i bardzo ograniczony zestaw informacji zostanie przekazany: unikalna identyfikacja dla tej instalacji i Twojego kraju. Chcielibyśmy wiedzieć, ilu użytkowników ma Wunderfitz i skąd pochodzą. Jeśli nie jest to dla Ciebie odpowiednie, po prostu zamknij aplikację. Do tej pory nie przesłano żadnych informacji.</translation>
     </message>
     <message>
         <source>Wunderfitz is and will remain Open Source Software. However, in order to support the development of Wunderfitz, we&apos;d like to ask you for a contribution before you can run it. Such a contribution can be made by translating Wunderfitz to another language, help developing it or simply by purchasing a key.</source>
         <translation>Wunderfitz jest i pozostanie oprogramowaniem Open Source. Jednakże, aby wesprzeć rozwój Wunderfitz, chcielibyśmy poprosić Cię o wkład, zanim będzie można go uruchomić. Taki wkład można wnieść poprzez przetłumaczenie Wunderfitz na inny język, pomoc w jego opracowaniu lub po prostu przez zakup klucza.</translation>
+    </message>
+    <message>
+        <source>The registration file on your device is corrupt. The registration process needs to be restarted. Please ensure that your device is connected to the Internet and press &apos;Restart Registration&apos;. In case the new registration isn&apos;t successful, please contact me via &lt;a href=&quot;mailto:contact@werkwolf.eu&quot;&gt;E-Mail&lt;/a&gt;</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -663,7 +663,7 @@
     </message>
     <message>
         <source>The Curiosity feature - taking a picture and automatically translating all recognized text on it - uses other people&apos;s computers (aka &quot;Cloud&quot;) to work. So, your picture is uploaded to another server, analyzed and the information is sent back to this app. So, be cautious if you take pictures of private or confidential data! The Cloud provider is Microsoft Azure. (You see the irony of having Microsoft services running on Sailfish OS ;) ?) By using this service you accept</source>
-        <translation>Funkcja Ciekawość - zrobienie zdjęcia i automatyczne przetłumaczenie wszystkich rozpoznanych tekstów - wykorzystuje do pracy komputery innych osób (inaczej "Chmura"). Twoje zdjęcie zostanie przesłane na inny serwer, przeanalizowane, a informacje zostaną odesłane do tej aplikacji. Zachowaj ostrożność, jeśli robisz zdjęcia prywatnych lub poufnych danych! Dostawca chmury to Microsoft Azure. (Widzisz ironię posiadania usług Microsoft uruchomionych na Sailfish OS;)?) Korzystając z tej usługi, akceptujesz</translation>
+        <translation>Funkcja Ciekawość - zrobienie zdjęcia i automatyczne przetłumaczenie wszystkich rozpoznanych tekstów - wykorzystuje do pracy komputery innych osób (inaczej &quot;Chmura&quot;). Twoje zdjęcie zostanie przesłane na inny serwer, przeanalizowane, a informacje zostaną odesłane do tej aplikacji. Zachowaj ostrożność, jeśli robisz zdjęcia prywatnych lub poufnych danych! Dostawca chmury to Microsoft Azure. (Widzisz ironię posiadania usług Microsoft uruchomionych na Sailfish OS;)?) Korzystając z tej usługi, akceptujesz</translation>
     </message>
     <message>
         <source>Moreover, the Curiosity feature is beta! This means that there is no guarantee that it works as you wish or that it will continue working forever in this or a future version of Wunderfitz. It may cease to work without any prior warning... Please also be aware that Cloud infrastructure costs actual money! Keeping this app in a one-time contribution model (without subscription) requires cooperation by all users. So please don&apos;t use that excessively, thanks!</source>

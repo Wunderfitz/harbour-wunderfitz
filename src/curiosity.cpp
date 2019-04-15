@@ -37,7 +37,7 @@ const char SETTINGS_USE_CLOUD[] = "settings/useCloud";
 Curiosity::Curiosity(QObject *parent) : QObject(parent)
 {
     this->networkAccessManager = new QNetworkAccessManager(this);
-    wagnis = new Wagnis(this->networkAccessManager, "harbour-wunderfitz", "1.1.1", this);
+    wagnis = new Wagnis(this->networkAccessManager, "harbour-wunderfitz", "1.2", this);
     QString tempDirectoryString = getTemporaryDirectoryPath();
     QDir myDirectory(tempDirectoryString);
     if (!myDirectory.exists()) {
@@ -233,7 +233,14 @@ void Curiosity::processCapture()
     }
     qDebug() << imageDimensions;
     finalImage = myImage.copy(imageDimensions);
-    finalImage.save(this->capturePath);
 
+    // Maximum dimensions 4000x4000
+    if (finalImage.width() >= 4000) {
+        finalImage = finalImage.scaledToWidth(3999);
+    }
+    if (finalImage.height() >= 4000) {
+        finalImage = finalImage.scaledToHeight(3999);
+    }
+    finalImage.save(this->capturePath);
     cloudApi->opticalCharacterRecognition(this->capturePath, this->getSourceLanguage());
 }
