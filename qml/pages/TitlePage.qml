@@ -1,5 +1,5 @@
 /*
-    Copyright (C) 2016-18 Sebastian J. Wolf
+    Copyright (C) 2016-19 Sebastian J. Wolf
 
     This file is part of Wunderfitz.
 
@@ -227,39 +227,17 @@ Page {
 
                             PageHeader {
                                 id: header
-
-                                // Simple, invisible spacer from the top
-                                Rectangle {
-                                    width: Theme.paddingLarge
-                                    height: Theme.paddingLarge
-                                    opacity: 0.0
+                                title: dictionaryModel.getSelectedDictionaryName()
+                                Connections {
+                                    target: dictionaryModel
+                                    onDictionaryChanged: {
+                                        header.title = dictionaryModel.getSelectedDictionaryName()
+                                        heinzelnisseModel.search(searchField.text)
+                                    }
                                 }
-
-                                ComboBox {
-                                    id: headerDictionaryBox
-                                    label: qsTranslate("DictionariesPage", "Dictionary")
-                                    currentIndex: dictionaryModel.getSelectedDictionaryIndex()
-                                    description: qsTranslate("DictionariesPage", "Choose the active dictionary here")
-                                    menu: ContextMenu {
-                                        Repeater {
-                                            model: dictionaryModel
-                                            delegate: MenuItem {
-                                                text: display.languages
-                                            }
-                                        }
-                                        onActivated: {
-                                            dictionaryModel.selectDictionary(index);
-                                        }
-                                    }
-
-                                    Connections {
-                                        // If dictionary is changed from DictionariesPage, we have to update index and search.
-                                        target: dictionaryModel
-                                        onDictionaryChanged: {
-                                            headerDictionaryBox.currentIndex = dictionaryModel.getSelectedDictionaryIndex()
-                                            heinzelnisseModel.search(searchField.text)
-                                        }
-                                    }
+                                MouseArea {
+                                    anchors.fill: parent
+                                    onClicked: pageStack.push(dictionariesPage)
                                 }
                             }
 

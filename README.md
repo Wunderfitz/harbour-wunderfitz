@@ -16,7 +16,10 @@ Licensed under GNU GPLv2
 - Swedish: Åke Engelbrektson
 
 ## Credits
+Code contributions
+- [zwieberl](https://github.com/zwieberl)
+
 This project uses
-- the Norwegian-German dictionary from [heinzelnisse.info](http://www.heinzelnisse.info) - Updated on January 22, 2018 - Thanks to the authors Heiko Klein and Julia Emmerich for making the dictionary accessible under the conditions of the GNU GPLv2!
+- the Norwegian-German dictionary from [heinzelnisse.info](http://www.heinzelnisse.info) - Updated on March 06, 2019 - Thanks to the authors Heiko Klein and Julia Emmerich for making the dictionary accessible under the conditions of the GNU GPLv2!
 - [Dict.cc](http://dict.cc) dictionaries
 - the [QuaZIP library](http://quazip.sourceforge.net) to extract ZIP archives

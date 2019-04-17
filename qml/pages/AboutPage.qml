@@ -1,5 +1,5 @@
 /*
-    Copyright (C) 2016-18 Sebastian J. Wolf
+    Copyright (C) 2016-19 Sebastian J. Wolf
 
     This file is part of Wunderfitz.
 
@@ -52,7 +52,7 @@ Page {
             }
 
             Label {
-                text: "Wunderfitz 1.1.1"
+                text: "Wunderfitz 1.2"
                 horizontalAlignment: Text.AlignHCenter
                 font.pixelSize: Theme.fontSizeExtraLarge
                 anchors {

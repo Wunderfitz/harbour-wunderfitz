@@ -29,3 +29,8 @@
 * Mon Jul 16 2018 <sebastian@ygriega.de> 1.1
 - Fix bug for empty dict.cc import
 - BETA feature: Translate text from picture
+
+* Mon Apr 15 2019 <sebastian@ygriega.de> 1.2
+- Heinzelnisse dictionary update from March 06, 2019
+- Fix bad request during translate from picture
+- Access dictionary page by clicking on title

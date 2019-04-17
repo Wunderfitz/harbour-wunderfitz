@@ -1,5 +1,5 @@
 /*
-    Copyright (C) 2016-18 Sebastian J. Wolf
+    Copyright (C) 2016-19 Sebastian J. Wolf
 
     This file is part of Wunderfitz.
 
