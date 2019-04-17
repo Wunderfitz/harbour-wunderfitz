@@ -225,8 +225,12 @@ Page {
 
                             width: parent.width
 
-                            PageHeader {
+                            SilicaFlickable {
                                 id: header
+                                width: parent.width
+                                anchors.left: parent.left
+                                anchors.right: parent.right
+                                height: headerDictionaryBox.height
 
                                 // Simple, invisible spacer from the top
                                 Rectangle {
