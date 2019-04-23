@@ -34,3 +34,6 @@
 - Heinzelnisse dictionary update from March 06, 2019
 - Fix bad request during translate from picture
 - Access dictionary page by clicking on title
+
+* Tue Apr 23 2019 <sebastian@ygriega.de> 1.2.1
+- New ComboBox header (thanks to zwieberl)

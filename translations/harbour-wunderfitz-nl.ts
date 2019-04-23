@@ -673,6 +673,10 @@
         <source>&lt;a href=&quot;https://azure.microsoft.com/support/legal/&quot;&gt;The Microsoft Azure terms of service and privacy statement&lt;/a&gt;</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Active Dictionary:</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>WunderfitzButton</name>

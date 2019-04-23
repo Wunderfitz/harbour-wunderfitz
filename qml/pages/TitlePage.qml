@@ -230,20 +230,14 @@ Page {
                                 width: parent.width
                                 anchors.left: parent.left
                                 anchors.right: parent.right
-                                height: headerDictionaryBox.height
-
-                                // Simple, invisible spacer from the top
-                                Rectangle {
-                                    width: Theme.paddingLarge
-                                    height: Theme.paddingLarge
-                                    opacity: 0.0
-                                }
+                                height: headerDictionaryBox.height + Theme.paddingMedium
 
                                 ComboBox {
                                     id: headerDictionaryBox
-                                    label: qsTranslate("DictionariesPage", "Dictionary")
+                                    y: Theme.paddingSmall
                                     currentIndex: dictionaryModel.getSelectedDictionaryIndex()
-                                    description: qsTranslate("DictionariesPage", "Choose the active dictionary here")
+                                    label: qsTr("Active Dictionary:")
+                                    width: parent.width
                                     menu: ContextMenu {
                                         Repeater {
                                             model: dictionaryModel
@@ -265,10 +259,15 @@ Page {
                                         }
                                     }
                                 }
-                                MouseArea {
-                                    anchors.fill: parent
-                                    onClicked: pageStack.push(dictionariesPage)
+
+                                Separator {
+                                    id: headerSeparator
+                                    anchors.top: headerDictionaryBox.bottom
+                                    width: parent.width
+                                    color: Theme.primaryColor
+                                    horizontalAlignment: Qt.AlignHCenter
                                 }
+
                             }
 
                             SearchField {

@@ -37,7 +37,7 @@ const char SETTINGS_USE_CLOUD[] = "settings/useCloud";
 Curiosity::Curiosity(QObject *parent) : QObject(parent)
 {
     this->networkAccessManager = new QNetworkAccessManager(this);
-    wagnis = new Wagnis(this->networkAccessManager, "harbour-wunderfitz", "1.2", this);
+    wagnis = new Wagnis(this->networkAccessManager, "harbour-wunderfitz", "1.2.1", this);
     QString tempDirectoryString = getTemporaryDirectoryPath();
     QDir myDirectory(tempDirectoryString);
     if (!myDirectory.exists()) {
