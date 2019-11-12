@@ -41,6 +41,10 @@ public:
     Q_INVOKABLE bool getUseCloud();
     Q_INVOKABLE void setUseCloud(const bool &useCloud);
     Q_INVOKABLE QString getTranslatedText();
+    Q_INVOKABLE void setComputerVisionKey(const QString &computerVisionKey);
+    Q_INVOKABLE QString getComputerVisionKey();
+    Q_INVOKABLE void setTranslatorTextKey(const QString &translatorTextKey);
+    Q_INVOKABLE QString getTranslatorTextKey();
 
     CloudApi *getCloudApi();
     Wagnis *getWagnis();

@@ -112,6 +112,11 @@ Page {
                 onClicked: pageStack.push(aboutPage)
             }
             MenuItem {
+                text: qsTr("Settings")
+                onClicked: pageStack.push(Qt.resolvedUrl("../pages/SettingsPage.qml"));
+            }
+
+            MenuItem {
                 visible: titlePage.activeTabId === 0
                 text: qsTr("Dictionaries")
                 onClicked: pageStack.push(dictionariesPage)
@@ -932,7 +937,7 @@ Page {
                             anchors.fill: parent
                             color: "black"
                             opacity: 0.8
-                            visible: !curiosity.getUseCloud()
+                            visible: cloudWarningFlickable.visible || settingsWarningFlickable.visible
                         }
 
                         SilicaFlickable {
@@ -1011,6 +1016,83 @@ Page {
                                         curiosity.setUseCloud(true);
                                         cloudWarningBackground.visible = false;
                                         cloudWarningFlickable.visible = false;
+                                    }
+                                }
+
+                                Label {
+                                    x: Theme.horizontalPageMargin
+                                    width: parent.width  - ( 2 * Theme.horizontalPageMargin )
+                                    font.pixelSize: Theme.fontSizeExtraSmall
+                                    wrapMode: Text.Wrap
+                                    anchors {
+                                        horizontalCenter: parent.horizontalCenter
+                                    }
+                                }
+
+                                VerticalScrollDecorator {}
+                            }
+
+                        }
+
+                        SilicaFlickable {
+                            id: settingsWarningFlickable
+                            contentHeight: settingsWarningColumn.height
+                            anchors.fill: parent
+                            visible: !cloudWarningFlickable.visible && ( curiosity.getTranslatorTextKey() === "" || curiosity.getComputerVisionKey() === "" )
+
+                            Column {
+                                id: settingsWarningColumn
+                                width: parent.width
+                                spacing: Theme.paddingLarge
+
+                                PageHeader {
+                                    id: settingsWarningHeader
+                                    title: qsTr("Azure API Keys not set")
+                                }
+
+                                Image {
+                                    id: settingsWarningImage
+                                    source: "image://theme/icon-l-attention"
+                                    anchors {
+                                        horizontalCenter: parent.horizontalCenter
+                                    }
+
+                                    fillMode: Image.PreserveAspectFit
+                                    width: Theme.iconSizeLarge
+                                    height: Theme.iconSizeLarge
+                                }
+
+                                Text {
+                                    id: textSettingsWarning
+                                    width: parent.width - 2 * Theme.horizontalPageMargin
+                                    anchors.horizontalCenter: parent.horizontalCenter
+                                    font.pixelSize: Theme.fontSizeSmall
+                                    color: Theme.primaryColor
+                                    linkColor: Theme.highlightColor
+                                    wrapMode: Text.Wrap
+                                    textFormat: Text.StyledText
+                                    text: qsTr("The Curiosity feature - taking a picture and automatically translating all recognized text on it - needs Microsoft Azure API keys to work. Please obtain API keys for the <a href=\"https://azure.microsoft.com/en-gb/services/cognitive-services/computer-vision/\">Computer Vision</a> and the <a href=\"https://azure.microsoft.com/en-gb/services/cognitive-services/translator-text-api/\">Translator Text</a> API, enter them on the settings page and have fun!")
+
+                                    onLinkActivated: Qt.openUrlExternally(link);
+                                }
+
+                                Button {
+                                    text: qsTr("Open Settings")
+                                    anchors {
+                                        horizontalCenter: parent.horizontalCenter
+                                    }
+                                    onClicked: {
+                                        pageStack.push(Qt.resolvedUrl("../pages/SettingsPage.qml"));
+                                    }
+                                }
+
+                                Button {
+                                    text: qsTr("Reload")
+                                    anchors {
+                                        horizontalCenter: parent.horizontalCenter
+                                    }
+                                    onClicked: {
+                                        settingsWarningFlickable.visible = !cloudWarningFlickable.visible && ( curiosity.getTranslatorTextKey() === "" || curiosity.getComputerVisionKey() === "" )
                                     }
                                 }
 

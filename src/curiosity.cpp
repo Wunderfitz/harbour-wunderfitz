@@ -33,6 +33,8 @@
 const char SETTINGS_SOURCE_LANGUAGE[] = "settings/sourceLanguage";
 const char SETTINGS_TARGET_LANGUAGE[] = "settings/targetLanguage";
 const char SETTINGS_USE_CLOUD[] = "settings/useCloud";
+const char SETTINGS_COMPUTER_VISION_KEY[] = "settings/computerVisionKey";
+const char SETTINGS_TRANSLATOR_TEXT_KEY[] = "settings/translatorTextKey";
 
 Curiosity::Curiosity(QObject *parent) : QObject(parent)
 {
@@ -127,6 +129,28 @@ void Curiosity::setUseCloud(const bool &useCloud)
 QString Curiosity::getTranslatedText()
 {
     return this->translatedText;
+}
+
+void Curiosity::setComputerVisionKey(const QString &computerVisionKey)
+{
+    qDebug() << "[Curiosity] Set computer vision key" << computerVisionKey;
+    settings.setValue(SETTINGS_COMPUTER_VISION_KEY, computerVisionKey);
+}
+
+QString Curiosity::getComputerVisionKey()
+{
+    return settings.value(SETTINGS_COMPUTER_VISION_KEY, "").toString();
+}
+
+void Curiosity::setTranslatorTextKey(const QString &translatorTextKey)
+{
+    qDebug() << "[Curiosity] Set translator text key" << translatorTextKey;
+    settings.setValue(SETTINGS_TRANSLATOR_TEXT_KEY, translatorTextKey);
+}
+
+QString Curiosity::getTranslatorTextKey()
+{
+    return settings.value(SETTINGS_TRANSLATOR_TEXT_KEY, "").toString();
 }
 
 CloudApi *Curiosity::getCloudApi()

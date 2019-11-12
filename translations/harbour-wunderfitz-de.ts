@@ -321,6 +321,25 @@
     </message>
 </context>
 <context>
+    <name>SettingsPage</name>
+    <message>
+        <source>Settings</source>
+        <translation>Einstellungen</translation>
+    </message>
+    <message>
+        <source>Cloud API</source>
+        <translation>Cloud-API</translation>
+    </message>
+    <message>
+        <source>Azure Computer Vision API Key</source>
+        <translation>Azure Computer Vision API-Schlüssel</translation>
+    </message>
+    <message>
+        <source>Azure Translator Text API Key</source>
+        <translation>Azure Translator Text API-Schlüssel</translation>
+    </message>
+</context>
+<context>
     <name>TextPage</name>
     <message>
         <source>Copy translation to clipboard</source>
@@ -676,6 +695,26 @@
     <message>
         <source>Active Dictionary:</source>
         <translation>Aktives Wörterbuch:</translation>
+    </message>
+    <message>
+        <source>Settings</source>
+        <translation>Einstellungen</translation>
+    </message>
+    <message>
+        <source>Azure API Keys not set</source>
+        <translation>Azure API-Schlüssel nicht gesetzt</translation>
+    </message>
+    <message>
+        <source>The Curiosity feature - taking a picture and automatically translating all recognized text on it - needs Microsoft Azure API keys to work. Please obtain API keys for the &lt;a href=&quot;https://azure.microsoft.com/en-gb/services/cognitive-services/computer-vision/&quot;&gt;Computer Vision&lt;/a&gt; and the &lt;a href=&quot;https://azure.microsoft.com/en-gb/services/cognitive-services/translator-text-api/&quot;&gt;Translator Text&lt;/a&gt; API, enter them on the settings page and have fun!</source>
+        <translation>Das Neugier-Feature - ein Bild aufnehmen und dann automatisch jeden erkannten Text darauf übersetzen - benötigt Microsoft Azure API-Schlüssel um zu funktionieren. Bitte besorgen Sie sich API-Schlüssel für die &lt;a href=&quot;https://azure.microsoft.com/en-gb/services/cognitive-services/computer-vision/&quot;&gt;Computer Vision&lt;/a&gt; und die &lt;a href=&quot;https://azure.microsoft.com/en-gb/services/cognitive-services/translator-text-api/&quot;&gt;Translator Text&lt;/a&gt; API, geben Sie diese auf der Einstellungen-Seite an und dann viel Spaß!</translation>
+    </message>
+    <message>
+        <source>Open Settings</source>
+        <translation>Einstellungen öffnen</translation>
+    </message>
+    <message>
+        <source>Reload</source>
+        <translation>Neu laden</translation>
     </message>
 </context>
 <context>

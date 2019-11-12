@@ -321,6 +321,25 @@
     </message>
 </context>
 <context>
+    <name>SettingsPage</name>
+    <message>
+        <source>Settings</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cloud API</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Azure Computer Vision API Key</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Azure Translator Text API Key</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>TextPage</name>
     <message>
         <source>Copy translation to clipboard</source>
@@ -675,6 +694,26 @@
     </message>
     <message>
         <source>Active Dictionary:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Settings</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Azure API Keys not set</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The Curiosity feature - taking a picture and automatically translating all recognized text on it - needs Microsoft Azure API keys to work. Please obtain API keys for the &lt;a href=&quot;https://azure.microsoft.com/en-gb/services/cognitive-services/computer-vision/&quot;&gt;Computer Vision&lt;/a&gt; and the &lt;a href=&quot;https://azure.microsoft.com/en-gb/services/cognitive-services/translator-text-api/&quot;&gt;Translator Text&lt;/a&gt; API, enter them on the settings page and have fun!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Open Settings</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Reload</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
