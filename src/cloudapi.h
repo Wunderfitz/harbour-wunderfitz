@@ -32,7 +32,7 @@
 #include <QNetworkAccessManager>
 #include <QVariantMap>
 #include <QFile>
-#include "cloudcredentials.h"
+#include <QSettings>
 
 const char API_OCR[] = "https://westeurope.api.cognitive.microsoft.com/vision/v1.0/ocr";
 const char API_TRANSLATE[] = "https://api.cognitive.microsofttranslator.com/translate";
@@ -63,6 +63,7 @@ public slots:
 private:
 
     QNetworkAccessManager *networkAccessManager;
+    QSettings settings;
 
 };
 

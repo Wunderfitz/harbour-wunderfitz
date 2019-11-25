@@ -30,12 +30,6 @@
 #include <QRect>
 #include <QJsonObject>
 
-const char SETTINGS_SOURCE_LANGUAGE[] = "settings/sourceLanguage";
-const char SETTINGS_TARGET_LANGUAGE[] = "settings/targetLanguage";
-const char SETTINGS_USE_CLOUD[] = "settings/useCloud";
-const char SETTINGS_COMPUTER_VISION_KEY[] = "settings/computerVisionKey";
-const char SETTINGS_TRANSLATOR_TEXT_KEY[] = "settings/translatorTextKey";
-
 Curiosity::Curiosity(QObject *parent) : QObject(parent)
 {
     this->networkAccessManager = new QNetworkAccessManager(this);

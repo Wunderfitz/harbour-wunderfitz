@@ -18,6 +18,7 @@
 */
 
 #include "cloudapi.h"
+#include "curiosity.h"
 
 CloudApi::CloudApi(QNetworkAccessManager *manager, QObject *parent) : QObject(parent)
 {
@@ -31,7 +32,7 @@ void CloudApi::opticalCharacterRecognition(const QString &imagePath, const QStri
     QUrl url = QUrl(QString(API_OCR));
     QNetworkRequest request(url);
     request.setHeader(QNetworkRequest::ContentTypeHeader, "application/octet-stream");
-    request.setRawHeader(QByteArray("Ocp-Apim-Subscription-Key"), QByteArray(AZURE_COMPUTER_VISION_KEY));
+    request.setRawHeader(QByteArray("Ocp-Apim-Subscription-Key"), settings.value(SETTINGS_COMPUTER_VISION_KEY).toByteArray());
     QUrlQuery urlQuery = QUrlQuery();
     urlQuery.addQueryItem("language", sourceLanguage);
     urlQuery.addQueryItem("detectOrientation", "true");
@@ -62,7 +63,7 @@ void CloudApi::translate(const QString &text, const QString &targetLanguage)
     url.setQuery(urlQuery);
     QNetworkRequest request(url);
     request.setHeader(QNetworkRequest::ContentTypeHeader, "application/json");
-    request.setRawHeader(QByteArray("Ocp-Apim-Subscription-Key"), QByteArray(AZURE_TRANSLATOR_TEXT_KEY));
+    request.setRawHeader(QByteArray("Ocp-Apim-Subscription-Key"), settings.value(SETTINGS_TRANSLATOR_TEXT_KEY).toByteArray());
 
     QJsonObject jsonText;
     jsonText.insert("Text", text);

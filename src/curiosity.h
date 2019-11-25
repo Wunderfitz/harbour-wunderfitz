@@ -25,6 +25,12 @@
 #include "cloudapi.h"
 #include "wagnis/wagnis.h"
 
+const char SETTINGS_SOURCE_LANGUAGE[] = "settings/sourceLanguage";
+const char SETTINGS_TARGET_LANGUAGE[] = "settings/targetLanguage";
+const char SETTINGS_USE_CLOUD[] = "settings/useCloud";
+const char SETTINGS_COMPUTER_VISION_KEY[] = "settings/computerVisionKey";
+const char SETTINGS_TRANSLATOR_TEXT_KEY[] = "settings/translatorTextKey";
+
 class Curiosity : public QObject
 {
     Q_OBJECT
