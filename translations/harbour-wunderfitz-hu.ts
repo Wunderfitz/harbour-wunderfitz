@@ -60,16 +60,8 @@
         <translation>A Wunderfitz különböző nyelvekre van lefordítva. Köszönet a közreműködőknek, amiért ezt lehetővé tették!</translation>
     </message>
     <message>
-        <source>Wagnis ID: </source>
-        <translation>Wagnis ID:</translation>
-    </message>
-    <message>
-        <source>Show Wagnis ID</source>
-        <translation>Wagnis ID megjelenítése</translation>
-    </message>
-    <message>
-        <source>This product uses &lt;a href=&quot;https://werkwolf.eu/terms.html#wagnis&quot;&gt;Wagnis&lt;/a&gt; and is distributed by &lt;a href=&quot;https://werkwolf.eu&quot;&gt;WerkWolf OÜ&lt;/a&gt;.</source>
-        <translation>Ez a termék a &lt;a href=&quot;https://werkwolf.eu/terms.html#wagnis&quot;&gt;Wagnis&lt;/a&gt;-t használja, és a &lt;a href=&quot;https://werkwolf.eu&quot;&gt;WerkWolf OÜ&lt;/a&gt; forgalmazza.</translation>
+        <source>This product is distributed by &lt;a href=&quot;https://werkwolf.eu&quot;&gt;WerkWolf OÜ&lt;/a&gt;.</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -135,189 +127,6 @@
     <message>
         <source>Loading...</source>
         <translation>Töltés...</translation>
-    </message>
-</context>
-<context>
-    <name>RegistrationPage</name>
-    <message>
-        <source>Welcome to Wunderfitz!</source>
-        <translation>Üdv a Wunderfitz-ben!</translation>
-    </message>
-    <message>
-        <source>Have fun with Wunderfitz! Sebastian J. Wolf</source>
-        <translation>Élvezd a Wunderfitz-et! Sebastian J. Wolf</translation>
-    </message>
-    <message>
-        <source>Accept</source>
-        <translation>Elfogadás</translation>
-    </message>
-    <message>
-        <source>Welcome to Wunderfitz - a mobile dictionary and translator for SailfishOS! Wunderfitz is &lt;a href=&quot;https://www.gnu.org/philosophy/free-sw&quot;&gt;free software&lt;/a&gt; and licensed under the conditions of the &lt;a href=&quot;https://www.gnu.org/licenses/old-licenses/gpl-2.0&quot;&gt;General Public License in version 2 (GPLv2)&lt;/a&gt;. By using this software, you accept the terms and conditions of this license.</source>
-        <translation>Üdv a Wunderfitz-ben - egy mobil szótár és fordító SailfishOS-re! A Wunderfitz &lt;a href=&quot;https://www.gnu.org/philosophy/free-sw&quot;&gt;szabad szoftver&lt;/a&gt; a &lt;a href=&quot;https://www.gnu.org/licenses/old-licenses/gpl-2.0&quot;&gt;General Public License 2-es verziója (GPLv2)&lt;/a&gt; alatt licencelve. A szoftver használatával elfogadod a licenc feltételeit.</translation>
-    </message>
-    <message>
-        <source>Committed to Free Software</source>
-        <translation>Elkötelezve a Szabad Szoftver iránt</translation>
-    </message>
-    <message>
-        <source>Anonymous Registration</source>
-        <translation>Névtelen regisztráció</translation>
-    </message>
-    <message>
-        <source>Registration Error</source>
-        <translation>Regisztrációs hiba</translation>
-    </message>
-    <message>
-        <source>Registration failed. Please ensure that your device is connected to the Internet and press &apos;Restart Registration&apos;. In case a restart doesn&apos;t work, please contact me via &lt;a href=&quot;mailto:contact@werkwolf.eu&quot;&gt;E-Mail&lt;/a&gt;</source>
-        <translation>A regisztráció nem sikerült. Kérlek bizonyosodj meg róla, hogy a készüléked csatlakozik a világhálóra, majd nyomd meg a &apos;Regisztráció újrakezdése&apos; gombot. Ha ez nem működik, kérlek lépj velem kapcsolatba &lt;a href=&quot;mailto:contact@werkwolf.eu&quot;&gt;E-Mail-en&lt;/a&gt; keresztül.</translation>
-    </message>
-    <message>
-        <source>Restart Registration</source>
-        <translation>Regisztráció újrakezdése</translation>
-    </message>
-    <message>
-        <source>Registration Invalid</source>
-        <translation>A regisztráció érvénytelen</translation>
-    </message>
-    <message>
-        <source>The registration file on your device is corrupt. The registration process needs to be restarted. Please ensure that your device is connected to the Internet and press &apos;Restart Registration&apos;. In case the new registration isn&apos;t successful, please contact me via &lt;a href=&quot;mailto:contact@werkwolf.eu&quot;&gt;E-Mail&lt;/a&gt;</source>
-        <translation>A készülékeden lévő regisztrációs fájl hibás. A regisztráció folyamatát újra kell kezdeni. Kérlek bizonyosodj meg róla, hogy a készüléked csatlakozik a világhálóra, majd nyomd meg a &apos;Regisztráció újrakezdése&apos; gombot. Ha sz új regisztráció nem sikerül, lépj velem kapcsolatba &lt;a href=&quot;mailto:contact@werkwolf.eu&quot;&gt;E-Mail-en&lt;/a&gt; keresztül</translation>
-    </message>
-    <message>
-        <source>Show Registration Data</source>
-        <translation>Regisztrációs adatok megjelenítése</translation>
-    </message>
-    <message>
-        <source>The data isn&apos;t shared with anyone else. Please see the &lt;a href=&quot;https://werkwolf.eu/terms.html&quot;&gt;legal notice&lt;/a&gt; for additional information how the data is processed. For additional details about the motivation for this, the unique ID and how it is generated please see my page &lt;a href=&quot;https://werkwolf.eu/terms.html#wagnis&quot;&gt;about Wagnis&lt;/a&gt;.</source>
-        <translation>Az adatok senki mással nem lesznek megosztva. Az adatok feldolgozásának módjáról további információkért lásd a &lt;a href=&quot;https://werkwolf.eu/terms.html&quot;&gt;legal notice&lt;/a&gt; címet. További részletekért az ebben való motivációkról, azegyedi ID-ről, valamint a létrehozásának módjáról lásd az oldalamat &lt;a href=&quot;https://werkwolf.eu/terms.html#wagnis&quot;&gt;about Wagnis&lt;/a&gt;.</translation>
-    </message>
-    <message>
-        <source>Development Contribution</source>
-        <translation>Fejlesztési hozzájárulás</translation>
-    </message>
-    <message>
-        <source>Please contribute to Wunderfitz</source>
-        <translation>Kérlek járulj hozzá a Wunderfitz fejlesztéséhez</translation>
-    </message>
-    <message>
-        <source>You can skip the contribution for %1 if you want to test Wunderfitz before.</source>
-        <translation>Átugorhatod a hozzájárulást ennyi ideig: %1, ha szeretnéd tesztelni előtte.</translation>
-    </message>
-    <message>
-        <source>Continue Testing</source>
-        <translation>Tesztelés folytatása</translation>
-    </message>
-    <message>
-        <source>If you&apos;ve already contributed to Wunderfitz, please &lt;a href=&quot;mailto:contact@werkwolf.eu&quot;&gt;contact me&lt;/a&gt; directly.</source>
-        <translation>Ha már hozzájárultál a Wunderfitz fejlesztéséhez, kérlek &lt;a href=&quot;mailto:contact@werkwolf.eu&quot;&gt;lépj velem kapcsolatba&lt;/a&gt;.</translation>
-    </message>
-    <message>
-        <source>Contribution</source>
-        <translation>Hozzájárulás</translation>
-    </message>
-    <message>
-        <source>Choose your contribution here</source>
-        <translation>Válaszd ki a hozzájárulásod itt</translation>
-    </message>
-    <message>
-        <source>Purchase Contribution Key</source>
-        <translation>Hozzájárulási kulcs vásárlása</translation>
-    </message>
-    <message>
-        <source>Validate your contribution key</source>
-        <translation>Hozzájárulási kulcs érvényesítése</translation>
-    </message>
-    <message>
-        <source>Enter the contribution key here</source>
-        <translation>Írd be ide a kulcsot</translation>
-    </message>
-    <message>
-        <source>Validate Contribution Key</source>
-        <translation>Kulcs érvényesítése</translation>
-    </message>
-    <message>
-        <source>Wunderfitz S - 3,33 €</source>
-        <translation>Wunderfitz S - 3,33 €</translation>
-    </message>
-    <message>
-        <source>Wunderfitz M - 5,55 €</source>
-        <translation>Wunderfitz M - 5,55 €</translation>
-    </message>
-    <message>
-        <source>Wunderfitz L - 7,77 €</source>
-        <translation>Wunderfitz L - 7,77 €</translation>
-    </message>
-    <message>
-        <source>Wunderfitz XL - 9,99 €</source>
-        <translation>Wunderfitz XL - 9,99 €</translation>
-    </message>
-    <message>
-        <source>If you have already validated your key on another device, you can reuse it for up to 3 additional devices without the need of another contribution.</source>
-        <translation>Ha már érvényesítetted a hozzájárulási kulcsodat, újra használhatod további három készüléken újabb hozájárulás nélkül.</translation>
-    </message>
-    <message>
-        <source>After you have received your key by purchasing it or for another contribution, please validate your key here to run Wunderfitz.</source>
-        <translation>Ha megkaptad a kulcodat vásárlás vagy valamilyen közreműködés által, érvényesítsd itt a Wunderfitz futtatásához.</translation>
-    </message>
-    <message>
-        <source>Contribution not validated!</source>
-        <translation>A hozzájárulás nem érvényesült!</translation>
-    </message>
-    <message>
-        <source>Your contribution could not be validated. Please ensure that your device is connected to the Internet and press &apos;Restart Validation&apos;. In case you have a valid contribution key and it can&apos;t be validated, please contact me via &lt;a href=&quot;mailto:contact@werkwolf.eu&quot;&gt;E-Mail&lt;/a&gt;</source>
-        <translation>A hozzájárulásod nem érvényesíthető. Kérlek bizonyosodj meg róla, hogy a készüléked csatlakozik a világhálóra, majd nyomd meg az &apos;Érvényesítés újrakezdése&apos; gombot. Abban az esetben, ha rendelkezel érvényes kulccsal, és nem érvényesíthető, lépj velem kapcsolatba &lt;a href=&quot;mailto:contact@werkwolf.eu&quot;&gt;E-Mail-en&lt;/a&gt; keresztül.</translation>
-    </message>
-    <message>
-        <source>Restart Validation</source>
-        <translation>Érvényesítés újrakezdése</translation>
-    </message>
-    <message>
-        <source>Thank You!</source>
-        <translation>Köszönöm!</translation>
-    </message>
-    <message>
-        <source>Your contribution was successfully validated. Thank you very much for your contribution to the development of Wunderfitz!</source>
-        <translation>A hozzájárulásod sikeresen érvényesült. Hálás köszönet a Wunderfitz fejlesztéséhez való hozzájárulásért!</translation>
-    </message>
-    <message>
-        <source>OK</source>
-        <translation>OK</translation>
-    </message>
-    <message>
-        <source>You have the choice between 4 different contributions: S, M, L, XL. No matter which size you choose, the purchased key will unlock the complete application. It&apos;s up to you to decide how much the app is worth to you.</source>
-        <translation>Négy különböző hozzájárulás közül választhatsz: S, M, L, XL. Nem számít melyiket választod, a kapott kulcs a teljes alkalmazást fel fogja oldani. Te döntöd el, mennyit ér meg neked az alkalmazás.</translation>
-    </message>
-    <message>
-        <source>the next %1 days</source>
-        <translation>a következő %1 napon</translation>
-    </message>
-    <message>
-        <source>the next day</source>
-        <translation>a következő napon</translation>
-    </message>
-    <message>
-        <source>the next %1 hours</source>
-        <translation>a következő %1 órán</translation>
-    </message>
-    <message>
-        <source>the next hour</source>
-        <translation>a következő órán</translation>
-    </message>
-    <message>
-        <source>the next %1 minutes</source>
-        <translation>a következő %1 percben</translation>
-    </message>
-    <message>
-        <source>the next minute</source>
-        <translation>a következő percben</translation>
-    </message>
-    <message>
-        <source>Moreover, Wunderfitz will register this installation automatically on our server if you press &apos;Accept&apos;. We respect your privacy, therefore only anonymous and a very limited set of information will be transmitted: a unique identifer for this installation and your country. We simply would like to know how many users Wunderfitz has and where they come from. If this is not OK for you, simply close the application. No information has been transmitted so far.</source>
-        <translation>Ezenfelül, ha megnyomod az &apos;Elfogadás&apos; gombot, a Wunderfitz automatikusan regisztrálni fogja ezt a telepítést a szerverünkön. Tiszteletben tartjuk a magánszférádat, ezért csak névtelen, és csak nagyon limitált mennyiségű információkerül átvitelre: e telepítés egyedi azonosítója, és az országod. Egyszerűen csak tudni szeretnénk, mennyi felhasználója va a Wunderfitz-nek, és honnan származnak. Ha ez szerinted nincs rendben, egyszerűen zárd be az alkalmazást. Még nem történt adatátvitel.</translation>
-    </message>
-    <message>
-        <source>Wunderfitz is and will remain Open Source Software. However, in order to support the development of Wunderfitz, we&apos;d like to ask you for a contribution before you can run it. Such a contribution can be made by translating Wunderfitz to another language, help developing it or simply by purchasing a key.</source>
-        <translation>A Wunderfitz nyílt forráskódú szoftver, és az is marad. Azonban, a Wunderfitz fejlesztését támogatandó, szeretnénk egy kis hozzájárulásra kérni. Egy ilyen hozzájárulás lehet a Wunderfitz más nyelvre való fordítása, a fejlesztésben való segédkezés, vagy egyszerűen egy kulcs megvásárlása.</translation>
     </message>
 </context>
 <context>
@@ -685,10 +494,6 @@
         <translation>A Kíváncsiság képesség - egy kép készítése, és a rajta lévő felismert szöveg automatikus fordítása - más emberek számítógépeit (aka &quot;Felhő&quot;) használja a működéshez. Tehát a képed egy másik kiszolgálóra töltődik fel, kerül feldolgozásra, majd visszaküldik ebbe az alkalmazásba. Tehát mindenképp figyelj erre, ha privát, vagy titkos adatokról készítesz képet! A felhőszolgáltató a Microsoft Azure. (Érzed az iróniát, Microsoft szolgáltatások futnak Sailfish OS-en ;) ?) A szolgáltatás használatával ezeket elfogadod</translation>
     </message>
     <message>
-        <source>Moreover, the Curiosity feature is beta! This means that there is no guarantee that it works as you wish or that it will continue working forever in this or a future version of Wunderfitz. It may cease to work without any prior warning... Please also be aware that Cloud infrastructure costs actual money! Keeping this app in a one-time contribution model (without subscription) requires cooperation by all users. So please don&apos;t use that excessively, thanks!</source>
-        <translation>Ezenfelül, a Kíváncsiság képesség béta állapotú! Ez azt jelenti, hogy semmi sem garantálja, hogy úgy működik, vagy úgy fog működni, ahogy szeretnéd a Wunderfitz ezen vagy egy újabb változatában. Bármilyen előzetes figyelmeztetés nélkül megszűnhet működni... Kérlek azt is vedd figyelembe, hogy a felhő infrastruktúra használata pénzbe kerül! Az alkalmazás egyszeri hozzájárulásos modelljének fenntartása (rendszeres fizetség nélkül) az összes felhasználó együttműködését igényli. Tehát ne használd különösen nagyon sokat, köszönöm!</translation>
-    </message>
-    <message>
         <source>&lt;a href=&quot;https://azure.microsoft.com/support/legal/&quot;&gt;The Microsoft Azure terms of service and privacy statement&lt;/a&gt;</source>
         <translation>&lt;a href=&quot;https://azure.microsoft.com/support/legal/&quot;&gt;The Microsoft Azure terms of service and privacy statement&lt;/a&gt;</translation>
     </message>
@@ -714,6 +519,10 @@
     </message>
     <message>
         <source>Reload</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Moreover, the Curiosity feature is beta! This means that there is no guarantee that it works as you wish or that it will continue working forever in this or a future version of Wunderfitz. It may cease to work without any prior warning...</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

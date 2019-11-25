@@ -33,7 +33,6 @@
 Curiosity::Curiosity(QObject *parent) : QObject(parent)
 {
     this->networkAccessManager = new QNetworkAccessManager(this);
-    wagnis = new Wagnis(this->networkAccessManager, "harbour-wunderfitz", "1.2.1", this);
     QString tempDirectoryString = getTemporaryDirectoryPath();
     QDir myDirectory(tempDirectoryString);
     if (!myDirectory.exists()) {
@@ -152,11 +151,6 @@ CloudApi *Curiosity::getCloudApi()
     return this->cloudApi;
 }
 
-Wagnis *Curiosity::getWagnis()
-{
-    return this->wagnis;
-}
-
 void Curiosity::handleOcrProcessingSuccessful(const QString &fileName, const QJsonObject &result)
 {
     qDebug() << "[Curiosity] Processing OCR result..." << fileName;
@@ -210,10 +204,6 @@ void Curiosity::handleTranslationError(const QString &errorMessage)
 
 void Curiosity::processCapture()
 {
-    if (!wagnis->hasFeature("contribution") && wagnis->getRemainingTime() == 0) {
-        emit ocrError("You haven't completed the registration process!");
-        return;
-    }
     qDebug() << "[Curiosity] Processing capture...";
     QImageReader imageReader;
     imageReader.setFileName(this->capturePath);

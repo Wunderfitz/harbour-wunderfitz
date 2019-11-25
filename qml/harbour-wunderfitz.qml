@@ -38,13 +38,8 @@ ApplicationWindow
         DictionariesPage {}
     }
 
-    Component {
-        id: registrationPage
-        RegistrationPage {}
-    }
-
     id: window
-    initialPage: ( wagnis.isRegistered() && wagnis.hasFeature("contribution") ) ? titlePage : registrationPage
+    initialPage: titlePage
     cover: Component { CoverPage { } }
     allowedOrientations: Orientation.All
 

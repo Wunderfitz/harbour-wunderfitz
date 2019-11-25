@@ -1004,7 +1004,7 @@ Page {
                                     linkColor: Theme.highlightColor
                                     wrapMode: Text.Wrap
                                     textFormat: Text.PlainText
-                                    text: qsTr("Moreover, the Curiosity feature is beta! This means that there is no guarantee that it works as you wish or that it will continue working forever in this or a future version of Wunderfitz. It may cease to work without any prior warning... Please also be aware that Cloud infrastructure costs actual money! Keeping this app in a one-time contribution model (without subscription) requires cooperation by all users. So please don't use that excessively, thanks!")
+                                    text: qsTr("Moreover, the Curiosity feature is beta! This means that there is no guarantee that it works as you wish or that it will continue working forever in this or a future version of Wunderfitz. It may cease to work without any prior warning...")
                                 }
 
                                 Button {
@@ -1039,6 +1039,9 @@ Page {
                             contentHeight: settingsWarningColumn.height
                             anchors.fill: parent
                             visible: !cloudWarningFlickable.visible && ( curiosity.getTranslatorTextKey() === "" || curiosity.getComputerVisionKey() === "" )
+                            onVisibleChanged: {
+                                cloudWarningBackground.visible = cloudWarningFlickable.visible || settingsWarningFlickable.visible
+                            }
 
                             Column {
                                 id: settingsWarningColumn

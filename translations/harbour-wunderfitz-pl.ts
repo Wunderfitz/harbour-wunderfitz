@@ -60,16 +60,8 @@
         <translation>Wunderfitz został przetłumaczony na kilka języków. Podziękowania dla autorów za to, że tak się stało!</translation>
     </message>
     <message>
-        <source>Wagnis ID: </source>
-        <translation>Wagins ID:</translation>
-    </message>
-    <message>
-        <source>Show Wagnis ID</source>
-        <translation>Pokaż Wagins ID</translation>
-    </message>
-    <message>
-        <source>This product uses &lt;a href=&quot;https://werkwolf.eu/terms.html#wagnis&quot;&gt;Wagnis&lt;/a&gt; and is distributed by &lt;a href=&quot;https://werkwolf.eu&quot;&gt;WerkWolf OÜ&lt;/a&gt;.</source>
-        <translation>Produkt ten używa &lt;a href=&quot;https://werkwolf.eu/terms.html#wagnis&quot;&gt;Wagnis&lt;/a&gt; i jest dystrybuowany przez &lt;a href=&quot;https://werkwolf.eu&quot;&gt;WerkWolf OÜ&lt;/a&gt;.</translation>
+        <source>This product is distributed by &lt;a href=&quot;https://werkwolf.eu&quot;&gt;WerkWolf OÜ&lt;/a&gt;.</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -135,189 +127,6 @@
     <message>
         <source>Loading...</source>
         <translation>Ładowanie...</translation>
-    </message>
-</context>
-<context>
-    <name>RegistrationPage</name>
-    <message>
-        <source>Welcome to Wunderfitz!</source>
-        <translation>Witaj w Wunderfitz!</translation>
-    </message>
-    <message>
-        <source>Have fun with Wunderfitz! Sebastian J. Wolf</source>
-        <translation>Udanej zabawy z Wunderfitz! Sebastian J. Wolf</translation>
-    </message>
-    <message>
-        <source>Accept</source>
-        <translation>Akceptuj</translation>
-    </message>
-    <message>
-        <source>Welcome to Wunderfitz - a mobile dictionary and translator for SailfishOS! Wunderfitz is &lt;a href=&quot;https://www.gnu.org/philosophy/free-sw&quot;&gt;free software&lt;/a&gt; and licensed under the conditions of the &lt;a href=&quot;https://www.gnu.org/licenses/old-licenses/gpl-2.0&quot;&gt;General Public License in version 2 (GPLv2)&lt;/a&gt;. By using this software, you accept the terms and conditions of this license.</source>
-        <translation>Witaj w Wunderfitz - mobilny słownik i tłumacz dla SailfishOS! Wunderfitz jest &lt;a href=&quot;https://www.gnu.org/philosophy/free-sw&quot;&gt;free software&lt;/a&gt; and licencjonowany na  &lt;a href=&quot;https://www.gnu.org/licenses/old-licenses/gpl-2.0&quot;&gt;General Public License in version 2 (GPLv2)&lt;/a&gt;. Uzywając tego programu, akceptujesz warunki i obostrzenia tej licencji.</translation>
-    </message>
-    <message>
-        <source>Committed to Free Software</source>
-        <translation>Zaangażowanie w darmowe oprogramowanie</translation>
-    </message>
-    <message>
-        <source>Anonymous Registration</source>
-        <translation>Anonimowa rejestracja</translation>
-    </message>
-    <message>
-        <source>Registration Error</source>
-        <translation>Błąd rejestracji</translation>
-    </message>
-    <message>
-        <source>Registration failed. Please ensure that your device is connected to the Internet and press &apos;Restart Registration&apos;. In case a restart doesn&apos;t work, please contact me via &lt;a href=&quot;mailto:contact@werkwolf.eu&quot;&gt;E-Mail&lt;/a&gt;</source>
-        <translation>Rejestracja nie powiodła się. Upewnij się, że twoje urządzenie podpięte jest do internetu i naciśnij &apos;Uruchom ponownie rejestrację&apos;. Jeśli restart rejestracji nie pomógł, skontaktuj się ze mną &lt;a href=&quot;mailto:contact@werkwolf.eu&quot;&gt;E-Mail&lt;/a&gt;</translation>
-    </message>
-    <message>
-        <source>Restart Registration</source>
-        <translation>Uruchom ponownie rejestrację</translation>
-    </message>
-    <message>
-        <source>Registration Invalid</source>
-        <translation>Nieprawidłowa rejestracja</translation>
-    </message>
-    <message>
-        <source>Show Registration Data</source>
-        <translation>Pokaż dane rejestracji</translation>
-    </message>
-    <message>
-        <source>The data isn&apos;t shared with anyone else. Please see the &lt;a href=&quot;https://werkwolf.eu/terms.html&quot;&gt;legal notice&lt;/a&gt; for additional information how the data is processed. For additional details about the motivation for this, the unique ID and how it is generated please see my page &lt;a href=&quot;https://werkwolf.eu/terms.html#wagnis&quot;&gt;about Wagnis&lt;/a&gt;.</source>
-        <translation>Dane nie są udostępniane nikomu. Proszę zobacz &lt;a href=&quot;https://werkwolf.eu/terms.html&quot;&gt;warunki prawne&lt;/a&gt; dla dodatkowych informacji o tym jak dane są przetwarzane. Aby uzyskać dodatkowe informacje na temat motywacji, unikalnego identyfikatora i sposobu jego wygenerowania, zobacz moją stronę &lt;a href=&quot;https://werkwolf.eu/terms.html#wagnis&quot;&gt;o Wagnis&lt;/a&gt;.</translation>
-    </message>
-    <message>
-        <source>Development Contribution</source>
-        <translation>Udział w rozwoju aplikacji</translation>
-    </message>
-    <message>
-        <source>Please contribute to Wunderfitz</source>
-        <translation>Pomóż w rozwoju Wunderfitz</translation>
-    </message>
-    <message>
-        <source>You can skip the contribution for %1 if you want to test Wunderfitz before.</source>
-        <translation>Możesz pominąć wkład dla %1, jeśli chcesz wcześniej przetestować Wunderfitz.</translation>
-    </message>
-    <message>
-        <source>Continue Testing</source>
-        <translation>Kontunuuj testowanie</translation>
-    </message>
-    <message>
-        <source>If you&apos;ve already contributed to Wunderfitz, please &lt;a href=&quot;mailto:contact@werkwolf.eu&quot;&gt;contact me&lt;/a&gt; directly.</source>
-        <translation>Jeśli wniosłeś już swój wkład do Wunderfitz, proszę skontaktuj napisz do &lt;a href=&quot;mailto:contact@werkwolf.eu&quot;&lt;/a&gt; bezpośrednio.</translation>
-    </message>
-    <message>
-        <source>Contribution</source>
-        <translation>Wkład w rozwój</translation>
-    </message>
-    <message>
-        <source>Choose your contribution here</source>
-        <translation>Wybierz rodzaj swojego wkładu w rozwój</translation>
-    </message>
-    <message>
-        <source>Purchase Contribution Key</source>
-        <translation>Kup klucz</translation>
-    </message>
-    <message>
-        <source>Validate your contribution key</source>
-        <translation>Sprawdź swój klucz</translation>
-    </message>
-    <message>
-        <source>Enter the contribution key here</source>
-        <translation>Wprowadź klucz, tutaj</translation>
-    </message>
-    <message>
-        <source>Validate Contribution Key</source>
-        <translation>Sprawdź klucz</translation>
-    </message>
-    <message>
-        <source>Wunderfitz S - 3,33 €</source>
-        <translation>Wunderfitz S - 3,33 €</translation>
-    </message>
-    <message>
-        <source>Wunderfitz M - 5,55 €</source>
-        <translation>Wunderfitz M - 5,55 €</translation>
-    </message>
-    <message>
-        <source>Wunderfitz L - 7,77 €</source>
-        <translation>Wunderfitz L - 7,77 €</translation>
-    </message>
-    <message>
-        <source>Wunderfitz XL - 9,99 €</source>
-        <translation>Wunderfitz XL - 9,99 €</translation>
-    </message>
-    <message>
-        <source>If you have already validated your key on another device, you can reuse it for up to 3 additional devices without the need of another contribution.</source>
-        <translation>Jeśli już zweryfikowałeś swój klucz na innym urządzeniu, możesz go użyć ponownie na maksymalnie 3 dodatkowych urządzeniach bez potrzeby dodatkowego wkładu.</translation>
-    </message>
-    <message>
-        <source>After you have received your key by purchasing it or for another contribution, please validate your key here to run Wunderfitz.</source>
-        <translation>Po otrzymaniu klucza, poprze jego kupno lub dla innegy wkład, zatwierdź swój klucz tutaj, aby uruchomić Wunderfitz.</translation>
-    </message>
-    <message>
-        <source>Contribution not validated!</source>
-        <translation>Wkład nie został zatwierdzony!</translation>
-    </message>
-    <message>
-        <source>Your contribution could not be validated. Please ensure that your device is connected to the Internet and press &apos;Restart Validation&apos;. In case you have a valid contribution key and it can&apos;t be validated, please contact me via &lt;a href=&quot;mailto:contact@werkwolf.eu&quot;&gt;E-Mail&lt;/a&gt;</source>
-        <translation>Your contribution could not be validated. Please ensure that your device is connected to the Internet and press &apos;Restart Validation&apos;. In case you have a valid contribution key and it can&apos;t be validated, please contact me via &lt;a href=&quot;mailto:contact@werkwolf.eu&quot;&gt;E-Mail&lt;/a&gt;</translation>
-    </message>
-    <message>
-        <source>Restart Validation</source>
-        <translation>Restart Validation</translation>
-    </message>
-    <message>
-        <source>Thank You!</source>
-        <translation>Dziękuję!</translation>
-    </message>
-    <message>
-        <source>Your contribution was successfully validated. Thank you very much for your contribution to the development of Wunderfitz!</source>
-        <translation>Twój wkład został pomyślnie sprawdzony. Bardzo dziękuję za Twój wkład w rozwój Wunderfitz!</translation>
-    </message>
-    <message>
-        <source>OK</source>
-        <translation>OK</translation>
-    </message>
-    <message>
-        <source>You have the choice between 4 different contributions: S, M, L, XL. No matter which size you choose, the purchased key will unlock the complete application. It&apos;s up to you to decide how much the app is worth to you.</source>
-        <translation>Masz do wyboru 4 różne składki: S, M, L, XL. Bez względu na to, jaki rozmiar wybierzesz, zakupiony klucz odblokuje kompletną aplikację. Decyzja, ile aplikacja jest dla Ciebie warta, zależy od Ciebie.</translation>
-    </message>
-    <message>
-        <source>the next %1 days</source>
-        <translation>następne %1 dni</translation>
-    </message>
-    <message>
-        <source>the next day</source>
-        <translation>następny dzień</translation>
-    </message>
-    <message>
-        <source>the next %1 hours</source>
-        <translation>następne %1 godzin</translation>
-    </message>
-    <message>
-        <source>the next hour</source>
-        <translation>następna godzina</translation>
-    </message>
-    <message>
-        <source>the next %1 minutes</source>
-        <translation>następne %1 minut</translation>
-    </message>
-    <message>
-        <source>the next minute</source>
-        <translation>następna minuta</translation>
-    </message>
-    <message>
-        <source>Moreover, Wunderfitz will register this installation automatically on our server if you press &apos;Accept&apos;. We respect your privacy, therefore only anonymous and a very limited set of information will be transmitted: a unique identifer for this installation and your country. We simply would like to know how many users Wunderfitz has and where they come from. If this is not OK for you, simply close the application. No information has been transmitted so far.</source>
-        <translation>Ponadto Wunderfitz automatycznie zarejestruje tę instalację na naszym serwerze, jeśli naciśniesz &quot;Zaakceptuj&quot;. Szanujemy Twoją prywatność, dlatego tylko anonimowy i bardzo ograniczony zestaw informacji zostanie przekazany: unikalna identyfikacja dla tej instalacji i Twojego kraju. Chcielibyśmy wiedzieć, ilu użytkowników ma Wunderfitz i skąd pochodzą. Jeśli nie jest to dla Ciebie odpowiednie, po prostu zamknij aplikację. Do tej pory nie przesłano żadnych informacji.</translation>
-    </message>
-    <message>
-        <source>Wunderfitz is and will remain Open Source Software. However, in order to support the development of Wunderfitz, we&apos;d like to ask you for a contribution before you can run it. Such a contribution can be made by translating Wunderfitz to another language, help developing it or simply by purchasing a key.</source>
-        <translation>Wunderfitz jest i pozostanie oprogramowaniem Open Source. Jednakże, aby wesprzeć rozwój Wunderfitz, chcielibyśmy poprosić Cię o wkład, zanim będzie można go uruchomić. Taki wkład można wnieść poprzez przetłumaczenie Wunderfitz na inny język, pomoc w jego opracowaniu lub po prostu przez zakup klucza.</translation>
-    </message>
-    <message>
-        <source>The registration file on your device is corrupt. The registration process needs to be restarted. Please ensure that your device is connected to the Internet and press &apos;Restart Registration&apos;. In case the new registration isn&apos;t successful, please contact me via &lt;a href=&quot;mailto:contact@werkwolf.eu&quot;&gt;E-Mail&lt;/a&gt;</source>
-        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -685,10 +494,6 @@
         <translation>Funkcja Ciekawość - zrobienie zdjęcia i automatyczne przetłumaczenie wszystkich rozpoznanych tekstów - wykorzystuje do pracy komputery innych osób (inaczej &quot;Chmura&quot;). Twoje zdjęcie zostanie przesłane na inny serwer, przeanalizowane, a informacje zostaną odesłane do tej aplikacji. Zachowaj ostrożność, jeśli robisz zdjęcia prywatnych lub poufnych danych! Dostawca chmury to Microsoft Azure. (Widzisz ironię posiadania usług Microsoft uruchomionych na Sailfish OS;)?) Korzystając z tej usługi, akceptujesz</translation>
     </message>
     <message>
-        <source>Moreover, the Curiosity feature is beta! This means that there is no guarantee that it works as you wish or that it will continue working forever in this or a future version of Wunderfitz. It may cease to work without any prior warning... Please also be aware that Cloud infrastructure costs actual money! Keeping this app in a one-time contribution model (without subscription) requires cooperation by all users. So please don&apos;t use that excessively, thanks!</source>
-        <translation>Co więcej, funkcja Ciekawość jest w wersji beta! Oznacza to, że nie ma gwarancji, że działa tak, jak sobie życzysz lub że będzie działać wiecznie w tej lub przyszłej wersji Wunderfitz. Może przestać działać bez uprzedzenia ... Należy również pamiętać, że infrastruktura chmury kosztuje prawdziwe pieniądze! Utrzymanie tej aplikacji w modelu jednorazowego wkładu (bez subskrypcji) wymaga współpracy wszystkich użytkowników. Więc proszę, nie używaj tego nadmiernie, dzięki!</translation>
-    </message>
-    <message>
         <source>&lt;a href=&quot;https://azure.microsoft.com/support/legal/&quot;&gt;The Microsoft Azure terms of service and privacy statement&lt;/a&gt;</source>
         <translation>&lt;a href=&quot;https://azure.microsoft.com/support/legal/&quot;&gt;The Microsoft Azure warunki usługi i prywatności&lt;/a&gt;</translation>
     </message>
@@ -714,6 +519,10 @@
     </message>
     <message>
         <source>Reload</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Moreover, the Curiosity feature is beta! This means that there is no guarantee that it works as you wish or that it will continue working forever in this or a future version of Wunderfitz. It may cease to work without any prior warning...</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

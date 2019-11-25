@@ -100,7 +100,7 @@ Page {
             Text {
                 wrapMode: Text.Wrap
                 width: parent.width - ( 2 * Theme.horizontalPageMargin )
-                text: qsTr("This product uses <a href=\"https://werkwolf.eu/terms.html#wagnis\">Wagnis</a> and is distributed by <a href=\"https://werkwolf.eu\">WerkWolf OÜ</a>.")
+                text: qsTr("This product is distributed by <a href=\"https://werkwolf.eu\">WerkWolf OÜ</a>.")
                 font.pixelSize: Theme.fontSizeSmall
                 linkColor: Theme.highlightColor
                 anchors {
@@ -135,31 +135,6 @@ Page {
                 linkColor: Theme.highlightColor
 
                 onLinkActivated: Qt.openUrlExternally("https://github.com/Wunderfitz/harbour-wunderfitz")
-            }
-
-            SectionHeader {
-                text: "Wagnis"
-            }
-
-            Label {
-                id: wagnisIdLabel
-                text: qsTr("Wagnis ID: ") + wagnis.getId()
-                font.pixelSize: Theme.fontSizeSmall
-                anchors {
-                    horizontalCenter: parent.horizontalCenter
-                }
-                visible: false
-            }
-            Button {
-                id: showWagnisIdButton
-                text: qsTr("Show Wagnis ID")
-                anchors {
-                    horizontalCenter: parent.horizontalCenter
-                }
-                onClicked: {
-                    showWagnisIdButton.visible = false;
-                    wagnisIdLabel.visible = true;
-                }
             }
 
             SectionHeader {

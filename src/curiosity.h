@@ -23,7 +23,6 @@
 #include <QObject>
 #include <QSettings>
 #include "cloudapi.h"
-#include "wagnis/wagnis.h"
 
 const char SETTINGS_SOURCE_LANGUAGE[] = "settings/sourceLanguage";
 const char SETTINGS_TARGET_LANGUAGE[] = "settings/targetLanguage";
@@ -53,7 +52,6 @@ public:
     Q_INVOKABLE QString getTranslatorTextKey();
 
     CloudApi *getCloudApi();
-    Wagnis *getWagnis();
 
 signals:
     void translationSuccessful(const QString &text);
@@ -79,7 +77,6 @@ private:
     CloudApi *cloudApi;
 
     QNetworkAccessManager *networkAccessManager;
-    Wagnis *wagnis;
 
     void processCapture();
 
