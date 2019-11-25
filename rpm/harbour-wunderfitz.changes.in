@@ -37,3 +37,8 @@
 
 * Tue Apr 23 2019 <sebastian@ygriega.de> 1.2.1
 - New ComboBox header (thanks to zwieberl)
+
+* Mon Nov 25 2019 <sebastian@ygriega.de> 1.3
+- Heinzelnisse dictionary update from August 11, 2019
+- Cloud API keys now to be set by end user
+- Remove Wagnis
