@@ -61,7 +61,7 @@
     </message>
     <message>
         <source>This product is distributed by &lt;a href=&quot;https://werkwolf.eu&quot;&gt;WerkWolf OÜ&lt;/a&gt;.</source>
-        <translation type="unfinished"></translation>
+        <translation>Este producto es distribuido por &lt;a href=&quot;https://werkwolf.eu&quot;&gt;WerkWolf OÜ&lt;/a&gt;.</translation>
     </message>
 </context>
 <context>
@@ -119,7 +119,7 @@
     <name>DictionaryButton</name>
     <message>
         <source>Dictionaries</source>
-        <translation>Diccionarios</translation>
+        <translation>Diccionario</translation>
     </message>
 </context>
 <context>
@@ -133,19 +133,19 @@
     <name>SettingsPage</name>
     <message>
         <source>Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Ajustes</translation>
     </message>
     <message>
         <source>Cloud API</source>
-        <translation type="unfinished"></translation>
+        <translation>API de nube</translation>
     </message>
     <message>
         <source>Azure Computer Vision API Key</source>
-        <translation type="unfinished"></translation>
+        <translation>Llave de API de AzureComputerVision</translation>
     </message>
     <message>
         <source>Azure Translator Text API Key</source>
-        <translation type="unfinished"></translation>
+        <translation>Llave de API de AzureTranslatorText</translation>
     </message>
 </context>
 <context>
@@ -499,31 +499,31 @@
     </message>
     <message>
         <source>Active Dictionary:</source>
-        <translation type="unfinished"></translation>
+        <translation>Diccionario activo:</translation>
     </message>
     <message>
         <source>Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Ajustes</translation>
     </message>
     <message>
         <source>Azure API Keys not set</source>
-        <translation type="unfinished"></translation>
+        <translation>AzureAPIKeys no establecida</translation>
     </message>
     <message>
         <source>The Curiosity feature - taking a picture and automatically translating all recognized text on it - needs Microsoft Azure API keys to work. Please obtain API keys for the &lt;a href=&quot;https://azure.microsoft.com/en-gb/services/cognitive-services/computer-vision/&quot;&gt;Computer Vision&lt;/a&gt; and the &lt;a href=&quot;https://azure.microsoft.com/en-gb/services/cognitive-services/translator-text-api/&quot;&gt;Translator Text&lt;/a&gt; API, enter them on the settings page and have fun!</source>
-        <translation type="unfinished"></translation>
+        <translation>La función Curiosidad, toma una foto y traduce automáticamente todo el texto reconocido en ella, necesita claves de la API de MicrosoftAzure para funcionar. Obtenga claves de API para &lt;a href=&quot;https://azure.microsoft.com/en-gb/services/cognitive-services/computer-vision/&quot;&gt;Computer Vision&lt;/a&gt; and the &lt;a href=&quot;https://azure.microsoft.com/en-gb/services/cognitive-services/translator-text-api/&quot;&gt;Translator Text&lt;/a&gt; API, ingréselos en la página de configuración y ¡diviértanse!</translation>
     </message>
     <message>
         <source>Open Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Configuración abierta</translation>
     </message>
     <message>
         <source>Reload</source>
-        <translation type="unfinished"></translation>
+        <translation>Recargar</translation>
     </message>
     <message>
         <source>Moreover, the Curiosity feature is beta! This means that there is no guarantee that it works as you wish or that it will continue working forever in this or a future version of Wunderfitz. It may cease to work without any prior warning...</source>
-        <translation type="unfinished"></translation>
+        <translation>¡Además, la función Curiosidad es beta! Esto significa que no hay garantía de que funcione como lo desee o que seguirá funcionando para siempre en esta o en una versión futura de Wunderfitz. Puede dejar de funcionar sin previo aviso ...</translation>
     </message>
 </context>
 <context>
