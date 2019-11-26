@@ -53,15 +53,15 @@
     </message>
     <message>
         <source>This project uses the Norwegian-German dictionary from heinzelnisse.info - Thanks to the authors Heiko Klein and Julia Emmerich for making the dictionary available under the conditions of the GNU GPLv2!</source>
-        <translation type="unfinished"></translation>
+        <translation>Detta projekt använder den Norsk-Tyska ordboken från heinzelnisse.info - Tack till författarna Heiko Klein och Julia Emmerich för att de gjort ordboken tillgänglig under villkoren i GNU GPLv2!</translation>
     </message>
     <message>
         <source>Wunderfitz was translated to several languages. Thanks to the contributors for making that happen!</source>
-        <translation type="unfinished"></translation>
+        <translation>Wunderfitz har översatts till flera språk. Tack till översättarna för att så skett!</translation>
     </message>
     <message>
         <source>This product is distributed by &lt;a href=&quot;https://werkwolf.eu&quot;&gt;WerkWolf OÜ&lt;/a&gt;.</source>
-        <translation type="unfinished"></translation>
+        <translation>Denna produkt distribueras av &lt;a href=&quot;https://werkwolf.eu&quot;&gt;WerkWolf OÜ&lt;/a&gt;.</translation>
     </message>
 </context>
 <context>
@@ -119,418 +119,418 @@
     <name>DictionaryButton</name>
     <message>
         <source>Dictionaries</source>
-        <translation type="unfinished">Ordböcker</translation>
+        <translation>Ordböcker</translation>
     </message>
 </context>
 <context>
     <name>LoadingIndicator</name>
     <message>
         <source>Loading...</source>
-        <translation type="unfinished"></translation>
+        <translation>Läser in...</translation>
     </message>
 </context>
 <context>
     <name>SettingsPage</name>
     <message>
         <source>Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Inställningar</translation>
     </message>
     <message>
         <source>Cloud API</source>
-        <translation type="unfinished"></translation>
+        <translation>Moln-API</translation>
     </message>
     <message>
         <source>Azure Computer Vision API Key</source>
-        <translation type="unfinished"></translation>
+        <translation>Azure Computer Vision API-nyckel</translation>
     </message>
     <message>
         <source>Azure Translator Text API Key</source>
-        <translation type="unfinished"></translation>
+        <translation>Azure Translator Text API-nyckel</translation>
     </message>
 </context>
 <context>
     <name>TextPage</name>
     <message>
         <source>Copy translation to clipboard</source>
-        <translation type="unfinished"></translation>
+        <translation>Kopiera översättning till urklipp</translation>
     </message>
     <message>
         <source>Copy original to clipboard</source>
-        <translation type="unfinished"></translation>
+        <translation>Kopiera källtext till urklipp</translation>
     </message>
     <message>
         <source>Result</source>
-        <translation type="unfinished"></translation>
+        <translation>Resultat</translation>
     </message>
     <message>
         <source>Original</source>
-        <translation type="unfinished"></translation>
+        <translation>Källtext</translation>
     </message>
     <message>
         <source>Translation</source>
-        <translation type="unfinished"></translation>
+        <translation>Översättning</translation>
     </message>
 </context>
 <context>
     <name>TitlePage</name>
     <message>
         <source>About Wunderfitz</source>
-        <translation type="unfinished">Om Wunderfitz</translation>
+        <translation>Om Wunderfitz</translation>
     </message>
     <message>
         <source>Dictionaries</source>
-        <translation type="unfinished">Ordböcker</translation>
+        <translation>Ordböcker</translation>
     </message>
     <message>
         <source>Pull down the menu to import and change your dictionaries</source>
-        <translation type="unfinished"></translation>
+        <translation>Dra ner menyn för att importera och ändra dina ordböcker</translation>
     </message>
     <message>
         <source>Searching...</source>
-        <translation type="unfinished"></translation>
+        <translation>Söker...</translation>
     </message>
     <message>
         <source>No results found</source>
-        <translation type="unfinished"></translation>
+        <translation>Inget hittades</translation>
     </message>
     <message>
         <source>Search in dictionary...</source>
-        <translation type="unfinished"></translation>
+        <translation>Sök i ordbok...</translation>
     </message>
     <message>
         <source>Copy to clipboard</source>
-        <translation type="unfinished"></translation>
+        <translation>Kopiera till urklipp</translation>
     </message>
     <message>
         <source>Search for &apos;%1&apos;</source>
-        <translation type="unfinished"></translation>
+        <translation>Sök efter &quot;%1&quot;</translation>
     </message>
     <message>
         <source>No camera available</source>
-        <translation type="unfinished"></translation>
+        <translation>Ingen kamera tillgänglig</translation>
     </message>
     <message>
         <source>Processing image...</source>
-        <translation type="unfinished"></translation>
+        <translation>Berbetar bild...</translation>
     </message>
     <message>
         <source>Uploading image, %1% completed...</source>
-        <translation type="unfinished"></translation>
+        <translation>Laddar upp bild, %1% slutfört...</translation>
     </message>
     <message>
         <source>Translating text...</source>
-        <translation type="unfinished"></translation>
+        <translation>Översätter text...</translation>
     </message>
     <message>
         <source>Source Language</source>
-        <translation type="unfinished"></translation>
+        <translation>Källspråk</translation>
     </message>
     <message>
         <source>Chinese-Simplified</source>
-        <translation type="unfinished"></translation>
+        <translation>Förenklad Kinesiska</translation>
     </message>
     <message>
         <source>Chinese-Traditional</source>
-        <translation type="unfinished"></translation>
+        <translation>Traditionell Kinesiska</translation>
     </message>
     <message>
         <source>Czech</source>
-        <translation type="unfinished"></translation>
+        <translation>Tjeckiska</translation>
     </message>
     <message>
         <source>Danish</source>
-        <translation type="unfinished"></translation>
+        <translation>Danska</translation>
     </message>
     <message>
         <source>Dutch</source>
-        <translation type="unfinished"></translation>
+        <translation>Nederländska</translation>
     </message>
     <message>
         <source>English</source>
-        <translation type="unfinished"></translation>
+        <translation>Engelska</translation>
     </message>
     <message>
         <source>Finnish</source>
-        <translation type="unfinished"></translation>
+        <translation>Finska</translation>
     </message>
     <message>
         <source>French</source>
-        <translation type="unfinished"></translation>
+        <translation>Franska</translation>
     </message>
     <message>
         <source>German</source>
-        <translation type="unfinished"></translation>
+        <translation>Tyska</translation>
     </message>
     <message>
         <source>Greek</source>
-        <translation type="unfinished"></translation>
+        <translation>Grekiska</translation>
     </message>
     <message>
         <source>Hungarian</source>
-        <translation type="unfinished"></translation>
+        <translation>Ungerska</translation>
     </message>
     <message>
         <source>Italian</source>
-        <translation type="unfinished"></translation>
+        <translation>Italienska</translation>
     </message>
     <message>
         <source>Japanese</source>
-        <translation type="unfinished"></translation>
+        <translation>Japanska</translation>
     </message>
     <message>
         <source>Korean</source>
-        <translation type="unfinished"></translation>
+        <translation>Koreanska</translation>
     </message>
     <message>
         <source>Norwegian</source>
-        <translation type="unfinished"></translation>
+        <translation>Norska</translation>
     </message>
     <message>
         <source>Polish</source>
-        <translation type="unfinished"></translation>
+        <translation>Polska</translation>
     </message>
     <message>
         <source>Portuguese</source>
-        <translation type="unfinished"></translation>
+        <translation>Portugisiska</translation>
     </message>
     <message>
         <source>Russian</source>
-        <translation type="unfinished"></translation>
+        <translation>Ryska</translation>
     </message>
     <message>
         <source>Spanish</source>
-        <translation type="unfinished"></translation>
+        <translation>Spanska</translation>
     </message>
     <message>
         <source>Swedish</source>
-        <translation type="unfinished"></translation>
+        <translation>Svenska</translation>
     </message>
     <message>
         <source>Turkish</source>
-        <translation type="unfinished"></translation>
+        <translation>Turkiska</translation>
     </message>
     <message>
         <source>Arabic</source>
-        <translation type="unfinished"></translation>
+        <translation>Arabiska</translation>
     </message>
     <message>
         <source>Romanian</source>
-        <translation type="unfinished"></translation>
+        <translation>Rumänska</translation>
     </message>
     <message>
         <source>Serbian-Cyrillic</source>
-        <translation type="unfinished"></translation>
+        <translation>Serbiska-Kyrilliska</translation>
     </message>
     <message>
         <source>Serbian-Latin</source>
-        <translation type="unfinished"></translation>
+        <translation>Serbiska-Latin</translation>
     </message>
     <message>
         <source>Slovak</source>
-        <translation type="unfinished"></translation>
+        <translation>Slovakiska</translation>
     </message>
     <message>
         <source>Auto-Detect</source>
-        <translation type="unfinished"></translation>
+        <translation>Identifiera automatiskt</translation>
     </message>
     <message>
         <source>Target Language</source>
-        <translation type="unfinished"></translation>
+        <translation>Målspråk</translation>
     </message>
     <message>
         <source>Afrikaans</source>
-        <translation type="unfinished"></translation>
+        <translation>Afrikaan</translation>
     </message>
     <message>
         <source>Bulgarian</source>
-        <translation type="unfinished"></translation>
+        <translation>Bulgariska</translation>
     </message>
     <message>
         <source>Bangla</source>
-        <translation type="unfinished"></translation>
+        <translation>Bangla</translation>
     </message>
     <message>
         <source>Bosnian</source>
-        <translation type="unfinished"></translation>
+        <translation>Bosniska</translation>
     </message>
     <message>
         <source>Catalan</source>
-        <translation type="unfinished"></translation>
+        <translation>Katalanska</translation>
     </message>
     <message>
         <source>Welsh</source>
-        <translation type="unfinished"></translation>
+        <translation>Walesiska</translation>
     </message>
     <message>
         <source>Estonian</source>
-        <translation type="unfinished"></translation>
+        <translation>Estländska</translation>
     </message>
     <message>
         <source>Persian</source>
-        <translation type="unfinished"></translation>
+        <translation>Persiska</translation>
     </message>
     <message>
         <source>Filipino</source>
-        <translation type="unfinished"></translation>
+        <translation>Filipinska</translation>
     </message>
     <message>
         <source>Fijian</source>
-        <translation type="unfinished"></translation>
+        <translation>Fijian</translation>
     </message>
     <message>
         <source>Hebrew</source>
-        <translation type="unfinished"></translation>
+        <translation>Hebreiska</translation>
     </message>
     <message>
         <source>Hindi</source>
-        <translation type="unfinished"></translation>
+        <translation>Hindi</translation>
     </message>
     <message>
         <source>Croatian</source>
-        <translation type="unfinished"></translation>
+        <translation>Kroatiska</translation>
     </message>
     <message>
         <source>Haitian Creole</source>
-        <translation type="unfinished"></translation>
+        <translation>Haitisk Kreolska</translation>
     </message>
     <message>
         <source>Indonesian</source>
-        <translation type="unfinished"></translation>
+        <translation>Indonesiska</translation>
     </message>
     <message>
         <source>Icelandic</source>
-        <translation type="unfinished"></translation>
+        <translation>Isländska</translation>
     </message>
     <message>
         <source>Lithuanian</source>
-        <translation type="unfinished"></translation>
+        <translation>Litauiska</translation>
     </message>
     <message>
         <source>Latvian</source>
-        <translation type="unfinished"></translation>
+        <translation>Lettiska</translation>
     </message>
     <message>
         <source>Malagasy</source>
-        <translation type="unfinished"></translation>
+        <translation>Madagaskiska</translation>
     </message>
     <message>
         <source>Malay</source>
-        <translation type="unfinished"></translation>
+        <translation>Malajiska</translation>
     </message>
     <message>
         <source>Maltese</source>
-        <translation type="unfinished"></translation>
+        <translation>Maltesiska</translation>
     </message>
     <message>
         <source>Hmong Daw</source>
-        <translation type="unfinished"></translation>
+        <translation>Hmong Daw</translation>
     </message>
     <message>
         <source>Querétaro Otomi</source>
-        <translation type="unfinished"></translation>
+        <translation>Querétaro Otomi</translation>
     </message>
     <message>
         <source>Slovenian</source>
-        <translation type="unfinished"></translation>
+        <translation>Slovenska</translation>
     </message>
     <message>
         <source>Samoan</source>
-        <translation type="unfinished"></translation>
+        <translation>Samoanska</translation>
     </message>
     <message>
         <source>Kiswahili</source>
-        <translation type="unfinished"></translation>
+        <translation>Kiswahili</translation>
     </message>
     <message>
         <source>Tamil</source>
-        <translation type="unfinished"></translation>
+        <translation>Tamilska</translation>
     </message>
     <message>
         <source>Thai</source>
-        <translation type="unfinished"></translation>
+        <translation>Thailändska</translation>
     </message>
     <message>
         <source>Klingon</source>
-        <translation type="unfinished"></translation>
+        <translation>Klingon</translation>
     </message>
     <message>
         <source>Tongan</source>
-        <translation type="unfinished"></translation>
+        <translation>Tongan</translation>
     </message>
     <message>
         <source>Tahitian</source>
-        <translation type="unfinished"></translation>
+        <translation>Tahitiska</translation>
     </message>
     <message>
         <source>Ukrainian</source>
-        <translation type="unfinished"></translation>
+        <translation>Ukrainska</translation>
     </message>
     <message>
         <source>Urdu</source>
-        <translation type="unfinished"></translation>
+        <translation>Urdu</translation>
     </message>
     <message>
         <source>Vietnamese</source>
-        <translation type="unfinished"></translation>
+        <translation>Vietnamesiska</translation>
     </message>
     <message>
         <source>Yucatec Maya</source>
-        <translation type="unfinished"></translation>
+        <translation>Yucatec Maya</translation>
     </message>
     <message>
         <source>Cantonese-Traditional</source>
-        <translation type="unfinished"></translation>
+        <translation>Traditionell kantonesiska</translation>
     </message>
     <message>
         <source>Cloud and Beta Warning</source>
-        <translation type="unfinished"></translation>
+        <translation>Moln och betavarning</translation>
     </message>
     <message>
         <source>Accept</source>
-        <translation type="unfinished"></translation>
+        <translation>Acceptera</translation>
     </message>
     <message>
         <source>The Curiosity feature - taking a picture and automatically translating all recognized text on it - uses other people&apos;s computers (aka &quot;Cloud&quot;) to work. So, your picture is uploaded to another server, analyzed and the information is sent back to this app. So, be cautious if you take pictures of private or confidential data! The Cloud provider is Microsoft Azure. (You see the irony of having Microsoft services running on Sailfish OS ;) ?) By using this service you accept</source>
-        <translation type="unfinished"></translation>
+        <translation>Kuriositetsfunktionen - Att ta en bild och automatiskt översätta all tolkad text på den, använder andras datorer (alias &quot;Moln&quot;) för arbetet. Så din bild laddas upp till en server, analyseras och informationen skickas tillbaka till denna app, så var försiktig om du tar bilder av privat eller konfidentiell karaktär! Molnleverantören är Microsoft Azure (Du ser ironin i att ha Microsoft-tjänster som körs på Sailfish OS;)? Genom att använda denna tjänst, accepterar du detta.</translation>
     </message>
     <message>
         <source>&lt;a href=&quot;https://azure.microsoft.com/support/legal/&quot;&gt;The Microsoft Azure terms of service and privacy statement&lt;/a&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;a href=&quot;https://azure.microsoft.com/support/legal/&quot;&gt;Microsoft Azure tjänstvillkor och sekretesspolicy&lt;/a&gt;</translation>
     </message>
     <message>
         <source>Active Dictionary:</source>
-        <translation type="unfinished"></translation>
+        <translation>Aktiv ordbok:</translation>
     </message>
     <message>
         <source>Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Inställningar</translation>
     </message>
     <message>
         <source>Azure API Keys not set</source>
-        <translation type="unfinished"></translation>
+        <translation>Azure API-nycklar ej angivna</translation>
     </message>
     <message>
         <source>The Curiosity feature - taking a picture and automatically translating all recognized text on it - needs Microsoft Azure API keys to work. Please obtain API keys for the &lt;a href=&quot;https://azure.microsoft.com/en-gb/services/cognitive-services/computer-vision/&quot;&gt;Computer Vision&lt;/a&gt; and the &lt;a href=&quot;https://azure.microsoft.com/en-gb/services/cognitive-services/translator-text-api/&quot;&gt;Translator Text&lt;/a&gt; API, enter them on the settings page and have fun!</source>
-        <translation type="unfinished"></translation>
+        <translation>Kuriositetsfunktionen - Att ta en bild och automatiskt översätta all tolkad text på den, kräver fungerande Microsoft Azure API-nycklar. Hämta API-nycklar för &lt;a href=&quot;https://azure.microsoft.com/en-gb/services/cognitive-services/computer-vision/&quot;&gt;Computer Vision&lt;/a&gt; och &lt;a href=&quot;https://azure.microsoft.com/en-gb/services/cognitive-services/translator-text-api/&quot;&gt;Translator Text&lt;/a&gt; Ange dem på inställningssidan och ha kul!</translation>
     </message>
     <message>
         <source>Open Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Öppna inställningarna</translation>
     </message>
     <message>
         <source>Reload</source>
-        <translation type="unfinished"></translation>
+        <translation>Uppdatera</translation>
     </message>
     <message>
         <source>Moreover, the Curiosity feature is beta! This means that there is no guarantee that it works as you wish or that it will continue working forever in this or a future version of Wunderfitz. It may cease to work without any prior warning...</source>
-        <translation type="unfinished"></translation>
+        <translation>Dessutom är kuriositetsfunktionen beta! Detta innebär att det inte finns någon garanti för att det fungerar som du vill eller att det kommer att fortsätta fungera för evigt, i denna eller framtida versioner av Wunderfitz. Det kan upphöra att fungera utan förvarning...</translation>
     </message>
 </context>
 <context>
     <name>WunderfitzButton</name>
     <message>
         <source>Curiosity</source>
-        <translation type="unfinished"></translation>
+        <translation>Kuriositet</translation>
     </message>
 </context>
 </TS>
