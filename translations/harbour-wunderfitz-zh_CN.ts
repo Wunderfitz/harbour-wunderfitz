@@ -89,7 +89,7 @@
     </message>
     <message>
         <source>Dict.cc does not allow other applications such as Wunderfitz to ship their dictionaries. Therefore, you must download them from dict.cc yourself. Use the Download link, follow the instructions and import the files here afterwards. The downloaded dict.cc ZIP files must be placed in the Downloads folder. If in doubt, use the SailfishOS E-Mail and Browser apps to store the downloads there automatically. After the import in Wunderfitz you can delete the ZIP archives. Please note that you only need to download one combination of two languages. For example if you use DE-EN, you don&apos;t need EN-DE as Wunderfitz always searches in both languages.</source>
-        <translation>​Dict.cc  不允许其它软件（例如 Wunderfitz）传输它们的词典。因此你必须自己从 dict.cc 下载词典。使用下载链接、遵从指导然后在此导入文件。下载的 dict.cc ZIP 文件必须放置于"Download"文件夹之内。如果你不知如何操作，请使用旗鱼系统电子邮件及浏览器软件以自动保存到"Download"文件夹。导入到 Wunderfitz 之后你可以删除 ZIP 文档。请注意:你只需下载两种语言的一种组合。例如，如果你使用 DE-EN ，无需再次下载 EN-DE 。Wunderfitz 会自动在两种语言之间进行搜索。</translation>
+        <translation> Dict.cc 不允许其它软件（例如 Wunderfitz）传输它们的词典。因此你必须自己从 dict.cc 下载词典。使用下载链接、遵从指导然后在此导入文件。下载的 dict.cc ZIP 文件必须放置于"Download"文件夹之内。如果你不知如何操作，请使用旗鱼系统电子邮件及浏览器软件以自动保存到"Download"文件夹。导入到 Wunderfitz 之后你可以删除 ZIP 文档。请注意:你只需下载两种语言的一种组合。例如，如果你使用 DE-EN ，无需再次下载 EN-DE 。Wunderfitz 会自动在两种语言之间进行搜索。</translation>
     </message>
     <message>
         <source>Dictionary</source>
