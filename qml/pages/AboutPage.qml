@@ -155,7 +155,7 @@ Page {
             Label {
                 x: Theme.horizontalPageMargin
                 width: parent.width  - ( 2 * Theme.horizontalPageMargin )
-                text: "d9h02f, Carlos Gonzales, Åke Engelbrektson, atlochowski, Szabó Géza, Alessandro Pra'"
+                text: "d9h02f, carlosgonz, Åke Engelbrektson, atlochowski, Szabó Géza, Alessandro Pra'"
                 horizontalAlignment: Text.AlignHCenter
                 wrapMode: Text.Wrap
                 anchors {
