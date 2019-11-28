@@ -35,7 +35,8 @@ TRANSLATIONS += translations/harbour-wunderfitz-de.ts \
      translations/harbour-wunderfitz-sv.ts \
      translations/harbour-wunderfitz-es.ts \
      translations/harbour-wunderfitz-pl.ts \
-     translations/harbour-wunderfitz-hu.ts
+     translations/harbour-wunderfitz-hu.ts \
+     translations/harbour-wunderfitz-zh_CN.ts
 
 database.files = db
 database.path = /usr/share/$${TARGET}

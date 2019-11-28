@@ -55,7 +55,7 @@
     <message>
         <source>This project uses the Norwegian-German dictionary from heinzelnisse.info - Thanks to the authors Heiko Klein and Julia Emmerich for making the dictionary available under the conditions of the GNU GPLv2!</source>
         <translation>该项目使用来自 heinzelnisse.info 的挪威语-德语词典-感谢作者 Heiko Klein 和 Julia Emmeric 使它在 GNU GPLv2 条款下可用！</translation>
-    </message> 
+    </message>
     <message>
         <source>Wunderfitz was translated to several languages. Thanks to the contributors for making that happen!</source>
         <translation>Wunderfitz 已被翻译为多种语言。再次由衷感谢各位翻译者！</translation>
@@ -89,7 +89,7 @@
     </message>
     <message>
         <source>Dict.cc does not allow other applications such as Wunderfitz to ship their dictionaries. Therefore, you must download them from dict.cc yourself. Use the Download link, follow the instructions and import the files here afterwards. The downloaded dict.cc ZIP files must be placed in the Downloads folder. If in doubt, use the SailfishOS E-Mail and Browser apps to store the downloads there automatically. After the import in Wunderfitz you can delete the ZIP archives. Please note that you only need to download one combination of two languages. For example if you use DE-EN, you don&apos;t need EN-DE as Wunderfitz always searches in both languages.</source>
-        <translation> Dict.cc 不允许其它软件（例如 Wunderfitz）传输它们的词典。因此你必须自己从 dict.cc 下载词典。使用下载链接、遵从指导然后在此导入文件。下载的 dict.cc ZIP 文件必须放置于"Download"文件夹之内。如果你不知如何操作，请使用旗鱼系统电子邮件及浏览器软件以自动保存到"Download"文件夹。导入到 Wunderfitz 之后你可以删除 ZIP 文档。请注意:你只需下载两种语言的一种组合。例如，如果你使用 DE-EN ，无需再次下载 EN-DE 。Wunderfitz 会自动在两种语言之间进行搜索。</translation>
+        <translation> Dict.cc 不允许其它软件（例如 Wunderfitz）传输它们的词典。因此你必须自己从 dict.cc 下载词典。使用下载链接、遵从指导然后在此导入文件。下载的 dict.cc ZIP 文件必须放置于&quot;Download&quot;文件夹之内。如果你不知如何操作，请使用旗鱼系统电子邮件及浏览器软件以自动保存到&quot;Download&quot;文件夹。导入到 Wunderfitz 之后你可以删除 ZIP 文档。请注意:你只需下载两种语言的一种组合。例如，如果你使用 DE-EN ，无需再次下载 EN-DE 。Wunderfitz 会自动在两种语言之间进行搜索。</translation>
     </message>
     <message>
         <source>Dictionary</source>
@@ -216,7 +216,7 @@
     </message>
     <message>
         <source>Uploading image, %1% completed...</source>
-        <translation>正在更新图片，已完成 %1% ……/translation>
+        <translation>正在更新图片，已完成 %1% ……</translation>
     </message>
     <message>
         <source>Translating text...</source>
@@ -488,7 +488,7 @@
     </message>
     <message>
         <source>Accept</source>
-        <translation接受</translation>
+        <translation>接受</translation>
     </message>
     <message>
         <source>The Curiosity feature - taking a picture and automatically translating all recognized text on it - uses other people&apos;s computers (aka &quot;Cloud&quot;) to work. So, your picture is uploaded to another server, analyzed and the information is sent back to this app. So, be cautious if you take pictures of private or confidential data! The Cloud provider is Microsoft Azure. (You see the irony of having Microsoft services running on Sailfish OS ;) ?) By using this service you accept</source>
@@ -537,4 +537,3 @@
     </message>
 </context>
 </TS>
-

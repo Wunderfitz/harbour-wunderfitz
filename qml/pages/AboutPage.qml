@@ -52,7 +52,7 @@ Page {
             }
 
             Label {
-                text: "Wunderfitz 1.3"
+                text: "Wunderfitz 1.3.1"
                 horizontalAlignment: Text.AlignHCenter
                 font.pixelSize: Theme.fontSizeExtraLarge
                 anchors {

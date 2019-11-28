@@ -42,3 +42,7 @@
 - Heinzelnisse dictionary update from August 11, 2019
 - Cloud API keys now to be set by end user
 - Remove Wagnis
+
+* Thu Nov 28 2019 <sebastian@ygriega.de> 1.3.1
+- Updated translations for Spanish and Swedish (thanks to eson57 and GNUuser)
+- New translation for Chinese (thanks to dashinfantry)

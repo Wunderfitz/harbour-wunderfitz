@@ -8,6 +8,7 @@ Sebastian J. Wolf [sebastian@ygriega.de](mailto:sebastian@ygriega.de)
 Licensed under GNU GPLv2
 
 ## Translations
+- Chinese: [dashinfantry](https://github.com/dashinfantry)
 - Dutch: d9h02f
 - Italian: Alessandro Pra'
 - Hungarian: Szabó Géza
