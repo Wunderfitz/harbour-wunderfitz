@@ -61,7 +61,7 @@
     </message>
     <message>
         <source>This product is distributed by &lt;a href=&quot;https://werkwolf.eu&quot;&gt;WerkWolf OÜ&lt;/a&gt;.</source>
-        <translation type="unfinished"></translation>
+        <translation>Ten produkt jest dystrybuowany przez &lt;a href=&quot;https://werkwolf.eu&quot;&gt;WerkWolf OÜ&lt;/a&gt;.</translation>
     </message>
 </context>
 <context>
@@ -133,19 +133,19 @@
     <name>SettingsPage</name>
     <message>
         <source>Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Ustawienia</translation>
     </message>
     <message>
         <source>Cloud API</source>
-        <translation type="unfinished"></translation>
+        <translation>Cloud API</translation>
     </message>
     <message>
         <source>Azure Computer Vision API Key</source>
-        <translation type="unfinished"></translation>
+        <translation>Klucz Azure Computer Vision API</translation>
     </message>
     <message>
         <source>Azure Translator Text API Key</source>
-        <translation type="unfinished"></translation>
+        <translation>Klucz Azure Translator Text API</translation>
     </message>
 </context>
 <context>
@@ -499,38 +499,38 @@
     </message>
     <message>
         <source>Active Dictionary:</source>
-        <translation type="unfinished"></translation>
+        <translation>Aktywny słownik:</translation>
     </message>
     <message>
         <source>Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Ustawienia</translation>
     </message>
     <message>
         <source>Azure API Keys not set</source>
-        <translation type="unfinished"></translation>
+        <translation>Klucze Azure API nie są ustawione</translation>
     </message>
     <message>
         <source>The Curiosity feature - taking a picture and automatically translating all recognized text on it - needs Microsoft Azure API keys to work. Please obtain API keys for the &lt;a href=&quot;https://azure.microsoft.com/en-gb/services/cognitive-services/computer-vision/&quot;&gt;Computer Vision&lt;/a&gt; and the &lt;a href=&quot;https://azure.microsoft.com/en-gb/services/cognitive-services/translator-text-api/&quot;&gt;Translator Text&lt;/a&gt; API, enter them on the settings page and have fun!</source>
-        <translation type="unfinished"></translation>
+        <translation>Funkcja Ciekawość - zrobienie zdjęcia i automatyczne przetłumaczenie znajdującego się na nim tekstu - wymaga do działania kluczy Microsoft Azure API. Uzyskaj klucze API dla &lt;a href=&quot;https://azure.microsoft.com/en-gb/services/cognitive-services/computer-vision/&quot;&gt;Computer Vision&lt;/a&gt; and the &lt;a href=&quot;https://azure.microsoft.com/en-gb/services/cognitive-services/translator-text-api/&quot;&gt;Translator Text&lt;/a&gt; API, wprowadź je na stronie ustawień i baw się dobrze!</translation>
     </message>
     <message>
         <source>Open Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Otwórz ustawienia</translation>
     </message>
     <message>
         <source>Reload</source>
-        <translation type="unfinished"></translation>
+        <translation>Przeładuj</translation>
     </message>
     <message>
         <source>Moreover, the Curiosity feature is beta! This means that there is no guarantee that it works as you wish or that it will continue working forever in this or a future version of Wunderfitz. It may cease to work without any prior warning...</source>
-        <translation type="unfinished"></translation>
+        <translation>Co więcej, funkcja Ciekawość jest w wersji beta! Oznacza to, że nie ma gwarancji, że będzie działała tak, jak chcesz lub że będzie działała wiecznie w tej lub przyszłej wersji Wunderfitz. Może przestać działać bez uprzedniego ostrzeżenia ...</translation>
     </message>
 </context>
 <context>
     <name>WunderfitzButton</name>
     <message>
         <source>Curiosity</source>
-        <translation>Ciekawostka</translation>
+        <translation>Ciekawość</translation>
     </message>
 </context>
 </TS>
