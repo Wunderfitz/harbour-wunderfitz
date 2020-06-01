@@ -58,7 +58,7 @@
     </message>
     <message>
         <source>Wunderfitz was translated to several languages. Thanks to the contributors for making that happen!</source>
-        <translation>Wunderfitz 已被翻译为多种语言。再次由衷感谢各位翻译者！</translation>
+        <translation>Wunderfitz 已被翻译为多种语言。在此由衷感谢各位翻译者！</translation>
     </message>
     <message>
         <source>This product is distributed by &lt;a href=&quot;https://werkwolf.eu&quot;&gt;WerkWolf OÜ&lt;/a&gt;.</source>
@@ -280,7 +280,7 @@
     </message>
     <message>
         <source>Korean</source>
-        <translation>韩语（朝鲜语）</translation>
+        <translation>韩语（朝鲜语)</translation>
     </message>
     <message>
         <source>Norwegian</source>
@@ -428,7 +428,7 @@
     </message>
     <message>
         <source>Querétaro Otomi</source>
-        <translation>克雷塔罗奥托米语i</translation>
+        <translation>克雷塔罗奥托米语</translation>
     </message>
     <message>
         <source>Slovenian</source>
@@ -493,7 +493,7 @@
     <message>
         <source>The Curiosity feature - taking a picture and automatically translating all recognized text on it - uses other people&apos;s computers (aka &quot;Cloud&quot;) to work. So, your picture is uploaded to another server, analyzed and the information is sent back to this app. So, be cautious if you take pictures of private or confidential data! The Cloud provider is Microsoft Azure. (You see the irony of having Microsoft services running on Sailfish OS ;) ?) By using this service you accept</source>
         <translation>The Curiosity feature - taking a picture and automatically translating all recognized text on it - uses other people&apos;s computers (aka &quot;Cloud&quot;) to work. So, your picture is uploaded to another server, analyzed and the information is sent back to this app. So, be cautious if you take pictures of private or confidential data! The Cloud provider is Microsoft Azure. (You see the irony of having Microsoft services running on Sailfish OS ;) ?) By using this service you accept
-​智能识图功能—即拍照并自动翻译所有识别到的文本。此项功能用到其它用户的计算机（也称作云服务）才能工作。所以你的图片会被上传到其它服务器以进行分析然后返回数据到本软件。所以请勿随意上传你的隐私及机密照片！云服务提供商为 Microsoft Azure 。（讽刺的是旗鱼系统上拥有 Microsoft 服务;）?）你需要接受以下条款以使用此功能</translation>
+​智能识图功能—即拍照并自动翻译所有识别到的文本。此项功能需要用到其它用户的计算机（也称作云服务）才能工作。所以你的图片会被上传到其它服务器以进行分析然后返回数据到本软件。所以请勿随意上传你的隐私及机密照片！云服务提供商为 Microsoft Azure 。（讽刺的是旗鱼系统上拥有 Microsoft 服务;）?）你需要接受以下条款以使用此功能</translation>
     </message>
     <message>
         <source>&lt;a href=&quot;https://azure.microsoft.com/support/legal/&quot;&gt;The Microsoft Azure terms of service and privacy statement&lt;/a&gt;</source>
