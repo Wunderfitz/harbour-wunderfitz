@@ -96,6 +96,9 @@ Page {
         running: false
         repeat: false
         onTriggered: {
+            if (searchField.text === "") {
+                searchField.focus = true;
+            }
             heinzelnisseModel.search(searchField.text)
         }
     }
