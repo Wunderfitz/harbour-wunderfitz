@@ -88,28 +88,7 @@ Page {
                 font.pixelSize: Theme.fontSizeSmall
                 linkColor: Theme.highlightColor
 
-                onLinkActivated: Qt.openUrlExternally("mailto:contact@werkwolf.eu")
-            }
-
-            Separator {
-                width: parent.width
-                color: Theme.primaryColor
-                horizontalAlignment: Qt.AlignHCenter
-            }
-
-            Text {
-                wrapMode: Text.Wrap
-                width: parent.width - ( 2 * Theme.horizontalPageMargin )
-                text: qsTr("This product is distributed by <a href=\"https://werkwolf.eu\">WerkWolf OÜ</a>.")
-                font.pixelSize: Theme.fontSizeSmall
-                linkColor: Theme.highlightColor
-                anchors {
-                    horizontalCenter: parent.horizontalCenter
-                }
-                color: Theme.primaryColor
-                textFormat: Text.StyledText
-                horizontalAlignment: Text.AlignHCenter
-                onLinkActivated: Qt.openUrlExternally(link);
+                onLinkActivated: Qt.openUrlExternally("mailto:contact@werkwolf.de")
             }
 
             Separator {

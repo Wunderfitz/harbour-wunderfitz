@@ -59,10 +59,6 @@
         <source>Wunderfitz was translated to several languages. Thanks to the contributors for making that happen!</source>
         <translation>Wunderfitz está traducido a varios lenguajes. Gracias a los contribuyentes por hacer esto realidad!</translation>
     </message>
-    <message>
-        <source>This product is distributed by &lt;a href=&quot;https://werkwolf.eu&quot;&gt;WerkWolf OÜ&lt;/a&gt;.</source>
-        <translation>Este programa está distribuido por &lt;a href=&quot;https://werkwolf.eu&quot;&gt;WerkWolf OÜ&lt;/a&gt;.</translation>
-    </message>
 </context>
 <context>
     <name>DictionariesPage</name>

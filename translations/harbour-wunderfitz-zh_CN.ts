@@ -60,10 +60,6 @@
         <source>Wunderfitz was translated to several languages. Thanks to the contributors for making that happen!</source>
         <translation>Wunderfitz 已被翻译为多种语言。在此由衷感谢各位翻译者！</translation>
     </message>
-    <message>
-        <source>This product is distributed by &lt;a href=&quot;https://werkwolf.eu&quot;&gt;WerkWolf OÜ&lt;/a&gt;.</source>
-        <translation>本产品在 &lt;a href=&quot;https://werkwolf.eu&quot;&gt;WerkWolf OÜ&lt;/a&gt; 下分发。</translation>
-    </message>
 </context>
 <context>
     <name>DictionariesPage</name>
