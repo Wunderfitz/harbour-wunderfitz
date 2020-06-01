@@ -13,7 +13,7 @@ Licensed under GNU GPLv2
 - Italian: Alessandro Pra'
 - Hungarian: Szabó Géza
 - Polish: [Atlochowski](https://github.com/atlochowski)
-- Spanish: Carlos Gonzales
+- Spanish: [carlosgonz](https://github.com/GNUUser)
 - Swedish: Åke Engelbrektson
 
 ## Credits
@@ -21,6 +21,6 @@ Code contributions
 - [zwieberl](https://github.com/zwieberl)
 
 This project uses
-- the Norwegian-German dictionary from [heinzelnisse.info](http://www.heinzelnisse.info) - Updated on March 06, 2019 - Thanks to the authors Heiko Klein and Julia Emmerich for making the dictionary accessible under the conditions of the GNU GPLv2!
+- the Norwegian-German dictionary from [heinzelnisse.info](http://www.heinzelnisse.info) - Updated on March 3, 2020 - Thanks to the authors Heiko Klein and Julia Emmerich for making the dictionary accessible under the conditions of the GNU GPLv2!
 - [Dict.cc](http://dict.cc) dictionaries
 - the [QuaZIP library](http://quazip.sourceforge.net) to extract ZIP archives
