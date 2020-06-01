@@ -49,7 +49,7 @@
     </message>
     <message>
         <source>A mobile dictionary application for offline use including the Heinzelnisse database and supporting dict.cc export files.</source>
-        <translation>Una aplicación de diccionario móvil para uso sin conexión con base de datos Heinzelnisse y archivos de exportación de dict.cc.</translation>
+        <translation>Una aplicación de diccionario móvil para uso sin línea con base de datos Heinzelnisse y archivos de exportación de dict.cc.</translation>
     </message>
     <message>
         <source>This project uses the Norwegian-German dictionary from heinzelnisse.info - Thanks to the authors Heiko Klein and Julia Emmerich for making the dictionary available under the conditions of the GNU GPLv2!</source>
@@ -57,11 +57,11 @@
     </message>
     <message>
         <source>Wunderfitz was translated to several languages. Thanks to the contributors for making that happen!</source>
-        <translation>Wunderfitz es traducido a varios lenguajes. Gracias a los contribuyentes por hacer esto realidad!</translation>
+        <translation>Wunderfitz está traducido a varios lenguajes. Gracias a los contribuyentes por hacer esto realidad!</translation>
     </message>
     <message>
         <source>This product is distributed by &lt;a href=&quot;https://werkwolf.eu&quot;&gt;WerkWolf OÜ&lt;/a&gt;.</source>
-        <translation>Este producto es distribuido por &lt;a href=&quot;https://werkwolf.eu&quot;&gt;WerkWolf OÜ&lt;/a&gt;.</translation>
+        <translation>Este programa está distribuido por &lt;a href=&quot;https://werkwolf.eu&quot;&gt;WerkWolf OÜ&lt;/a&gt;.</translation>
     </message>
 </context>
 <context>
@@ -137,15 +137,15 @@
     </message>
     <message>
         <source>Cloud API</source>
-        <translation>API de nube</translation>
+        <translation>Nube</translation>
     </message>
     <message>
         <source>Azure Computer Vision API Key</source>
-        <translation>Llave de API de AzureComputerVision</translation>
+        <translation>Llave del API AzureComputerVision</translation>
     </message>
     <message>
         <source>Azure Translator Text API Key</source>
-        <translation>Llave de API de AzureTranslatorText</translation>
+        <translation>Llave del API AzureTranslatorText</translation>
     </message>
 </context>
 <context>
@@ -183,7 +183,7 @@
     </message>
     <message>
         <source>Pull down the menu to import and change your dictionaries</source>
-        <translation>Halar hacia abajo para el menú eh importar y cambiar los diccionarios</translation>
+        <translation>Halar hacia abajo para opciones eh importar y cambiar los diccionarios</translation>
     </message>
     <message>
         <source>Searching...</source>
@@ -195,7 +195,7 @@
     </message>
     <message>
         <source>Search in dictionary...</source>
-        <translation>Buscando en diccionario...</translation>
+        <translation>Introducir texto...</translation>
     </message>
     <message>
         <source>Copy to clipboard</source>
