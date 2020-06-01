@@ -284,6 +284,8 @@ Page {
                                 EnterKey.iconSource: "image://theme/icon-m-enter-close"
                                 EnterKey.onClicked: focus = false
 
+                                inputMethodHints: Qt.ImhNone
+
                                 onTextChanged: {
                                     searchTimer.stop()
                                     searchTimer.start()
