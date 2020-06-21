@@ -1,5 +1,6 @@
 /*
     Copyright (C) 2016-19 Sebastian J. Wolf
+                     2020 Mirian Margiani
 
     This file is part of Wunderfitz.
 
@@ -52,7 +53,7 @@ Page {
             }
 
             Label {
-                text: "Wunderfitz 1.4"
+                text: "Wunderfitz %1".arg(versionNumber)
                 horizontalAlignment: Text.AlignHCenter
                 font.pixelSize: Theme.fontSizeExtraLarge
                 anchors {

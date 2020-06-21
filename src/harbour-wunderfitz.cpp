@@ -1,5 +1,6 @@
 /*
     Copyright (C) 2016-19 Sebastian J. Wolf
+                     2020 Mirian Margiani
 
     This file is part of Wunderfitz.
 
@@ -43,6 +44,7 @@ int main(int argc, char *argv[])
     ctxt->setContextProperty("dictionaryModel", &dictionaryModel);
     ctxt->setContextProperty("heinzelnisseModel", &dictionaryModel.heinzelnisseModel);
     ctxt->setContextProperty("dictCCImporterModel", &dictionaryModel.dictCCImporterModel);
+    ctxt->setContextProperty("versionNumber", QString(APP_VERSION));
 
     Curiosity curiosity;
     ctxt->setContextProperty("curiosity", &curiosity);
