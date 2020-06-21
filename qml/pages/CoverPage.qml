@@ -66,8 +66,32 @@ CoverBackground {
                 }
             }
         }
+
+        Column {
+            visible: coverListView.count === 0
+            width: parent.width
+            height: childrenRect.height
+            anchors.verticalCenter: parent.verticalCenter
+
+            Label {
+                wrapMode: Text.Wrap
+                horizontalAlignment: Text.AlignHCenter
+                font { pixelSize: Theme.fontSizeMedium; family: Theme.fontFamilyHeading }
+                x: Theme.paddingMedium
+                width: parent.width - 2*x
+                color: Theme.highlightColor
+                text: "Wunderfitz"
+            }
+            Label {
+                wrapMode: Text.Wrap
+                horizontalAlignment: Text.AlignHCenter
+                font { pixelSize: Theme.fontSizeMedium; family: Theme.fontFamilyHeading }
+                x: Theme.paddingMedium
+                width: parent.width - 2*x
+                color: Theme.highlightColor
+                opacity: Theme.opacityLow
+                text: qsTr("Dictionary")
+            }
+        }
     }
-
 }
-
-
