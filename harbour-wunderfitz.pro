@@ -19,7 +19,7 @@ OTHER_FILES += rpm/harbour-wunderfitz.changes.in \
     qml/*.qml
     db/heinzelliste.db
 
-SAILFISHAPP_ICONS = 86x86 108x108 128x128 256x256
+SAILFISHAPP_ICONS = 86x86 108x108 128x128 172x172
 
 # to disable building translations every time, comment out the
 # following CONFIG line
@@ -61,23 +61,18 @@ ICONPATH = /usr/share/icons/hicolor
 172.png.path = $${ICONPATH}/172x172/apps/
 172.png.files += icons/172x172/harbour-wunderfitz.png
 
-256.png.path = $${ICONPATH}/256x256/apps/
-256.png.files += icons/256x256/harbour-wunderfitz.png
-
 wunderfitz.desktop.path = /usr/share/applications/
 wunderfitz.desktop.files = harbour-wunderfitz.desktop
 
-INSTALLS += 86.png 108.png 128.png 172.png 256.png \
+INSTALLS += 86.png 108.png 128.png 172.png \
             wunderfitz.desktop database gui images
 
 DISTFILES += \
+    icons/86x86/harbour-wunderfitz.png \
     icons/108x108/harbour-wunderfitz.png \
     icons/128x128/harbour-wunderfitz.png \
     icons/172x172/harbour-wunderfitz.png \
-    icons/256x256/harbour-wunderfitz.png \
-    icons/86x86/harbour-wunderfitz.png \
-    images/background.png \
-    images/wunderfitz.png \
+    images/*.png \
     qml/*.qml \
     pml/pages/*.qml \
     LICENSE \
