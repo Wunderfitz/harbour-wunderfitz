@@ -33,7 +33,30 @@ CoverBackground {
             rightMargin: Theme.paddingMedium
             bottom: parent.bottom
         }
+
         model: heinzelnisseModel
+
+        header: Label {
+            id: headerLabel
+            maximumLineCount: 1
+            truncationMode: TruncationMode.Fade
+            font.pixelSize: Theme.fontSizeExtraSmall
+            color: Theme.highlightColor
+            anchors { left: parent.left; right: parent.right }
+            text: dictionaryModel.selectedDictionaryName
+            horizontalAlignment: Text.AlignHCenter
+
+            Separator {
+                width: parent.width
+                horizontalAlignment: Qt.AlignHCenter
+                color: Theme.highlightColor
+                anchors {
+                    horizontalCenter: parent.horizontalCenter
+                    top: parent.bottom
+                }
+            }
+        }
+
         delegate: ListItem {
             anchors {
                 topMargin:  Theme.paddingMedium
