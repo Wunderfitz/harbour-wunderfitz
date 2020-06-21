@@ -35,7 +35,7 @@ Page {
     Notification {
         id: importNotification
         appName: "Wunderfitz"
-        appIcon: "/usr/share/icons/hicolor/256x256/apps/harbour-wunderfitz.png"
+        appIcon: "/usr/share/icons/hicolor/172x172/apps/harbour-wunderfitz.png"
     }
 
     Connections {
