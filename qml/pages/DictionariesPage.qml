@@ -95,6 +95,11 @@ Page {
                 text: qsTr("Delete selected dictionary")
                 onClicked: remorseDelete.execute(qsTr("Deleting dictionary %1").arg(dictionaryModel.selectedDictionaryId), function() {dictionaryModel.deleteSelectedDictionary()}, 4000)
             }
+            MenuItem {
+                visible: !canDeleteCurrentDictionary
+                enabled: false
+                text: qsTr("This built-in dictionary cannot be deleted.")
+            }
         }
 
         Column {
