@@ -62,6 +62,13 @@
     </message>
 </context>
 <context>
+    <name>CoverPage</name>
+    <message>
+        <source>Dictionary</source>
+        <translation type="unfinished">词典</translation>
+    </message>
+</context>
+<context>
     <name>DictionariesPage</name>
     <message>
         <source>Dictionaries</source>
@@ -110,6 +117,10 @@
     <message>
         <source>Dictionary %1 imported</source>
         <translation>词典 %1 已导入</translation>
+    </message>
+    <message>
+        <source>This built-in dictionary cannot be deleted.</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

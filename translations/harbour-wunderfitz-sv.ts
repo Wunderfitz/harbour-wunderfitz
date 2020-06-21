@@ -61,6 +61,13 @@
     </message>
 </context>
 <context>
+    <name>CoverPage</name>
+    <message>
+        <source>Dictionary</source>
+        <translation type="unfinished">Ordbok</translation>
+    </message>
+</context>
+<context>
     <name>DictionariesPage</name>
     <message>
         <source>Dictionaries</source>
@@ -109,6 +116,10 @@
     <message>
         <source>Dictionary %1 imported</source>
         <translation>Ordbok %1 importerad</translation>
+    </message>
+    <message>
+        <source>This built-in dictionary cannot be deleted.</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
