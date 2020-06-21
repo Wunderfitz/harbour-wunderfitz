@@ -22,23 +22,6 @@ import Sailfish.Silica 1.0
 import "."
 
 CoverBackground {
-
-    Image {
-        source: "../../images/background.png"
-        anchors {
-            verticalCenter: parent.verticalCenter
-
-            bottom: parent.bottom
-            bottomMargin: Theme.paddingMedium
-
-            right: parent.right
-            rightMargin: Theme.paddingMedium
-        }
-
-        fillMode: Image.PreserveAspectFit
-        opacity: 0.1
-    }
-
     SilicaListView {
         id: coverListView
         anchors {
