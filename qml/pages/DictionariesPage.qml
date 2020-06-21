@@ -25,6 +25,7 @@ import Nemo.DBus 2.0
 Page {
     id: dictionariesPage
     allowedOrientations: Orientation.All
+    property bool canDeleteCurrentDictionary: (dictionaryModel.selectedDictionaryId === "heinzelnisse") ? false : true
 
     function toggleBusyIndicator() {
         busyIndicator.running = dictCCImporterModel.isWorking()
@@ -77,20 +78,11 @@ Page {
     }
 
     SilicaFlickable {
-
         id: dictionaryFlickable
         anchors.fill: parent
         contentHeight: dictionariesColumn.height
         Behavior on opacity { NumberAnimation {} }
         opacity: dictCCImporterModel.isWorking() ? 0 : 1
-
-        Connections {
-            target: dictionaryModel
-            onDictionaryChanged: {
-                dictionaryPullDown.enabled = (dictionaryModel.getSelectedDictionaryId() === "heinzelnisse") ? false : true
-                dictionaryComboBox.currentIndex = dictionaryModel.getSelectedDictionaryIndex();
-            }
-        }
 
         RemorsePopup {
             id: remorseDelete
@@ -99,10 +91,10 @@ Page {
         PullDownMenu {
             id: dictionaryPullDown
             MenuItem {
+                visible: canDeleteCurrentDictionary
                 text: qsTr("Delete selected dictionary")
-                onClicked: remorseDelete.execute(qsTr("Deleting dictionary %1").arg(dictionaryModel.getSelectedDictionaryId()), function() {dictionaryModel.deleteSelectedDictionary()}, 4000)
+                onClicked: remorseDelete.execute(qsTr("Deleting dictionary %1").arg(dictionaryModel.selectedDictionaryId), function() {dictionaryModel.deleteSelectedDictionary()}, 4000)
             }
-            enabled: (dictionaryModel.getSelectedDictionaryId() === "heinzelnisse") ? false : true
         }
 
         Column {
@@ -117,7 +109,8 @@ Page {
             ComboBox {
                 id: dictionaryComboBox
                 label: qsTr("Dictionary")
-                currentIndex: dictionaryModel.getSelectedDictionaryIndex()
+                property int selectedIndexProxy: dictionaryModel.selectedDictionaryIndex
+                onSelectedIndexProxyChanged: currentIndex = selectedIndexProxy
                 description: qsTr("Choose the active dictionary here")
                 menu: ContextMenu {
                     Repeater {

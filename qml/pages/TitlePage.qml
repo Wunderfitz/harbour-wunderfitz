@@ -243,7 +243,10 @@ Page {
                                 ComboBox {
                                     id: headerDictionaryBox
                                     y: Theme.paddingSmall
-                                    currentIndex: dictionaryModel.getSelectedDictionaryIndex()
+                                    property int selectedIndexProxy: dictionaryModel.selectedDictionaryIndex
+                                    onSelectedIndexProxyChanged: currentIndex = selectedIndexProxy
+                                    onCurrentIndexChanged: heinzelnisseModel.search(searchField.text)
+                                    currentIndex: selectedIndexProxy
                                     label: qsTr("Active Dictionary:")
                                     width: parent.width
                                     menu: ContextMenu {
@@ -255,15 +258,6 @@ Page {
                                         }
                                         onActivated: {
                                             dictionaryModel.selectDictionary(index);
-                                        }
-                                    }
-
-                                    Connections {
-                                        // If dictionary is changed from DictionariesPage, we have to update index and search.
-                                        target: dictionaryModel
-                                        onDictionaryChanged: {
-                                            headerDictionaryBox.currentIndex = dictionaryModel.getSelectedDictionaryIndex()
-                                            heinzelnisseModel.search(searchField.text)
                                         }
                                     }
                                 }
