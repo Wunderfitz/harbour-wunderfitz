@@ -47,12 +47,21 @@ Page {
                 text: qsTr("Cloud API")
             }
 
+            TextSwitch {
+                checked: useCloud
+                text: qsTr("Enable cloud features")
+                description: qsTr("The Curiosity feature needs API keys and access to the Internet. " +
+                                  "No data is uploaded without your consent.")
+                onClicked: curiosity.useCloud = !curiosity.useCloud
+            }
+
             TextField {
                 id: computerVisionKeyField
                 width: parent.width
                 placeholderText: qsTr("Azure Computer Vision API Key")
                 label: placeholderText
                 onTextChanged: curiosity.setComputerVisionKey(text)
+                enabled: useCloud
             }
 
             TextField {
@@ -61,6 +70,7 @@ Page {
                 placeholderText: qsTr("Azure Translator Text API Key")
                 label: placeholderText
                 onTextChanged: curiosity.setTranslatorTextKey(text)
+                enabled: useCloud
             }
 
             Label {
