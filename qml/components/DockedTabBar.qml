@@ -8,9 +8,10 @@ DockedPanel {
 
     property bool _debug: false
     property int _orientation: pageStack.currentOrientation
-    property alias _orientationState: orientationContainer.state
+    property alias _orientationState: orientationStateContainer.state
     property bool isVertical: orientation === Orientation.Landscape || orientation === Orientation.LandscapeInverted
     property bool isHorizontal: orientation === Orientation.Portrait || orientation === Orientation.PortraitInverted
+    property bool isInverted: orientation === Orientation.LandscapeInverted || orientation === Orientation.PortraitInverted
 
     property int _baseTabHeight: Theme.itemSizeLarge
 
@@ -50,12 +51,15 @@ DockedPanel {
         id: separator
         horizontalAlignment: Qt.AlignHCenter
         width: parent.width
-        anchors.top: contentFlow.top
+        // Normally, the separator is placed correctly. However, then the tab bar
+        // is vertical and inverted, it has to be placed at the opposite side.
+        // When it is vertical and normal, it has to be placed a bit to the right so
+        // it is invisible when the dock is closed.
+        x: ((!isInverted && isVertical) ? contentFlow.width : (isVertical ? height : 0))
         color: Theme.primaryColor
         transform: Rotation {
             id: separatorRotation
             angle: 0
-            // FIXME, TODO: the separator is still visible when the dock is vertical and hidden
         }
     }
 
@@ -133,9 +137,6 @@ DockedPanel {
                 tabBar.width = tabWidth*cols;
                 tabBar.height = __silica_applicationwindow_instance.width;
                 __silica_applicationwindow_instance.bottomMargin = 0;
-                // __silica_applicationwindow_instance._clippingItem.height = Qt.binding(function(){ return __silica_applicationwindow_instance.height - tabBar.visibleSize; })
-
-                // FIXME, TODO: dock and separator are on the wrong side for LandscapeInverted
 
                 console.log("#:", usedHeight, tabsPerCol, cols, lastColIndex, tabHeight, tabWidth,
                             lastColCount, lastColOuterTabHeight, tabBar.width, tabBar.visibleSize);
@@ -185,7 +186,7 @@ DockedPanel {
     }
 
     Item {
-        id: orientationContainer
+        id: orientationStateContainer
         onStateChanged: console.log("=>", state)
         states: [
             State {
@@ -198,7 +199,10 @@ DockedPanel {
                 name: "vertical"
                 PropertyChanges {
                     target: tabBar
-                    dock: Dock.Right
+                    // When not inverted: __silica_applicationwindow_instance._clippingItem is
+                    // anchored to the right edge of its parent and does not follow any
+                    // AnchorChanges made here, so we place the tab bar at the left side.
+                    dock: isInverted ? Dock.Right : Dock.Left
                 }
                 PropertyChanges {
                     target: __silica_applicationwindow_instance._clippingItem
