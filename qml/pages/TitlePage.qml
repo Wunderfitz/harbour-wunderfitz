@@ -68,13 +68,29 @@ Page {
             anchors.fill: parent
             itemWidth: width
             clip: true
-
             model: VisualItemModel {
-                DictionariesView { width: viewsSlideshow.width; height: viewsSlideshow.height }
-                CuriosityView { width: viewsSlideshow.width; height: viewsSlideshow.height }
+                Loader {
+                    width: viewsSlideshow.width; height: viewsSlideshow.height
+                    source: Qt.resolvedUrl("../components/DictionariesView.qml")
+                }
+                Loader {
+                    width: viewsSlideshow.width; height: viewsSlideshow.height
+                    source: useCloud ? Qt.resolvedUrl("../components/CuriosityView.qml") : ""
+                    asynchronous: true
+                    onSourceChanged: {
+                        if (source == "") console.log("CuriosityView unloaded", source);
+                        else console.log("CuriosityView loaded:", source);
+                    }
+                }
             }
 
             onCurrentIndexChanged: openTab(currentIndex)
+            interactive: useCloud
+
+            Connections {
+                target: curiosity
+                onUseCloudChanged: if (!useCloud) viewsSlideshow.currentIndex = 0
+            }
 
             Behavior on opacity { NumberAnimation {} }
             onOpacityChanged: {
