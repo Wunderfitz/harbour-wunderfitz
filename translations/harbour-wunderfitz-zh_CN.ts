@@ -65,154 +65,11 @@
     <name>CoverPage</name>
     <message>
         <source>Dictionary</source>
-        <translation type="unfinished">词典</translation>
-    </message>
-</context>
-<context>
-    <name>DictionariesPage</name>
-    <message>
-        <source>Dictionaries</source>
-        <translation>词典</translation>
-    </message>
-    <message>
-        <source></source>
-        <translation></translation>
-    </message>
-    <message>
-        <source>Download dict.cc dictionaries</source>
-        <translation>下载 dict.cc 词典</translation>
-    </message>
-    <message>
-        <source>Import dict.cc ZIP archives</source>
-        <translation>导入 dict.cc ZIP 文档</translation>
-    </message>
-    <message>
-        <source>Dict.cc Import</source>
-        <translation>导入 Dict.cc</translation>
-    </message>
-    <message>
-        <source>Dict.cc does not allow other applications such as Wunderfitz to ship their dictionaries. Therefore, you must download them from dict.cc yourself. Use the Download link, follow the instructions and import the files here afterwards. The downloaded dict.cc ZIP files must be placed in the Downloads folder. If in doubt, use the SailfishOS E-Mail and Browser apps to store the downloads there automatically. After the import in Wunderfitz you can delete the ZIP archives. Please note that you only need to download one combination of two languages. For example if you use DE-EN, you don&apos;t need EN-DE as Wunderfitz always searches in both languages.</source>
-        <translation>Dict.cc 不允许其它软件（例如 Wunderfitz）传输它们的词典。因此你必须自己从 dict.cc 下载词典。使用下载链接、遵从指导然后在此导入文件。下载的 dict.cc ZIP 文件必须放置于&quot;Download&quot;文件夹之内。如果你不知如何操作，请使用旗鱼系统电子邮件及浏览器软件以自动保存到&quot;Download&quot;文件夹。导入到 Wunderfitz 之后你可以删除 ZIP 文档。请注意:你只需下载两种语言的一种组合。例如，如果你使用 DE-EN ，无需再次下载 EN-DE 。Wunderfitz 会自动在两种语言之间进行搜索。</translation>
-    </message>
-    <message>
-        <source>Dictionary</source>
-        <translation>词典</translation>
-    </message>
-    <message>
-        <source>Choose the active dictionary here</source>
-        <translation>在此选择词典文档</translation>
-    </message>
-    <message>
-        <source>Delete selected dictionary</source>
-        <translation>删除所选词典</translation>
-    </message>
-    <message>
-        <source>Dictionary %1 successfully imported</source>
-        <translation>词典 %1 已成功导入</translation>
-    </message>
-    <message>
-        <source>Deleting dictionary %1</source>
-        <translation>正在删除词典 %1</translation>
-    </message>
-    <message>
-        <source>Dictionary %1 imported</source>
-        <translation>词典 %1 已导入</translation>
-    </message>
-    <message>
-        <source>This built-in dictionary cannot be deleted.</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
-    <name>DictionaryButton</name>
-    <message>
-        <source>Dictionaries</source>
         <translation>词典</translation>
     </message>
 </context>
 <context>
-    <name>LoadingIndicator</name>
-    <message>
-        <source>Loading...</source>
-        <translation>正在加载……</translation>
-    </message>
-</context>
-<context>
-    <name>SettingsPage</name>
-    <message>
-        <source>Settings</source>
-        <translation>设置</translation>
-    </message>
-    <message>
-        <source>Cloud API</source>
-        <translation>云服务 API</translation>
-    </message>
-    <message>
-        <source>Azure Computer Vision API Key</source>
-        <translation>Azure 计算机版本 API 密钥</translation>
-    </message>
-    <message>
-        <source>Azure Translator Text API Key</source>
-        <translation>Azure 翻译器文本 API 密钥</translation>
-    </message>
-</context>
-<context>
-    <name>TextPage</name>
-    <message>
-        <source>Copy translation to clipboard</source>
-        <translation>复制翻译到剪切板</translation>
-    </message>
-    <message>
-        <source>Copy original to clipboard</source>
-        <translation>复制原文到剪切板</translation>
-    </message>
-    <message>
-        <source>Result</source>
-        <translation>结果</translation>
-    </message>
-    <message>
-        <source>Original</source>
-        <translation>原文</translation>
-    </message>
-    <message>
-        <source>Translation</source>
-        <translation>翻译</translation>
-    </message>
-</context>
-<context>
-    <name>TitlePage</name>
-    <message>
-        <source>About Wunderfitz</source>
-        <translation>关于 Wunderfitz</translation>
-    </message>
-    <message>
-        <source>Dictionaries</source>
-        <translation>词典</translation>
-    </message>
-    <message>
-        <source>Pull down the menu to import and change your dictionaries</source>
-        <translation>下拉菜单以导入及更换你的词典</translation>
-    </message>
-    <message>
-        <source>Searching...</source>
-        <translation>正在搜索……</translation>
-    </message>
-    <message>
-        <source>No results found</source>
-        <translation>没有找到结果</translation>
-    </message>
-    <message>
-        <source>Search in dictionary...</source>
-        <translation>在词典内搜索……</translation>
-    </message>
-    <message>
-        <source>Copy to clipboard</source>
-        <translation>复制到剪切板</translation>
-    </message>
-    <message>
-        <source>Search for &apos;%1&apos;</source>
-        <translation>搜索 &apos;%1&apos;</translation>
-    </message>
+    <name>CuriosityView</name>
     <message>
         <source>No camera available</source>
         <translation>相机不可用</translation>
@@ -232,6 +89,10 @@
     <message>
         <source>Source Language</source>
         <translation>源语言</translation>
+    </message>
+    <message>
+        <source>Auto-Detect</source>
+        <translation>自动检测</translation>
     </message>
     <message>
         <source>Chinese-Simplified</source>
@@ -336,10 +197,6 @@
     <message>
         <source>Slovak</source>
         <translation>斯洛伐克语</translation>
-    </message>
-    <message>
-        <source>Auto-Detect</source>
-        <translation>自动检测</translation>
     </message>
     <message>
         <source>Target Language</source>
@@ -494,10 +351,6 @@
         <translation>云服务及测试警告</translation>
     </message>
     <message>
-        <source>Accept</source>
-        <translation>接受</translation>
-    </message>
-    <message>
         <source>The Curiosity feature - taking a picture and automatically translating all recognized text on it - uses other people&apos;s computers (aka &quot;Cloud&quot;) to work. So, your picture is uploaded to another server, analyzed and the information is sent back to this app. So, be cautious if you take pictures of private or confidential data! The Cloud provider is Microsoft Azure. (You see the irony of having Microsoft services running on Sailfish OS ;) ?) By using this service you accept</source>
         <translation>The Curiosity feature - taking a picture and automatically translating all recognized text on it - uses other people&apos;s computers (aka &quot;Cloud&quot;) to work. So, your picture is uploaded to another server, analyzed and the information is sent back to this app. So, be cautious if you take pictures of private or confidential data! The Cloud provider is Microsoft Azure. (You see the irony of having Microsoft services running on Sailfish OS ;) ?) By using this service you accept
 ​智能识图功能—即拍照并自动翻译所有识别到的文本。此项功能需要用到其它用户的计算机（也称作云服务）才能工作。所以你的图片会被上传到其它服务器以进行分析然后返回数据到本软件。所以请勿随意上传你的隐私及机密照片！云服务提供商为 Microsoft Azure 。（讽刺的是旗鱼系统上拥有 Microsoft 服务;）?）你需要接受以下条款以使用此功能</translation>
@@ -507,12 +360,12 @@
         <translation>&lt;a href=&quot;https://azure.microsoft.com/support/legal/&quot;&gt; Microsoft Azure 使用条款及隐私政策声明 &lt;/a&gt;</translation>
     </message>
     <message>
-        <source>Active Dictionary:</source>
-        <translation>启用词典:</translation>
+        <source>Moreover, the Curiosity feature is beta! This means that there is no guarantee that it works as you wish or that it will continue working forever in this or a future version of Wunderfitz. It may cease to work without any prior warning...</source>
+        <translation>智能识图功能尚处于测试阶段！我无法保证它取得符合你预期的效果以及承诺在今后的 Wunderfitz 版本中进一步完善此功能。此功能可能会在今后的开发中随时被移除，而不会提前告知你。</translation>
     </message>
     <message>
-        <source>Settings</source>
-        <translation>设置</translation>
+        <source>Accept</source>
+        <translation>接受</translation>
     </message>
     <message>
         <source>Azure API Keys not set</source>
@@ -531,13 +384,535 @@
         <source>Reload</source>
         <translation>重新加载</translation>
     </message>
+</context>
+<context>
+    <name>DictionariesPage</name>
+    <message>
+        <source>Dictionaries</source>
+        <translation>词典</translation>
+    </message>
+    <message>
+        <source></source>
+        <translation></translation>
+    </message>
+    <message>
+        <source>Download dict.cc dictionaries</source>
+        <translation>下载 dict.cc 词典</translation>
+    </message>
+    <message>
+        <source>Import dict.cc ZIP archives</source>
+        <translation>导入 dict.cc ZIP 文档</translation>
+    </message>
+    <message>
+        <source>Dict.cc Import</source>
+        <translation>导入 Dict.cc</translation>
+    </message>
+    <message>
+        <source>Dict.cc does not allow other applications such as Wunderfitz to ship their dictionaries. Therefore, you must download them from dict.cc yourself. Use the Download link, follow the instructions and import the files here afterwards. The downloaded dict.cc ZIP files must be placed in the Downloads folder. If in doubt, use the SailfishOS E-Mail and Browser apps to store the downloads there automatically. After the import in Wunderfitz you can delete the ZIP archives. Please note that you only need to download one combination of two languages. For example if you use DE-EN, you don&apos;t need EN-DE as Wunderfitz always searches in both languages.</source>
+        <translation>Dict.cc 不允许其它软件（例如 Wunderfitz）传输它们的词典。因此你必须自己从 dict.cc 下载词典。使用下载链接、遵从指导然后在此导入文件。下载的 dict.cc ZIP 文件必须放置于&quot;Download&quot;文件夹之内。如果你不知如何操作，请使用旗鱼系统电子邮件及浏览器软件以自动保存到&quot;Download&quot;文件夹。导入到 Wunderfitz 之后你可以删除 ZIP 文档。请注意:你只需下载两种语言的一种组合。例如，如果你使用 DE-EN ，无需再次下载 EN-DE 。Wunderfitz 会自动在两种语言之间进行搜索。</translation>
+    </message>
+    <message>
+        <source>Dictionary</source>
+        <translation>词典</translation>
+    </message>
+    <message>
+        <source>Choose the active dictionary here</source>
+        <translation>在此选择词典文档</translation>
+    </message>
+    <message>
+        <source>Delete selected dictionary</source>
+        <translation>删除所选词典</translation>
+    </message>
+    <message>
+        <source>Dictionary %1 successfully imported</source>
+        <translation>词典 %1 已成功导入</translation>
+    </message>
+    <message>
+        <source>Deleting dictionary %1</source>
+        <translation>正在删除词典 %1</translation>
+    </message>
+    <message>
+        <source>Dictionary %1 imported</source>
+        <translation>词典 %1 已导入</translation>
+    </message>
+    <message>
+        <source>This built-in dictionary cannot be deleted.</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>DictionariesView</name>
+    <message>
+        <source>Pull down the menu to import and change your dictionaries</source>
+        <translation>下拉菜单以导入及更换你的词典</translation>
+    </message>
+    <message>
+        <source>Searching...</source>
+        <translation>正在搜索……</translation>
+    </message>
+    <message>
+        <source>No results found</source>
+        <translation>没有找到结果</translation>
+    </message>
+    <message>
+        <source>Active Dictionary:</source>
+        <translation>启用词典:</translation>
+    </message>
+    <message>
+        <source>Search in dictionary...</source>
+        <translation>在词典内搜索……</translation>
+    </message>
+    <message>
+        <source>Copy to clipboard</source>
+        <translation>复制到剪切板</translation>
+    </message>
+    <message>
+        <source>Search for &apos;%1&apos;</source>
+        <translation>搜索 &apos;%1&apos;</translation>
+    </message>
+</context>
+<context>
+    <name>DictionaryButton</name>
+    <message>
+        <source>Dictionaries</source>
+        <translation type="vanished">词典</translation>
+    </message>
+</context>
+<context>
+    <name>LoadingIndicator</name>
+    <message>
+        <source>Loading...</source>
+        <translation>正在加载……</translation>
+    </message>
+</context>
+<context>
+    <name>SettingsPage</name>
+    <message>
+        <source>Settings</source>
+        <translation>设置</translation>
+    </message>
+    <message>
+        <source>Cloud API</source>
+        <translation>云服务 API</translation>
+    </message>
+    <message>
+        <source>Azure Computer Vision API Key</source>
+        <translation>Azure 计算机版本 API 密钥</translation>
+    </message>
+    <message>
+        <source>Azure Translator Text API Key</source>
+        <translation>Azure 翻译器文本 API 密钥</translation>
+    </message>
+    <message>
+        <source>Enable cloud features</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The Curiosity feature needs API keys and access to the Internet. No data is uploaded without your consent.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Accept Microsoft Azure terms and conditions</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>You have to accept the terms of service and the privacy statement in order to use this service. More information is given when opening the Curiosity feature.</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>TextPage</name>
+    <message>
+        <source>Copy translation to clipboard</source>
+        <translation>复制翻译到剪切板</translation>
+    </message>
+    <message>
+        <source>Copy original to clipboard</source>
+        <translation>复制原文到剪切板</translation>
+    </message>
+    <message>
+        <source>Result</source>
+        <translation>结果</translation>
+    </message>
+    <message>
+        <source>Original</source>
+        <translation>原文</translation>
+    </message>
+    <message>
+        <source>Translation</source>
+        <translation>翻译</translation>
+    </message>
+</context>
+<context>
+    <name>TitlePage</name>
+    <message>
+        <source>About Wunderfitz</source>
+        <translation>关于 Wunderfitz</translation>
+    </message>
+    <message>
+        <source>Dictionaries</source>
+        <translation>词典</translation>
+    </message>
+    <message>
+        <source>Pull down the menu to import and change your dictionaries</source>
+        <translation type="vanished">下拉菜单以导入及更换你的词典</translation>
+    </message>
+    <message>
+        <source>Searching...</source>
+        <translation type="vanished">正在搜索……</translation>
+    </message>
+    <message>
+        <source>No results found</source>
+        <translation type="vanished">没有找到结果</translation>
+    </message>
+    <message>
+        <source>Search in dictionary...</source>
+        <translation type="vanished">在词典内搜索……</translation>
+    </message>
+    <message>
+        <source>Copy to clipboard</source>
+        <translation type="vanished">复制到剪切板</translation>
+    </message>
+    <message>
+        <source>Search for &apos;%1&apos;</source>
+        <translation type="vanished">搜索 &apos;%1&apos;</translation>
+    </message>
+    <message>
+        <source>No camera available</source>
+        <translation type="vanished">相机不可用</translation>
+    </message>
+    <message>
+        <source>Processing image...</source>
+        <translation type="vanished">正在处理图片……</translation>
+    </message>
+    <message>
+        <source>Uploading image, %1% completed...</source>
+        <translation type="vanished">正在更新图片，已完成 %1% ……</translation>
+    </message>
+    <message>
+        <source>Translating text...</source>
+        <translation type="vanished">正在翻译文本……</translation>
+    </message>
+    <message>
+        <source>Source Language</source>
+        <translation type="vanished">源语言</translation>
+    </message>
+    <message>
+        <source>Chinese-Simplified</source>
+        <translation type="vanished">汉语（简体）</translation>
+    </message>
+    <message>
+        <source>Chinese-Traditional</source>
+        <translation type="vanished">漢語（繁體）</translation>
+    </message>
+    <message>
+        <source>Czech</source>
+        <translation type="vanished">捷克语</translation>
+    </message>
+    <message>
+        <source>Danish</source>
+        <translation type="vanished">丹麦语</translation>
+    </message>
+    <message>
+        <source>Dutch</source>
+        <translation type="vanished">荷兰语</translation>
+    </message>
+    <message>
+        <source>English</source>
+        <translation type="vanished">英语</translation>
+    </message>
+    <message>
+        <source>Finnish</source>
+        <translation type="vanished">芬兰语</translation>
+    </message>
+    <message>
+        <source>French</source>
+        <translation type="vanished">法语</translation>
+    </message>
+    <message>
+        <source>German</source>
+        <translation type="vanished">德语</translation>
+    </message>
+    <message>
+        <source>Greek</source>
+        <translation type="vanished">希腊语</translation>
+    </message>
+    <message>
+        <source>Hungarian</source>
+        <translation type="vanished">匈牙利语</translation>
+    </message>
+    <message>
+        <source>Italian</source>
+        <translation type="vanished">意大利语</translation>
+    </message>
+    <message>
+        <source>Japanese</source>
+        <translation type="vanished">日语</translation>
+    </message>
+    <message>
+        <source>Korean</source>
+        <translation type="vanished">韩语（朝鲜语)</translation>
+    </message>
+    <message>
+        <source>Norwegian</source>
+        <translation type="vanished">挪威语</translation>
+    </message>
+    <message>
+        <source>Polish</source>
+        <translation type="vanished">波兰语</translation>
+    </message>
+    <message>
+        <source>Portuguese</source>
+        <translation type="vanished">葡萄牙语</translation>
+    </message>
+    <message>
+        <source>Russian</source>
+        <translation type="vanished">俄语</translation>
+    </message>
+    <message>
+        <source>Spanish</source>
+        <translation type="vanished">西班牙语</translation>
+    </message>
+    <message>
+        <source>Swedish</source>
+        <translation type="vanished">瑞典语</translation>
+    </message>
+    <message>
+        <source>Turkish</source>
+        <translation type="vanished">土耳其语</translation>
+    </message>
+    <message>
+        <source>Arabic</source>
+        <translation type="vanished">阿拉伯语</translation>
+    </message>
+    <message>
+        <source>Romanian</source>
+        <translation type="vanished">罗马尼亚语</translation>
+    </message>
+    <message>
+        <source>Serbian-Cyrillic</source>
+        <translation type="vanished">西里尔塞尔维亚语</translation>
+    </message>
+    <message>
+        <source>Serbian-Latin</source>
+        <translation type="vanished">拉丁塞尔维亚语</translation>
+    </message>
+    <message>
+        <source>Slovak</source>
+        <translation type="vanished">斯洛伐克语</translation>
+    </message>
+    <message>
+        <source>Auto-Detect</source>
+        <translation type="vanished">自动检测</translation>
+    </message>
+    <message>
+        <source>Target Language</source>
+        <translation type="vanished">目标语言</translation>
+    </message>
+    <message>
+        <source>Afrikaans</source>
+        <translation type="vanished">南非语</translation>
+    </message>
+    <message>
+        <source>Bulgarian</source>
+        <translation type="vanished">保加利亚语</translation>
+    </message>
+    <message>
+        <source>Bangla</source>
+        <translation type="vanished">孟加拉语</translation>
+    </message>
+    <message>
+        <source>Bosnian</source>
+        <translation type="vanished">波斯尼亚语</translation>
+    </message>
+    <message>
+        <source>Catalan</source>
+        <translation type="vanished">加⁮泰罗尼亚语</translation>
+    </message>
+    <message>
+        <source>Welsh</source>
+        <translation type="vanished">威尔士语</translation>
+    </message>
+    <message>
+        <source>Estonian</source>
+        <translation type="vanished">爱沙尼亚语</translation>
+    </message>
+    <message>
+        <source>Persian</source>
+        <translation type="vanished">波斯语</translation>
+    </message>
+    <message>
+        <source>Filipino</source>
+        <translation type="vanished">菲律宾语</translation>
+    </message>
+    <message>
+        <source>Fijian</source>
+        <translation type="vanished">斐济语</translation>
+    </message>
+    <message>
+        <source>Hebrew</source>
+        <translation type="vanished">希伯来语</translation>
+    </message>
+    <message>
+        <source>Hindi</source>
+        <translation type="vanished">印地语</translation>
+    </message>
+    <message>
+        <source>Croatian</source>
+        <translation type="vanished">克罗地亚语</translation>
+    </message>
+    <message>
+        <source>Haitian Creole</source>
+        <translation type="vanished">海地克里奥尔语</translation>
+    </message>
+    <message>
+        <source>Indonesian</source>
+        <translation type="vanished">印度尼西亚语</translation>
+    </message>
+    <message>
+        <source>Icelandic</source>
+        <translation type="vanished">冰岛语</translation>
+    </message>
+    <message>
+        <source>Lithuanian</source>
+        <translation type="vanished">立陶宛语</translation>
+    </message>
+    <message>
+        <source>Latvian</source>
+        <translation type="vanished">拉脱维亚语</translation>
+    </message>
+    <message>
+        <source>Malagasy</source>
+        <translation type="vanished">马尔加什语</translation>
+    </message>
+    <message>
+        <source>Malay</source>
+        <translation type="vanished">马来语</translation>
+    </message>
+    <message>
+        <source>Maltese</source>
+        <translation type="vanished">马耳他语</translation>
+    </message>
+    <message>
+        <source>Hmong Daw</source>
+        <translation type="vanished">白苗语</translation>
+    </message>
+    <message>
+        <source>Querétaro Otomi</source>
+        <translation type="vanished">克雷塔罗奥托米语</translation>
+    </message>
+    <message>
+        <source>Slovenian</source>
+        <translation type="vanished">斯洛文尼亚语</translation>
+    </message>
+    <message>
+        <source>Samoan</source>
+        <translation type="vanished">萨摩亚语</translation>
+    </message>
+    <message>
+        <source>Kiswahili</source>
+        <translation type="vanished">斯瓦希里语</translation>
+    </message>
+    <message>
+        <source>Tamil</source>
+        <translation type="vanished">泰米尔语</translation>
+    </message>
+    <message>
+        <source>Thai</source>
+        <translation type="vanished">泰语</translation>
+    </message>
+    <message>
+        <source>Klingon</source>
+        <translation type="vanished">克林贡语</translation>
+    </message>
+    <message>
+        <source>Tongan</source>
+        <translation type="vanished">汤加语</translation>
+    </message>
+    <message>
+        <source>Tahitian</source>
+        <translation type="vanished">塔希提语</translation>
+    </message>
+    <message>
+        <source>Ukrainian</source>
+        <translation type="vanished">乌克兰语</translation>
+    </message>
+    <message>
+        <source>Urdu</source>
+        <translation type="vanished">乌尔都语</translation>
+    </message>
+    <message>
+        <source>Vietnamese</source>
+        <translation type="vanished">越南语</translation>
+    </message>
+    <message>
+        <source>Yucatec Maya</source>
+        <translation type="vanished">尤卡坦玛雅语</translation>
+    </message>
+    <message>
+        <source>Cantonese-Traditional</source>
+        <translation type="vanished">粤语</translation>
+    </message>
+    <message>
+        <source>Cloud and Beta Warning</source>
+        <translation type="vanished">云服务及测试警告</translation>
+    </message>
+    <message>
+        <source>Accept</source>
+        <translation type="vanished">接受</translation>
+    </message>
+    <message>
+        <source>The Curiosity feature - taking a picture and automatically translating all recognized text on it - uses other people&apos;s computers (aka &quot;Cloud&quot;) to work. So, your picture is uploaded to another server, analyzed and the information is sent back to this app. So, be cautious if you take pictures of private or confidential data! The Cloud provider is Microsoft Azure. (You see the irony of having Microsoft services running on Sailfish OS ;) ?) By using this service you accept</source>
+        <translation type="vanished">The Curiosity feature - taking a picture and automatically translating all recognized text on it - uses other people&apos;s computers (aka &quot;Cloud&quot;) to work. So, your picture is uploaded to another server, analyzed and the information is sent back to this app. So, be cautious if you take pictures of private or confidential data! The Cloud provider is Microsoft Azure. (You see the irony of having Microsoft services running on Sailfish OS ;) ?) By using this service you accept
+​智能识图功能—即拍照并自动翻译所有识别到的文本。此项功能需要用到其它用户的计算机（也称作云服务）才能工作。所以你的图片会被上传到其它服务器以进行分析然后返回数据到本软件。所以请勿随意上传你的隐私及机密照片！云服务提供商为 Microsoft Azure 。（讽刺的是旗鱼系统上拥有 Microsoft 服务;）?）你需要接受以下条款以使用此功能</translation>
+    </message>
+    <message>
+        <source>&lt;a href=&quot;https://azure.microsoft.com/support/legal/&quot;&gt;The Microsoft Azure terms of service and privacy statement&lt;/a&gt;</source>
+        <translation type="vanished">&lt;a href=&quot;https://azure.microsoft.com/support/legal/&quot;&gt; Microsoft Azure 使用条款及隐私政策声明 &lt;/a&gt;</translation>
+    </message>
+    <message>
+        <source>Active Dictionary:</source>
+        <translation type="vanished">启用词典:</translation>
+    </message>
+    <message>
+        <source>Settings</source>
+        <translation>设置</translation>
+    </message>
+    <message>
+        <source>Azure API Keys not set</source>
+        <translation type="vanished">未设置 Azure API 密钥</translation>
+    </message>
+    <message>
+        <source>The Curiosity feature - taking a picture and automatically translating all recognized text on it - needs Microsoft Azure API keys to work. Please obtain API keys for the &lt;a href=&quot;https://azure.microsoft.com/en-gb/services/cognitive-services/computer-vision/&quot;&gt;Computer Vision&lt;/a&gt; and the &lt;a href=&quot;https://azure.microsoft.com/en-gb/services/cognitive-services/translator-text-api/&quot;&gt;Translator Text&lt;/a&gt; API, enter them on the settings page and have fun!</source>
+        <translation type="vanished">
+​智能识图功能——即拍照并自动翻译所有识别到的文本。此项功能需要用到 Microsoft  Azure API 密钥才能工作。请从下方链接获取 API 密钥 &lt;a href=&quot;https://azure.microsoft.com/en-gb/services/cognitive-services/computer-vision/&quot;&gt;Computer Vision&lt;/a&gt; and the &lt;a href=&quot;https://azure.microsoft.com/en-gb/services/cognitive-services/translator-text-api/&quot;&gt;Translator Text&lt;/a&gt; 在设置页面输入它们。祝你愉快！</translation>
+    </message>
+    <message>
+        <source>Open Settings</source>
+        <translation type="vanished">打开设置</translation>
+    </message>
+    <message>
+        <source>Reload</source>
+        <translation type="vanished">重新加载</translation>
+    </message>
     <message>
         <source>Moreover, the Curiosity feature is beta! This means that there is no guarantee that it works as you wish or that it will continue working forever in this or a future version of Wunderfitz. It may cease to work without any prior warning...</source>
-        <translation>智能识图功能尚处于测试阶段！我无法保证它取得符合你预期的效果以及承诺在今后的 Wunderfitz 版本中进一步完善此功能。此功能可能会在今后的开发中随时被移除，而不会提前告知你。</translation>
+        <translation type="vanished">智能识图功能尚处于测试阶段！我无法保证它取得符合你预期的效果以及承诺在今后的 Wunderfitz 版本中进一步完善此功能。此功能可能会在今后的开发中随时被移除，而不会提前告知你。</translation>
     </message>
 </context>
 <context>
     <name>WunderfitzButton</name>
+    <message>
+        <source>Curiosity</source>
+        <translation type="vanished">智能识图</translation>
+    </message>
+</context>
+<context>
+    <name>harbour-wunderfitz</name>
+    <message>
+        <source>Dictionaries</source>
+        <translation>词典</translation>
+    </message>
     <message>
         <source>Curiosity</source>
         <translation>智能识图</translation>

@@ -64,154 +64,11 @@
     <name>CoverPage</name>
     <message>
         <source>Dictionary</source>
-        <translation type="unfinished">Szótár</translation>
-    </message>
-</context>
-<context>
-    <name>DictionariesPage</name>
-    <message>
-        <source>Dictionaries</source>
-        <translation>Szótárak</translation>
-    </message>
-    <message>
-        <source></source>
-        <translation></translation>
-    </message>
-    <message>
-        <source>Download dict.cc dictionaries</source>
-        <translation>Tölts le dict.cc szótárakat</translation>
-    </message>
-    <message>
-        <source>Import dict.cc ZIP archives</source>
-        <translation>Importálj dict.cc ZIP archívumokat</translation>
-    </message>
-    <message>
-        <source>Dict.cc Import</source>
-        <translation>Dict.cc importálás</translation>
-    </message>
-    <message>
-        <source>Dict.cc does not allow other applications such as Wunderfitz to ship their dictionaries. Therefore, you must download them from dict.cc yourself. Use the Download link, follow the instructions and import the files here afterwards. The downloaded dict.cc ZIP files must be placed in the Downloads folder. If in doubt, use the SailfishOS E-Mail and Browser apps to store the downloads there automatically. After the import in Wunderfitz you can delete the ZIP archives. Please note that you only need to download one combination of two languages. For example if you use DE-EN, you don&apos;t need EN-DE as Wunderfitz always searches in both languages.</source>
-        <translation>A Dict.cc nem engedélyezi más alkalmazások, mint a Wunderfitz, hogy az ő szótáraikat forgalmazza. Ezért saját magadnak kell letöltened a dict.cc-ről. Használd a letöltés linket, kövesd az utasításokat, majd utána importáld a fájlokat ide. A letöltött dict.cc ZIP fájlokat a Letöltések mappában kell elhelyezni. Ha nem vagy bizos magadban, használd a SailfishOS E-Mail és Böngésző alkalmazásokat a letöltések automatikusan itt történő tárolásához. A Wunderfitz-be való importálás után törölheted a ZIP archívumokat. Vedd figyelembe, hogy a két nyelv csak egy kombinációját kell letöltened. Ha például te a német-magyart használod, nincs szükség a magyar-németre is, mert a Wunderfitz mindig mindkét nyelvben keres.</translation>
-    </message>
-    <message>
-        <source>Dictionary</source>
         <translation>Szótár</translation>
     </message>
-    <message>
-        <source>Choose the active dictionary here</source>
-        <translation>Válaszd ki itt az aktív szótárt</translation>
-    </message>
-    <message>
-        <source>Delete selected dictionary</source>
-        <translation>Kijelölt szótár törlése</translation>
-    </message>
-    <message>
-        <source>Dictionary %1 successfully imported</source>
-        <translation>%1 szótár sikeresen importálva</translation>
-    </message>
-    <message>
-        <source>Deleting dictionary %1</source>
-        <translation>%1 szótár törlése</translation>
-    </message>
-    <message>
-        <source>Dictionary %1 imported</source>
-        <translation>%1 szótár importálva</translation>
-    </message>
-    <message>
-        <source>This built-in dictionary cannot be deleted.</source>
-        <translation type="unfinished"></translation>
-    </message>
 </context>
 <context>
-    <name>DictionaryButton</name>
-    <message>
-        <source>Dictionaries</source>
-        <translation>Szótárak</translation>
-    </message>
-</context>
-<context>
-    <name>LoadingIndicator</name>
-    <message>
-        <source>Loading...</source>
-        <translation>Töltés...</translation>
-    </message>
-</context>
-<context>
-    <name>SettingsPage</name>
-    <message>
-        <source>Settings</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Cloud API</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Azure Computer Vision API Key</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Azure Translator Text API Key</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
-    <name>TextPage</name>
-    <message>
-        <source>Copy translation to clipboard</source>
-        <translation>Fordítás másolása a vágólapra</translation>
-    </message>
-    <message>
-        <source>Copy original to clipboard</source>
-        <translation>Eredeti másolása a vágólapra</translation>
-    </message>
-    <message>
-        <source>Result</source>
-        <translation>Eredmény</translation>
-    </message>
-    <message>
-        <source>Original</source>
-        <translation>Eredeti</translation>
-    </message>
-    <message>
-        <source>Translation</source>
-        <translation>Fordítás</translation>
-    </message>
-</context>
-<context>
-    <name>TitlePage</name>
-    <message>
-        <source>About Wunderfitz</source>
-        <translation>A Wunderfitz-ről</translation>
-    </message>
-    <message>
-        <source>Dictionaries</source>
-        <translation>Szótárak</translation>
-    </message>
-    <message>
-        <source>Pull down the menu to import and change your dictionaries</source>
-        <translation>Húzd le a menüt szótárak importálásához és megváltoztatásához</translation>
-    </message>
-    <message>
-        <source>Searching...</source>
-        <translation>Keresés...</translation>
-    </message>
-    <message>
-        <source>No results found</source>
-        <translation>Nem találhatók eredmények</translation>
-    </message>
-    <message>
-        <source>Search in dictionary...</source>
-        <translation>Keresés a szótárban...</translation>
-    </message>
-    <message>
-        <source>Copy to clipboard</source>
-        <translation>Másolás a vágólapra</translation>
-    </message>
-    <message>
-        <source>Search for &apos;%1&apos;</source>
-        <translation>Keresés erre &apos;%1&apos;</translation>
-    </message>
+    <name>CuriosityView</name>
     <message>
         <source>No camera available</source>
         <translation>A kamera nem elérhető</translation>
@@ -231,6 +88,10 @@
     <message>
         <source>Source Language</source>
         <translation>Forrásnyelv</translation>
+    </message>
+    <message>
+        <source>Auto-Detect</source>
+        <translation>Automatikus érzékelés</translation>
     </message>
     <message>
         <source>Chinese-Simplified</source>
@@ -335,10 +196,6 @@
     <message>
         <source>Slovak</source>
         <translation>Szlovák</translation>
-    </message>
-    <message>
-        <source>Auto-Detect</source>
-        <translation>Automatikus érzékelés</translation>
     </message>
     <message>
         <source>Target Language</source>
@@ -493,10 +350,6 @@
         <translation>Cloud and Beta Warning</translation>
     </message>
     <message>
-        <source>Accept</source>
-        <translation>Elfogadás</translation>
-    </message>
-    <message>
         <source>The Curiosity feature - taking a picture and automatically translating all recognized text on it - uses other people&apos;s computers (aka &quot;Cloud&quot;) to work. So, your picture is uploaded to another server, analyzed and the information is sent back to this app. So, be cautious if you take pictures of private or confidential data! The Cloud provider is Microsoft Azure. (You see the irony of having Microsoft services running on Sailfish OS ;) ?) By using this service you accept</source>
         <translation>A Kíváncsiság képesség - egy kép készítése, és a rajta lévő felismert szöveg automatikus fordítása - más emberek számítógépeit (aka &quot;Felhő&quot;) használja a működéshez. Tehát a képed egy másik kiszolgálóra töltődik fel, kerül feldolgozásra, majd visszaküldik ebbe az alkalmazásba. Tehát mindenképp figyelj erre, ha privát, vagy titkos adatokról készítesz képet! A felhőszolgáltató a Microsoft Azure. (Érzed az iróniát, Microsoft szolgáltatások futnak Sailfish OS-en ;) ?) A szolgáltatás használatával ezeket elfogadod</translation>
     </message>
@@ -505,12 +358,12 @@
         <translation>&lt;a href=&quot;https://azure.microsoft.com/support/legal/&quot;&gt;The Microsoft Azure terms of service and privacy statement&lt;/a&gt;</translation>
     </message>
     <message>
-        <source>Active Dictionary:</source>
+        <source>Moreover, the Curiosity feature is beta! This means that there is no guarantee that it works as you wish or that it will continue working forever in this or a future version of Wunderfitz. It may cease to work without any prior warning...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Settings</source>
-        <translation type="unfinished"></translation>
+        <source>Accept</source>
+        <translation>Elfogadás</translation>
     </message>
     <message>
         <source>Azure API Keys not set</source>
@@ -528,13 +381,509 @@
         <source>Reload</source>
         <translation type="unfinished"></translation>
     </message>
+</context>
+<context>
+    <name>DictionariesPage</name>
     <message>
-        <source>Moreover, the Curiosity feature is beta! This means that there is no guarantee that it works as you wish or that it will continue working forever in this or a future version of Wunderfitz. It may cease to work without any prior warning...</source>
+        <source>Dictionaries</source>
+        <translation>Szótárak</translation>
+    </message>
+    <message>
+        <source></source>
+        <translation></translation>
+    </message>
+    <message>
+        <source>Download dict.cc dictionaries</source>
+        <translation>Tölts le dict.cc szótárakat</translation>
+    </message>
+    <message>
+        <source>Import dict.cc ZIP archives</source>
+        <translation>Importálj dict.cc ZIP archívumokat</translation>
+    </message>
+    <message>
+        <source>Dict.cc Import</source>
+        <translation>Dict.cc importálás</translation>
+    </message>
+    <message>
+        <source>Dict.cc does not allow other applications such as Wunderfitz to ship their dictionaries. Therefore, you must download them from dict.cc yourself. Use the Download link, follow the instructions and import the files here afterwards. The downloaded dict.cc ZIP files must be placed in the Downloads folder. If in doubt, use the SailfishOS E-Mail and Browser apps to store the downloads there automatically. After the import in Wunderfitz you can delete the ZIP archives. Please note that you only need to download one combination of two languages. For example if you use DE-EN, you don&apos;t need EN-DE as Wunderfitz always searches in both languages.</source>
+        <translation>A Dict.cc nem engedélyezi más alkalmazások, mint a Wunderfitz, hogy az ő szótáraikat forgalmazza. Ezért saját magadnak kell letöltened a dict.cc-ről. Használd a letöltés linket, kövesd az utasításokat, majd utána importáld a fájlokat ide. A letöltött dict.cc ZIP fájlokat a Letöltések mappában kell elhelyezni. Ha nem vagy bizos magadban, használd a SailfishOS E-Mail és Böngésző alkalmazásokat a letöltések automatikusan itt történő tárolásához. A Wunderfitz-be való importálás után törölheted a ZIP archívumokat. Vedd figyelembe, hogy a két nyelv csak egy kombinációját kell letöltened. Ha például te a német-magyart használod, nincs szükség a magyar-németre is, mert a Wunderfitz mindig mindkét nyelvben keres.</translation>
+    </message>
+    <message>
+        <source>Dictionary</source>
+        <translation>Szótár</translation>
+    </message>
+    <message>
+        <source>Choose the active dictionary here</source>
+        <translation>Válaszd ki itt az aktív szótárt</translation>
+    </message>
+    <message>
+        <source>Delete selected dictionary</source>
+        <translation>Kijelölt szótár törlése</translation>
+    </message>
+    <message>
+        <source>Dictionary %1 successfully imported</source>
+        <translation>%1 szótár sikeresen importálva</translation>
+    </message>
+    <message>
+        <source>Deleting dictionary %1</source>
+        <translation>%1 szótár törlése</translation>
+    </message>
+    <message>
+        <source>Dictionary %1 imported</source>
+        <translation>%1 szótár importálva</translation>
+    </message>
+    <message>
+        <source>This built-in dictionary cannot be deleted.</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>DictionariesView</name>
+    <message>
+        <source>Pull down the menu to import and change your dictionaries</source>
+        <translation>Húzd le a menüt szótárak importálásához és megváltoztatásához</translation>
+    </message>
+    <message>
+        <source>Searching...</source>
+        <translation>Keresés...</translation>
+    </message>
+    <message>
+        <source>No results found</source>
+        <translation>Nem találhatók eredmények</translation>
+    </message>
+    <message>
+        <source>Active Dictionary:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Search in dictionary...</source>
+        <translation>Keresés a szótárban...</translation>
+    </message>
+    <message>
+        <source>Copy to clipboard</source>
+        <translation>Másolás a vágólapra</translation>
+    </message>
+    <message>
+        <source>Search for &apos;%1&apos;</source>
+        <translation>Keresés erre &apos;%1&apos;</translation>
+    </message>
+</context>
+<context>
+    <name>DictionaryButton</name>
+    <message>
+        <source>Dictionaries</source>
+        <translation type="vanished">Szótárak</translation>
+    </message>
+</context>
+<context>
+    <name>LoadingIndicator</name>
+    <message>
+        <source>Loading...</source>
+        <translation>Töltés...</translation>
+    </message>
+</context>
+<context>
+    <name>SettingsPage</name>
+    <message>
+        <source>Settings</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cloud API</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Azure Computer Vision API Key</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Azure Translator Text API Key</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Enable cloud features</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The Curiosity feature needs API keys and access to the Internet. No data is uploaded without your consent.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Accept Microsoft Azure terms and conditions</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>You have to accept the terms of service and the privacy statement in order to use this service. More information is given when opening the Curiosity feature.</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>TextPage</name>
+    <message>
+        <source>Copy translation to clipboard</source>
+        <translation>Fordítás másolása a vágólapra</translation>
+    </message>
+    <message>
+        <source>Copy original to clipboard</source>
+        <translation>Eredeti másolása a vágólapra</translation>
+    </message>
+    <message>
+        <source>Result</source>
+        <translation>Eredmény</translation>
+    </message>
+    <message>
+        <source>Original</source>
+        <translation>Eredeti</translation>
+    </message>
+    <message>
+        <source>Translation</source>
+        <translation>Fordítás</translation>
+    </message>
+</context>
+<context>
+    <name>TitlePage</name>
+    <message>
+        <source>About Wunderfitz</source>
+        <translation>A Wunderfitz-ről</translation>
+    </message>
+    <message>
+        <source>Dictionaries</source>
+        <translation>Szótárak</translation>
+    </message>
+    <message>
+        <source>Pull down the menu to import and change your dictionaries</source>
+        <translation type="vanished">Húzd le a menüt szótárak importálásához és megváltoztatásához</translation>
+    </message>
+    <message>
+        <source>Searching...</source>
+        <translation type="vanished">Keresés...</translation>
+    </message>
+    <message>
+        <source>No results found</source>
+        <translation type="vanished">Nem találhatók eredmények</translation>
+    </message>
+    <message>
+        <source>Search in dictionary...</source>
+        <translation type="vanished">Keresés a szótárban...</translation>
+    </message>
+    <message>
+        <source>Copy to clipboard</source>
+        <translation type="vanished">Másolás a vágólapra</translation>
+    </message>
+    <message>
+        <source>Search for &apos;%1&apos;</source>
+        <translation type="vanished">Keresés erre &apos;%1&apos;</translation>
+    </message>
+    <message>
+        <source>No camera available</source>
+        <translation type="vanished">A kamera nem elérhető</translation>
+    </message>
+    <message>
+        <source>Processing image...</source>
+        <translation type="vanished">Kép feldolgozása...</translation>
+    </message>
+    <message>
+        <source>Uploading image, %1% completed...</source>
+        <translation type="vanished">Kép feltöltése, %1% kész...</translation>
+    </message>
+    <message>
+        <source>Translating text...</source>
+        <translation type="vanished">Szöveg fordítása...</translation>
+    </message>
+    <message>
+        <source>Source Language</source>
+        <translation type="vanished">Forrásnyelv</translation>
+    </message>
+    <message>
+        <source>Chinese-Simplified</source>
+        <translation type="vanished">Kínai-egyszerűsített</translation>
+    </message>
+    <message>
+        <source>Chinese-Traditional</source>
+        <translation type="vanished">Kínai-hagyományos</translation>
+    </message>
+    <message>
+        <source>Czech</source>
+        <translation type="vanished">Cseh</translation>
+    </message>
+    <message>
+        <source>Danish</source>
+        <translation type="vanished">Dán</translation>
+    </message>
+    <message>
+        <source>Dutch</source>
+        <translation type="vanished">Holland</translation>
+    </message>
+    <message>
+        <source>English</source>
+        <translation type="vanished">Angol</translation>
+    </message>
+    <message>
+        <source>Finnish</source>
+        <translation type="vanished">Finn</translation>
+    </message>
+    <message>
+        <source>French</source>
+        <translation type="vanished">Francia</translation>
+    </message>
+    <message>
+        <source>German</source>
+        <translation type="vanished">Német</translation>
+    </message>
+    <message>
+        <source>Greek</source>
+        <translation type="vanished">Görög</translation>
+    </message>
+    <message>
+        <source>Hungarian</source>
+        <translation type="vanished">Hungarian</translation>
+    </message>
+    <message>
+        <source>Italian</source>
+        <translation type="vanished">Olasz</translation>
+    </message>
+    <message>
+        <source>Japanese</source>
+        <translation type="vanished">Japán</translation>
+    </message>
+    <message>
+        <source>Korean</source>
+        <translation type="vanished">Koreai</translation>
+    </message>
+    <message>
+        <source>Norwegian</source>
+        <translation type="vanished">Norvég</translation>
+    </message>
+    <message>
+        <source>Polish</source>
+        <translation type="vanished">Lengyel</translation>
+    </message>
+    <message>
+        <source>Portuguese</source>
+        <translation type="vanished">Portugál</translation>
+    </message>
+    <message>
+        <source>Russian</source>
+        <translation type="vanished">Orosz</translation>
+    </message>
+    <message>
+        <source>Spanish</source>
+        <translation type="vanished">Spanyol</translation>
+    </message>
+    <message>
+        <source>Swedish</source>
+        <translation type="vanished">Svéd</translation>
+    </message>
+    <message>
+        <source>Turkish</source>
+        <translation type="vanished">Török</translation>
+    </message>
+    <message>
+        <source>Arabic</source>
+        <translation type="vanished">Arab</translation>
+    </message>
+    <message>
+        <source>Romanian</source>
+        <translation type="vanished">Román</translation>
+    </message>
+    <message>
+        <source>Serbian-Cyrillic</source>
+        <translation type="vanished">Szerb-cirill</translation>
+    </message>
+    <message>
+        <source>Serbian-Latin</source>
+        <translation type="vanished">Szerb-latin</translation>
+    </message>
+    <message>
+        <source>Slovak</source>
+        <translation type="vanished">Szlovák</translation>
+    </message>
+    <message>
+        <source>Auto-Detect</source>
+        <translation type="vanished">Automatikus érzékelés</translation>
+    </message>
+    <message>
+        <source>Target Language</source>
+        <translation type="vanished">Célnyelv</translation>
+    </message>
+    <message>
+        <source>Afrikaans</source>
+        <translation type="vanished">Afrikaans</translation>
+    </message>
+    <message>
+        <source>Bulgarian</source>
+        <translation type="vanished">Bolgár</translation>
+    </message>
+    <message>
+        <source>Bangla</source>
+        <translation type="vanished">Bangla</translation>
+    </message>
+    <message>
+        <source>Bosnian</source>
+        <translation type="vanished">Bosnyák</translation>
+    </message>
+    <message>
+        <source>Catalan</source>
+        <translation type="vanished">Katalán</translation>
+    </message>
+    <message>
+        <source>Welsh</source>
+        <translation type="vanished">Welszi</translation>
+    </message>
+    <message>
+        <source>Estonian</source>
+        <translation type="vanished">Észt</translation>
+    </message>
+    <message>
+        <source>Persian</source>
+        <translation type="vanished">Perzsa</translation>
+    </message>
+    <message>
+        <source>Filipino</source>
+        <translation type="vanished">Filippínó</translation>
+    </message>
+    <message>
+        <source>Fijian</source>
+        <translation type="vanished">Fiji</translation>
+    </message>
+    <message>
+        <source>Hebrew</source>
+        <translation type="vanished">Zsidó</translation>
+    </message>
+    <message>
+        <source>Hindi</source>
+        <translation type="vanished">Hindi</translation>
+    </message>
+    <message>
+        <source>Croatian</source>
+        <translation type="vanished">Horvát</translation>
+    </message>
+    <message>
+        <source>Haitian Creole</source>
+        <translation type="vanished">Haiti</translation>
+    </message>
+    <message>
+        <source>Indonesian</source>
+        <translation type="vanished">Indonéz</translation>
+    </message>
+    <message>
+        <source>Icelandic</source>
+        <translation type="vanished">Izlandi</translation>
+    </message>
+    <message>
+        <source>Lithuanian</source>
+        <translation type="vanished">Litván</translation>
+    </message>
+    <message>
+        <source>Latvian</source>
+        <translation type="vanished">Lett</translation>
+    </message>
+    <message>
+        <source>Malagasy</source>
+        <translation type="vanished">Malaga</translation>
+    </message>
+    <message>
+        <source>Malay</source>
+        <translation type="vanished">Maláj</translation>
+    </message>
+    <message>
+        <source>Maltese</source>
+        <translation type="vanished">Máltai</translation>
+    </message>
+    <message>
+        <source>Hmong Daw</source>
+        <translation type="vanished">Hmong Daw</translation>
+    </message>
+    <message>
+        <source>Querétaro Otomi</source>
+        <translation type="vanished">Querétaro Otomi</translation>
+    </message>
+    <message>
+        <source>Slovenian</source>
+        <translation type="vanished">Szlovén</translation>
+    </message>
+    <message>
+        <source>Samoan</source>
+        <translation type="vanished">Szamoai</translation>
+    </message>
+    <message>
+        <source>Kiswahili</source>
+        <translation type="vanished">Kiswahili</translation>
+    </message>
+    <message>
+        <source>Tamil</source>
+        <translation type="vanished">Tamil</translation>
+    </message>
+    <message>
+        <source>Thai</source>
+        <translation type="vanished">Táj</translation>
+    </message>
+    <message>
+        <source>Klingon</source>
+        <translation type="vanished">Klingon</translation>
+    </message>
+    <message>
+        <source>Tongan</source>
+        <translation type="vanished">Tongan</translation>
+    </message>
+    <message>
+        <source>Tahitian</source>
+        <translation type="vanished">Tahiti</translation>
+    </message>
+    <message>
+        <source>Ukrainian</source>
+        <translation type="vanished">Ukrán</translation>
+    </message>
+    <message>
+        <source>Urdu</source>
+        <translation type="vanished">Urdu</translation>
+    </message>
+    <message>
+        <source>Vietnamese</source>
+        <translation type="vanished">Vietnámi</translation>
+    </message>
+    <message>
+        <source>Yucatec Maya</source>
+        <translation type="vanished">Yucatec Maja</translation>
+    </message>
+    <message>
+        <source>Cantonese-Traditional</source>
+        <translation type="vanished">Cantonese-Traditional</translation>
+    </message>
+    <message>
+        <source>Cloud and Beta Warning</source>
+        <translation type="vanished">Cloud and Beta Warning</translation>
+    </message>
+    <message>
+        <source>Accept</source>
+        <translation type="vanished">Elfogadás</translation>
+    </message>
+    <message>
+        <source>The Curiosity feature - taking a picture and automatically translating all recognized text on it - uses other people&apos;s computers (aka &quot;Cloud&quot;) to work. So, your picture is uploaded to another server, analyzed and the information is sent back to this app. So, be cautious if you take pictures of private or confidential data! The Cloud provider is Microsoft Azure. (You see the irony of having Microsoft services running on Sailfish OS ;) ?) By using this service you accept</source>
+        <translation type="vanished">A Kíváncsiság képesség - egy kép készítése, és a rajta lévő felismert szöveg automatikus fordítása - más emberek számítógépeit (aka &quot;Felhő&quot;) használja a működéshez. Tehát a képed egy másik kiszolgálóra töltődik fel, kerül feldolgozásra, majd visszaküldik ebbe az alkalmazásba. Tehát mindenképp figyelj erre, ha privát, vagy titkos adatokról készítesz képet! A felhőszolgáltató a Microsoft Azure. (Érzed az iróniát, Microsoft szolgáltatások futnak Sailfish OS-en ;) ?) A szolgáltatás használatával ezeket elfogadod</translation>
+    </message>
+    <message>
+        <source>&lt;a href=&quot;https://azure.microsoft.com/support/legal/&quot;&gt;The Microsoft Azure terms of service and privacy statement&lt;/a&gt;</source>
+        <translation type="vanished">&lt;a href=&quot;https://azure.microsoft.com/support/legal/&quot;&gt;The Microsoft Azure terms of service and privacy statement&lt;/a&gt;</translation>
+    </message>
+    <message>
+        <source>Settings</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>WunderfitzButton</name>
+    <message>
+        <source>Curiosity</source>
+        <translation type="vanished">Kíváncsiság</translation>
+    </message>
+</context>
+<context>
+    <name>harbour-wunderfitz</name>
+    <message>
+        <source>Dictionaries</source>
+        <translation>Szótárak</translation>
+    </message>
     <message>
         <source>Curiosity</source>
         <translation>Kíváncsiság</translation>
