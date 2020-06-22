@@ -103,7 +103,7 @@ CoverBackground {
                 font { pixelSize: Theme.fontSizeMedium; family: Theme.fontFamilyHeading }
                 x: Theme.paddingMedium
                 width: parent.width - 2*x
-                color: Theme.highlightColor
+                color: Theme.secondaryColor
                 text: "Wunderfitz"
             }
             Label {
@@ -112,7 +112,7 @@ CoverBackground {
                 font { pixelSize: Theme.fontSizeMedium; family: Theme.fontFamilyHeading }
                 x: Theme.paddingMedium
                 width: parent.width - 2*x
-                color: Theme.highlightColor
+                color: Theme.primaryColor
                 opacity: Theme.opacityLow
                 text: qsTr("Dictionary")
             }
