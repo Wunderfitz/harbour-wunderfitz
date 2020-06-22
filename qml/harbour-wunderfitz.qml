@@ -31,10 +31,11 @@ ApplicationWindow
     allowedOrientations: Orientation.All
 
     property alias tabBar: _tabBar
+    property string mainPageName: "TitlePage"
 
     DockedTabBar {
         id: _tabBar
-        enabledOnPage: "TitlePage"
+        enabledOnPage: mainPageName
         currentSelection: 0
 
         DockedTabButton {
