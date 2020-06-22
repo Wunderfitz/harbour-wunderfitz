@@ -221,26 +221,16 @@ Item {
         }
     }
 
-    Timer {
-        id: cameraLoaderTimer
-        interval: 1000
-        running: true
-        repeat: true
-        onTriggered: {
-            if (pageStack.currentPage.objectName !== mainPageName) {
-                viewfinderLoader.active = false;
-            } else {
-                viewfinderLoader.active = (currentTabId === 1 && Qt.application.state === Qt.ApplicationActive);
-            }
-        }
-    }
-
     Loader {
         id: viewfinderLoader
-        active: currentTabId === 1 && Qt.application.state === Qt.ApplicationActive
+        active: pageStack.currentPage.objectName === mainPageName &&
+                    tabBar.currentSelection === 1 &&
+                        Qt.application.state === Qt.ApplicationActive &&
+                            !cloudWarningFlickable.visible &&
+                                !settingsWarningFlickable.visible
         width: parent.width
         height: parent.height
-        sourceComponent: viewfinderComponent
+        sourceComponent: active ? viewfinderComponent : undefined
         onActiveChanged: {
             if (active) {
                 console.log("Camera loaded");
@@ -251,6 +241,7 @@ Item {
     }
 
     ComboBox {
+        id: sourceLanguageCombo
         property var allLanguageCodes: [
             // order has to be the same as in the menu below
             "unk", "zh-Hans", "zh-Hant", "cs", "da", "nl", "en", "fi", "fr", "de",
@@ -263,7 +254,8 @@ Item {
             currentIndex = allLanguageCodes.indexOf(code);
         }
 
-        anchors.bottom: targetLanguageBox.top
+        currentIndex: -1
+        anchors.bottom: targetLanguageCombo.top
         anchors.horizontalCenter: parent.horizontalCenter
         label: qsTr("Source Language")
         visible: !isProcessing && viewfinderLoader.active
@@ -309,7 +301,7 @@ Item {
     }
 
     ComboBox {
-        id: targetLanguageBox
+        id: targetLanguageCombo
         property var allLanguageCodes: [
             // order has to be the same as in the menu below
             "en", "af", "ar", "bg", "bn", "bs", "ca", "cs", "cy", "da", "de",
@@ -321,10 +313,11 @@ Item {
         ]
 
         Component.onCompleted: {
-            var code = curiosity.getSourceLanguage();
+            var code = curiosity.getTargetLanguage();
             currentIndex = allLanguageCodes.indexOf(code);
         }
 
+        currentIndex: -1
         anchors.bottom: parent.bottom
         anchors.bottomMargin: Theme.iconSizeMedium + Theme.horizontalPageMargin + ( 2 * Theme.paddingLarge )
         anchors.horizontalCenter: parent.horizontalCenter
