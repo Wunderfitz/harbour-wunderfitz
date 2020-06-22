@@ -474,7 +474,6 @@ Item {
                 onClicked: {
                     curiosity.cloudTermsAccepted = true;
                     curiosity.useCloud = true;
-                    cloudWarningBackground.visible = false;
                     cloudWarningFlickable.visible = false;
                 }
             }
@@ -499,9 +498,6 @@ Item {
         contentHeight: settingsWarningColumn.height
         anchors.fill: parent
         visible: !cloudWarningFlickable.visible && ( curiosity.getTranslatorTextKey() === "" || curiosity.getComputerVisionKey() === "" )
-        onVisibleChanged: {
-            cloudWarningBackground.visible = cloudWarningFlickable.visible || settingsWarningFlickable.visible
-        }
 
         Column {
             id: settingsWarningColumn
