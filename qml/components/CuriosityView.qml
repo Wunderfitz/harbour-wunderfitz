@@ -399,14 +399,6 @@ Item {
         }
     }
 
-    Rectangle {
-        id: cloudWarningBackground
-        anchors.fill: parent
-        color: Theme.overlayBackgroundColor
-        opacity: Theme.opacityOverlay
-        visible: cloudWarningFlickable.visible || settingsWarningFlickable.visible
-    }
-
     SilicaFlickable {
         id: cloudWarningFlickable
         contentHeight: warningColumn.height
