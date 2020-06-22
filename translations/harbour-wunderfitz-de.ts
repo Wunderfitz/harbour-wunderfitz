@@ -75,15 +75,15 @@
     </message>
     <message>
         <source>Processing image...</source>
-        <translation>Bild wird verarbeitet...</translation>
+        <translation>Bild wird verarbeitet ...</translation>
     </message>
     <message>
         <source>Uploading image, %1% completed...</source>
-        <translation>Bild wird hochgeladen, %1% fertiggestellt...</translation>
+        <translation>Bild wird hochgeladen, %1% fertiggestellt ...</translation>
     </message>
     <message>
         <source>Translating text...</source>
-        <translation>Text wird übersetzt...</translation>
+        <translation>Text wird übersetzt ...</translation>
     </message>
     <message>
         <source>Source Language</source>
@@ -426,7 +426,7 @@
     </message>
     <message>
         <source>Deleting dictionary %1</source>
-        <translation>Löscht Wörterbuch %1</translation>
+        <translation>Wörterbuch %1 wird gelöscht</translation>
     </message>
     <message>
         <source>Dictionary %1 imported</source>
@@ -434,18 +434,18 @@
     </message>
     <message>
         <source>This built-in dictionary cannot be deleted.</source>
-        <translation type="unfinished"></translation>
+        <translation>Dieses eingebaute Wörterbuch kann nicht gelöscht werden.</translation>
     </message>
 </context>
 <context>
     <name>DictionariesView</name>
     <message>
         <source>Pull down the menu to import and change your dictionaries</source>
-        <translation type="unfinished"></translation>
+        <translation>Nach unten wischen, um Wörterbücher zu importieren oder zu ändern</translation>
     </message>
     <message>
         <source>Searching...</source>
-        <translation type="unfinished"></translation>
+        <translation>Suchen ...</translation>
     </message>
     <message>
         <source>No results found</source>
@@ -457,7 +457,7 @@
     </message>
     <message>
         <source>Search in dictionary...</source>
-        <translation>Im Wörterbuch suchen...</translation>
+        <translation>Im Wörterbuch suchen ...</translation>
     </message>
     <message>
         <source>Copy to clipboard</source>
@@ -465,7 +465,7 @@
     </message>
     <message>
         <source>Search for &apos;%1&apos;</source>
-        <translation>Nach &apos;%1&apos; suchen</translation>
+        <translation>Nach „%1“ suchen</translation>
     </message>
 </context>
 <context>
@@ -495,19 +495,19 @@
     </message>
     <message>
         <source>Enable cloud features</source>
-        <translation type="unfinished"></translation>
+        <translation>Cloud-Funktionen aktivieren</translation>
     </message>
     <message>
         <source>The Curiosity feature needs API keys and access to the Internet. No data is uploaded without your consent.</source>
-        <translation type="unfinished"></translation>
+        <translation>Die Neugier-Funktion benötigt API-Schlüssel und Internetzugriff. Es werden keine Daten ohne Ihre Zustimmung hochgeladen.</translation>
     </message>
     <message>
         <source>Accept Microsoft Azure terms and conditions</source>
-        <translation type="unfinished"></translation>
+        <translation>Geschäftsbedingungen von Microsoft Azure akzeptieren</translation>
     </message>
     <message>
         <source>You have to accept the terms of service and the privacy statement in order to use this service. More information is given when opening the Curiosity feature.</source>
-        <translation type="unfinished"></translation>
+        <translation>Sie müssen den Geschäftsbedingungen und der Datenschutzerklärung zustimmen, um diesen Dienst zu verwenden. Weitere Informationen werden angezeigt, wenn die Neugier-Funktion geöffnet wird.</translation>
     </message>
 </context>
 <context>
