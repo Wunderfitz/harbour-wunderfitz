@@ -1,5 +1,6 @@
 /*
     Copyright (C) 2016-19 Sebastian J. Wolf
+                     2020 Mirian Margiani
 
     This file is part of Wunderfitz.
 
@@ -20,27 +21,13 @@
 import QtQuick 2.0
 import Sailfish.Silica 1.0
 import "pages"
+import "components"
 
 ApplicationWindow
 {
-    Component {
-        id: aboutPage
-        AboutPage {}
-    }
-
-    Component {
-        id: titlePage
-        TitlePage {}
-    }
-
-    Component {
-        id: dictionariesPage
-        DictionariesPage {}
-    }
-
     id: window
-    initialPage: titlePage
-    cover: Component { CoverPage { } }
+    initialPage: Component { TitlePage {} }
+    cover: Component { CoverPage {} }
     allowedOrientations: Orientation.All
 
 }

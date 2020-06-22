@@ -25,6 +25,7 @@ import "../components"
 Page {
     id: titlePage
     allowedOrientations: Orientation.All
+    objectName: "TitlePage"
 
     property int activeTabId: 0;
     property bool interactionHintDisplayed : dictionaryModel.isInteractionHintDisplayed()
@@ -112,7 +113,7 @@ Page {
         PullDownMenu {
             MenuItem {
                 text: qsTr("About Wunderfitz")
-                onClicked: pageStack.push(aboutPage)
+                onClicked: pageStack.push(Qt.resolvedUrl("../pages/AboutPage.qml"))
             }
             MenuItem {
                 text: qsTr("Settings")
@@ -122,7 +123,7 @@ Page {
             MenuItem {
                 visible: titlePage.activeTabId === 0
                 text: qsTr("Dictionaries")
-                onClicked: pageStack.push(dictionariesPage)
+                onClicked: pageStack.push(Qt.resolvedUrl("../pages/DictionariesPage.qml"))
             }
         }
 
