@@ -268,16 +268,33 @@ Item {
         label: qsTr("Source Language")
         visible: !isProcessing && viewfinderLoader.active
         menu: ContextMenu {
-            Repeater {
-                model: [
-                    qsTr("Auto-Detect"), qsTr("Chinese-Simplified"), qsTr("Chinese-Traditional"), qsTr("Czech"),
-                    qsTr("Danish"), qsTr("Dutch"), qsTr("English"), qsTr("Finnish"), qsTr("French"), qsTr("German"), qsTr("Greek"),
-                    qsTr("Hungarian"), qsTr("Italian"), qsTr("Japanese"), qsTr("Korean"), qsTr("Norwegian"), qsTr("Polish"),
-                    qsTr("Portuguese"), qsTr("Russian"), qsTr("Spanish"), qsTr("Swedish"), qsTr("Turkish"), qsTr("Arabic"),
-                    qsTr("Romanian"), qsTr("Serbian-Cyrillic"), qsTr("Serbian-Latin"), qsTr("Slovak")
-                ]
-                delegate: MenuItem { text: modelData }
-            }
+            MenuItem { text: qsTr("Auto-Detect") }
+            MenuItem { text: qsTr("Chinese-Simplified") }
+            MenuItem { text: qsTr("Chinese-Traditional") }
+            MenuItem { text: qsTr("Czech") }
+            MenuItem { text: qsTr("Danish") }
+            MenuItem { text: qsTr("Dutch") }
+            MenuItem { text: qsTr("English") }
+            MenuItem { text: qsTr("Finnish") }
+            MenuItem { text: qsTr("French") }
+            MenuItem { text: qsTr("German") }
+            MenuItem { text: qsTr("Greek") }
+            MenuItem { text: qsTr("Hungarian") }
+            MenuItem { text: qsTr("Italian") }
+            MenuItem { text: qsTr("Japanese") }
+            MenuItem { text: qsTr("Korean") }
+            MenuItem { text: qsTr("Norwegian") }
+            MenuItem { text: qsTr("Polish") }
+            MenuItem { text: qsTr("Portuguese") }
+            MenuItem { text: qsTr("Russian") }
+            MenuItem { text: qsTr("Spanish") }
+            MenuItem { text: qsTr("Swedish") }
+            MenuItem { text: qsTr("Turkish") }
+            MenuItem { text: qsTr("Arabic") }
+            MenuItem { text: qsTr("Romanian") }
+            MenuItem { text: qsTr("Serbian-Cyrillic") }
+            MenuItem { text: qsTr("Serbian-Latin") }
+            MenuItem { text: qsTr("Slovak") }
         }
         onCurrentIndexChanged: {
             if (currentIndex >= allLanguageCodes.length) {
@@ -314,24 +331,68 @@ Item {
         label: qsTr("Target Language")
         visible: !isProcessing && viewfinderLoader.active
         menu: ContextMenu {
-            Repeater {
-                model: [
-                    qsTr("English"), qsTr("Afrikaans"), qsTr("Arabic"), qsTr("Bulgarian"), qsTr("Bangla"),
-                    qsTr("Bosnian"), qsTr("Catalan"), qsTr("Czech"), qsTr("Welsh"), qsTr("Danish"),
-                    qsTr("German"), qsTr("Greek"), qsTr("Spanish"), qsTr("Estonian"), qsTr("Persian"),
-                    qsTr("Finnish"), qsTr("Filipino"), qsTr("Fijian"), qsTr("French"), qsTr("Hebrew"),
-                    qsTr("Hindi"), qsTr("Croatian"), qsTr("Haitian Creole"), qsTr("Hungarian"), qsTr("Indonesian"),
-                    qsTr("Icelandic"), qsTr("Italian"), qsTr("Japanese"), qsTr("Korean"), qsTr("Lithuanian"),
-                    qsTr("Latvian"), qsTr("Malagasy"), qsTr("Malay"), qsTr("Maltese"), qsTr("Hmong Daw"),
-                    qsTr("Norwegian"), qsTr("Dutch"), qsTr("Querétaro Otomi"), qsTr("Polish"), qsTr("Portuguese"),
-                    qsTr("Romanian"), qsTr("Russian"), qsTr("Slovak"), qsTr("Slovenian"), qsTr("Samoan"),
-                    qsTr("Serbian-Cyrillic"), qsTr("Serbian-Latin"), qsTr("Swedish"), qsTr("Kiswahili"), qsTr("Tamil"),
-                    qsTr("Thai"), qsTr("Klingon"), qsTr("Tongan"), qsTr("Turkish"), qsTr("Tahitian"), qsTr("Ukrainian"),
-                    qsTr("Urdu"), qsTr("Vietnamese"), qsTr("Yucatec Maya"), qsTr("Cantonese-Traditional"),
-                    qsTr("Chinese-Simplified"), qsTr("Chinese-Traditional")
-                ]
-                delegate: MenuItem { text: modelData }
-            }
+            MenuItem { text: qsTr("English") }
+            MenuItem { text: qsTr("Afrikaans") }
+            MenuItem { text: qsTr("Arabic") }
+            MenuItem { text: qsTr("Bulgarian") }
+            MenuItem { text: qsTr("Bangla") }
+            MenuItem { text: qsTr("Bosnian") }
+            MenuItem { text: qsTr("Catalan") }
+            MenuItem { text: qsTr("Czech") }
+            MenuItem { text: qsTr("Welsh") }
+            MenuItem { text: qsTr("Danish") }
+            MenuItem { text: qsTr("German") }
+            MenuItem { text: qsTr("Greek") }
+            MenuItem { text: qsTr("Spanish") }
+            MenuItem { text: qsTr("Estonian") }
+            MenuItem { text: qsTr("Persian") }
+            MenuItem { text: qsTr("Finnish") }
+            MenuItem { text: qsTr("Filipino") }
+            MenuItem { text: qsTr("Fijian") }
+            MenuItem { text: qsTr("French") }
+            MenuItem { text: qsTr("Hebrew") }
+            MenuItem { text: qsTr("Hindi") }
+            MenuItem { text: qsTr("Croatian") }
+            MenuItem { text: qsTr("Haitian Creole") }
+            MenuItem { text: qsTr("Hungarian") }
+            MenuItem { text: qsTr("Indonesian") }
+            MenuItem { text: qsTr("Icelandic") }
+            MenuItem { text: qsTr("Italian") }
+            MenuItem { text: qsTr("Japanese") }
+            MenuItem { text: qsTr("Korean") }
+            MenuItem { text: qsTr("Lithuanian") }
+            MenuItem { text: qsTr("Latvian") }
+            MenuItem { text: qsTr("Malagasy") }
+            MenuItem { text: qsTr("Malay") }
+            MenuItem { text: qsTr("Maltese") }
+            MenuItem { text: qsTr("Hmong Daw") }
+            MenuItem { text: qsTr("Norwegian") }
+            MenuItem { text: qsTr("Dutch") }
+            MenuItem { text: qsTr("Querétaro Otomi") }
+            MenuItem { text: qsTr("Polish") }
+            MenuItem { text: qsTr("Portuguese") }
+            MenuItem { text: qsTr("Romanian") }
+            MenuItem { text: qsTr("Russian") }
+            MenuItem { text: qsTr("Slovak") }
+            MenuItem { text: qsTr("Slovenian") }
+            MenuItem { text: qsTr("Samoan") }
+            MenuItem { text: qsTr("Serbian-Cyrillic") }
+            MenuItem { text: qsTr("Serbian-Latin") }
+            MenuItem { text: qsTr("Swedish") }
+            MenuItem { text: qsTr("Kiswahili") }
+            MenuItem { text: qsTr("Tamil") }
+            MenuItem { text: qsTr("Thai") }
+            MenuItem { text: qsTr("Klingon") }
+            MenuItem { text: qsTr("Tongan") }
+            MenuItem { text: qsTr("Turkish") }
+            MenuItem { text: qsTr("Tahitian") }
+            MenuItem { text: qsTr("Ukrainian") }
+            MenuItem { text: qsTr("Urdu") }
+            MenuItem { text: qsTr("Vietnamese") }
+            MenuItem { text: qsTr("Yucatec Maya") }
+            MenuItem { text: qsTr("Cantonese-Traditional") }
+            MenuItem { text: qsTr("Chinese-Simplified") }
+            MenuItem { text: qsTr("Chinese-Traditional") }
         }
         onCurrentIndexChanged: {
             if (currentIndex >= allLanguageCodes.length) {
