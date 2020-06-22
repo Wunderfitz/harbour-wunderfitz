@@ -26,18 +26,6 @@ Page {
     allowedOrientations: Orientation.All
     objectName: mainPageName
 
-    readonly property int currentTabId: tabBar.currentSelection
-
-    function openTab(tabId) {
-        viewsSlideshow.opacity = 0;
-        slideshowVisibleTimer.goToTab(tabId);
-        tabBar.currentSelection = tabId;
-    }
-
-    onCurrentTabIdChanged: {
-        if (viewsSlideshow.currentIndex !== currentTabId) openTab(currentTabId);
-    }
-
     AppNotification {
         id: titleNotification
     }
@@ -57,7 +45,7 @@ Page {
                 onClicked: pageStack.push(Qt.resolvedUrl("../pages/SettingsPage.qml"));
             }
             MenuItem {
-                visible: currentTabId === 0
+                visible: viewsSlideshow.currentIndex === 0
                 text: qsTr("Dictionaries")
                 onClicked: pageStack.push(Qt.resolvedUrl("../pages/DictionariesPage.qml"))
             }
@@ -84,7 +72,7 @@ Page {
                 }
             }
 
-            onCurrentIndexChanged: openTab(currentIndex)
+            onCurrentIndexChanged: tabBar.currentSelection = currentIndex
             interactive: useCloud
 
             Connections {
@@ -92,27 +80,12 @@ Page {
                 onUseCloudChanged: if (!useCloud) viewsSlideshow.currentIndex = 0
             }
 
-            Behavior on opacity { NumberAnimation {} }
-            onOpacityChanged: {
-                if (opacity === 0) {
-                    slideshowVisibleTimer.start();
-                }
-            }
-
-            Timer {
-                id: slideshowVisibleTimer
-                property int targetTabId: 0
-                interval: 50
-                repeat: false
-
-                onTriggered: {
-                    viewsSlideshow.positionViewAtIndex(targetTabId, PathView.SnapPosition);
-                    viewsSlideshow.opacity = 1;
-                }
-
-                function goToTab(newTabId) {
-                    targetTabId = newTabId;
-                    start();
+            Connections {
+                target: tabBar
+                onCurrentSelectionChanged: {
+                    if (viewsSlideshow.currentIndex !== tabBar.currentSelection) {
+                        viewsSlideshow.positionViewAtIndex(tabBar.currentSelection, PathView.SnapPosition);
+                    }
                 }
             }
         }
