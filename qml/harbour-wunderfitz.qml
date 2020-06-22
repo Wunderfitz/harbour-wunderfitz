@@ -30,6 +30,22 @@ ApplicationWindow
     cover: Component { CoverPage {} }
     allowedOrientations: Orientation.All
 
+    property alias tabBar: _tabBar
+
+    DockedTabBar {
+        id: _tabBar
+        enabledOnPage: "TitlePage"
+        currentSelection: 0
+
+        DockedTabButton {
+            icon.source: "image://theme/icon-m-search"
+            label: qsTr("Dictionaries")
+            fontSize: Theme.fontSizeTiny
+        }
+        DockedTabButton {
+            icon.source: "image://theme/icon-m-camera"
+            label: qsTr("Curiosity")
+            fontSize: Theme.fontSizeTiny
+        }
+    }
 }
-
-
