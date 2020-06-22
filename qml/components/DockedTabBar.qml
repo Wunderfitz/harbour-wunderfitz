@@ -54,7 +54,8 @@ DockedPanel {
         color: Theme.primaryColor
         transform: Rotation {
             id: separatorRotation
-            angle: 90
+            angle: 0
+            // FIXME, TODO: the separator is still visible when the dock is vertical and hidden
         }
     }
 
@@ -88,6 +89,7 @@ DockedPanel {
                 tabBar.width = __silica_applicationwindow_instance.width
                 tabBar.height = baseTabHeight*rows;
                 __silica_applicationwindow_instance.bottomMargin = Qt.binding(function() { return tabBar.visibleSize; });
+                // __silica_applicationwindow_instance._clippingItem.height = Qt.binding(function(){ return __silica_applicationwindow_instance.height; })
 
                 console.log("#:", usedWidth, baseTabWidth, tabsPerRow, rows, lastRowIndex,
                             tabWidth, lastRowCount, lastRowOuterTabWidth,
@@ -131,9 +133,12 @@ DockedPanel {
                 tabBar.width = tabWidth*cols;
                 tabBar.height = __silica_applicationwindow_instance.width;
                 __silica_applicationwindow_instance.bottomMargin = 0;
+                // __silica_applicationwindow_instance._clippingItem.height = Qt.binding(function(){ return __silica_applicationwindow_instance.height - tabBar.visibleSize; })
+
+                // FIXME, TODO: dock and separator are on the wrong side for LandscapeInverted
 
                 console.log("#:", usedHeight, tabsPerCol, cols, lastColIndex, tabHeight, tabWidth,
-                            lastColCount, lastColOuterTabHeight, tabBar.width);
+                            lastColCount, lastColOuterTabHeight, tabBar.width, tabBar.visibleSize);
 
                 for (i in _tabs) {
                     _tabs[i]._tabIndex = Number(i);
@@ -205,7 +210,7 @@ DockedPanel {
                 }
                 PropertyChanges {
                     target: __silica_applicationwindow_instance._clippingItem
-                    height: __silica_applicationwindow_instance.height - tabBar.width
+                    height: { return __silica_applicationwindow_instance.height - tabBar.visibleSize; }
                 }
                 PropertyChanges {
                     target: separatorRotation
