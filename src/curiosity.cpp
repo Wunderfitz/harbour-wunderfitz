@@ -108,15 +108,16 @@ void Curiosity::setTargetLanguage(const QString &targetLanguage)
     settings.setValue(SETTINGS_TARGET_LANGUAGE, targetLanguage);
 }
 
-bool Curiosity::getUseCloud()
+bool Curiosity::useCloud()
 {
-    return settings.value(SETTINGS_USE_CLOUD, false).toBool();
+    return settings.value(SETTINGS_USE_CLOUD, true).toBool();
 }
 
 void Curiosity::setUseCloud(const bool &useCloud)
 {
     qDebug() << "[Curiosity] Set use cloud" << useCloud;
     settings.setValue(SETTINGS_USE_CLOUD, useCloud);
+    emit useCloudChanged();
 }
 
 QString Curiosity::getTranslatedText()
@@ -149,6 +150,18 @@ QString Curiosity::getTranslatorTextKey()
 CloudApi *Curiosity::getCloudApi()
 {
     return this->cloudApi;
+}
+
+bool Curiosity::cloudTermsAccepted()
+{
+    return settings.value(SETTINGS_CLOUD_TERMS_ACCEPTED, false).toBool();
+}
+
+void Curiosity::setCloudTermsAccepted(const bool &accepted)
+{
+    qDebug() << "[Curiosity] Set cloud terms accepted" << accepted;
+    settings.setValue(SETTINGS_CLOUD_TERMS_ACCEPTED, accepted);
+    emit cloudTermsAcceptedChanged();
 }
 
 void Curiosity::handleOcrProcessingSuccessful(const QString &fileName, const QJsonObject &result)

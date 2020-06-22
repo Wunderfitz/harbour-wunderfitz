@@ -411,7 +411,7 @@ Item {
         id: cloudWarningFlickable
         contentHeight: warningColumn.height
         anchors.fill: parent
-        visible: !curiosity.getUseCloud()
+        visible: !curiosity.cloudTermsAccepted
 
         Column {
             id: warningColumn
@@ -480,7 +480,8 @@ Item {
                     horizontalCenter: parent.horizontalCenter
                 }
                 onClicked: {
-                    curiosity.setUseCloud(true);
+                    curiosity.cloudTermsAccepted = true;
+                    curiosity.useCloud = true;
                     cloudWarningBackground.visible = false;
                     cloudWarningFlickable.visible = false;
                 }
