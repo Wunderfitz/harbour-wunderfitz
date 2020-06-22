@@ -469,13 +469,6 @@
     </message>
 </context>
 <context>
-    <name>DictionaryButton</name>
-    <message>
-        <source>Dictionaries</source>
-        <translation type="obsolete">Woordenboeken</translation>
-    </message>
-</context>
-<context>
     <name>LoadingIndicator</name>
     <message>
         <source>Loading...</source>
