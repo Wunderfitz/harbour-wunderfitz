@@ -191,14 +191,6 @@ DockedPanel {
             State {
                 when: isHorizontal
                 name: "horizontal"
-                PropertyChanges {
-                    target: tabBar
-                    dock: Dock.Bottom
-                }
-                PropertyChanges {
-                    target: separatorRotation
-                    angle: 0
-                }
                 StateChangeScript { script: contentFlow.relayout(); }
             },
             State {
