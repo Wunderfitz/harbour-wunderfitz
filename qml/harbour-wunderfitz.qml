@@ -30,12 +30,13 @@ ApplicationWindow
     cover: Component { CoverPage {} }
     allowedOrientations: Orientation.All
 
+    readonly property bool useCloud: curiosity.useCloud
+    readonly property string mainPageName: "TitlePage"
     property alias tabBar: _tabBar
-    property string mainPageName: "TitlePage"
 
     DockedTabBar {
         id: _tabBar
-        enabledOnPage: mainPageName
+        enabledOnPage: useCloud ? mainPageName : "[disabled]"
         currentSelection: 0
 
         DockedTabButton {
