@@ -36,6 +36,8 @@ Item {
         onCurrentSelectionChanged: {
             if (_tabBar.currentSelection !== tab._tabIndex) {
                 tab.isSelected = false;
+            } else {
+                tab.isSelected = true;
             }
         }
     }
