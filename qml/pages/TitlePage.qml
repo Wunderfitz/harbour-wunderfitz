@@ -45,7 +45,7 @@ Page {
                 onClicked: pageStack.push(Qt.resolvedUrl("../pages/SettingsPage.qml"));
             }
             MenuItem {
-                visible: viewsSlideshow.currentIndex === 0
+                visible: viewsSlideshow.currentIndex === dictView.index
                 text: qsTr("Dictionaries")
                 onClicked: pageStack.push(Qt.resolvedUrl("../pages/DictionariesPage.qml"))
             }
@@ -87,7 +87,7 @@ Page {
 
             Connections {
                 target: curiosity
-                onUseCloudChanged: if (!useCloud) viewsSlideshow.currentIndex = 0
+                onUseCloudChanged: if (!useCloud) viewsSlideshow.currentIndex = dictView.index
             }
 
             Connections {
