@@ -76,12 +76,12 @@ DockedPanel {
                 if (children[i].objectName === 'DockedTabBarItem') _tabs.push(children[i]);
             }
 
-            console.log("layouting DockedTabBar: found", _tabs.length, "tabs");
+            console.log("DockedTabBar: found", _tabs.length, "tabs");
             var baseTabWidth = Theme.itemSizeLarge;
             var baseTabHeight = _baseTabHeight;
 
             if (isHorizontal) {
-                console.log("layouting horizontally");
+                console.log("DockedTabBar: layouting horizontally");
                 var usedWidth = __silica_applicationwindow_instance.width;
                 var tabsPerRow = Math.floor(usedWidth / baseTabWidth)+1;
                 var rows = Math.ceil(_tabs.length / tabsPerRow);
@@ -93,11 +93,10 @@ DockedPanel {
                 tabBar.width = __silica_applicationwindow_instance.width
                 tabBar.height = baseTabHeight*rows;
                 __silica_applicationwindow_instance.bottomMargin = Qt.binding(function() { return tabBar.visibleSize; });
-                // __silica_applicationwindow_instance._clippingItem.height = Qt.binding(function(){ return __silica_applicationwindow_instance.height; })
 
-                console.log("#:", usedWidth, baseTabWidth, tabsPerRow, rows, lastRowIndex,
-                            tabWidth, lastRowCount, lastRowOuterTabWidth,
-                            tabBar.height, __silica_applicationwindow_instance.bottomMargin, tabBar.visibleSize);
+                if (_debug) console.log("DockedTabBar:", usedWidth, baseTabWidth, tabsPerRow, rows, lastRowIndex,
+                                        tabWidth, lastRowCount, lastRowOuterTabWidth,
+                                        tabBar.height, __silica_applicationwindow_instance.bottomMargin, tabBar.visibleSize);
 
                 for (i in _tabs) {
                     _tabs[i]._tabIndex = Number(i);
@@ -124,7 +123,7 @@ DockedPanel {
                     _tabs[i].height = baseTabHeight;
                 }
             } else {
-                console.log("layouting vertically");
+                console.log("DockedTabBar: layouting vertically");
                 var usedHeight = __silica_applicationwindow_instance.width;
                 var tabsPerCol = Math.floor(usedHeight / baseTabHeight)+1;
                 var cols = Math.ceil(_tabs.length / tabsPerCol);
@@ -138,8 +137,8 @@ DockedPanel {
                 tabBar.height = __silica_applicationwindow_instance.width;
                 __silica_applicationwindow_instance.bottomMargin = 0;
 
-                console.log("#:", usedHeight, tabsPerCol, cols, lastColIndex, tabHeight, tabWidth,
-                            lastColCount, lastColOuterTabHeight, tabBar.width, tabBar.visibleSize);
+                if (_debug) console.log("DockedTabBar:", usedHeight, tabsPerCol, cols, lastColIndex, tabHeight, tabWidth,
+                                        lastColCount, lastColOuterTabHeight, tabBar.width, tabBar.visibleSize);
 
                 for (i in _tabs) {
                     _tabs[i]._tabIndex = Number(i);
@@ -169,8 +168,9 @@ DockedPanel {
         }
 
         onChildrenChanged: {
+            // This might be necessary when tabs are added dynamically.
+            // console.log("DockedTabBar: children changed")
             // relayout();
-            console.log("TabBar: children changed")
         }
 
         Component.onCompleted: relayout()
@@ -187,7 +187,7 @@ DockedPanel {
 
     Item {
         id: orientationStateContainer
-        onStateChanged: console.log("=>", state)
+        onStateChanged: console.log("DockedTabBar: entering", state)
         states: [
             State {
                 when: isHorizontal

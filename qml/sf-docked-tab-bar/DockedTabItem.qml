@@ -55,10 +55,10 @@ Item {
         anchors.fill: parent
         preventStealing: true
         onClicked: {
-            console.log("clicked", _tabIndex)
+            console.log("DockedTabItem: clicked #", _tabIndex)
             if (!isSelected) {
                 tabSelected(_tabIndex)
-                console.log("selected", _tabIndex)
+                console.log("DockedTabItem: selected #", _tabIndex)
             }
         }
     }
