@@ -15,6 +15,7 @@ OTHER_FILES += rpm/harbour-wunderfitz.changes.in \
     translations/*.ts \
     harbour-wunderfitz.desktop \
     qml/components/*.qml \
+    qml/sf-docked-tab-bar/*.qml \
     qml/pages/*.qml \
     qml/*.qml
     db/heinzelliste.db
@@ -74,9 +75,8 @@ DISTFILES += \
     icons/172x172/harbour-wunderfitz.png \
     images/*.png \
     qml/*.qml \
+    pml/components/*.qml \
+    qml/sf-docked-tab-bar/*.qml \
     pml/pages/*.qml \
     LICENSE \
     README.md \
-    qml/components/WunderfitzButton.qml \
-    qml/pages/TextPage.qml
-
