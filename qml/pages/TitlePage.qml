@@ -58,6 +58,8 @@ Page {
             clip: true
             model: VisualItemModel {
                 Loader {
+                    id: dictView
+                    property int index: index // makes attached property available from outside
                     width: viewsSlideshow.width; height: viewsSlideshow.height
                     source: Qt.resolvedUrl("../components/DictionariesView.qml")
                 }
@@ -72,8 +74,16 @@ Page {
                 }
             }
 
-            onCurrentIndexChanged: tabBar.currentSelection = currentIndex
             interactive: useCloud
+            onCurrentIndexChanged: {
+                tabBar.currentSelection = currentIndex
+                if (currentIndex === dictView.index && pageStack.currentPage.objectName === mainPageName) {
+                    dictView.item.focusSearchField();
+                }
+            }
+
+            currentIndex: tabBar.currentSelection
+            Component.onCompleted: if (currentIndex === dictView.index) dictView.item.focusSearchField()
 
             Connections {
                 target: curiosity

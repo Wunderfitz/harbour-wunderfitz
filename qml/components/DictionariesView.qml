@@ -24,6 +24,10 @@ import Sailfish.Silica 1.0
 Item {
     property bool interactionHintDisplayed: dictionaryModel.isInteractionHintDisplayed()
 
+    function focusSearchField() {
+        searchField.forceActiveFocus();
+    }
+
     function toggleBusyIndicator() {
         busyIndicator.running = heinzelnisseModel.isSearchInProgress()
         busyIndicatorColumn.opacity = heinzelnisseModel.isSearchInProgress() ? 1 : 0
@@ -103,7 +107,6 @@ Item {
             }
         }
     }
-
 
     Column {
         x: listView.x
