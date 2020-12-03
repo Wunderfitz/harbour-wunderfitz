@@ -49,7 +49,7 @@ render() { # 1: source base name (without .svg), 2: target base name (without .p
 
 echo "rendering app icon..."
 appicons=(harbour-wunderfitz)
-for i in 86 108 128 172; do
+for i in 86 108 128 172 256; do
     prepare "../icons/${i}x$i"
     for a in "${appicons[@]}"; do
         # shared files need the postfix
