@@ -1,5 +1,6 @@
 /*
     Copyright (C) 2016-19 Sebastian J. Wolf
+                     2020 Mirian Margiani
 
     This file is part of Wunderfitz.
 
@@ -20,29 +21,34 @@
 import QtQuick 2.0
 import Sailfish.Silica 1.0
 import "pages"
+import "components"
+import "sf-docked-tab-bar"
 
 ApplicationWindow
 {
-    Component {
-        id: aboutPage
-        AboutPage {}
-    }
-
-    Component {
-        id: titlePage
-        TitlePage {}
-    }
-
-    Component {
-        id: dictionariesPage
-        DictionariesPage {}
-    }
-
     id: window
-    initialPage: titlePage
-    cover: Component { CoverPage { } }
+    initialPage: Component { TitlePage {} }
+    cover: Component { CoverPage {} }
     allowedOrientations: Orientation.All
 
+    readonly property bool useCloud: curiosity.useCloud
+    readonly property string mainPageName: "TitlePage"
+    property alias tabBar: _tabBar
+
+    DockedTabBar {
+        id: _tabBar
+        enabledOnPage: useCloud ? mainPageName : "[disabled]"
+        currentSelection: 0
+
+        DockedTabButton {
+            icon.source: "image://theme/icon-m-search"
+            label: qsTr("Dictionaries")
+            fontSize: Theme.fontSizeTiny
+        }
+        DockedTabButton {
+            icon.source: "image://theme/icon-m-camera"
+            label: qsTr("Curiosity")
+            fontSize: Theme.fontSizeTiny
+        }
+    }
 }
-
-

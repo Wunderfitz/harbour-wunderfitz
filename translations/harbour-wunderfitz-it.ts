@@ -61,146 +61,14 @@
     </message>
 </context>
 <context>
-    <name>DictionariesPage</name>
-    <message>
-        <source>Dictionaries</source>
-        <translation>Dizionari</translation>
-    </message>
-    <message>
-        <source></source>
-        <translation></translation>
-    </message>
-    <message>
-        <source>Download dict.cc dictionaries</source>
-        <translation>Scarica dizionari da dict.cc</translation>
-    </message>
-    <message>
-        <source>Import dict.cc ZIP archives</source>
-        <translation>Importa archivi ZIP di dict.cc</translation>
-    </message>
-    <message>
-        <source>Dict.cc Import</source>
-        <translation>Importazione da dict.cc</translation>
-    </message>
-    <message>
-        <source>Dict.cc does not allow other applications such as Wunderfitz to ship their dictionaries. Therefore, you must download them from dict.cc yourself. Use the Download link, follow the instructions and import the files here afterwards. The downloaded dict.cc ZIP files must be placed in the Downloads folder. If in doubt, use the SailfishOS E-Mail and Browser apps to store the downloads there automatically. After the import in Wunderfitz you can delete the ZIP archives. Please note that you only need to download one combination of two languages. For example if you use DE-EN, you don&apos;t need EN-DE as Wunderfitz always searches in both languages.</source>
-        <translation>Dict.cc non permette ad applicazioni di terze parti come Wunderfitz di includere i propri dizionari. Devi perciò scaricarli da dict.cc personalmente. Tocca il link di download qui sotto, segui le istruzioni sul sito e quindi importa i file in Wunderfitz. I file ZIP scaricati da dict.cc devono essere scaricati nella cartella Downloads. In caso di dubbi, usa le applicazioni E-Mail e Browser di SailfishOS per salvare automaticamente i file nella giusta posizione. Dopo l&apos;importazione in Wunderfitz, puoi cancellare gli archivi ZIP. Nota: è necessario scaricare solo una combinazione di due lingue. Per esempio, se usi IT-EN, non hai bisogno di EN-IT poiché Wunderfitz cerca sempre in entrambe le lingue.</translation>
-    </message>
+    <name>CoverPage</name>
     <message>
         <source>Dictionary</source>
         <translation>Dizionario</translation>
     </message>
-    <message>
-        <source>Choose the active dictionary here</source>
-        <translation>Scegli il dizionario attivo</translation>
-    </message>
-    <message>
-        <source>Delete selected dictionary</source>
-        <translation>Elimina il dizionario selezionato</translation>
-    </message>
-    <message>
-        <source>Dictionary %1 successfully imported</source>
-        <translation>Dizionaro %1 importato con successo</translation>
-    </message>
-    <message>
-        <source>Deleting dictionary %1</source>
-        <translation>Eliminazione dizionaro %1</translation>
-    </message>
-    <message>
-        <source>Dictionary %1 imported</source>
-        <translation>Dizionario %1 importato</translation>
-    </message>
 </context>
 <context>
-    <name>DictionaryButton</name>
-    <message>
-        <source>Dictionaries</source>
-        <translation>Dizionari</translation>
-    </message>
-</context>
-<context>
-    <name>LoadingIndicator</name>
-    <message>
-        <source>Loading...</source>
-        <translation>Caricamento...</translation>
-    </message>
-</context>
-<context>
-    <name>SettingsPage</name>
-    <message>
-        <source>Settings</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Cloud API</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Azure Computer Vision API Key</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Azure Translator Text API Key</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
-    <name>TextPage</name>
-    <message>
-        <source>Copy translation to clipboard</source>
-        <translation>Copia traduzione negli appunti</translation>
-    </message>
-    <message>
-        <source>Copy original to clipboard</source>
-        <translation>Copia originale negli appunti</translation>
-    </message>
-    <message>
-        <source>Result</source>
-        <translation>Risultato</translation>
-    </message>
-    <message>
-        <source>Original</source>
-        <translation>Originale</translation>
-    </message>
-    <message>
-        <source>Translation</source>
-        <translation>Traduzione</translation>
-    </message>
-</context>
-<context>
-    <name>TitlePage</name>
-    <message>
-        <source>About Wunderfitz</source>
-        <translation>Info su Wunderfitz</translation>
-    </message>
-    <message>
-        <source>Dictionaries</source>
-        <translation>Dizionari</translation>
-    </message>
-    <message>
-        <source>Pull down the menu to import and change your dictionaries</source>
-        <translation>Tira berso il basso il menu per importare e cambiare i tuoi dizionari</translation>
-    </message>
-    <message>
-        <source>Searching...</source>
-        <translation>Ricerca...</translation>
-    </message>
-    <message>
-        <source>No results found</source>
-        <translation>Nessun risultato trovato</translation>
-    </message>
-    <message>
-        <source>Search in dictionary...</source>
-        <translation>Ricerca nel dizionario...</translation>
-    </message>
-    <message>
-        <source>Copy to clipboard</source>
-        <translation>Copia negli appunti</translation>
-    </message>
-    <message>
-        <source>Search for &apos;%1&apos;</source>
-        <translation>Cerca %1</translation>
-    </message>
+    <name>CuriosityView</name>
     <message>
         <source>No camera available</source>
         <translation>Nessuna fotocamera disponibile</translation>
@@ -220,6 +88,10 @@
     <message>
         <source>Source Language</source>
         <translation>Linguaggio di partenza</translation>
+    </message>
+    <message>
+        <source>Auto-Detect</source>
+        <translation>Rileva automaticamente</translation>
     </message>
     <message>
         <source>Chinese-Simplified</source>
@@ -324,10 +196,6 @@
     <message>
         <source>Slovak</source>
         <translation>Slovacco</translation>
-    </message>
-    <message>
-        <source>Auto-Detect</source>
-        <translation>Rileva automaticamente</translation>
     </message>
     <message>
         <source>Target Language</source>
@@ -482,10 +350,6 @@
         <translation>Avvertenza Cloud e Beta</translation>
     </message>
     <message>
-        <source>Accept</source>
-        <translation>Accetta</translation>
-    </message>
-    <message>
         <source>The Curiosity feature - taking a picture and automatically translating all recognized text on it - uses other people&apos;s computers (aka &quot;Cloud&quot;) to work. So, your picture is uploaded to another server, analyzed and the information is sent back to this app. So, be cautious if you take pictures of private or confidential data! The Cloud provider is Microsoft Azure. (You see the irony of having Microsoft services running on Sailfish OS ;) ?) By using this service you accept</source>
         <translation>La funzionalità Curiosità - scattare una foto e tradurre automaticamente tutto il testo riconosciuto in essa - usa i computer di altre persone (cioè il &quot;cloud&quot;) per funzionare. Quindi, la tua fotografia viene caricata su un altro server e analizzata, quindi l&apos;informazione viene rimandata a questa app. Per cui sii cauto se scatti fotografie di dati privati o confidenziali! Il fornitore del servizio cloud è Microsoft Azure. (Vedi l&apos;ironia di avere un servizio Microsoft in esecuzione su SailfishOS ;) ?) Usando questo servizio accetti</translation>
     </message>
@@ -494,12 +358,12 @@
         <translation>&lt;a href=&quot;https://azure.microsoft.com/support/legal/&quot;&gt;i termini di servizio e l&apos;informativa sulla privacy di Microsoft Azure&lt;/a&gt;</translation>
     </message>
     <message>
-        <source>Active Dictionary:</source>
+        <source>Moreover, the Curiosity feature is beta! This means that there is no guarantee that it works as you wish or that it will continue working forever in this or a future version of Wunderfitz. It may cease to work without any prior warning...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Settings</source>
-        <translation type="unfinished"></translation>
+        <source>Accept</source>
+        <translation>Accetta</translation>
     </message>
     <message>
         <source>Azure API Keys not set</source>
@@ -517,13 +381,179 @@
         <source>Reload</source>
         <translation type="unfinished"></translation>
     </message>
+</context>
+<context>
+    <name>DictionariesPage</name>
     <message>
-        <source>Moreover, the Curiosity feature is beta! This means that there is no guarantee that it works as you wish or that it will continue working forever in this or a future version of Wunderfitz. It may cease to work without any prior warning...</source>
+        <source>Dictionaries</source>
+        <translation>Dizionari</translation>
+    </message>
+    <message>
+        <source></source>
+        <translation></translation>
+    </message>
+    <message>
+        <source>Download dict.cc dictionaries</source>
+        <translation>Scarica dizionari da dict.cc</translation>
+    </message>
+    <message>
+        <source>Import dict.cc ZIP archives</source>
+        <translation>Importa archivi ZIP di dict.cc</translation>
+    </message>
+    <message>
+        <source>Dict.cc Import</source>
+        <translation>Importazione da dict.cc</translation>
+    </message>
+    <message>
+        <source>Dict.cc does not allow other applications such as Wunderfitz to ship their dictionaries. Therefore, you must download them from dict.cc yourself. Use the Download link, follow the instructions and import the files here afterwards. The downloaded dict.cc ZIP files must be placed in the Downloads folder. If in doubt, use the SailfishOS E-Mail and Browser apps to store the downloads there automatically. After the import in Wunderfitz you can delete the ZIP archives. Please note that you only need to download one combination of two languages. For example if you use DE-EN, you don&apos;t need EN-DE as Wunderfitz always searches in both languages.</source>
+        <translation>Dict.cc non permette ad applicazioni di terze parti come Wunderfitz di includere i propri dizionari. Devi perciò scaricarli da dict.cc personalmente. Tocca il link di download qui sotto, segui le istruzioni sul sito e quindi importa i file in Wunderfitz. I file ZIP scaricati da dict.cc devono essere scaricati nella cartella Downloads. In caso di dubbi, usa le applicazioni E-Mail e Browser di SailfishOS per salvare automaticamente i file nella giusta posizione. Dopo l&apos;importazione in Wunderfitz, puoi cancellare gli archivi ZIP. Nota: è necessario scaricare solo una combinazione di due lingue. Per esempio, se usi IT-EN, non hai bisogno di EN-IT poiché Wunderfitz cerca sempre in entrambe le lingue.</translation>
+    </message>
+    <message>
+        <source>Dictionary</source>
+        <translation>Dizionario</translation>
+    </message>
+    <message>
+        <source>Choose the active dictionary here</source>
+        <translation>Scegli il dizionario attivo</translation>
+    </message>
+    <message>
+        <source>Delete selected dictionary</source>
+        <translation>Elimina il dizionario selezionato</translation>
+    </message>
+    <message>
+        <source>Dictionary %1 successfully imported</source>
+        <translation>Dizionaro %1 importato con successo</translation>
+    </message>
+    <message>
+        <source>Deleting dictionary %1</source>
+        <translation>Eliminazione dizionaro %1</translation>
+    </message>
+    <message>
+        <source>Dictionary %1 imported</source>
+        <translation>Dizionario %1 importato</translation>
+    </message>
+    <message>
+        <source>This built-in dictionary cannot be deleted.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
-    <name>WunderfitzButton</name>
+    <name>DictionariesView</name>
+    <message>
+        <source>Pull down the menu to import and change your dictionaries</source>
+        <translation>Tira berso il basso il menu per importare e cambiare i tuoi dizionari</translation>
+    </message>
+    <message>
+        <source>Searching...</source>
+        <translation>Ricerca...</translation>
+    </message>
+    <message>
+        <source>No results found</source>
+        <translation>Nessun risultato trovato</translation>
+    </message>
+    <message>
+        <source>Active Dictionary:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Search in dictionary...</source>
+        <translation>Ricerca nel dizionario...</translation>
+    </message>
+    <message>
+        <source>Copy to clipboard</source>
+        <translation>Copia negli appunti</translation>
+    </message>
+    <message>
+        <source>Search for &apos;%1&apos;</source>
+        <translation>Cerca %1</translation>
+    </message>
+</context>
+<context>
+    <name>LoadingIndicator</name>
+    <message>
+        <source>Loading...</source>
+        <translation>Caricamento...</translation>
+    </message>
+</context>
+<context>
+    <name>SettingsPage</name>
+    <message>
+        <source>Settings</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cloud API</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Azure Computer Vision API Key</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Azure Translator Text API Key</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Enable cloud features</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The Curiosity feature needs API keys and access to the Internet. No data is uploaded without your consent.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Accept Microsoft Azure terms and conditions</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>You have to accept the terms of service and the privacy statement in order to use this service. More information is given when opening the Curiosity feature.</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>TextPage</name>
+    <message>
+        <source>Copy translation to clipboard</source>
+        <translation>Copia traduzione negli appunti</translation>
+    </message>
+    <message>
+        <source>Copy original to clipboard</source>
+        <translation>Copia originale negli appunti</translation>
+    </message>
+    <message>
+        <source>Result</source>
+        <translation>Risultato</translation>
+    </message>
+    <message>
+        <source>Original</source>
+        <translation>Originale</translation>
+    </message>
+    <message>
+        <source>Translation</source>
+        <translation>Traduzione</translation>
+    </message>
+</context>
+<context>
+    <name>TitlePage</name>
+    <message>
+        <source>About Wunderfitz</source>
+        <translation>Info su Wunderfitz</translation>
+    </message>
+    <message>
+        <source>Dictionaries</source>
+        <translation>Dizionari</translation>
+    </message>
+    <message>
+        <source>Settings</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>harbour-wunderfitz</name>
+    <message>
+        <source>Dictionaries</source>
+        <translation>Dizionari</translation>
+    </message>
     <message>
         <source>Curiosity</source>
         <translation>Curiosità</translation>

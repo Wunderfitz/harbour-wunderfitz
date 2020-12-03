@@ -38,6 +38,9 @@ DictionaryModel::DictionaryModel()
     initializeDatabases();
     DictCCImporterModel* myModel (&dictCCImporterModel);
     connect(myModel, SIGNAL(importFinished()), this, SLOT(handleModelChanged()));
+    connect(this, SIGNAL(dictionaryChanged()), this, SIGNAL(selectedDictionaryIndexChanged()));
+    connect(this, SIGNAL(dictionaryChanged()), this, SIGNAL(selectedDictionaryIdChanged()));
+    connect(this, SIGNAL(dictionaryChanged()), this, SIGNAL(selectedDictionaryNameChanged()));
 }
 
 QVariant DictionaryModel::data(const QModelIndex &index, int role) const {

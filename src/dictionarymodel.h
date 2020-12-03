@@ -1,5 +1,6 @@
 /*
     Copyright (C) 2016-19 Sebastian J. Wolf
+                     2020 Mirian Margiani
 
     This file is part of Wunderfitz.
 
@@ -31,6 +32,10 @@
 class DictionaryModel : public QAbstractListModel
 {
     Q_OBJECT
+    Q_PROPERTY(QString selectedDictionaryName READ getSelectedDictionaryName NOTIFY selectedDictionaryNameChanged)
+    Q_PROPERTY(QString selectedDictionaryId READ getSelectedDictionaryId NOTIFY selectedDictionaryIdChanged)
+    Q_PROPERTY(int selectedDictionaryIndex READ getSelectedDictionaryIndex NOTIFY selectedDictionaryIndexChanged)
+
 public:
 
     static const QString settingDictionaryId;
@@ -50,10 +55,12 @@ public:
 
     Q_INVOKABLE void selectDictionary(int dictionaryIndex);
     Q_INVOKABLE void deleteSelectedDictionary();
-    Q_INVOKABLE QString getSelectedDictionaryName();
-    Q_INVOKABLE QString getSelectedDictionaryId();
-    Q_INVOKABLE int getSelectedDictionaryIndex();
     Q_INVOKABLE bool isInteractionHintDisplayed();
+
+    // property accessors
+    QString getSelectedDictionaryName();
+    QString getSelectedDictionaryId();
+    int getSelectedDictionaryIndex();
 
 public slots:
     void handleModelChanged();
@@ -61,6 +68,9 @@ public slots:
 signals:
     void dictionaryChanged();
     void deletionNotSuccessful(const QString &dictionaryId);
+    void selectedDictionaryNameChanged();
+    void selectedDictionaryIdChanged();
+    void selectedDictionaryIndexChanged();
 
 private:
     QString readLanguages(QSqlDatabase &database);

@@ -1,5 +1,6 @@
 /*
     Copyright (C) 2016-19 Sebastian J. Wolf
+                     2020 Mirian Margiani
 
     This file is part of Wunderfitz.
 
@@ -22,23 +23,6 @@ import Sailfish.Silica 1.0
 import "."
 
 CoverBackground {
-
-    Image {
-        source: "../../images/background.png"
-        anchors {
-            verticalCenter: parent.verticalCenter
-
-            bottom: parent.bottom
-            bottomMargin: Theme.paddingMedium
-
-            right: parent.right
-            rightMargin: Theme.paddingMedium
-        }
-
-        fillMode: Image.PreserveAspectFit
-        opacity: 0.1
-    }
-
     SilicaListView {
         id: coverListView
         anchors {
@@ -50,7 +34,30 @@ CoverBackground {
             rightMargin: Theme.paddingMedium
             bottom: parent.bottom
         }
+
         model: heinzelnisseModel
+
+        header: Label {
+            id: headerLabel
+            maximumLineCount: 1
+            truncationMode: TruncationMode.Fade
+            font.pixelSize: Theme.fontSizeExtraSmall
+            color: Theme.highlightColor
+            anchors { left: parent.left; right: parent.right }
+            text: dictionaryModel.selectedDictionaryName
+            horizontalAlignment: Text.AlignHCenter
+
+            Separator {
+                width: parent.width
+                horizontalAlignment: Qt.AlignHCenter
+                color: Theme.highlightColor
+                anchors {
+                    horizontalCenter: parent.horizontalCenter
+                    top: parent.bottom
+                }
+            }
+        }
+
         delegate: ListItem {
             anchors {
                 topMargin:  Theme.paddingMedium
@@ -83,8 +90,32 @@ CoverBackground {
                 }
             }
         }
+
+        Column {
+            visible: coverListView.count === 0
+            width: parent.width
+            height: childrenRect.height
+            anchors.verticalCenter: parent.verticalCenter
+
+            Label {
+                wrapMode: Text.Wrap
+                horizontalAlignment: Text.AlignHCenter
+                font { pixelSize: Theme.fontSizeMedium; family: Theme.fontFamilyHeading }
+                x: Theme.paddingMedium
+                width: parent.width - 2*x
+                color: Theme.secondaryColor
+                text: "Wunderfitz"
+            }
+            Label {
+                wrapMode: Text.Wrap
+                horizontalAlignment: Text.AlignHCenter
+                font { pixelSize: Theme.fontSizeMedium; family: Theme.fontFamilyHeading }
+                x: Theme.paddingMedium
+                width: parent.width - 2*x
+                color: Theme.primaryColor
+                opacity: Theme.opacityLow
+                text: qsTr("Dictionary")
+            }
+        }
     }
-
 }
-
-

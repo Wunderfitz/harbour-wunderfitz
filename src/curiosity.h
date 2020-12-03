@@ -27,12 +27,16 @@
 const char SETTINGS_SOURCE_LANGUAGE[] = "settings/sourceLanguage";
 const char SETTINGS_TARGET_LANGUAGE[] = "settings/targetLanguage";
 const char SETTINGS_USE_CLOUD[] = "settings/useCloud";
+const char SETTINGS_CLOUD_TERMS_ACCEPTED[] = "settings/cloudTermsAccepted";
 const char SETTINGS_COMPUTER_VISION_KEY[] = "settings/computerVisionKey";
 const char SETTINGS_TRANSLATOR_TEXT_KEY[] = "settings/translatorTextKey";
 
 class Curiosity : public QObject
 {
     Q_OBJECT
+    Q_PROPERTY(bool cloudTermsAccepted READ cloudTermsAccepted WRITE setCloudTermsAccepted NOTIFY cloudTermsAcceptedChanged)
+    Q_PROPERTY(bool useCloud READ useCloud WRITE setUseCloud NOTIFY useCloudChanged)
+
 public:
     explicit Curiosity(QObject *parent = 0);
     Q_INVOKABLE QString getTemporaryDirectoryPath();
@@ -43,8 +47,6 @@ public:
     Q_INVOKABLE void setSourceLanguage(const QString &sourceLanguage);
     Q_INVOKABLE QString getTargetLanguage();
     Q_INVOKABLE void setTargetLanguage(const QString &targetLanguage);
-    Q_INVOKABLE bool getUseCloud();
-    Q_INVOKABLE void setUseCloud(const bool &useCloud);
     Q_INVOKABLE QString getTranslatedText();
     Q_INVOKABLE void setComputerVisionKey(const QString &computerVisionKey);
     Q_INVOKABLE QString getComputerVisionKey();
@@ -53,12 +55,21 @@ public:
 
     CloudApi *getCloudApi();
 
+    // property accessors
+    bool cloudTermsAccepted();
+    void setCloudTermsAccepted(const bool &accepted);
+    bool useCloud();
+    void setUseCloud(const bool &useCloud);
+
 signals:
     void translationSuccessful(const QString &text);
     void translationError(const QString &errorMessage);
     void ocrProgress(const int &percentCompleted);
     void ocrError(const QString &errorMessage);
     void ocrSuccessful();
+
+    void useCloudChanged();
+    void cloudTermsAcceptedChanged();
 
 public slots:
     void handleTranslationSuccessful(const QJsonArray &result);

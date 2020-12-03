@@ -61,146 +61,14 @@
     </message>
 </context>
 <context>
-    <name>DictionariesPage</name>
-    <message>
-        <source>Dictionaries</source>
-        <translation>Ordböcker</translation>
-    </message>
-    <message>
-        <source></source>
-        <translation></translation>
-    </message>
-    <message>
-        <source>Download dict.cc dictionaries</source>
-        <translation>Ladda ner ordböcker från dict.cc</translation>
-    </message>
-    <message>
-        <source>Import dict.cc ZIP archives</source>
-        <translation>Importera ZIP-arkiv från dict.cc</translation>
-    </message>
+    <name>CoverPage</name>
     <message>
         <source>Dictionary</source>
         <translation>Ordbok</translation>
     </message>
-    <message>
-        <source>Dict.cc Import</source>
-        <translation>Dict.cc-import</translation>
-    </message>
-    <message>
-        <source>Choose the active dictionary here</source>
-        <translation>Välj aktiv ordbok här</translation>
-    </message>
-    <message>
-        <source>Dict.cc does not allow other applications such as Wunderfitz to ship their dictionaries. Therefore, you must download them from dict.cc yourself. Use the Download link, follow the instructions and import the files here afterwards. The downloaded dict.cc ZIP files must be placed in the Downloads folder. If in doubt, use the SailfishOS E-Mail and Browser apps to store the downloads there automatically. After the import in Wunderfitz you can delete the ZIP archives. Please note that you only need to download one combination of two languages. For example if you use DE-EN, you don&apos;t need EN-DE as Wunderfitz always searches in both languages.</source>
-        <translation>Dict.cc tillåter inte andra program såsom Wunderfitz, att leverera deras ordböcker. Därför måste du själv ladda ner dem från dict.cc. Använd nerladdningslänken, följ instruktionerna och importera därefter filerna här. De nerladdade ZIP-filerna måste placeras i mappen &quot;Nedladdningar&quot;. Om du är osäker kan du använda SailfishOS e-postprogram och webbläsare för att automatiskt lagra nerladdningarna där. Efter import i Wunderfitz kan du radera ZIP-arkiven. Notera att du bara behöver ladda ner en av två språkkombinationer. Om du t.ex. vill använda SV-EN, behöver du inte EN-SV, eftersom Wunderfitz alltid söker i bägge språken.</translation>
-    </message>
-    <message>
-        <source>Delete selected dictionary</source>
-        <translation>Ta bort aktuell ordbok</translation>
-    </message>
-    <message>
-        <source>Dictionary %1 successfully imported</source>
-        <translation>Ordbok %1 korrekt importerad</translation>
-    </message>
-    <message>
-        <source>Deleting dictionary %1</source>
-        <translation>Tar bort ordbok %1</translation>
-    </message>
-    <message>
-        <source>Dictionary %1 imported</source>
-        <translation>Ordbok %1 importerad</translation>
-    </message>
 </context>
 <context>
-    <name>DictionaryButton</name>
-    <message>
-        <source>Dictionaries</source>
-        <translation>Ordböcker</translation>
-    </message>
-</context>
-<context>
-    <name>LoadingIndicator</name>
-    <message>
-        <source>Loading...</source>
-        <translation>Läser in...</translation>
-    </message>
-</context>
-<context>
-    <name>SettingsPage</name>
-    <message>
-        <source>Settings</source>
-        <translation>Inställningar</translation>
-    </message>
-    <message>
-        <source>Cloud API</source>
-        <translation>Moln-API</translation>
-    </message>
-    <message>
-        <source>Azure Computer Vision API Key</source>
-        <translation>Azure Computer Vision API-nyckel</translation>
-    </message>
-    <message>
-        <source>Azure Translator Text API Key</source>
-        <translation>Azure Translator Text API-nyckel</translation>
-    </message>
-</context>
-<context>
-    <name>TextPage</name>
-    <message>
-        <source>Copy translation to clipboard</source>
-        <translation>Kopiera översättning till urklipp</translation>
-    </message>
-    <message>
-        <source>Copy original to clipboard</source>
-        <translation>Kopiera källtext till urklipp</translation>
-    </message>
-    <message>
-        <source>Result</source>
-        <translation>Resultat</translation>
-    </message>
-    <message>
-        <source>Original</source>
-        <translation>Källtext</translation>
-    </message>
-    <message>
-        <source>Translation</source>
-        <translation>Översättning</translation>
-    </message>
-</context>
-<context>
-    <name>TitlePage</name>
-    <message>
-        <source>About Wunderfitz</source>
-        <translation>Om Wunderfitz</translation>
-    </message>
-    <message>
-        <source>Dictionaries</source>
-        <translation>Ordböcker</translation>
-    </message>
-    <message>
-        <source>Pull down the menu to import and change your dictionaries</source>
-        <translation>Dra ner menyn för att importera och ändra dina ordböcker</translation>
-    </message>
-    <message>
-        <source>Searching...</source>
-        <translation>Söker...</translation>
-    </message>
-    <message>
-        <source>No results found</source>
-        <translation>Inget hittades</translation>
-    </message>
-    <message>
-        <source>Search in dictionary...</source>
-        <translation>Sök i ordbok...</translation>
-    </message>
-    <message>
-        <source>Copy to clipboard</source>
-        <translation>Kopiera till urklipp</translation>
-    </message>
-    <message>
-        <source>Search for &apos;%1&apos;</source>
-        <translation>Sök efter &quot;%1&quot;</translation>
-    </message>
+    <name>CuriosityView</name>
     <message>
         <source>No camera available</source>
         <translation>Ingen kamera tillgänglig</translation>
@@ -220,6 +88,10 @@
     <message>
         <source>Source Language</source>
         <translation>Källspråk</translation>
+    </message>
+    <message>
+        <source>Auto-Detect</source>
+        <translation>Identifiera automatiskt</translation>
     </message>
     <message>
         <source>Chinese-Simplified</source>
@@ -324,10 +196,6 @@
     <message>
         <source>Slovak</source>
         <translation>Slovakiska</translation>
-    </message>
-    <message>
-        <source>Auto-Detect</source>
-        <translation>Identifiera automatiskt</translation>
     </message>
     <message>
         <source>Target Language</source>
@@ -482,10 +350,6 @@
         <translation>Moln och betavarning</translation>
     </message>
     <message>
-        <source>Accept</source>
-        <translation>Acceptera</translation>
-    </message>
-    <message>
         <source>The Curiosity feature - taking a picture and automatically translating all recognized text on it - uses other people&apos;s computers (aka &quot;Cloud&quot;) to work. So, your picture is uploaded to another server, analyzed and the information is sent back to this app. So, be cautious if you take pictures of private or confidential data! The Cloud provider is Microsoft Azure. (You see the irony of having Microsoft services running on Sailfish OS ;) ?) By using this service you accept</source>
         <translation>Kuriositetsfunktionen - Att ta en bild och automatiskt översätta all tolkad text på den, använder andras datorer (alias &quot;Moln&quot;) för arbetet. Så din bild laddas upp till en server, analyseras och informationen skickas tillbaka till denna app, så var försiktig om du tar bilder av privat eller konfidentiell karaktär! Molnleverantören är Microsoft Azure (Du ser ironin i att ha Microsoft-tjänster som körs på Sailfish OS;)? Genom att använda denna tjänst, accepterar du detta.</translation>
     </message>
@@ -494,12 +358,12 @@
         <translation>&lt;a href=&quot;https://azure.microsoft.com/support/legal/&quot;&gt;Microsoft Azure tjänstvillkor och sekretesspolicy&lt;/a&gt;</translation>
     </message>
     <message>
-        <source>Active Dictionary:</source>
-        <translation>Aktiv ordbok:</translation>
+        <source>Moreover, the Curiosity feature is beta! This means that there is no guarantee that it works as you wish or that it will continue working forever in this or a future version of Wunderfitz. It may cease to work without any prior warning...</source>
+        <translation>Dessutom är kuriositetsfunktionen beta! Detta innebär att det inte finns någon garanti för att det fungerar som du vill eller att det kommer att fortsätta fungera för evigt, i denna eller framtida versioner av Wunderfitz. Det kan upphöra att fungera utan förvarning...</translation>
     </message>
     <message>
-        <source>Settings</source>
-        <translation>Inställningar</translation>
+        <source>Accept</source>
+        <translation>Acceptera</translation>
     </message>
     <message>
         <source>Azure API Keys not set</source>
@@ -517,13 +381,179 @@
         <source>Reload</source>
         <translation>Uppdatera</translation>
     </message>
+</context>
+<context>
+    <name>DictionariesPage</name>
     <message>
-        <source>Moreover, the Curiosity feature is beta! This means that there is no guarantee that it works as you wish or that it will continue working forever in this or a future version of Wunderfitz. It may cease to work without any prior warning...</source>
-        <translation>Dessutom är kuriositetsfunktionen beta! Detta innebär att det inte finns någon garanti för att det fungerar som du vill eller att det kommer att fortsätta fungera för evigt, i denna eller framtida versioner av Wunderfitz. Det kan upphöra att fungera utan förvarning...</translation>
+        <source>Dictionaries</source>
+        <translation>Ordböcker</translation>
+    </message>
+    <message>
+        <source></source>
+        <translation></translation>
+    </message>
+    <message>
+        <source>Download dict.cc dictionaries</source>
+        <translation>Ladda ner ordböcker från dict.cc</translation>
+    </message>
+    <message>
+        <source>Import dict.cc ZIP archives</source>
+        <translation>Importera ZIP-arkiv från dict.cc</translation>
+    </message>
+    <message>
+        <source>Dictionary</source>
+        <translation>Ordbok</translation>
+    </message>
+    <message>
+        <source>Dict.cc Import</source>
+        <translation>Dict.cc-import</translation>
+    </message>
+    <message>
+        <source>Choose the active dictionary here</source>
+        <translation>Välj aktiv ordbok här</translation>
+    </message>
+    <message>
+        <source>Dict.cc does not allow other applications such as Wunderfitz to ship their dictionaries. Therefore, you must download them from dict.cc yourself. Use the Download link, follow the instructions and import the files here afterwards. The downloaded dict.cc ZIP files must be placed in the Downloads folder. If in doubt, use the SailfishOS E-Mail and Browser apps to store the downloads there automatically. After the import in Wunderfitz you can delete the ZIP archives. Please note that you only need to download one combination of two languages. For example if you use DE-EN, you don&apos;t need EN-DE as Wunderfitz always searches in both languages.</source>
+        <translation>Dict.cc tillåter inte andra program såsom Wunderfitz, att leverera deras ordböcker. Därför måste du själv ladda ner dem från dict.cc. Använd nerladdningslänken, följ instruktionerna och importera därefter filerna här. De nerladdade ZIP-filerna måste placeras i mappen &quot;Nedladdningar&quot;. Om du är osäker kan du använda SailfishOS e-postprogram och webbläsare för att automatiskt lagra nerladdningarna där. Efter import i Wunderfitz kan du radera ZIP-arkiven. Notera att du bara behöver ladda ner en av två språkkombinationer. Om du t.ex. vill använda SV-EN, behöver du inte EN-SV, eftersom Wunderfitz alltid söker i bägge språken.</translation>
+    </message>
+    <message>
+        <source>Delete selected dictionary</source>
+        <translation>Ta bort aktuell ordbok</translation>
+    </message>
+    <message>
+        <source>Dictionary %1 successfully imported</source>
+        <translation>Ordbok %1 korrekt importerad</translation>
+    </message>
+    <message>
+        <source>Deleting dictionary %1</source>
+        <translation>Tar bort ordbok %1</translation>
+    </message>
+    <message>
+        <source>Dictionary %1 imported</source>
+        <translation>Ordbok %1 importerad</translation>
+    </message>
+    <message>
+        <source>This built-in dictionary cannot be deleted.</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
-    <name>WunderfitzButton</name>
+    <name>DictionariesView</name>
+    <message>
+        <source>Pull down the menu to import and change your dictionaries</source>
+        <translation>Dra ner menyn för att importera och ändra dina ordböcker</translation>
+    </message>
+    <message>
+        <source>Searching...</source>
+        <translation>Söker...</translation>
+    </message>
+    <message>
+        <source>No results found</source>
+        <translation>Inget hittades</translation>
+    </message>
+    <message>
+        <source>Active Dictionary:</source>
+        <translation>Aktiv ordbok:</translation>
+    </message>
+    <message>
+        <source>Search in dictionary...</source>
+        <translation>Sök i ordbok...</translation>
+    </message>
+    <message>
+        <source>Copy to clipboard</source>
+        <translation>Kopiera till urklipp</translation>
+    </message>
+    <message>
+        <source>Search for &apos;%1&apos;</source>
+        <translation>Sök efter &quot;%1&quot;</translation>
+    </message>
+</context>
+<context>
+    <name>LoadingIndicator</name>
+    <message>
+        <source>Loading...</source>
+        <translation>Läser in...</translation>
+    </message>
+</context>
+<context>
+    <name>SettingsPage</name>
+    <message>
+        <source>Settings</source>
+        <translation>Inställningar</translation>
+    </message>
+    <message>
+        <source>Cloud API</source>
+        <translation>Moln-API</translation>
+    </message>
+    <message>
+        <source>Azure Computer Vision API Key</source>
+        <translation>Azure Computer Vision API-nyckel</translation>
+    </message>
+    <message>
+        <source>Azure Translator Text API Key</source>
+        <translation>Azure Translator Text API-nyckel</translation>
+    </message>
+    <message>
+        <source>Enable cloud features</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The Curiosity feature needs API keys and access to the Internet. No data is uploaded without your consent.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Accept Microsoft Azure terms and conditions</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>You have to accept the terms of service and the privacy statement in order to use this service. More information is given when opening the Curiosity feature.</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>TextPage</name>
+    <message>
+        <source>Copy translation to clipboard</source>
+        <translation>Kopiera översättning till urklipp</translation>
+    </message>
+    <message>
+        <source>Copy original to clipboard</source>
+        <translation>Kopiera källtext till urklipp</translation>
+    </message>
+    <message>
+        <source>Result</source>
+        <translation>Resultat</translation>
+    </message>
+    <message>
+        <source>Original</source>
+        <translation>Källtext</translation>
+    </message>
+    <message>
+        <source>Translation</source>
+        <translation>Översättning</translation>
+    </message>
+</context>
+<context>
+    <name>TitlePage</name>
+    <message>
+        <source>About Wunderfitz</source>
+        <translation>Om Wunderfitz</translation>
+    </message>
+    <message>
+        <source>Dictionaries</source>
+        <translation>Ordböcker</translation>
+    </message>
+    <message>
+        <source>Settings</source>
+        <translation>Inställningar</translation>
+    </message>
+</context>
+<context>
+    <name>harbour-wunderfitz</name>
+    <message>
+        <source>Dictionaries</source>
+        <translation>Ordböcker</translation>
+    </message>
     <message>
         <source>Curiosity</source>
         <translation>Kuriositet</translation>

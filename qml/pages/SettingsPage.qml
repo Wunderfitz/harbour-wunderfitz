@@ -1,5 +1,6 @@
 /*
     Copyright (C) 2016-19 Sebastian J. Wolf
+                     2020 Mirian Margiani
 
     This file is part of Wunderfitz.
 
@@ -47,12 +48,31 @@ Page {
                 text: qsTr("Cloud API")
             }
 
+            TextSwitch {
+                checked: useCloud
+                text: qsTr("Enable cloud features")
+                description: qsTr("The Curiosity feature needs API keys and access to the Internet. " +
+                                  "No data is uploaded without your consent.")
+                onClicked: curiosity.useCloud = !curiosity.useCloud
+            }
+
+            TextSwitch {
+                checked: curiosity.cloudTermsAccepted
+                text: qsTr("Accept Microsoft Azure terms and conditions")
+                description: qsTr("You have to accept the terms of service and the privacy statement " +
+                                  "in order to use this service. More information is given when opening " +
+                                  "the Curiosity feature.")
+                onClicked: curiosity.cloudTermsAccepted = !curiosity.cloudTermsAccepted
+                enabled: useCloud
+            }
+
             TextField {
                 id: computerVisionKeyField
                 width: parent.width
                 placeholderText: qsTr("Azure Computer Vision API Key")
                 label: placeholderText
                 onTextChanged: curiosity.setComputerVisionKey(text)
+                enabled: useCloud
             }
 
             TextField {
@@ -61,6 +81,7 @@ Page {
                 placeholderText: qsTr("Azure Translator Text API Key")
                 label: placeholderText
                 onTextChanged: curiosity.setTranslatorTextKey(text)
+                enabled: useCloud
             }
 
             Label {
