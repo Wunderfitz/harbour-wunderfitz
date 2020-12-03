@@ -1,5 +1,6 @@
 /*
     Copyright (C) 2016-19 Sebastian J. Wolf
+                     2020 Mirian Margiani
 
     This file is part of Wunderfitz.
 
@@ -32,6 +33,7 @@
 #include "dictionarymodel.h"
 #include "curiosity.h"
 #include "cloudapi.h"
+#include "requires_defines.h"
 
 int main(int argc, char *argv[])
 {
@@ -43,6 +45,8 @@ int main(int argc, char *argv[])
     ctxt->setContextProperty("dictionaryModel", &dictionaryModel);
     ctxt->setContextProperty("heinzelnisseModel", &dictionaryModel.heinzelnisseModel);
     ctxt->setContextProperty("dictCCImporterModel", &dictionaryModel.dictCCImporterModel);
+    // ctxt->setContextProperty("versionNumber", QString("%1-%2").arg(APP_VERSION).arg(APP_RELEASE));
+    ctxt->setContextProperty("versionNumber", QString(APP_VERSION));
 
     Curiosity curiosity;
     ctxt->setContextProperty("curiosity", &curiosity);

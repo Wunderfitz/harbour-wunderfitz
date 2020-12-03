@@ -39,3 +39,13 @@ HEADERS += \
     curiosity.h \
     cloudapi.h
 
+# Note: version number can be configured in the yaml-file
+DEFINES += APP_VERSION=\\\"$$VERSION\\\"
+DEFINES += APP_RELEASE=\\\"$$RELEASE\\\"
+
+OLD_DEFINES = "$$cat($$OUT_PWD/requires_defines.h)"
+!equals(OLD_DEFINES, $$join(DEFINES, ";", "//")) {
+    NEW_DEFINES = "$$join(DEFINES, ";", "//")"
+    write_file("$$OUT_PWD/requires_defines.h", NEW_DEFINES)
+    message("DEFINES changed...")
+}
