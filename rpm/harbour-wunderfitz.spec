@@ -42,15 +42,15 @@ Wunderfitz is a mobile dictionary application, supporting the Heinzelnisse dicti
 
 %build
 # >> build pre
-export APP_VERSION=%{version}
 # << build pre
 
-%qtc_qmake5 
+%qtc_qmake5  \
+    VERSION=%{version} \
+    RELEASE=%{release}
 
 %qtc_make %{?_smp_mflags}
 
 # >> build post
-unset APP_VERSION
 # << build post
 
 %install

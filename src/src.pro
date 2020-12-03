@@ -3,7 +3,6 @@ LIBS += -lz -lquazip -L../quazip/quazip
 
 QT += sql core
 
-DEFINES += APP_VERSION=\\\"$$(APP_VERSION)\\\"
 DEPENDPATH += . ../quazip/quazip
 INCLUDEPATH += . ../quazip/quazip
 QMAKE_LFLAGS += -Wl,-rpath,\\$${LITERAL_DOLLAR}$${LITERAL_DOLLAR}ORIGIN/../share/harbour-wunderfitz/lib
@@ -40,3 +39,13 @@ HEADERS += \
     curiosity.h \
     cloudapi.h
 
+# Note: version number can be configured in the yaml-file
+DEFINES += APP_VERSION=\\\"$$VERSION\\\"
+DEFINES += APP_RELEASE=\\\"$$RELEASE\\\"
+
+OLD_DEFINES = "$$cat($$OUT_PWD/requires_defines.h)"
+!equals(OLD_DEFINES, $$join(DEFINES, ";", "//")) {
+    NEW_DEFINES = "$$join(DEFINES, ";", "//")"
+    write_file("$$OUT_PWD/requires_defines.h", NEW_DEFINES)
+    message("DEFINES changed...")
+}
