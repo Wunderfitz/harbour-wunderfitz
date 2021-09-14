@@ -51,3 +51,7 @@
 - Heinzelnisse dictionary update from March 3, 2020
 - Updated translations for Chinese, Polish and Spanish (thanks to dashinfantry, atlochowski and GNUuser)
 - UX improvements to search field: focus handling & predictive text input. (Thanks to Pohli for the ideas)
+
+* Tue Sep 14 2021 <sebastian@ygriega.de> 1.5
+- Heinzelnisse dictionary update from April 25, 2021
+- aarch64 compatibility
