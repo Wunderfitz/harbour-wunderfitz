@@ -34,7 +34,7 @@
 #include <QFile>
 #include <QSettings>
 
-const char API_OCR[] = "https://westeurope.api.cognitive.microsoft.com/vision/v1.0/ocr";
+const char API_OCR[] = "https://wunderfitz.cognitiveservices.azure.com/vision/v1.0/ocr";
 const char API_TRANSLATE[] = "https://api.cognitive.microsofttranslator.com/translate";
 
 class CloudApi : public QObject
