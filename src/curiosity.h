@@ -22,13 +22,22 @@
 
 #include <QObject>
 #include <QSettings>
-#include "cloudapi.h"
+#include <QNetworkAccessManager>
 
+// Settings keys
 const char SETTINGS_SOURCE_LANGUAGE[] = "settings/sourceLanguage";
 const char SETTINGS_TARGET_LANGUAGE[] = "settings/targetLanguage";
 const char SETTINGS_USE_CLOUD[] = "settings/useCloud";
 const char SETTINGS_COMPUTER_VISION_KEY[] = "settings/computerVisionKey";
+const char SETTINGS_COMPUTER_VISION_ENDPOINT[] = "settings/computerVisionEndpoint";
 const char SETTINGS_TRANSLATOR_TEXT_KEY[] = "settings/translatorTextKey";
+const char SETTINGS_TRANSLATOR_TEXT_ENDPOINT[] = "settings/translatorTextEndpoint";
+
+// Settings defaults
+const char DEFAULT_COMPUTER_VISION_ENDPOINT[] = "https://westeurope.api.cognitive.microsoft.com";
+const char DEFAULT_TRANSLATOR_TEXT_ENDPOINT[] = "https://api.cognitive.microsofttranslator.com";
+
+class CloudApi;
 
 class Curiosity : public QObject
 {
@@ -48,8 +57,12 @@ public:
     Q_INVOKABLE QString getTranslatedText();
     Q_INVOKABLE void setComputerVisionKey(const QString &computerVisionKey);
     Q_INVOKABLE QString getComputerVisionKey();
+    Q_INVOKABLE void setComputerVisionEndpoint(const QString &computerVisionEndpoint);
+    Q_INVOKABLE QString getComputerVisionEndpoint();
     Q_INVOKABLE void setTranslatorTextKey(const QString &translatorTextKey);
     Q_INVOKABLE QString getTranslatorTextKey();
+    Q_INVOKABLE void setTranslatorTextEndpoint(const QString &translatorTextEndpoint);
+    Q_INVOKABLE QString getTranslatorTextEndpoint();
 
     CloudApi *getCloudApi();
 

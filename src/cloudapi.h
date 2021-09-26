@@ -34,14 +34,16 @@
 #include <QFile>
 #include <QSettings>
 
-const char API_OCR[] = "https://wunderfitz.cognitiveservices.azure.com/vision/v1.0/ocr";
-const char API_TRANSLATE[] = "https://api.cognitive.microsofttranslator.com/translate";
+const char API_COMPUTER_VISION_ENDPOINT_PATH[] = "/vision/v1.0/ocr";
+const char API_TRANSLATOR_TEXT_ENDPOINT_PATH[] = "/translate";
+
+class Curiosity;
 
 class CloudApi : public QObject
 {
     Q_OBJECT
 public:
-    explicit CloudApi(QNetworkAccessManager *manager, QObject *parent = 0);
+    explicit CloudApi(QNetworkAccessManager *manager, Curiosity *parent = 0);
 
     Q_INVOKABLE void opticalCharacterRecognition(const QString &imagePath, const QString &sourceLanguage);
     Q_INVOKABLE void translate(const QString &text, const QString &targetLanguage);
@@ -65,6 +67,7 @@ private:
     QNetworkAccessManager *networkAccessManager;
     QSettings settings;
 
+    Curiosity *curiosity;
 };
 
 #endif // CLOUDAPI_H

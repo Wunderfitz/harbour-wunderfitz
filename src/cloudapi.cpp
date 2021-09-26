@@ -20,7 +20,9 @@
 #include "cloudapi.h"
 #include "curiosity.h"
 
-CloudApi::CloudApi(QNetworkAccessManager *manager, QObject *parent) : QObject(parent)
+CloudApi::CloudApi(QNetworkAccessManager *manager, Curiosity *parent)
+    : QObject(parent)
+    , curiosity(parent)
 {
     this->networkAccessManager = manager;
 }
@@ -29,10 +31,11 @@ void CloudApi::opticalCharacterRecognition(const QString &imagePath, const QStri
 {
     qDebug() << "CloudApi::opticalCharacterRecognition" << imagePath << sourceLanguage;
 
-    QUrl url = QUrl(QString(API_OCR));
+    QUrl url = QUrl(curiosity->getComputerVisionEndpoint());
+    url.setPath(url.path() + API_COMPUTER_VISION_ENDPOINT_PATH);
     QNetworkRequest request(url);
     request.setHeader(QNetworkRequest::ContentTypeHeader, "application/octet-stream");
-    request.setRawHeader(QByteArray("Ocp-Apim-Subscription-Key"), settings.value(SETTINGS_COMPUTER_VISION_KEY).toByteArray());
+    request.setRawHeader(QByteArray("Ocp-Apim-Subscription-Key"), curiosity->getComputerVisionKey().toLocal8Bit());
     QUrlQuery urlQuery = QUrlQuery();
     urlQuery.addQueryItem("language", sourceLanguage);
     urlQuery.addQueryItem("detectOrientation", "true");
@@ -56,14 +59,15 @@ void CloudApi::translate(const QString &text, const QString &targetLanguage)
 {
     qDebug() << "CloudApi::translate" << text << targetLanguage;
 
-    QUrl url = QUrl(QString(API_TRANSLATE));
+    QUrl url = QUrl(curiosity->getTranslatorTextEndpoint());
+    url.setPath(url.path() + API_TRANSLATOR_TEXT_ENDPOINT_PATH);
     QUrlQuery urlQuery = QUrlQuery();
     urlQuery.addQueryItem("api-version", "3.0");
     urlQuery.addQueryItem("to", targetLanguage);
     url.setQuery(urlQuery);
     QNetworkRequest request(url);
     request.setHeader(QNetworkRequest::ContentTypeHeader, "application/json");
-    request.setRawHeader(QByteArray("Ocp-Apim-Subscription-Key"), settings.value(SETTINGS_TRANSLATOR_TEXT_KEY).toByteArray());
+    request.setRawHeader(QByteArray("Ocp-Apim-Subscription-Key"), curiosity->getTranslatorTextKey().toLocal8Bit());
     request.setRawHeader(QByteArray("Ocp-Apim-Subscription-Region"), "northeurope");
 
     QJsonObject jsonText;

@@ -143,6 +143,14 @@
         <source>Azure Translator Text API Key</source>
         <translation>Azure Translator Text API-nyckel</translation>
     </message>
+    <message>
+        <source>Azure Computer Vision Endpoint</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Azure Translator Text Endpoint</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>TextPage</name>
