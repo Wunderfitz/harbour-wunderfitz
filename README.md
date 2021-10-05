@@ -13,6 +13,7 @@ Licensed under GNU GPLv2
 - Italian: Alessandro Pra'
 - Hungarian: Szabó Géza
 - Polish: [Atlochowski](https://github.com/atlochowski)
+- Slovak: [okruhliak](https://github.com/okruhliak)
 - Spanish: [carlosgonz](https://github.com/GNUUser)
 - Swedish: Åke Engelbrektson
 

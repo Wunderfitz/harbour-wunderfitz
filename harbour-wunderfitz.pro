@@ -36,6 +36,7 @@ TRANSLATIONS += translations/harbour-wunderfitz-de.ts \
      translations/harbour-wunderfitz-es.ts \
      translations/harbour-wunderfitz-pl.ts \
      translations/harbour-wunderfitz-hu.ts \
+     translations/harbour-wunderfitz-sk.ts \
      translations/harbour-wunderfitz-zh_CN.ts
 
 database.files = db
