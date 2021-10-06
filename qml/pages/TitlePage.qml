@@ -435,14 +435,17 @@ Page {
                                 Camera {
                                     id: camera
                                     deviceId: QtMultimedia.defaultCamera.deviceId
-                                    imageCapture {
-                                        onImageSaved: {
-                                            console.log("Image captured");
-                                            curiosity.captureCompleted(path);
-                                            previewImage.source = path;
-                                            previewImage.visible = true;
-                                        }
+                                    imageCapture.onImageSaved: {
+                                        console.log("Image captured");
+                                        curiosity.captureCompleted(path);
+                                        previewImage.source = path;
+                                        previewImage.visible = true;
                                     }
+                                    onError: {
+                                        wunderfitzView.isProcessing = false;
+                                        titleNotification.show("Error occurred: " + errorString);
+                                    }
+
                                     onCameraStateChanged: {
                                         if (cameraState == Camera.ActiveState) {
                                             console.log("We are loaded!");
