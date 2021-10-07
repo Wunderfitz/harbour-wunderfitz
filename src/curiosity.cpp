@@ -30,6 +30,8 @@
 #include <QRect>
 #include <QJsonObject>
 
+#include "cloudapi.h"
+
 Curiosity::Curiosity(QObject *parent) : QObject(parent)
 {
     this->networkAccessManager = new QNetworkAccessManager(this);
@@ -135,6 +137,17 @@ QString Curiosity::getComputerVisionKey()
     return settings.value(SETTINGS_COMPUTER_VISION_KEY, "").toString();
 }
 
+void Curiosity::setComputerVisionEndpoint(const QString &computerVisionEndpoint)
+{
+    qDebug() << "[Curiosity] Set computer vision endpoint" << computerVisionEndpoint;
+    settings.setValue(SETTINGS_COMPUTER_VISION_ENDPOINT, computerVisionEndpoint);
+}
+
+QString Curiosity::getComputerVisionEndpoint()
+{
+    return settings.value(SETTINGS_COMPUTER_VISION_ENDPOINT, DEFAULT_COMPUTER_VISION_ENDPOINT).toString();
+}
+
 void Curiosity::setTranslatorTextKey(const QString &translatorTextKey)
 {
     qDebug() << "[Curiosity] Set translator text key" << translatorTextKey;
@@ -144,6 +157,17 @@ void Curiosity::setTranslatorTextKey(const QString &translatorTextKey)
 QString Curiosity::getTranslatorTextKey()
 {
     return settings.value(SETTINGS_TRANSLATOR_TEXT_KEY, "").toString();
+}
+
+void Curiosity::setTranslatorTextEndpoint(const QString &translatorTextEndpoint)
+{
+    qDebug() << "[Curiosity] Set translator text endpoint" << translatorTextEndpoint;
+    settings.setValue(SETTINGS_TRANSLATOR_TEXT_ENDPOINT, translatorTextEndpoint);
+}
+
+QString Curiosity::getTranslatorTextEndpoint()
+{
+    return settings.value(SETTINGS_TRANSLATOR_TEXT_ENDPOINT, DEFAULT_TRANSLATOR_TEXT_ENDPOINT).toString();
 }
 
 CloudApi *Curiosity::getCloudApi()

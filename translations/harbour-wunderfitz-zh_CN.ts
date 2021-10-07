@@ -144,6 +144,14 @@
         <source>Azure Translator Text API Key</source>
         <translation>Azure 翻译器文本 API 密钥</translation>
     </message>
+    <message>
+        <source>Azure Computer Vision Endpoint</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Azure Translator Text Endpoint</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>TextPage</name>

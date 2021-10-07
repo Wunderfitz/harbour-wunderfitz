@@ -26,7 +26,9 @@ Page {
 
     Component.onCompleted: {
         computerVisionKeyField.text = curiosity.getComputerVisionKey();
+        computerVisionEndpointField.text = curiosity.getComputerVisionEndpoint();
         translatorTextKeyField.text = curiosity.getTranslatorTextKey();
+        translatorTextEndpointField.text = curiosity.getTranslatorTextEndpoint();
     }
 
     SilicaFlickable {
@@ -56,11 +58,27 @@ Page {
             }
 
             TextField {
+                id: computerVisionEndpointField
+                width: parent.width
+                placeholderText: qsTr("Azure Computer Vision Endpoint")
+                label: placeholderText
+                onTextChanged: curiosity.setComputerVisionEndpoint(text)
+            }
+
+            TextField {
                 id: translatorTextKeyField
                 width: parent.width
                 placeholderText: qsTr("Azure Translator Text API Key")
                 label: placeholderText
                 onTextChanged: curiosity.setTranslatorTextKey(text)
+            }
+
+            TextField {
+                id: translatorTextEndpointField
+                width: parent.width
+                placeholderText: qsTr("Azure Translator Text Endpoint")
+                label: placeholderText
+                onTextChanged: curiosity.setTranslatorTextEndpoint(text)
             }
 
             Label {
