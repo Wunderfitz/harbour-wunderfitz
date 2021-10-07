@@ -143,6 +143,18 @@
         <source>Azure Translator Text API Key</source>
         <translation>Kľúč API rozhrania Azure Translator Text</translation>
     </message>
+    <message>
+        <source>Azure Computer Vision Endpoint</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Azure Translator Text Endpoint</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Azure Translator Text Region</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>TextPage</name>

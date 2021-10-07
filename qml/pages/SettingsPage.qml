@@ -29,6 +29,7 @@ Page {
         computerVisionEndpointField.text = curiosity.getComputerVisionEndpoint();
         translatorTextKeyField.text = curiosity.getTranslatorTextKey();
         translatorTextEndpointField.text = curiosity.getTranslatorTextEndpoint();
+        translatorTextRegionField.text = curiosity.getTranslatorTextRegion();
     }
 
     SilicaFlickable {
@@ -79,6 +80,14 @@ Page {
                 placeholderText: qsTr("Azure Translator Text Endpoint")
                 label: placeholderText
                 onTextChanged: curiosity.setTranslatorTextEndpoint(text)
+            }
+
+            TextField {
+                id: translatorTextRegionField
+                width: parent.width
+                placeholderText: qsTr("Azure Translator Text Region")
+                label: placeholderText
+                onTextChanged: curiosity.setTranslatorTextRegion(text)
             }
 
             Label {

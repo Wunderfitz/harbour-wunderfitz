@@ -32,10 +32,12 @@ const char SETTINGS_COMPUTER_VISION_KEY[] = "settings/computerVisionKey";
 const char SETTINGS_COMPUTER_VISION_ENDPOINT[] = "settings/computerVisionEndpoint";
 const char SETTINGS_TRANSLATOR_TEXT_KEY[] = "settings/translatorTextKey";
 const char SETTINGS_TRANSLATOR_TEXT_ENDPOINT[] = "settings/translatorTextEndpoint";
+const char SETTINGS_TRANSLATOR_TEXT_REGION[] = "settings/translatorTextRegion";
 
 // Settings defaults
 const char DEFAULT_COMPUTER_VISION_ENDPOINT[] = "https://westeurope.api.cognitive.microsoft.com";
 const char DEFAULT_TRANSLATOR_TEXT_ENDPOINT[] = "https://api.cognitive.microsofttranslator.com";
+const char DEFAULT_TRANSLATOR_TEXT_REGION[] = "westeurope";
 
 class CloudApi;
 
@@ -63,6 +65,8 @@ public:
     Q_INVOKABLE QString getTranslatorTextKey();
     Q_INVOKABLE void setTranslatorTextEndpoint(const QString &translatorTextEndpoint);
     Q_INVOKABLE QString getTranslatorTextEndpoint();
+    Q_INVOKABLE void setTranslatorTextRegion(const QString &translatorTextRegion);
+    Q_INVOKABLE QString getTranslatorTextRegion();
 
     CloudApi *getCloudApi();
 

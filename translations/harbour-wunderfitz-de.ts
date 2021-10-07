@@ -145,11 +145,15 @@
     </message>
     <message>
         <source>Azure Computer Vision Endpoint</source>
-        <translation type="unfinished"></translation>
+        <translation>Azure Computer Vision-Endpunkt</translation>
     </message>
     <message>
         <source>Azure Translator Text Endpoint</source>
-        <translation type="unfinished"></translation>
+        <translation>Azure Translator Text-Endpunkt</translation>
+    </message>
+    <message>
+        <source>Azure Translator Text Region</source>
+        <translation>Azure Translator Text-Region</translation>
     </message>
 </context>
 <context>

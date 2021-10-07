@@ -19,6 +19,7 @@ Licensed under GNU GPLv2
 
 ## Credits
 Code contributions
+- [llewelld](https://github.com/llewelld)
 - [zwieberl](https://github.com/zwieberl)
 
 This project uses

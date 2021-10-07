@@ -68,7 +68,7 @@ void CloudApi::translate(const QString &text, const QString &targetLanguage)
     QNetworkRequest request(url);
     request.setHeader(QNetworkRequest::ContentTypeHeader, "application/json");
     request.setRawHeader(QByteArray("Ocp-Apim-Subscription-Key"), curiosity->getTranslatorTextKey().toLocal8Bit());
-    request.setRawHeader(QByteArray("Ocp-Apim-Subscription-Region"), "northeurope");
+    request.setRawHeader(QByteArray("Ocp-Apim-Subscription-Region"), curiosity->getTranslatorTextRegion().toLocal8Bit());
 
     QJsonObject jsonText;
     jsonText.insert("Text", text);

@@ -170,6 +170,17 @@ QString Curiosity::getTranslatorTextEndpoint()
     return settings.value(SETTINGS_TRANSLATOR_TEXT_ENDPOINT, DEFAULT_TRANSLATOR_TEXT_ENDPOINT).toString();
 }
 
+void Curiosity::setTranslatorTextRegion(const QString &translatorTextRegion)
+{
+    qDebug() << "[Curiosity] Set translator text region" << translatorTextRegion;
+    settings.setValue(SETTINGS_TRANSLATOR_TEXT_REGION, translatorTextRegion);
+}
+
+QString Curiosity::getTranslatorTextRegion()
+{
+    return settings.value(SETTINGS_TRANSLATOR_TEXT_REGION, DEFAULT_TRANSLATOR_TEXT_REGION).toString();
+}
+
 CloudApi *Curiosity::getCloudApi()
 {
     return this->cloudApi;
