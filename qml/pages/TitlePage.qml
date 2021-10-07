@@ -475,7 +475,7 @@ Page {
                                     anchors.left: parent.left
                                     source: camera
                                     fillMode: VideoOutput.PreserveAspectCrop
-                                    visible: camera.availability === Camera.Available && !wunderfitzView.isProcessing
+                                    visible: camera.availability === Camera.Available
                                     rotation: ( titlePage.orientation === Orientation.Portrait ? 0 : ( titlePage.orientation === Orientation.Landscape ? -90 : ( titlePage.orientation === Orientation.PortraitInverted ? 180 : -270 ) ) )
                                     MouseArea {
                                         anchors.fill: parent
@@ -546,13 +546,16 @@ Page {
                                     anchors.bottomMargin: Theme.horizontalPageMargin
                                     visible: !wunderfitzView.isProcessing
                                     onClicked: {
-                                        camera.imageCapture.captureToLocation(curiosity.getTemporaryDirectoryPath());
+                                        camera.searchAndLock();
+                                    }
+                                    onReleased: {
                                         snapshotRectangle.visible = true;
                                         snapshotRectangle.opacity = 1;
                                         snapshotTimer.start();
                                         wunderfitzView.isProcessing = true;
                                         wunderfitzProcessingIndicator.informationText = qsTr("Processing image...");
                                         curiosity.captureRequested(titlePage.orientation, videoOutput.height, titlePage.isLandscape ? navigationColumn.width : navigationRow.height );
+                                        camera.imageCapture.captureToLocation(curiosity.getTemporaryDirectoryPath());
                                     }
                                 }
 
