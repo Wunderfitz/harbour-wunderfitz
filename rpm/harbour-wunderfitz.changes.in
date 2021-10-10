@@ -55,3 +55,8 @@
 * Tue Sep 14 2021 <sebastian@ygriega.de> 1.5
 - Heinzelnisse dictionary update from April 25, 2021
 - aarch64 compatibility
+
+* Sun Oct 10 2021 <sebastian@ygriega.de> 1.6
+- Revive Curiosity feature (thanks to llewelld)
+- Heinzelnisse dictionary update from September 16, 2021
+- New translation for Slovak (thanks to okruhliak)

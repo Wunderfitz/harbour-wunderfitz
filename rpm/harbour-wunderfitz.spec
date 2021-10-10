@@ -15,7 +15,7 @@ Name:       harbour-wunderfitz
 %{!?qtc_make:%define qtc_make make}
 %{?qtc_builddir:%define _builddir %qtc_builddir}
 Summary:    An offline dictionary (supporting dict.cc and Heinzelnisse)
-Version:    1.5
+Version:    1.6
 Release:    1
 Group:      Qt/Qt
 License:    LICENSE
