@@ -145,15 +145,15 @@
     </message>
     <message>
         <source>Azure Computer Vision Endpoint</source>
-        <translation type="unfinished"></translation>
+        <translation>Koncový bod Azure Computer Vision</translation>
     </message>
     <message>
         <source>Azure Translator Text Endpoint</source>
-        <translation type="unfinished"></translation>
+        <translation>Textový koncový bod prekladača Azure</translation>
     </message>
     <message>
         <source>Azure Translator Text Region</source>
-        <translation type="unfinished"></translation>
+        <translation>Textová oblasť prekladača Azure</translation>
     </message>
 </context>
 <context>
