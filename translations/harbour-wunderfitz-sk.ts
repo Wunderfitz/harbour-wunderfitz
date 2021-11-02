@@ -499,7 +499,7 @@
     </message>
     <message>
         <source>The Curiosity feature - taking a picture and automatically translating all recognized text on it - uses other people&apos;s computers (aka &quot;Cloud&quot;) to work. So, your picture is uploaded to another server, analyzed and the information is sent back to this app. So, be cautious if you take pictures of private or confidential data! The Cloud provider is Microsoft Azure. (You see the irony of having Microsoft services running on Sailfish OS ;) ?) By using this service you accept</source>
-        <translation>Funkcia Curiosity - odfotí obrázok a automaticky na ňom preloží všetok rozpoznaný text - využíva počítače iných ľudí (ako „Cloud“). Váš obrázok sa teda nahrá na iný server, analyzuje sa a informácie sa odošlú späť do tejto aplikácie. Buďte preto opatrní, ak fotografujete súkromné ​​alebo dôverné údaje! Poskytovateľom cloudu je Microsoft Azure. (Vidíte iróniu v tom, že služby Microsoft bežia na operačnom systéme Sailfish OS;)?) Používaním tejto služby súhlasíte</translation>
+        <translation>Funkcia Spoznávanie - odfotí obrázok a automaticky na ňom preloží všetok rozpoznaný text - využíva počítače iných ľudí (ako „Cloud“). Váš obrázok sa teda nahrá na iný server, analyzuje sa a informácie sa odošlú späť do tejto aplikácie. Buďte preto opatrní, ak fotografujete súkromné ​​alebo dôverné údaje! Poskytovateľom cloudu je Microsoft Azure. (Vidíte iróniu v tom, že služby Microsoft bežia na operačnom systéme Sailfish OS;)?) Používaním tejto služby súhlasíte</translation>
     </message>
     <message>
         <source>&lt;a href=&quot;https://azure.microsoft.com/support/legal/&quot;&gt;The Microsoft Azure terms of service and privacy statement&lt;/a&gt;</source>
@@ -519,7 +519,7 @@
     </message>
     <message>
         <source>The Curiosity feature - taking a picture and automatically translating all recognized text on it - needs Microsoft Azure API keys to work. Please obtain API keys for the &lt;a href=&quot;https://azure.microsoft.com/en-gb/services/cognitive-services/computer-vision/&quot;&gt;Computer Vision&lt;/a&gt; and the &lt;a href=&quot;https://azure.microsoft.com/en-gb/services/cognitive-services/translator-text-api/&quot;&gt;Translator Text&lt;/a&gt; API, enter them on the settings page and have fun!</source>
-        <translation>Funkcia Curiosity - nasnímanie obrázku a automatické preloženie celého rozpoznaného textu na ňom - na svoju činnosť potrebuje kľúče Microsoft Azure API. Získajte kľúče API pre &lt;a href=&quot;https://azure.microsoft.com/en-gb/services/cognitive-services/computer-vision/&quot;&gt;Computer Vision&lt;/a&gt; a &lt;a href=&quot;https://azure.microsoft.com/en-gb/services/cognitive-services/translator-text-api/&quot;&gt;Translator Text&lt;/a&gt; API, zadajte ich na stránke nastavení a bavte sa!</translation>
+        <translation>Funkcia Spoznávanie - nasnímanie obrázku a automatické preloženie celého rozpoznaného textu na ňom - na svoju činnosť potrebuje kľúče Microsoft Azure API. Získajte kľúče API pre &lt;a href=&quot;https://azure.microsoft.com/en-gb/services/cognitive-services/computer-vision/&quot;&gt;Computer Vision&lt;/a&gt; a &lt;a href=&quot;https://azure.microsoft.com/en-gb/services/cognitive-services/translator-text-api/&quot;&gt;Translator Text&lt;/a&gt; API, zadajte ich na stránke nastavení a bavte sa!</translation>
     </message>
     <message>
         <source>Open Settings</source>
@@ -531,14 +531,14 @@
     </message>
     <message>
         <source>Moreover, the Curiosity feature is beta! This means that there is no guarantee that it works as you wish or that it will continue working forever in this or a future version of Wunderfitz. It may cease to work without any prior warning...</source>
-        <translation>Navyše, funkcia Curiosity je beta! To znamená, že neexistuje žiadna záruka, že funguje tak, ako si želáte, alebo že bude v tejto alebo budúcej verzii Wunderfitzu fungovať navždy. Môže prestať fungovať bez predchádzajúceho upozornenia...</translation>
+        <translation>Navyše, funkcia Spoznávanie je beta! To znamená, že neexistuje žiadna záruka, že funguje tak, ako si želáte, alebo že bude v tejto alebo budúcej verzii Wunderfitzu fungovať navždy. Môže prestať fungovať bez predchádzajúceho upozornenia...</translation>
     </message>
 </context>
 <context>
     <name>WunderfitzButton</name>
     <message>
         <source>Curiosity</source>
-        <translation>Curiosity</translation>
+        <translation>Spoznávanie</translation>
     </message>
 </context>
 </TS>
