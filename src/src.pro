@@ -1,5 +1,5 @@
 CONFIG += sailfishapp
-LIBS += -lz -lquazip -L../quazip/quazip
+LIBS += -lz -lquazip -L$$OUT_PWD/../quazip/quazip
 
 QT += sql core
 
@@ -12,6 +12,8 @@ target.path = /usr/bin/
 
 TARGET = harbour-wunderfitz
 TEMPLATE = app
+
+LIBS += -lsailfishsecrets
 
 SOURCES += harbour-wunderfitz.cpp \
     databasemanager.cpp \

@@ -33,13 +33,16 @@ void CloudApi::opticalCharacterRecognition(const QString &imagePath, const QStri
 
     QUrl url = QUrl(curiosity->getComputerVisionEndpoint());
     url.setPath(url.path() + API_COMPUTER_VISION_ENDPOINT_PATH);
+    QUrlQuery urlQuery = QUrlQuery();
+    urlQuery.addQueryItem("api-version", "2024-02-01");
+    urlQuery.addQueryItem("features", "read");
+    if (sourceLanguage != "unk") {
+        urlQuery.addQueryItem("language", sourceLanguage);
+    }
+    url.setQuery(urlQuery);
     QNetworkRequest request(url);
     request.setHeader(QNetworkRequest::ContentTypeHeader, "application/octet-stream");
     request.setRawHeader(QByteArray("Ocp-Apim-Subscription-Key"), curiosity->getComputerVisionKey().toLocal8Bit());
-    QUrlQuery urlQuery = QUrlQuery();
-    urlQuery.addQueryItem("language", sourceLanguage);
-    urlQuery.addQueryItem("detectOrientation", "true");
-    url.setQuery(urlQuery);
 
     QFile *file = new QFile(imagePath);
     file->open(QIODevice::ReadOnly);
@@ -96,8 +99,17 @@ void CloudApi::handleOcrUploadError(QNetworkReply::NetworkError error)
 {
     QNetworkReply *reply = qobject_cast<QNetworkReply *>(sender());
     reply->deleteLater();
-    qWarning() << "CloudApi::handleOcrUploadError:" << (int)error << reply->errorString() << reply->readAll();
-    emit ocrUploadError(reply->objectName(), reply->errorString());
+    QString responseBody = QString::fromUtf8(reply->readAll());
+    qWarning() << "CloudApi::handleOcrUploadError:" << (int)error << reply->errorString() << responseBody;
+    QJsonDocument errorDoc = QJsonDocument::fromJson(responseBody.toUtf8());
+    QString errorMessage = reply->errorString();
+    if (errorDoc.isObject()) {
+        QJsonObject errorObj = errorDoc.object().value("error").toObject();
+        if (!errorObj.isEmpty()) {
+            errorMessage = errorObj.value("message").toString();
+        }
+    }
+    emit ocrUploadError(reply->objectName(), errorMessage);
 }
 
 void CloudApi::handleOcrUploadFinished()
@@ -121,8 +133,17 @@ void CloudApi::handleTranslateError(QNetworkReply::NetworkError error)
 {
     QNetworkReply *reply = qobject_cast<QNetworkReply *>(sender());
     reply->deleteLater();
-    qWarning() << "CloudApi::handleTranslateError:" << (int)error << reply->errorString() << reply->readAll();
-    emit translateError(reply->errorString());
+    QString responseBody = QString::fromUtf8(reply->readAll());
+    qWarning() << "CloudApi::handleTranslateError:" << (int)error << reply->errorString() << responseBody;
+    QString errorMessage = reply->errorString();
+    QJsonDocument errorDoc = QJsonDocument::fromJson(responseBody.toUtf8());
+    if (errorDoc.isObject()) {
+        QJsonObject errorObj = errorDoc.object().value("error").toObject();
+        if (!errorObj.isEmpty()) {
+            errorMessage = errorObj.value("message").toString();
+        }
+    }
+    emit translateError(errorMessage);
 }
 
 void CloudApi::handleTranslateFinished()

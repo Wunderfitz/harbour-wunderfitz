@@ -136,16 +136,8 @@
         <translation>Nube</translation>
     </message>
     <message>
-        <source>Azure Computer Vision API Key</source>
-        <translation>Llave del API AzureComputerVision</translation>
-    </message>
-    <message>
         <source>Azure Translator Text API Key</source>
         <translation>Llave del API AzureTranslatorText</translation>
-    </message>
-    <message>
-        <source>Azure Computer Vision Endpoint</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Azure Translator Text Endpoint</source>
@@ -153,6 +145,14 @@
     </message>
     <message>
         <source>Azure Translator Text Region</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Azure AI Vision API Key</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Azure AI Vision Endpoint</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -518,10 +518,6 @@
         <translation>AzureAPIKeys no establecida</translation>
     </message>
     <message>
-        <source>The Curiosity feature - taking a picture and automatically translating all recognized text on it - needs Microsoft Azure API keys to work. Please obtain API keys for the &lt;a href=&quot;https://azure.microsoft.com/en-gb/services/cognitive-services/computer-vision/&quot;&gt;Computer Vision&lt;/a&gt; and the &lt;a href=&quot;https://azure.microsoft.com/en-gb/services/cognitive-services/translator-text-api/&quot;&gt;Translator Text&lt;/a&gt; API, enter them on the settings page and have fun!</source>
-        <translation>La función Curiosidad, toma una foto y traduce automáticamente todo el texto reconocido en ella, necesita claves de la API de MicrosoftAzure para funcionar. Obtenga claves de API para &lt;a href=&quot;https://azure.microsoft.com/en-gb/services/cognitive-services/computer-vision/&quot;&gt;Computer Vision&lt;/a&gt; and the &lt;a href=&quot;https://azure.microsoft.com/en-gb/services/cognitive-services/translator-text-api/&quot;&gt;Translator Text&lt;/a&gt; API, ingréselos en la página de configuración y ¡diviértanse!</translation>
-    </message>
-    <message>
         <source>Open Settings</source>
         <translation>Configuración abierta</translation>
     </message>
@@ -532,6 +528,30 @@
     <message>
         <source>Moreover, the Curiosity feature is beta! This means that there is no guarantee that it works as you wish or that it will continue working forever in this or a future version of Wunderfitz. It may cease to work without any prior warning...</source>
         <translation>¡Además, la función Curiosidad es beta! Esto significa que no hay garantía de que funcione como lo desee o que seguirá funcionando para siempre en esta o en una versión futura de Wunderfitz. Puede dejar de funcionar sin previo aviso ...</translation>
+    </message>
+    <message>
+        <source>The Curiosity feature - taking a picture and automatically translating all recognized text on it - needs Microsoft Azure API keys to work. Please obtain API keys for &lt;a href=&quot;https://azure.microsoft.com/en-us/products/ai-services/ai-vision&quot;&gt;Azure AI Vision&lt;/a&gt; and the &lt;a href=&quot;https://azure.microsoft.com/en-us/products/ai-services/ai-translator&quot;&gt;Azure AI Translator&lt;/a&gt; API, enter them on the settings page and have fun!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Copy translation to clipboard</source>
+        <translation type="unfinished">Copiar traducción</translation>
+    </message>
+    <message>
+        <source>Copy original to clipboard</source>
+        <translation type="unfinished">Copiar original</translation>
+    </message>
+    <message>
+        <source>Result</source>
+        <translation type="unfinished">Resultados</translation>
+    </message>
+    <message>
+        <source>Original</source>
+        <translation type="unfinished">Original</translation>
+    </message>
+    <message>
+        <source>Translation</source>
+        <translation type="unfinished">Traducción</translation>
     </message>
 </context>
 <context>

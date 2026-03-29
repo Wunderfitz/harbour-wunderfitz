@@ -137,16 +137,8 @@
         <translation>云服务 API</translation>
     </message>
     <message>
-        <source>Azure Computer Vision API Key</source>
-        <translation>Azure 计算机版本 API 密钥</translation>
-    </message>
-    <message>
         <source>Azure Translator Text API Key</source>
         <translation>Azure 翻译器文本 API 密钥</translation>
-    </message>
-    <message>
-        <source>Azure Computer Vision Endpoint</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Azure Translator Text Endpoint</source>
@@ -154,6 +146,14 @@
     </message>
     <message>
         <source>Azure Translator Text Region</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Azure AI Vision API Key</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Azure AI Vision Endpoint</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -520,11 +520,6 @@
         <translation>未设置 Azure API 密钥</translation>
     </message>
     <message>
-        <source>The Curiosity feature - taking a picture and automatically translating all recognized text on it - needs Microsoft Azure API keys to work. Please obtain API keys for the &lt;a href=&quot;https://azure.microsoft.com/en-gb/services/cognitive-services/computer-vision/&quot;&gt;Computer Vision&lt;/a&gt; and the &lt;a href=&quot;https://azure.microsoft.com/en-gb/services/cognitive-services/translator-text-api/&quot;&gt;Translator Text&lt;/a&gt; API, enter them on the settings page and have fun!</source>
-        <translation>
-​智能识图功能——即拍照并自动翻译所有识别到的文本。此项功能需要用到 Microsoft  Azure API 密钥才能工作。请从下方链接获取 API 密钥 &lt;a href=&quot;https://azure.microsoft.com/en-gb/services/cognitive-services/computer-vision/&quot;&gt;Computer Vision&lt;/a&gt; and the &lt;a href=&quot;https://azure.microsoft.com/en-gb/services/cognitive-services/translator-text-api/&quot;&gt;Translator Text&lt;/a&gt; 在设置页面输入它们。祝你愉快！</translation>
-    </message>
-    <message>
         <source>Open Settings</source>
         <translation>打开设置</translation>
     </message>
@@ -535,6 +530,30 @@
     <message>
         <source>Moreover, the Curiosity feature is beta! This means that there is no guarantee that it works as you wish or that it will continue working forever in this or a future version of Wunderfitz. It may cease to work without any prior warning...</source>
         <translation>智能识图功能尚处于测试阶段！我无法保证它取得符合你预期的效果以及承诺在今后的 Wunderfitz 版本中进一步完善此功能。此功能可能会在今后的开发中随时被移除，而不会提前告知你。</translation>
+    </message>
+    <message>
+        <source>The Curiosity feature - taking a picture and automatically translating all recognized text on it - needs Microsoft Azure API keys to work. Please obtain API keys for &lt;a href=&quot;https://azure.microsoft.com/en-us/products/ai-services/ai-vision&quot;&gt;Azure AI Vision&lt;/a&gt; and the &lt;a href=&quot;https://azure.microsoft.com/en-us/products/ai-services/ai-translator&quot;&gt;Azure AI Translator&lt;/a&gt; API, enter them on the settings page and have fun!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Copy translation to clipboard</source>
+        <translation type="unfinished">复制翻译到剪切板</translation>
+    </message>
+    <message>
+        <source>Copy original to clipboard</source>
+        <translation type="unfinished">复制原文到剪切板</translation>
+    </message>
+    <message>
+        <source>Result</source>
+        <translation type="unfinished">结果</translation>
+    </message>
+    <message>
+        <source>Original</source>
+        <translation type="unfinished">原文</translation>
+    </message>
+    <message>
+        <source>Translation</source>
+        <translation type="unfinished">翻译</translation>
     </message>
 </context>
 <context>

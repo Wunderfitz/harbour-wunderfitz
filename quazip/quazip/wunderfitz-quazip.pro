@@ -1,7 +1,7 @@
 TEMPLATE = lib
 CONFIG += qt warn_on
 QT -= gui
-!win32:VERSION = 1.0.0
+CONFIG += unversioned_libname unversioned_soname
 TARGET = quazip
 
 DEFINES += QUAZIP_BUILD

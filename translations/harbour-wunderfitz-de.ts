@@ -136,16 +136,8 @@
         <translation>Cloud-API</translation>
     </message>
     <message>
-        <source>Azure Computer Vision API Key</source>
-        <translation>Azure Computer Vision API-Schlüssel</translation>
-    </message>
-    <message>
         <source>Azure Translator Text API Key</source>
         <translation>Azure Translator Text API-Schlüssel</translation>
-    </message>
-    <message>
-        <source>Azure Computer Vision Endpoint</source>
-        <translation>Azure Computer Vision-Endpunkt</translation>
     </message>
     <message>
         <source>Azure Translator Text Endpoint</source>
@@ -154,6 +146,14 @@
     <message>
         <source>Azure Translator Text Region</source>
         <translation>Azure Translator Text-Region</translation>
+    </message>
+    <message>
+        <source>Azure AI Vision API Key</source>
+        <translation>Azure AI Vision API-Schlüssel</translation>
+    </message>
+    <message>
+        <source>Azure AI Vision Endpoint</source>
+        <translation>Azure AI Vision-Endpunkt</translation>
     </message>
 </context>
 <context>
@@ -522,16 +522,36 @@
         <translation>Azure API-Schlüssel nicht gesetzt</translation>
     </message>
     <message>
-        <source>The Curiosity feature - taking a picture and automatically translating all recognized text on it - needs Microsoft Azure API keys to work. Please obtain API keys for the &lt;a href=&quot;https://azure.microsoft.com/en-gb/services/cognitive-services/computer-vision/&quot;&gt;Computer Vision&lt;/a&gt; and the &lt;a href=&quot;https://azure.microsoft.com/en-gb/services/cognitive-services/translator-text-api/&quot;&gt;Translator Text&lt;/a&gt; API, enter them on the settings page and have fun!</source>
-        <translation>Das Neugier-Feature - ein Bild aufnehmen und dann automatisch jeden erkannten Text darauf übersetzen - benötigt Microsoft Azure API-Schlüssel um zu funktionieren. Bitte besorgen Sie sich API-Schlüssel für die &lt;a href=&quot;https://azure.microsoft.com/en-gb/services/cognitive-services/computer-vision/&quot;&gt;Computer Vision&lt;/a&gt; und die &lt;a href=&quot;https://azure.microsoft.com/en-gb/services/cognitive-services/translator-text-api/&quot;&gt;Translator Text&lt;/a&gt; API, geben Sie diese auf der Einstellungen-Seite an und dann viel Spaß!</translation>
-    </message>
-    <message>
         <source>Open Settings</source>
         <translation>Einstellungen öffnen</translation>
     </message>
     <message>
         <source>Reload</source>
         <translation>Neu laden</translation>
+    </message>
+    <message>
+        <source>The Curiosity feature - taking a picture and automatically translating all recognized text on it - needs Microsoft Azure API keys to work. Please obtain API keys for &lt;a href=&quot;https://azure.microsoft.com/en-us/products/ai-services/ai-vision&quot;&gt;Azure AI Vision&lt;/a&gt; and the &lt;a href=&quot;https://azure.microsoft.com/en-us/products/ai-services/ai-translator&quot;&gt;Azure AI Translator&lt;/a&gt; API, enter them on the settings page and have fun!</source>
+        <translation>Das Neugier-Feature benötigt Microsoft Azure API-Schlüssel. Bitte API-Schlüssel für &lt;a href=&quot;https://azure.microsoft.com/en-us/products/ai-services/ai-vision&quot;&gt;Azure AI Vision&lt;/a&gt; und &lt;a href=&quot;https://azure.microsoft.com/en-us/products/ai-services/ai-translator&quot;&gt;Azure AI Translator&lt;/a&gt; besorgen, auf der Einstellungsseite eingeben und viel Spaß!</translation>
+    </message>
+    <message>
+        <source>Copy translation to clipboard</source>
+        <translation>Übersetzung in die Zwischenablage kopieren</translation>
+    </message>
+    <message>
+        <source>Copy original to clipboard</source>
+        <translation>Original in die Zwischenablage kopieren</translation>
+    </message>
+    <message>
+        <source>Result</source>
+        <translation>Ergebnis</translation>
+    </message>
+    <message>
+        <source>Original</source>
+        <translation>Original</translation>
+    </message>
+    <message>
+        <source>Translation</source>
+        <translation>Übersetzung</translation>
     </message>
 </context>
 <context>

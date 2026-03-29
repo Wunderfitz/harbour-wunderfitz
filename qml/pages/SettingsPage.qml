@@ -53,7 +53,7 @@ Page {
             TextField {
                 id: computerVisionKeyField
                 width: parent.width
-                placeholderText: qsTr("Azure Computer Vision API Key")
+                placeholderText: qsTr("Azure AI Vision API Key")
                 label: placeholderText
                 onTextChanged: curiosity.setComputerVisionKey(text)
             }
@@ -61,7 +61,7 @@ Page {
             TextField {
                 id: computerVisionEndpointField
                 width: parent.width
-                placeholderText: qsTr("Azure Computer Vision Endpoint")
+                placeholderText: qsTr("Azure AI Vision Endpoint")
                 label: placeholderText
                 onTextChanged: curiosity.setComputerVisionEndpoint(text)
             }

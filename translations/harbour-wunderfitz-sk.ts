@@ -136,16 +136,8 @@
         <translation>Cloud API</translation>
     </message>
     <message>
-        <source>Azure Computer Vision API Key</source>
-        <translation>Kľúč API Azure Computer Vision</translation>
-    </message>
-    <message>
         <source>Azure Translator Text API Key</source>
         <translation>Kľúč API rozhrania Azure Translator Text</translation>
-    </message>
-    <message>
-        <source>Azure Computer Vision Endpoint</source>
-        <translation>Koncový bod Azure Computer Vision</translation>
     </message>
     <message>
         <source>Azure Translator Text Endpoint</source>
@@ -154,6 +146,14 @@
     <message>
         <source>Azure Translator Text Region</source>
         <translation>Textová oblasť prekladača Azure</translation>
+    </message>
+    <message>
+        <source>Azure AI Vision API Key</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Azure AI Vision Endpoint</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -518,10 +518,6 @@
         <translation>Kľúče Azure API nie sú nastavené</translation>
     </message>
     <message>
-        <source>The Curiosity feature - taking a picture and automatically translating all recognized text on it - needs Microsoft Azure API keys to work. Please obtain API keys for the &lt;a href=&quot;https://azure.microsoft.com/en-gb/services/cognitive-services/computer-vision/&quot;&gt;Computer Vision&lt;/a&gt; and the &lt;a href=&quot;https://azure.microsoft.com/en-gb/services/cognitive-services/translator-text-api/&quot;&gt;Translator Text&lt;/a&gt; API, enter them on the settings page and have fun!</source>
-        <translation>Funkcia Curiosity - nasnímanie obrázku a automatické preloženie celého rozpoznaného textu na ňom - na svoju činnosť potrebuje kľúče Microsoft Azure API. Získajte kľúče API pre &lt;a href=&quot;https://azure.microsoft.com/en-gb/services/cognitive-services/computer-vision/&quot;&gt;Computer Vision&lt;/a&gt; a &lt;a href=&quot;https://azure.microsoft.com/en-gb/services/cognitive-services/translator-text-api/&quot;&gt;Translator Text&lt;/a&gt; API, zadajte ich na stránke nastavení a bavte sa!</translation>
-    </message>
-    <message>
         <source>Open Settings</source>
         <translation>Otvoriť nastavenia</translation>
     </message>
@@ -532,6 +528,30 @@
     <message>
         <source>Moreover, the Curiosity feature is beta! This means that there is no guarantee that it works as you wish or that it will continue working forever in this or a future version of Wunderfitz. It may cease to work without any prior warning...</source>
         <translation>Navyše, funkcia Curiosity je beta! To znamená, že neexistuje žiadna záruka, že funguje tak, ako si želáte, alebo že bude v tejto alebo budúcej verzii Wunderfitzu fungovať navždy. Môže prestať fungovať bez predchádzajúceho upozornenia...</translation>
+    </message>
+    <message>
+        <source>The Curiosity feature - taking a picture and automatically translating all recognized text on it - needs Microsoft Azure API keys to work. Please obtain API keys for &lt;a href=&quot;https://azure.microsoft.com/en-us/products/ai-services/ai-vision&quot;&gt;Azure AI Vision&lt;/a&gt; and the &lt;a href=&quot;https://azure.microsoft.com/en-us/products/ai-services/ai-translator&quot;&gt;Azure AI Translator&lt;/a&gt; API, enter them on the settings page and have fun!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Copy translation to clipboard</source>
+        <translation type="unfinished">Kopírovať preložené do schránky</translation>
+    </message>
+    <message>
+        <source>Copy original to clipboard</source>
+        <translation type="unfinished">Kopírovať pôvodné do schránky</translation>
+    </message>
+    <message>
+        <source>Result</source>
+        <translation type="unfinished">Výsledok</translation>
+    </message>
+    <message>
+        <source>Original</source>
+        <translation type="unfinished">Pôvodné</translation>
+    </message>
+    <message>
+        <source>Translation</source>
+        <translation type="unfinished">Preložené</translation>
     </message>
 </context>
 <context>

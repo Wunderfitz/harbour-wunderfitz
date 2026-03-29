@@ -28,6 +28,9 @@ Page {
 
     property int activeTabId: 0;
     property bool interactionHintDisplayed : dictionaryModel.isInteractionHintDisplayed()
+    property string lastOriginal: ""
+    property string lastTranslation: ""
+    property bool hasResult: lastOriginal !== "" || lastTranslation !== ""
 
     function toggleBusyIndicator() {
         busyIndicator.running = heinzelnisseModel.isSearchInProgress()
@@ -50,12 +53,24 @@ Page {
             dictionariesButtonLandscape.isActive = true;
             wunderfitzButtonPortrait.isActive = false;
             wunderfitzButtonLandscape.isActive = false;
+            resultButtonPortrait.isActive = false;
+            resultButtonLandscape.isActive = false;
             break;
         case 1:
             dictionariesButtonPortrait.isActive = false;
             dictionariesButtonLandscape.isActive = false;
             wunderfitzButtonPortrait.isActive = true;
             wunderfitzButtonLandscape.isActive = true;
+            resultButtonPortrait.isActive = false;
+            resultButtonLandscape.isActive = false;
+            break;
+        case 2:
+            dictionariesButtonPortrait.isActive = false;
+            dictionariesButtonLandscape.isActive = false;
+            wunderfitzButtonPortrait.isActive = false;
+            wunderfitzButtonLandscape.isActive = false;
+            resultButtonPortrait.isActive = true;
+            resultButtonLandscape.isActive = true;
             break;
         default:
             console.log("Some strange navigation happened!")
@@ -79,6 +94,16 @@ Page {
             viewsSlideshow.opacity = 0;
             slideshowVisibleTimer.goToTab(1);
             openTab(1);
+        }
+    }
+
+    function handleResultClicked() {
+        if (titlePage.activeTabId === 2) {
+            resultFlickable.scrollToTop();
+        } else {
+            viewsSlideshow.opacity = 0;
+            slideshowVisibleTimer.goToTab(2);
+            openTab(2);
         }
     }
 
@@ -123,6 +148,16 @@ Page {
                 visible: titlePage.activeTabId === 0
                 text: qsTr("Dictionaries")
                 onClicked: pageStack.push(dictionariesPage)
+            }
+            MenuItem {
+                visible: titlePage.activeTabId === 2
+                text: qsTr("Copy translation to clipboard")
+                onClicked: Clipboard.text = titlePage.lastTranslation
+            }
+            MenuItem {
+                visible: titlePage.activeTabId === 2
+                text: qsTr("Copy original to clipboard")
+                onClicked: Clipboard.text = titlePage.lastOriginal
             }
         }
 
@@ -416,7 +451,11 @@ Page {
                                     onTranslationSuccessful: {
                                         wunderfitzView.isProcessing = false;
                                         previewImage.visible = false;
-                                        pageStack.push(Qt.resolvedUrl("../pages/TextPage.qml"), {"original": curiosity.getTranslatedText(), "translation": text});
+                                        titlePage.lastOriginal = curiosity.getTranslatedText();
+                                        titlePage.lastTranslation = text;
+                                        viewsSlideshow.opacity = 0;
+                                        slideshowVisibleTimer.goToTab(2);
+                                        openTab(2);
                                     }
                                     onTranslationError: {
                                         wunderfitzView.isProcessing = false;
@@ -1085,7 +1124,7 @@ Page {
                                     linkColor: Theme.highlightColor
                                     wrapMode: Text.Wrap
                                     textFormat: Text.StyledText
-                                    text: qsTr("The Curiosity feature - taking a picture and automatically translating all recognized text on it - needs Microsoft Azure API keys to work. Please obtain API keys for the <a href=\"https://azure.microsoft.com/en-gb/services/cognitive-services/computer-vision/\">Computer Vision</a> and the <a href=\"https://azure.microsoft.com/en-gb/services/cognitive-services/translator-text-api/\">Translator Text</a> API, enter them on the settings page and have fun!")
+                                    text: qsTr("The Curiosity feature - taking a picture and automatically translating all recognized text on it - needs Microsoft Azure API keys to work. Please obtain API keys for <a href=\"https://azure.microsoft.com/en-us/products/ai-services/ai-vision\">Azure AI Vision</a> and the <a href=\"https://azure.microsoft.com/en-us/products/ai-services/ai-translator\">Azure AI Translator</a> API, enter them on the settings page and have fun!")
 
                                     onLinkActivated: Qt.openUrlExternally(link);
                                 }
@@ -1126,6 +1165,55 @@ Page {
                         }
 
                     }
+
+                    Item {
+                        id: resultView
+                        width: viewsSlideshow.width
+                        height: viewsSlideshow.height
+
+                        SilicaFlickable {
+                            id: resultFlickable
+                            contentHeight: resultColumn.height
+                            anchors.fill: parent
+
+                            Column {
+                                id: resultColumn
+                                width: parent.width
+
+                                SectionHeader {
+                                    text: qsTr("Original")
+                                }
+
+                                TextArea {
+                                    id: originalTextArea
+                                    width: parent.width
+                                    wrapMode: TextEdit.Wrap
+                                    text: titlePage.lastOriginal
+                                    Connections {
+                                        target: titlePage
+                                        onLastOriginalChanged: originalTextArea.text = titlePage.lastOriginal
+                                    }
+                                }
+
+                                SectionHeader {
+                                    text: qsTr("Translation")
+                                }
+
+                                TextArea {
+                                    id: translationTextArea
+                                    width: parent.width
+                                    wrapMode: TextEdit.Wrap
+                                    text: titlePage.lastTranslation
+                                    Connections {
+                                        target: titlePage
+                                        onLastTranslationChanged: translationTextArea.text = titlePage.lastTranslation
+                                    }
+                                }
+                            }
+
+                            VerticalScrollDecorator {}
+                        }
+                    }
                 }
 
                 Timer {
@@ -1151,7 +1239,12 @@ Page {
                     clip: true
                     model: viewsModel
                     onCurrentIndexChanged: {
-                        openTab(currentIndex);
+                        if (currentIndex === 2 && !titlePage.hasResult) {
+                            slideshowVisibleTimer.goToTab(1);
+                            openTab(1);
+                        } else {
+                            openTab(currentIndex);
+                        }
                     }
                     Behavior on opacity { NumberAnimation {} }
                     onOpacityChanged: {
@@ -1189,7 +1282,7 @@ Page {
 
                         Item {
                             id: dictionariesButtonColumnLandscape
-                            height: parent.height / 2
+                            height: parent.height / 3
                             width: parent.width - Theme.paddingMedium
                             DictionaryButton {
                                 id: dictionariesButtonLandscape
@@ -1200,12 +1293,44 @@ Page {
 
                         Item {
                             id: wunderfitzButtonColumnLandscape
-                            height: parent.height / 2
+                            height: parent.height / 3
                             width: parent.width - Theme.paddingMedium
                             WunderfitzButton {
                                 id: wunderfitzButtonLandscape
                                 visible: (isActive || !navigationColumn.squeezed)
                                 anchors.verticalCenter: parent.verticalCenter
+                            }
+                        }
+
+                        Item {
+                            id: resultButtonColumnLandscape
+                            height: parent.height / 3
+                            width: parent.width - Theme.paddingMedium
+                            visible: titlePage.hasResult
+                            Column {
+                                id: resultButtonLandscape
+                                property bool isActive: false
+                                width: parent.width
+                                anchors.verticalCenter: parent.verticalCenter
+                                visible: (isActive || !navigationColumn.squeezed)
+                                IconButton {
+                                    icon.source: resultButtonLandscape.isActive ? "image://theme/icon-m-note?" + Theme.highlightColor : "image://theme/icon-m-note?" + Theme.primaryColor
+                                    height: Theme.iconSizeMedium
+                                    width: Theme.iconSizeMedium
+                                    anchors.horizontalCenter: parent.horizontalCenter
+                                    onClicked: handleResultClicked()
+                                }
+                                Label {
+                                    text: qsTr("Result")
+                                    font.pixelSize: Theme.fontSizeTiny
+                                    color: resultButtonLandscape.isActive ? Theme.highlightColor : Theme.primaryColor
+                                    truncationMode: TruncationMode.Fade
+                                    anchors.horizontalCenter: parent.horizontalCenter
+                                    MouseArea {
+                                        anchors.fill: parent
+                                        onClicked: handleResultClicked()
+                                    }
+                                }
                             }
                         }
 
@@ -1237,7 +1362,7 @@ Page {
                     width: parent.width
                     Item {
                         id: dictionariesButtonColumn
-                        width: parent.width / 2
+                        width: parent.width / 3
                         height: parent.height - Theme.paddingMedium
                         DictionaryButton {
                             id: dictionariesButtonPortrait
@@ -1247,11 +1372,42 @@ Page {
 
                     Item {
                         id: notificationsButtonColumn
-                        width: parent.width / 2
+                        width: parent.width / 3
                         height: parent.height - navigationRowSeparator.height
                         WunderfitzButton {
                             id: wunderfitzButtonPortrait
                             anchors.top: parent.top
+                        }
+                    }
+
+                    Item {
+                        id: resultButtonColumn
+                        width: parent.width / 3
+                        height: parent.height - navigationRowSeparator.height
+                        visible: titlePage.hasResult
+                        Column {
+                            id: resultButtonPortrait
+                            property bool isActive: false
+                            width: parent.width
+                            anchors.top: parent.top
+                            IconButton {
+                                icon.source: resultButtonPortrait.isActive ? "image://theme/icon-m-note?" + Theme.highlightColor : "image://theme/icon-m-note?" + Theme.primaryColor
+                                height: Theme.iconSizeMedium
+                                width: Theme.iconSizeMedium
+                                anchors.horizontalCenter: parent.horizontalCenter
+                                onClicked: handleResultClicked()
+                            }
+                            Label {
+                                text: qsTr("Result")
+                                font.pixelSize: Theme.fontSizeTiny
+                                color: resultButtonPortrait.isActive ? Theme.highlightColor : Theme.primaryColor
+                                truncationMode: TruncationMode.Fade
+                                anchors.horizontalCenter: parent.horizontalCenter
+                                MouseArea {
+                                    anchors.fill: parent
+                                    onClicked: handleResultClicked()
+                                }
+                            }
                         }
                     }
                 }

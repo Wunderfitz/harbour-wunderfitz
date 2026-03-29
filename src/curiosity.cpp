@@ -29,6 +29,9 @@
 #include <QMatrix>
 #include <QRect>
 #include <QJsonObject>
+#include <Secrets/createcollectionrequest.h>
+#include <Secrets/storesecretrequest.h>
+#include <Secrets/storedsecretrequest.h>
 
 #include "cloudapi.h"
 
@@ -128,13 +131,27 @@ QString Curiosity::getTranslatedText()
 
 void Curiosity::setComputerVisionKey(const QString &computerVisionKey)
 {
-    qDebug() << "[Curiosity] Set computer vision key" << computerVisionKey;
-    settings.setValue(SETTINGS_COMPUTER_VISION_KEY, computerVisionKey);
+    qDebug() << "[Curiosity] Set computer vision key";
+    secretsWriteKey(QLatin1String(SECRETS_SECRET_CV_KEY), computerVisionKey);
 }
 
 QString Curiosity::getComputerVisionKey()
 {
-    return settings.value(SETTINGS_COMPUTER_VISION_KEY, "").toString();
+    if (settings.contains(SETTINGS_COMPUTER_VISION_KEY)) {
+        QString legacyValue = settings.value(SETTINGS_COMPUTER_VISION_KEY).toString();
+        if (!legacyValue.isEmpty()) {
+            if (secretsWriteKey(QLatin1String(SECRETS_SECRET_CV_KEY), legacyValue)) {
+                settings.remove(SETTINGS_COMPUTER_VISION_KEY);
+                qDebug() << "[Curiosity] Migrated computer vision key to Secrets";
+            } else {
+                qWarning() << "[Curiosity] Migration of computer vision key failed; retaining QSettings value";
+                return legacyValue;
+            }
+        } else {
+            settings.remove(SETTINGS_COMPUTER_VISION_KEY);
+        }
+    }
+    return secretsReadKey(QLatin1String(SECRETS_SECRET_CV_KEY));
 }
 
 void Curiosity::setComputerVisionEndpoint(const QString &computerVisionEndpoint)
@@ -150,13 +167,27 @@ QString Curiosity::getComputerVisionEndpoint()
 
 void Curiosity::setTranslatorTextKey(const QString &translatorTextKey)
 {
-    qDebug() << "[Curiosity] Set translator text key" << translatorTextKey;
-    settings.setValue(SETTINGS_TRANSLATOR_TEXT_KEY, translatorTextKey);
+    qDebug() << "[Curiosity] Set translator text key";
+    secretsWriteKey(QLatin1String(SECRETS_SECRET_TR_KEY), translatorTextKey);
 }
 
 QString Curiosity::getTranslatorTextKey()
 {
-    return settings.value(SETTINGS_TRANSLATOR_TEXT_KEY, "").toString();
+    if (settings.contains(SETTINGS_TRANSLATOR_TEXT_KEY)) {
+        QString legacyValue = settings.value(SETTINGS_TRANSLATOR_TEXT_KEY).toString();
+        if (!legacyValue.isEmpty()) {
+            if (secretsWriteKey(QLatin1String(SECRETS_SECRET_TR_KEY), legacyValue)) {
+                settings.remove(SETTINGS_TRANSLATOR_TEXT_KEY);
+                qDebug() << "[Curiosity] Migrated translator text key to Secrets";
+            } else {
+                qWarning() << "[Curiosity] Migration of translator text key failed; retaining QSettings value";
+                return legacyValue;
+            }
+        } else {
+            settings.remove(SETTINGS_TRANSLATOR_TEXT_KEY);
+        }
+    }
+    return secretsReadKey(QLatin1String(SECRETS_SECRET_TR_KEY));
 }
 
 void Curiosity::setTranslatorTextEndpoint(const QString &translatorTextEndpoint)
@@ -181,6 +212,67 @@ QString Curiosity::getTranslatorTextRegion()
     return settings.value(SETTINGS_TRANSLATOR_TEXT_REGION, DEFAULT_TRANSLATOR_TEXT_REGION).toString();
 }
 
+bool Curiosity::secretsWriteKey(const QString &secretName, const QString &value)
+{
+    Sailfish::Secrets::CreateCollectionRequest createRequest;
+    createRequest.setManager(&secretManager);
+    createRequest.setCollectionName(QLatin1String(SECRETS_COLLECTION_NAME));
+    createRequest.setStoragePluginName(Sailfish::Secrets::SecretManager::DefaultEncryptedStoragePluginName);
+    createRequest.setEncryptionPluginName(Sailfish::Secrets::SecretManager::DefaultEncryptionPluginName);
+    createRequest.setAccessControlMode(Sailfish::Secrets::SecretManager::OwnerOnlyMode);
+    createRequest.setCollectionLockType(Sailfish::Secrets::CreateCollectionRequest::DeviceLock);
+    createRequest.setDeviceLockUnlockSemantic(Sailfish::Secrets::SecretManager::DeviceLockKeepUnlocked);
+    createRequest.startRequest();
+    createRequest.waitForFinished();
+
+    Sailfish::Secrets::Result createResult = createRequest.result();
+    if (createResult.code() == Sailfish::Secrets::Result::Failed
+            && createResult.errorCode() != Sailfish::Secrets::Result::CollectionAlreadyExistsError) {
+        qWarning() << "[Curiosity] Failed to create secrets collection:" << createResult.errorMessage();
+        return false;
+    }
+
+    Sailfish::Secrets::Secret::Identifier id(
+        secretName,
+        QLatin1String(SECRETS_COLLECTION_NAME),
+        Sailfish::Secrets::SecretManager::DefaultEncryptedStoragePluginName);
+    Sailfish::Secrets::Secret secret(id);
+    secret.setData(value.toUtf8());
+
+    Sailfish::Secrets::StoreSecretRequest storeRequest;
+    storeRequest.setManager(&secretManager);
+    storeRequest.setSecretStorageType(Sailfish::Secrets::StoreSecretRequest::CollectionSecret);
+    storeRequest.setSecret(secret);
+    storeRequest.startRequest();
+    storeRequest.waitForFinished();
+
+    Sailfish::Secrets::Result storeResult = storeRequest.result();
+    if (storeResult.code() == Sailfish::Secrets::Result::Failed) {
+        qWarning() << "[Curiosity] Failed to store secret" << secretName << ":" << storeResult.errorMessage();
+        return false;
+    }
+    return true;
+}
+
+QString Curiosity::secretsReadKey(const QString &secretName)
+{
+    Sailfish::Secrets::Secret::Identifier id(
+        secretName,
+        QLatin1String(SECRETS_COLLECTION_NAME),
+        Sailfish::Secrets::SecretManager::DefaultEncryptedStoragePluginName);
+
+    Sailfish::Secrets::StoredSecretRequest readRequest;
+    readRequest.setManager(&secretManager);
+    readRequest.setIdentifier(id);
+    readRequest.startRequest();
+    readRequest.waitForFinished();
+
+    if (readRequest.result().code() == Sailfish::Secrets::Result::Failed) {
+        return QString();
+    }
+    return QString::fromUtf8(readRequest.secret().data());
+}
+
 CloudApi *Curiosity::getCloudApi()
 {
     return this->cloudApi;
@@ -189,18 +281,16 @@ CloudApi *Curiosity::getCloudApi()
 void Curiosity::handleOcrProcessingSuccessful(const QString &fileName, const QJsonObject &result)
 {
     qDebug() << "[Curiosity] Processing OCR result..." << fileName;
-    QJsonArray regionArray = result.value("regions").toArray();
+    QJsonObject readResult = result.value("readResult").toObject();
+    QJsonArray blockArray = readResult.value("blocks").toArray();
     QString completeText;
-    foreach (const QJsonValue &region, regionArray) {
-        QJsonArray lineArray = region.toObject().value("lines").toArray();
+    foreach (const QJsonValue &block, blockArray) {
+        QJsonArray lineArray = block.toObject().value("lines").toArray();
         foreach (const QJsonValue &line, lineArray) {
-            QJsonArray wordArray = line.toObject().value("words").toArray();
-            foreach (const QJsonValue &word, wordArray) {
-                if (!completeText.isEmpty()) {
-                    completeText.append(" ");
-                }
-                completeText.append(word.toObject().value("text").toString());
+            if (!completeText.isEmpty()) {
+                completeText.append(" ");
             }
+            completeText.append(line.toObject().value("text").toString());
         }
     }
     qDebug() << completeText;

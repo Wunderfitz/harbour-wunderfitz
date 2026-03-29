@@ -23,6 +23,9 @@
 #include <QObject>
 #include <QSettings>
 #include <QNetworkAccessManager>
+#include <Secrets/secretmanager.h>
+#include <Secrets/secret.h>
+#include <Secrets/result.h>
 
 // Settings keys
 const char SETTINGS_SOURCE_LANGUAGE[] = "settings/sourceLanguage";
@@ -33,6 +36,11 @@ const char SETTINGS_COMPUTER_VISION_ENDPOINT[] = "settings/computerVisionEndpoin
 const char SETTINGS_TRANSLATOR_TEXT_KEY[] = "settings/translatorTextKey";
 const char SETTINGS_TRANSLATOR_TEXT_ENDPOINT[] = "settings/translatorTextEndpoint";
 const char SETTINGS_TRANSLATOR_TEXT_REGION[] = "settings/translatorTextRegion";
+
+// Sailfish Secrets identifiers
+const char SECRETS_COLLECTION_NAME[] = "harbour-wunderfitz-secrets";
+const char SECRETS_SECRET_CV_KEY[]    = "computerVisionKey";
+const char SECRETS_SECRET_TR_KEY[]    = "translatorTextKey";
 
 // Settings defaults
 const char DEFAULT_COMPUTER_VISION_ENDPOINT[] = "https://westeurope.api.cognitive.microsoft.com";
@@ -92,10 +100,12 @@ private:
     QString translatedText;
     QSettings settings;
     CloudApi *cloudApi;
-
     QNetworkAccessManager *networkAccessManager;
+    Sailfish::Secrets::SecretManager secretManager;
 
     void processCapture();
+    QString secretsReadKey(const QString &secretName);
+    bool secretsWriteKey(const QString &secretName, const QString &value);
 
 };
 

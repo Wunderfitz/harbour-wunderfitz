@@ -34,7 +34,7 @@
 #include <QFile>
 #include <QSettings>
 
-const char API_COMPUTER_VISION_ENDPOINT_PATH[] = "/vision/v1.0/ocr";
+const char API_COMPUTER_VISION_ENDPOINT_PATH[] = "/computervision/imageanalysis:analyze";
 const char API_TRANSLATOR_TEXT_ENDPOINT_PATH[] = "/translate";
 
 class Curiosity;

@@ -37,13 +37,13 @@ Page {
             MenuItem {
                 text: qsTr("Copy translation to clipboard")
                 onClicked: {
-                    Clipboard.text = translationContent.text
+                    Clipboard.text = textPage.translation
                 }
             }
             MenuItem {
                 text: qsTr("Copy original to clipboard")
                 onClicked: {
-                    Clipboard.text = originalContent.text
+                    Clipboard.text = textPage.original
                 }
             }
         }
@@ -51,49 +51,36 @@ Page {
         Column {
             id: column
             width: textPage.width
-            spacing: Theme.paddingLarge
 
             PageHeader {
-                id: textHeader
                 title: qsTr("Result")
             }
 
             SectionHeader {
-                id: originalHeader
                 text: qsTr("Original")
             }
 
-            Text {
-                id: originalContent
-                width: parent.width - 2 * Theme.horizontalPageMargin
-                anchors.horizontalCenter: parent.horizontalCenter
+            TextArea {
+                width: parent.width
+                wrapMode: TextEdit.Wrap
                 font.pixelSize: Theme.fontSizeMedium
-                color: Theme.primaryColor
-                linkColor: Theme.highlightColor
-                wrapMode: Text.Wrap
-                textFormat: Text.PlainText
                 text: textPage.original
             }
 
             SectionHeader {
-                id: translationHeader
                 text: qsTr("Translation")
             }
 
-            Text {
-                id: translationContent
-                width: parent.width - 2 * Theme.horizontalPageMargin
-                anchors.horizontalCenter: parent.horizontalCenter
+            TextArea {
+                width: parent.width
+                wrapMode: TextEdit.Wrap
                 font.pixelSize: Theme.fontSizeMedium
-                color: Theme.primaryColor
-                linkColor: Theme.highlightColor
-                wrapMode: Text.Wrap
-                textFormat: Text.PlainText
                 text: textPage.translation
             }
 
-            VerticalScrollDecorator {}
+            Item { width: parent.width; height: Theme.paddingLarge }
         }
 
+        VerticalScrollDecorator {}
     }
 }
